@@ -12,7 +12,6 @@ using System.Threading;
 
 namespace RunCodunit
 {
-
     class RunThem
     {        public static Sms.Sms_Service Sservice = new Sms.Sms_Service();
         public static mbranch.MBranch mbranch = new mbranch.MBranch();

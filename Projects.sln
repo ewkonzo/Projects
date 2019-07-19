@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nav", "Nav", "{22B1937D-4C9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Post_Sms", "Sms\NavSms\RunCodunit\Post_Sms.csproj", "{81FEA21F-ED8D-4EEC-8A4D-CA4BB3C6233F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{506C33A7-0E53-4E26-945E-607D64C25010}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{37DA0F10-2127-489C-ACEF-365C261CA4B2} = {506C33A7-0E53-4E26-945E-607D64C25010}
 		{00060B0C-01B9-4606-9E46-EC36BD59CDB7} = {6D4C46A1-3125-4512-964C-A1313F2DEC4F}
 		{81FEA21F-ED8D-4EEC-8A4D-CA4BB3C6233F} = {22B1937D-4C9E-4CF6-82FC-AE24DE080DC4}
 	EndGlobalSection
