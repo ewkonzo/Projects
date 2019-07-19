@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F0AE3F8-6C53-48CB-A3C9-23E5A1271F00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PData</RootNamespace>
+    <AssemblyName>PData</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Weigh\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aspirant.cs">
+      <DependentUpon>Mobile.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Autoweigh.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Autoweigh.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Autoweigh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Autoweigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Autoweigh.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Autoweigh.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkSm.cs">
+      <DependentUpon>Mobile.tt</DependentUpon>
+    </Compile>
+    <Compile Include="constituency.cs">
+      <DependentUpon>Mobile.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Crop.cs">
+      <DependentUpon>Autoweigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Daily_Collections_Detail.cs">
+      <DependentUpon>Autoweigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer.cs">
+      <DependentUpon>Autoweigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mobile.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mobile.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mobile.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="poll.cs">
+      <DependentUpon>Mobile.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Route.cs">
+      <DependentUpon>Autoweigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.cs">
+      <DependentUpon>Autoweigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Trans.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>Autoweigh.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ussd.cs">
+      <DependentUpon>Mobile.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Accounts\Reference.cs" />
+    <Compile Include="Web References\Constituency\Reference.cs" />
+    <Compile Include="Web References\Groups\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Loansproducts\Reference.cs" />
+    <Compile Include="Web References\Loans\Reference.cs" />
+    <Compile Include="Web References\MbranchApplications\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MBranchMembers\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MBranchsms\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MBranchTransactions\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MBranchtranstypes\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\MBranch\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Member\Reference.cs" />
+    <Compile Include="Web References\Setup\Reference.cs" />
+    <Compile Include="Web References\Sms\Reference.cs" />
+    <Compile Include="Web References\Statement\Reference.cs" />
+    <Compile Include="Web References\S_Applications\Reference.cs" />
+    <Compile Include="Web References\S_Mobile\Reference.cs" />
+    <Compile Include="Web References\Transactions\Reference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <EntityDeploy Include="Mobile.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Mobile.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="Autoweigh.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Autoweigh.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Autoweigh.edmx.diagram">
+      <DependentUpon>Autoweigh.edmx</DependentUpon>
+    </None>
+    <None Include="Mobile.edmx.diagram">
+      <DependentUpon>Mobile.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Accounts\Accounts.wsdl" />
+    <None Include="Web References\Accounts\Accounts1.datasource" />
+    <None Include="Web References\Accounts\Reference.map" />
+    <None Include="Web References\Constituency\Constituency.datasource" />
+    <None Include="Web References\Constituency\Constituency.wsdl" />
+    <None Include="Web References\Constituency\Reference.map" />
+    <None Include="Web References\Groups\M_Branch_Groups.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Groups\M_Branch_Groups.wsdl" />
+    <None Include="Web References\Groups\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Loansproducts\Loanproducts.wsdl" />
+    <None Include="Web References\Loansproducts\Loanproducts1.datasource" />
+    <None Include="Web References\Loansproducts\Reference.map" />
+    <None Include="Web References\Loans\Loans.wsdl" />
+    <None Include="Web References\Loans\Loans1.datasource" />
+    <None Include="Web References\Loans\Reference.map" />
+    <None Include="Web References\MbranchApplications\M_Branch_Applications.wsdl" />
+    <None Include="Web References\MbranchApplications\M_Branch_Applications1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MbranchApplications\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MBranchMembers\M_Branch_Members.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MBranchMembers\M_Branch_Members.wsdl" />
+    <None Include="Web References\MBranchMembers\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MBranchsms\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MBranchsms\Sms.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MBranchsms\Sms.wsdl" />
+    <None Include="Web References\MBranchTransactions\M_Branch_Transactions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MBranchTransactions\M_Branch_Transactions.wsdl" />
+    <None Include="Web References\MBranchTransactions\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MBranchtranstypes\M_Branch_transtypes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\MBranchtranstypes\M_Branch_transtypes.wsdl" />
+    <None Include="Web References\MBranchtranstypes\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\MBranch\MBranch.wsdl" />
+    <None Include="Web References\MBranch\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Member\Member.wsdl" />
+    <None Include="Web References\Member\Member1.datasource" />
+    <None Include="Web References\Member\Reference.map" />
+    <None Include="Web References\Setup\Reference.map" />
+    <None Include="Web References\Setup\Setup.wsdl" />
+    <None Include="Web References\Setup\Setup1.datasource" />
+    <None Include="Web References\Sms\Reference.map" />
+    <None Include="Web References\Sms\Sms.wsdl" />
+    <None Include="Web References\Sms\Sms1.datasource" />
+    <None Include="Web References\Statement\Account_Entries.wsdl" />
+    <None Include="Web References\Statement\Account_Entries1.datasource" />
+    <None Include="Web References\Statement\Reference.map" />
+    <None Include="Web References\S_Applications\Applications.wsdl" />
+    <None Include="Web References\S_Applications\Applications1.datasource" />
+    <None Include="Web References\S_Applications\Reference.map" />
+    <None Include="Web References\S_Mobile\Reference.map" />
+    <None Include="Web References\S_Mobile\S_Mobile.wsdl" />
+    <None Include="Web References\Transactions\Reference.map" />
+    <None Include="Web References\Transactions\Transactions.wsdl" />
+    <None Include="Web References\Transactions\Transactions1.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Mobile\S-Mobile\Logging\Logging.csproj">
+      <Project>{1c78e6b7-870d-41d4-8234-fb43fe8b16b9}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Codeunit/MBranch">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MBranch\</RelPath>
+      <UpdateFromURL>http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Codeunit/MBranch</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PData_MBranch_MBranch</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Page/M_Branch_Applications">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MbranchApplications\</RelPath>
+      <UpdateFromURL>http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Page/M_Branch_Applications</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PData_MBranchApplications_M_Branch_Applications_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Page/M_Branch_Groups">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Groups\</RelPath>
+      <UpdateFromURL>http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Page/M_Branch_Groups</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PData_Groups_M_Branch_Groups_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Page/M_Branch_Members">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MBranchMembers\</RelPath>
+      <UpdateFromURL>http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Page/M_Branch_Members</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PData_MBranchMembers_M_Branch_Members_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Page/M_Branch_Transactions">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MBranchTransactions\</RelPath>
+      <UpdateFromURL>http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Page/M_Branch_Transactions</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PData_MBranchTransactions_M_Branch_Transactions_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Page/M_Branch_transtypes">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MBranchtranstypes\</RelPath>
+      <UpdateFromURL>http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Page/M_Branch_transtypes</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PData_MBranchtranstypes_M_Branch_transtypes_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Page/Sms">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\MBranchsms\</RelPath>
+      <UpdateFromURL>http://localhost:7047/DynamicsNAV/WS/HOMABAY%2520COUNTY%2520WOMEN%2520SACCO/Page/Sms</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PData_MBranchsms_Sms_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Autoweigh.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Autoweigh.edmx</DependentUpon>
+      <LastGenOutput>Autoweigh.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Autoweigh.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Autoweigh.edmx</DependentUpon>
+      <LastGenOutput>Autoweigh.cs</LastGenOutput>
+    </Content>
+    <Content Include="Mobile.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Mobile.edmx</DependentUpon>
+      <LastGenOutput>Mobile.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Mobile.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Mobile.edmx</DependentUpon>
+      <LastGenOutput>Mobile.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

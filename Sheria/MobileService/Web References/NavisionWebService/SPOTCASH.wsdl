@@ -1,0 +1,1612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="BalanceEnquiry">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="reference" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="BalanceEnquiry_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccountBalance">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccountBalance_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccountName">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccountName_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WithdrawalRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="trace" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="WithdrawalRequest_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Decline">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="trace" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Decline_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Inserttojournal">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tranDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="otherd" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="reference" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="spotcashAmount" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Inserttojournal_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InserttojournalDeposits">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tranDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="otherd" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InserttojournalDeposits_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Accounts">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Accounts_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetDebitableAccounts">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetDebitableAccounts_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetCreditableAccounts">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetCreditableAccounts_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Ministatement">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="reference" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="noTransactions" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Ministatement_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Loanbalances">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Loanbalances_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanStatus">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanStatus_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Sms">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Sms_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PayLoan">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="loanno" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="accountNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="documentno" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PayLoan_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Transfer">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="debitacc" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="creditacc" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="reference" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transfertype" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Transfer_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Minicharge">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Minicharge_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Balcharge">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Balcharge_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Msacocharge">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Msacocharge_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Transfercharge">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Transfercharge_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Smsupdate">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="status" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="balance" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Smsupdate_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="BOSANameByMemberNo">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="memberNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="BOSANameByMemberNo_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="BOSANameByIdNo">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="idNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="BOSANameByIdNo_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertMsaccoOtherServices">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="traceID" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="accountNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephoneNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transactionType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="chequeLeafFrom" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="chequeLeafTo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transactionDate" type="dateTime" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertMsaccoOtherServices_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CallManualFunctions">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="CallManualFunctions_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="TransferToAccountName">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="accountNumberTo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="TransferToAccountName_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetBOSANumber">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetBOSANumber_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Send_Sms">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="source" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="textsms" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Send_Sms_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PostmanualDeposits">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PostmanualDeposits_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="InserttojournalMdeposits">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tranDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="otherd" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InserttojournalMdeposits_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostmanualWithdrawals">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PostmanualWithdrawals_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="InserttojournalMwithdrawals">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tranDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="otherd" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="spotReference" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InserttojournalMwithdrawals_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InserttojournalM">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tranDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="otherd" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephoneNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="corporateNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InserttojournalM_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UtilityPayment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tranDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="otherd" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UtilityPayment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ShareContribution">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="receiptno" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phoneNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="accountNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ShareContribution_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostmanualShareContribution">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PostmanualShareContribution_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="InserttojournalMshares">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tranDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="otherd" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InserttojournalMshares_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Postmanualutilitypayment">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Postmanualutilitypayment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostmanualLoanRepayments">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PostmanualLoanRepayments_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Registrations">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Registrations_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetLoanStatus">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetLoanStatus_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostSMSAlertCharges">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PostSMSAlertCharges_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="UpdateUnpostedLoans">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="UpdateUnpostedLoans_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="LoanEligibility">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="loantypes" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanEligibility_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Loanbal">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="loanTypes" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Loanbal_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanRepayment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="reference" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="loantypes" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="source" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanRepayment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="reference" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="loanTypes" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanRequest_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="BalanceEnquiry">
+    <part name="parameters" element="tns:BalanceEnquiry" />
+  </message>
+  <message name="BalanceEnquiry_Result">
+    <part name="parameters" element="tns:BalanceEnquiry_Result" />
+  </message>
+  <message name="AccountBalance">
+    <part name="parameters" element="tns:AccountBalance" />
+  </message>
+  <message name="AccountBalance_Result">
+    <part name="parameters" element="tns:AccountBalance_Result" />
+  </message>
+  <message name="AccountName">
+    <part name="parameters" element="tns:AccountName" />
+  </message>
+  <message name="AccountName_Result">
+    <part name="parameters" element="tns:AccountName_Result" />
+  </message>
+  <message name="WithdrawalRequest">
+    <part name="parameters" element="tns:WithdrawalRequest" />
+  </message>
+  <message name="WithdrawalRequest_Result">
+    <part name="parameters" element="tns:WithdrawalRequest_Result" />
+  </message>
+  <message name="Decline">
+    <part name="parameters" element="tns:Decline" />
+  </message>
+  <message name="Decline_Result">
+    <part name="parameters" element="tns:Decline_Result" />
+  </message>
+  <message name="Inserttojournal">
+    <part name="parameters" element="tns:Inserttojournal" />
+  </message>
+  <message name="Inserttojournal_Result">
+    <part name="parameters" element="tns:Inserttojournal_Result" />
+  </message>
+  <message name="InserttojournalDeposits">
+    <part name="parameters" element="tns:InserttojournalDeposits" />
+  </message>
+  <message name="InserttojournalDeposits_Result">
+    <part name="parameters" element="tns:InserttojournalDeposits_Result" />
+  </message>
+  <message name="Accounts">
+    <part name="parameters" element="tns:Accounts" />
+  </message>
+  <message name="Accounts_Result">
+    <part name="parameters" element="tns:Accounts_Result" />
+  </message>
+  <message name="GetDebitableAccounts">
+    <part name="parameters" element="tns:GetDebitableAccounts" />
+  </message>
+  <message name="GetDebitableAccounts_Result">
+    <part name="parameters" element="tns:GetDebitableAccounts_Result" />
+  </message>
+  <message name="GetCreditableAccounts">
+    <part name="parameters" element="tns:GetCreditableAccounts" />
+  </message>
+  <message name="GetCreditableAccounts_Result">
+    <part name="parameters" element="tns:GetCreditableAccounts_Result" />
+  </message>
+  <message name="Ministatement">
+    <part name="parameters" element="tns:Ministatement" />
+  </message>
+  <message name="Ministatement_Result">
+    <part name="parameters" element="tns:Ministatement_Result" />
+  </message>
+  <message name="Loanbalances">
+    <part name="parameters" element="tns:Loanbalances" />
+  </message>
+  <message name="Loanbalances_Result">
+    <part name="parameters" element="tns:Loanbalances_Result" />
+  </message>
+  <message name="LoanStatus">
+    <part name="parameters" element="tns:LoanStatus" />
+  </message>
+  <message name="LoanStatus_Result">
+    <part name="parameters" element="tns:LoanStatus_Result" />
+  </message>
+  <message name="Sms">
+    <part name="parameters" element="tns:Sms" />
+  </message>
+  <message name="Sms_Result">
+    <part name="parameters" element="tns:Sms_Result" />
+  </message>
+  <message name="PayLoan">
+    <part name="parameters" element="tns:PayLoan" />
+  </message>
+  <message name="PayLoan_Result">
+    <part name="parameters" element="tns:PayLoan_Result" />
+  </message>
+  <message name="Transfer">
+    <part name="parameters" element="tns:Transfer" />
+  </message>
+  <message name="Transfer_Result">
+    <part name="parameters" element="tns:Transfer_Result" />
+  </message>
+  <message name="Minicharge">
+    <part name="parameters" element="tns:Minicharge" />
+  </message>
+  <message name="Minicharge_Result">
+    <part name="parameters" element="tns:Minicharge_Result" />
+  </message>
+  <message name="Balcharge">
+    <part name="parameters" element="tns:Balcharge" />
+  </message>
+  <message name="Balcharge_Result">
+    <part name="parameters" element="tns:Balcharge_Result" />
+  </message>
+  <message name="Msacocharge">
+    <part name="parameters" element="tns:Msacocharge" />
+  </message>
+  <message name="Msacocharge_Result">
+    <part name="parameters" element="tns:Msacocharge_Result" />
+  </message>
+  <message name="Transfercharge">
+    <part name="parameters" element="tns:Transfercharge" />
+  </message>
+  <message name="Transfercharge_Result">
+    <part name="parameters" element="tns:Transfercharge_Result" />
+  </message>
+  <message name="Smsupdate">
+    <part name="parameters" element="tns:Smsupdate" />
+  </message>
+  <message name="Smsupdate_Result">
+    <part name="parameters" element="tns:Smsupdate_Result" />
+  </message>
+  <message name="BOSANameByMemberNo">
+    <part name="parameters" element="tns:BOSANameByMemberNo" />
+  </message>
+  <message name="BOSANameByMemberNo_Result">
+    <part name="parameters" element="tns:BOSANameByMemberNo_Result" />
+  </message>
+  <message name="BOSANameByIdNo">
+    <part name="parameters" element="tns:BOSANameByIdNo" />
+  </message>
+  <message name="BOSANameByIdNo_Result">
+    <part name="parameters" element="tns:BOSANameByIdNo_Result" />
+  </message>
+  <message name="InsertMsaccoOtherServices">
+    <part name="parameters" element="tns:InsertMsaccoOtherServices" />
+  </message>
+  <message name="InsertMsaccoOtherServices_Result">
+    <part name="parameters" element="tns:InsertMsaccoOtherServices_Result" />
+  </message>
+  <message name="CallManualFunctions">
+    <part name="parameters" element="tns:CallManualFunctions" />
+  </message>
+  <message name="CallManualFunctions_Result">
+    <part name="parameters" element="tns:CallManualFunctions_Result" />
+  </message>
+  <message name="TransferToAccountName">
+    <part name="parameters" element="tns:TransferToAccountName" />
+  </message>
+  <message name="TransferToAccountName_Result">
+    <part name="parameters" element="tns:TransferToAccountName_Result" />
+  </message>
+  <message name="GetBOSANumber">
+    <part name="parameters" element="tns:GetBOSANumber" />
+  </message>
+  <message name="GetBOSANumber_Result">
+    <part name="parameters" element="tns:GetBOSANumber_Result" />
+  </message>
+  <message name="Send_Sms">
+    <part name="parameters" element="tns:Send_Sms" />
+  </message>
+  <message name="Send_Sms_Result">
+    <part name="parameters" element="tns:Send_Sms_Result" />
+  </message>
+  <message name="PostmanualDeposits">
+    <part name="parameters" element="tns:PostmanualDeposits" />
+  </message>
+  <message name="PostmanualDeposits_Result">
+    <part name="parameters" element="tns:PostmanualDeposits_Result" />
+  </message>
+  <message name="InserttojournalMdeposits">
+    <part name="parameters" element="tns:InserttojournalMdeposits" />
+  </message>
+  <message name="InserttojournalMdeposits_Result">
+    <part name="parameters" element="tns:InserttojournalMdeposits_Result" />
+  </message>
+  <message name="PostmanualWithdrawals">
+    <part name="parameters" element="tns:PostmanualWithdrawals" />
+  </message>
+  <message name="PostmanualWithdrawals_Result">
+    <part name="parameters" element="tns:PostmanualWithdrawals_Result" />
+  </message>
+  <message name="InserttojournalMwithdrawals">
+    <part name="parameters" element="tns:InserttojournalMwithdrawals" />
+  </message>
+  <message name="InserttojournalMwithdrawals_Result">
+    <part name="parameters" element="tns:InserttojournalMwithdrawals_Result" />
+  </message>
+  <message name="InserttojournalM">
+    <part name="parameters" element="tns:InserttojournalM" />
+  </message>
+  <message name="InserttojournalM_Result">
+    <part name="parameters" element="tns:InserttojournalM_Result" />
+  </message>
+  <message name="UtilityPayment">
+    <part name="parameters" element="tns:UtilityPayment" />
+  </message>
+  <message name="UtilityPayment_Result">
+    <part name="parameters" element="tns:UtilityPayment_Result" />
+  </message>
+  <message name="ShareContribution">
+    <part name="parameters" element="tns:ShareContribution" />
+  </message>
+  <message name="ShareContribution_Result">
+    <part name="parameters" element="tns:ShareContribution_Result" />
+  </message>
+  <message name="PostmanualShareContribution">
+    <part name="parameters" element="tns:PostmanualShareContribution" />
+  </message>
+  <message name="PostmanualShareContribution_Result">
+    <part name="parameters" element="tns:PostmanualShareContribution_Result" />
+  </message>
+  <message name="InserttojournalMshares">
+    <part name="parameters" element="tns:InserttojournalMshares" />
+  </message>
+  <message name="InserttojournalMshares_Result">
+    <part name="parameters" element="tns:InserttojournalMshares_Result" />
+  </message>
+  <message name="Postmanualutilitypayment">
+    <part name="parameters" element="tns:Postmanualutilitypayment" />
+  </message>
+  <message name="Postmanualutilitypayment_Result">
+    <part name="parameters" element="tns:Postmanualutilitypayment_Result" />
+  </message>
+  <message name="PostmanualLoanRepayments">
+    <part name="parameters" element="tns:PostmanualLoanRepayments" />
+  </message>
+  <message name="PostmanualLoanRepayments_Result">
+    <part name="parameters" element="tns:PostmanualLoanRepayments_Result" />
+  </message>
+  <message name="Registrations">
+    <part name="parameters" element="tns:Registrations" />
+  </message>
+  <message name="Registrations_Result">
+    <part name="parameters" element="tns:Registrations_Result" />
+  </message>
+  <message name="GetLoanStatus">
+    <part name="parameters" element="tns:GetLoanStatus" />
+  </message>
+  <message name="GetLoanStatus_Result">
+    <part name="parameters" element="tns:GetLoanStatus_Result" />
+  </message>
+  <message name="PostSMSAlertCharges">
+    <part name="parameters" element="tns:PostSMSAlertCharges" />
+  </message>
+  <message name="PostSMSAlertCharges_Result">
+    <part name="parameters" element="tns:PostSMSAlertCharges_Result" />
+  </message>
+  <message name="UpdateUnpostedLoans">
+    <part name="parameters" element="tns:UpdateUnpostedLoans" />
+  </message>
+  <message name="UpdateUnpostedLoans_Result">
+    <part name="parameters" element="tns:UpdateUnpostedLoans_Result" />
+  </message>
+  <message name="LoanEligibility">
+    <part name="parameters" element="tns:LoanEligibility" />
+  </message>
+  <message name="LoanEligibility_Result">
+    <part name="parameters" element="tns:LoanEligibility_Result" />
+  </message>
+  <message name="Loanbal">
+    <part name="parameters" element="tns:Loanbal" />
+  </message>
+  <message name="Loanbal_Result">
+    <part name="parameters" element="tns:Loanbal_Result" />
+  </message>
+  <message name="LoanRepayment">
+    <part name="parameters" element="tns:LoanRepayment" />
+  </message>
+  <message name="LoanRepayment_Result">
+    <part name="parameters" element="tns:LoanRepayment_Result" />
+  </message>
+  <message name="LoanRequest">
+    <part name="parameters" element="tns:LoanRequest" />
+  </message>
+  <message name="LoanRequest_Result">
+    <part name="parameters" element="tns:LoanRequest_Result" />
+  </message>
+  <portType name="SPOTCASH_Port">
+    <operation name="BalanceEnquiry">
+      <input name="BalanceEnquiry" message="tns:BalanceEnquiry" />
+      <output name="BalanceEnquiry_Result" message="tns:BalanceEnquiry_Result" />
+    </operation>
+    <operation name="AccountBalance">
+      <input name="AccountBalance" message="tns:AccountBalance" />
+      <output name="AccountBalance_Result" message="tns:AccountBalance_Result" />
+    </operation>
+    <operation name="AccountName">
+      <input name="AccountName" message="tns:AccountName" />
+      <output name="AccountName_Result" message="tns:AccountName_Result" />
+    </operation>
+    <operation name="WithdrawalRequest">
+      <input name="WithdrawalRequest" message="tns:WithdrawalRequest" />
+      <output name="WithdrawalRequest_Result" message="tns:WithdrawalRequest_Result" />
+    </operation>
+    <operation name="Decline">
+      <input name="Decline" message="tns:Decline" />
+      <output name="Decline_Result" message="tns:Decline_Result" />
+    </operation>
+    <operation name="Inserttojournal">
+      <input name="Inserttojournal" message="tns:Inserttojournal" />
+      <output name="Inserttojournal_Result" message="tns:Inserttojournal_Result" />
+    </operation>
+    <operation name="InserttojournalDeposits">
+      <input name="InserttojournalDeposits" message="tns:InserttojournalDeposits" />
+      <output name="InserttojournalDeposits_Result" message="tns:InserttojournalDeposits_Result" />
+    </operation>
+    <operation name="Accounts">
+      <input name="Accounts" message="tns:Accounts" />
+      <output name="Accounts_Result" message="tns:Accounts_Result" />
+    </operation>
+    <operation name="GetDebitableAccounts">
+      <input name="GetDebitableAccounts" message="tns:GetDebitableAccounts" />
+      <output name="GetDebitableAccounts_Result" message="tns:GetDebitableAccounts_Result" />
+    </operation>
+    <operation name="GetCreditableAccounts">
+      <input name="GetCreditableAccounts" message="tns:GetCreditableAccounts" />
+      <output name="GetCreditableAccounts_Result" message="tns:GetCreditableAccounts_Result" />
+    </operation>
+    <operation name="Ministatement">
+      <input name="Ministatement" message="tns:Ministatement" />
+      <output name="Ministatement_Result" message="tns:Ministatement_Result" />
+    </operation>
+    <operation name="Loanbalances">
+      <input name="Loanbalances" message="tns:Loanbalances" />
+      <output name="Loanbalances_Result" message="tns:Loanbalances_Result" />
+    </operation>
+    <operation name="LoanStatus">
+      <input name="LoanStatus" message="tns:LoanStatus" />
+      <output name="LoanStatus_Result" message="tns:LoanStatus_Result" />
+    </operation>
+    <operation name="Sms">
+      <input name="Sms" message="tns:Sms" />
+      <output name="Sms_Result" message="tns:Sms_Result" />
+    </operation>
+    <operation name="PayLoan">
+      <input name="PayLoan" message="tns:PayLoan" />
+      <output name="PayLoan_Result" message="tns:PayLoan_Result" />
+    </operation>
+    <operation name="Transfer">
+      <input name="Transfer" message="tns:Transfer" />
+      <output name="Transfer_Result" message="tns:Transfer_Result" />
+    </operation>
+    <operation name="Minicharge">
+      <input name="Minicharge" message="tns:Minicharge" />
+      <output name="Minicharge_Result" message="tns:Minicharge_Result" />
+    </operation>
+    <operation name="Balcharge">
+      <input name="Balcharge" message="tns:Balcharge" />
+      <output name="Balcharge_Result" message="tns:Balcharge_Result" />
+    </operation>
+    <operation name="Msacocharge">
+      <input name="Msacocharge" message="tns:Msacocharge" />
+      <output name="Msacocharge_Result" message="tns:Msacocharge_Result" />
+    </operation>
+    <operation name="Transfercharge">
+      <input name="Transfercharge" message="tns:Transfercharge" />
+      <output name="Transfercharge_Result" message="tns:Transfercharge_Result" />
+    </operation>
+    <operation name="Smsupdate">
+      <input name="Smsupdate" message="tns:Smsupdate" />
+      <output name="Smsupdate_Result" message="tns:Smsupdate_Result" />
+    </operation>
+    <operation name="BOSANameByMemberNo">
+      <input name="BOSANameByMemberNo" message="tns:BOSANameByMemberNo" />
+      <output name="BOSANameByMemberNo_Result" message="tns:BOSANameByMemberNo_Result" />
+    </operation>
+    <operation name="BOSANameByIdNo">
+      <input name="BOSANameByIdNo" message="tns:BOSANameByIdNo" />
+      <output name="BOSANameByIdNo_Result" message="tns:BOSANameByIdNo_Result" />
+    </operation>
+    <operation name="InsertMsaccoOtherServices">
+      <input name="InsertMsaccoOtherServices" message="tns:InsertMsaccoOtherServices" />
+      <output name="InsertMsaccoOtherServices_Result" message="tns:InsertMsaccoOtherServices_Result" />
+    </operation>
+    <operation name="CallManualFunctions">
+      <input name="CallManualFunctions" message="tns:CallManualFunctions" />
+      <output name="CallManualFunctions_Result" message="tns:CallManualFunctions_Result" />
+    </operation>
+    <operation name="TransferToAccountName">
+      <input name="TransferToAccountName" message="tns:TransferToAccountName" />
+      <output name="TransferToAccountName_Result" message="tns:TransferToAccountName_Result" />
+    </operation>
+    <operation name="GetBOSANumber">
+      <input name="GetBOSANumber" message="tns:GetBOSANumber" />
+      <output name="GetBOSANumber_Result" message="tns:GetBOSANumber_Result" />
+    </operation>
+    <operation name="Send_Sms">
+      <input name="Send_Sms" message="tns:Send_Sms" />
+      <output name="Send_Sms_Result" message="tns:Send_Sms_Result" />
+    </operation>
+    <operation name="PostmanualDeposits">
+      <input name="PostmanualDeposits" message="tns:PostmanualDeposits" />
+      <output name="PostmanualDeposits_Result" message="tns:PostmanualDeposits_Result" />
+    </operation>
+    <operation name="InserttojournalMdeposits">
+      <input name="InserttojournalMdeposits" message="tns:InserttojournalMdeposits" />
+      <output name="InserttojournalMdeposits_Result" message="tns:InserttojournalMdeposits_Result" />
+    </operation>
+    <operation name="PostmanualWithdrawals">
+      <input name="PostmanualWithdrawals" message="tns:PostmanualWithdrawals" />
+      <output name="PostmanualWithdrawals_Result" message="tns:PostmanualWithdrawals_Result" />
+    </operation>
+    <operation name="InserttojournalMwithdrawals">
+      <input name="InserttojournalMwithdrawals" message="tns:InserttojournalMwithdrawals" />
+      <output name="InserttojournalMwithdrawals_Result" message="tns:InserttojournalMwithdrawals_Result" />
+    </operation>
+    <operation name="InserttojournalM">
+      <input name="InserttojournalM" message="tns:InserttojournalM" />
+      <output name="InserttojournalM_Result" message="tns:InserttojournalM_Result" />
+    </operation>
+    <operation name="UtilityPayment">
+      <input name="UtilityPayment" message="tns:UtilityPayment" />
+      <output name="UtilityPayment_Result" message="tns:UtilityPayment_Result" />
+    </operation>
+    <operation name="ShareContribution">
+      <input name="ShareContribution" message="tns:ShareContribution" />
+      <output name="ShareContribution_Result" message="tns:ShareContribution_Result" />
+    </operation>
+    <operation name="PostmanualShareContribution">
+      <input name="PostmanualShareContribution" message="tns:PostmanualShareContribution" />
+      <output name="PostmanualShareContribution_Result" message="tns:PostmanualShareContribution_Result" />
+    </operation>
+    <operation name="InserttojournalMshares">
+      <input name="InserttojournalMshares" message="tns:InserttojournalMshares" />
+      <output name="InserttojournalMshares_Result" message="tns:InserttojournalMshares_Result" />
+    </operation>
+    <operation name="Postmanualutilitypayment">
+      <input name="Postmanualutilitypayment" message="tns:Postmanualutilitypayment" />
+      <output name="Postmanualutilitypayment_Result" message="tns:Postmanualutilitypayment_Result" />
+    </operation>
+    <operation name="PostmanualLoanRepayments">
+      <input name="PostmanualLoanRepayments" message="tns:PostmanualLoanRepayments" />
+      <output name="PostmanualLoanRepayments_Result" message="tns:PostmanualLoanRepayments_Result" />
+    </operation>
+    <operation name="Registrations">
+      <input name="Registrations" message="tns:Registrations" />
+      <output name="Registrations_Result" message="tns:Registrations_Result" />
+    </operation>
+    <operation name="GetLoanStatus">
+      <input name="GetLoanStatus" message="tns:GetLoanStatus" />
+      <output name="GetLoanStatus_Result" message="tns:GetLoanStatus_Result" />
+    </operation>
+    <operation name="PostSMSAlertCharges">
+      <input name="PostSMSAlertCharges" message="tns:PostSMSAlertCharges" />
+      <output name="PostSMSAlertCharges_Result" message="tns:PostSMSAlertCharges_Result" />
+    </operation>
+    <operation name="UpdateUnpostedLoans">
+      <input name="UpdateUnpostedLoans" message="tns:UpdateUnpostedLoans" />
+      <output name="UpdateUnpostedLoans_Result" message="tns:UpdateUnpostedLoans_Result" />
+    </operation>
+    <operation name="LoanEligibility">
+      <input name="LoanEligibility" message="tns:LoanEligibility" />
+      <output name="LoanEligibility_Result" message="tns:LoanEligibility_Result" />
+    </operation>
+    <operation name="Loanbal">
+      <input name="Loanbal" message="tns:Loanbal" />
+      <output name="Loanbal_Result" message="tns:Loanbal_Result" />
+    </operation>
+    <operation name="LoanRepayment">
+      <input name="LoanRepayment" message="tns:LoanRepayment" />
+      <output name="LoanRepayment_Result" message="tns:LoanRepayment_Result" />
+    </operation>
+    <operation name="LoanRequest">
+      <input name="LoanRequest" message="tns:LoanRequest" />
+      <output name="LoanRequest_Result" message="tns:LoanRequest_Result" />
+    </operation>
+  </portType>
+  <binding name="SPOTCASH_Binding" type="tns:SPOTCASH_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="BalanceEnquiry">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:BalanceEnquiry" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="BalanceEnquiry">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="BalanceEnquiry_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AccountBalance">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:AccountBalance" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AccountBalance">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AccountBalance_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AccountName">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:AccountName" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AccountName">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AccountName_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="WithdrawalRequest">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:WithdrawalRequest" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="WithdrawalRequest">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="WithdrawalRequest_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Decline">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Decline" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Decline">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Decline_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Inserttojournal">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Inserttojournal" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Inserttojournal">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Inserttojournal_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InserttojournalDeposits">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:InserttojournalDeposits" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InserttojournalDeposits">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InserttojournalDeposits_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Accounts">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Accounts" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Accounts">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Accounts_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetDebitableAccounts">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:GetDebitableAccounts" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetDebitableAccounts">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetDebitableAccounts_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetCreditableAccounts">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:GetCreditableAccounts" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetCreditableAccounts">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetCreditableAccounts_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Ministatement">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Ministatement" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Ministatement">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Ministatement_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Loanbalances">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Loanbalances" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Loanbalances">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Loanbalances_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="LoanStatus">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:LoanStatus" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="LoanStatus">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="LoanStatus_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Sms">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Sms" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Sms">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Sms_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PayLoan">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:PayLoan" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PayLoan">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PayLoan_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Transfer">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Transfer" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Transfer">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Transfer_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Minicharge">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Minicharge" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Minicharge">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Minicharge_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Balcharge">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Balcharge" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Balcharge">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Balcharge_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Msacocharge">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Msacocharge" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Msacocharge">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Msacocharge_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Transfercharge">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Transfercharge" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Transfercharge">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Transfercharge_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Smsupdate">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Smsupdate" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Smsupdate">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Smsupdate_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="BOSANameByMemberNo">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:BOSANameByMemberNo" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="BOSANameByMemberNo">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="BOSANameByMemberNo_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="BOSANameByIdNo">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:BOSANameByIdNo" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="BOSANameByIdNo">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="BOSANameByIdNo_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InsertMsaccoOtherServices">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:InsertMsaccoOtherServices" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InsertMsaccoOtherServices">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InsertMsaccoOtherServices_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CallManualFunctions">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:CallManualFunctions" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CallManualFunctions">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CallManualFunctions_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="TransferToAccountName">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:TransferToAccountName" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="TransferToAccountName">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="TransferToAccountName_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetBOSANumber">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:GetBOSANumber" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetBOSANumber">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetBOSANumber_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Send_Sms">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Send_Sms" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Send_Sms">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Send_Sms_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PostmanualDeposits">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:PostmanualDeposits" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostmanualDeposits">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostmanualDeposits_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InserttojournalMdeposits">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:InserttojournalMdeposits" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InserttojournalMdeposits">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InserttojournalMdeposits_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PostmanualWithdrawals">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:PostmanualWithdrawals" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostmanualWithdrawals">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostmanualWithdrawals_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InserttojournalMwithdrawals">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:InserttojournalMwithdrawals" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InserttojournalMwithdrawals">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InserttojournalMwithdrawals_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InserttojournalM">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:InserttojournalM" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InserttojournalM">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InserttojournalM_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UtilityPayment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:UtilityPayment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UtilityPayment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UtilityPayment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ShareContribution">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:ShareContribution" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ShareContribution">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ShareContribution_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PostmanualShareContribution">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:PostmanualShareContribution" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostmanualShareContribution">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostmanualShareContribution_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InserttojournalMshares">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:InserttojournalMshares" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InserttojournalMshares">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InserttojournalMshares_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Postmanualutilitypayment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Postmanualutilitypayment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Postmanualutilitypayment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Postmanualutilitypayment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PostmanualLoanRepayments">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:PostmanualLoanRepayments" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostmanualLoanRepayments">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostmanualLoanRepayments_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Registrations">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Registrations" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Registrations">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Registrations_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetLoanStatus">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:GetLoanStatus" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetLoanStatus">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetLoanStatus_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PostSMSAlertCharges">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:PostSMSAlertCharges" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostSMSAlertCharges">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostSMSAlertCharges_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateUnpostedLoans">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:UpdateUnpostedLoans" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateUnpostedLoans">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateUnpostedLoans_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="LoanEligibility">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:LoanEligibility" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="LoanEligibility">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="LoanEligibility_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Loanbal">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:Loanbal" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Loanbal">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Loanbal_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="LoanRepayment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:LoanRepayment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="LoanRepayment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="LoanRepayment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="LoanRequest">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/SPOTCASH:LoanRequest" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="LoanRequest">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="LoanRequest_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SPOTCASH">
+    <port name="SPOTCASH_Port" binding="tns:SPOTCASH_Binding">
+      <address location="http://vaio:1112/Sheria/WS/SHERIA%20SACCO%20SOCIETY%20LTD./Codeunit/SPOTCASH" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

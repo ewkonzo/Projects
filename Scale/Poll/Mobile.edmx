@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MobileModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Aspirants">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="aspirant code" Type="varchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Constituency" Type="int" />
+          <Property Name="position" Type="nvarchar" MaxLength="50" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="constituencies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="constituency" Type="nvarchar" MaxLength="50" />
+          <Property Name="shortcode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="polls">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="msisdn" Type="nvarchar" MaxLength="50" />
+          <Property Name="constituency" Type="bigint" />
+          <Property Name="aspirant" Type="bigint" />
+        </EntityType>
+        <EntityType Name="session variables">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="session" Type="nvarchar" MaxLength="50" />
+          <Property Name="var key" Type="nvarchar" MaxLength="50" />
+          <Property Name="var value" Type="nvarchar" MaxLength="50" />
+          <Property Name="var id" Type="int" />
+          <Property Name="type" Type="nchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="ussd">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="date" Type="date" />
+          <Property Name="time" Type="datetime" />
+          <Property Name="msisdn" Type="nvarchar" MaxLength="50" />
+          <Property Name="session" Type="nvarchar" MaxLength="50" />
+          <Property Name="ussdcode" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="MobileModelStoreContainer">
+          <EntitySet Name="Aspirants" EntityType="Self.Aspirants" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="constituencies" EntityType="Self.constituencies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="polls" EntityType="Self.polls" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="session variables" EntityType="Self.session variables" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ussd" EntityType="Self.ussd" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MobileModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Aspirant">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="aspirant_code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Constituency" Type="Int32" />
+          <Property Name="position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="constituency">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="constituency1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="shortcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="poll">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="msisdn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="constituency" Type="Int64" />
+          <Property Name="aspirant" Type="Int64" />
+        </EntityType>
+        <EntityType Name="session_variable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="session" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="var_key" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="var_value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="var_id" Type="Int32" />
+          <Property Name="type" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ussd">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="date" Type="DateTime" Precision="0" />
+          <Property Name="time" Type="DateTime" Precision="3" />
+          <Property Name="msisdn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="session" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ussdcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="MobileEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Aspirants" EntityType="Self.Aspirant" />
+          <EntitySet Name="constituencies" EntityType="Self.constituency" />
+          <EntitySet Name="polls" EntityType="Self.poll" />
+          <EntitySet Name="session_variables" EntityType="Self.session_variable" />
+          <EntitySet Name="ussds" EntityType="Self.ussd" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MobileModelStoreContainer" CdmEntityContainer="MobileEntities">
+          <EntitySetMapping Name="Aspirants">
+            <EntityTypeMapping TypeName="MobileModel.Aspirant">
+              <MappingFragment StoreEntitySet="Aspirants">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="aspirant_code" ColumnName="aspirant code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Constituency" ColumnName="Constituency" />
+                <ScalarProperty Name="position" ColumnName="position" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="constituencies">
+            <EntityTypeMapping TypeName="MobileModel.constituency">
+              <MappingFragment StoreEntitySet="constituencies">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="constituency1" ColumnName="constituency" />
+                <ScalarProperty Name="shortcode" ColumnName="shortcode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="polls">
+            <EntityTypeMapping TypeName="MobileModel.poll">
+              <MappingFragment StoreEntitySet="polls">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="msisdn" ColumnName="msisdn" />
+                <ScalarProperty Name="constituency" ColumnName="constituency" />
+                <ScalarProperty Name="aspirant" ColumnName="aspirant" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="session_variables">
+            <EntityTypeMapping TypeName="MobileModel.session_variable">
+              <MappingFragment StoreEntitySet="session variables">
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="session" ColumnName="session" />
+                <ScalarProperty Name="var_key" ColumnName="var key" />
+                <ScalarProperty Name="var_value" ColumnName="var value" />
+                <ScalarProperty Name="var_id" ColumnName="var id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ussds">
+            <EntityTypeMapping TypeName="MobileModel.ussd">
+              <MappingFragment StoreEntitySet="ussd">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="msisdn" ColumnName="msisdn" />
+                <ScalarProperty Name="session" ColumnName="session" />
+                <ScalarProperty Name="ussdcode" ColumnName="ussdcode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

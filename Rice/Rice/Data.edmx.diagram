@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a57ee152b18d4deda1ac396bfc6bce12" Name="Diagram1">
+        <EntityTypeShape EntityType="RiceModel.Crop" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RiceModel.User" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RiceModel.Dimension" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RiceModel.Customer" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="RiceModel.Paddy_Detail" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="RiceModel.Bag_Weight" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RiceModel.Transporter" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RiceModel.Unit" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RiceModel.Bank_Account" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="RiceModel.Contact" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="RiceModel.Farmer" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RiceModel.Company" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="RiceModel.Variant" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RiceModel.Sales_Price" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RiceModel.Items_Header" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="RiceModel.Outlet" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RiceModel.Items_Services_List" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RiceModel.Category_location" Width="1.5" PointX="12.75" PointY="12.75" />
+        <EntityTypeShape EntityType="RiceModel.Items_Services" Width="1.5" PointX="0.75" PointY="13.75" />
+        <EntityTypeShape EntityType="RiceModel.Vendor" Width="1.5" PointX="2.75" PointY="13.75" />
+        <EntityTypeShape EntityType="RiceModel.Item_Movement" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RiceModel.Item_Movement_Header" Width="1.5" PointX="14.75" PointY="7.75" />
+        <EntityTypeShape EntityType="RiceModel.Item_Conversion_Matrix" Width="1.5" PointX="8.75" PointY="14.75" />
+        <EntityTypeShape EntityType="RiceModel.Item_Reversal" Width="1.5" PointX="14.75" PointY="14.75" />
+        <EntityTypeShape EntityType="RiceModel.Setting" Width="1.5" PointX="10.75" PointY="15.75" />
+        <EntityTypeShape EntityType="RiceModel.User_outlet" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="RiceModel.Resource" Width="1.5" PointX="0.75" PointY="16.75" />
+        <EntityTypeShape EntityType="RiceModel.Item_Balance" Width="1.5" PointX="2.75" PointY="16.75" />
+        <EntityTypeShape EntityType="RiceModel.Paddy_Bag" Width="1.5" PointX="16.75" PointY="3.75" />
+        <EntityTypeShape EntityType="RiceModel.Transferred_Item" Width="1.5" PointX="4.75" PointY="16.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

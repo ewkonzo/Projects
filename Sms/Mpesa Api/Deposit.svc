@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Mpesa_Api.Deposit" CodeBehind="Deposit.svc.cs" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>

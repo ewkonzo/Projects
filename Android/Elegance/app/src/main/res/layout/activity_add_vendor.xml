@@ -1,0 +1,331 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="elegance.hasoft.com.elegance.AddVendor"
+    android:background="@color/white">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        >
+    </include>
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+          >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            >
+
+            <elegance.hasoft.com.elegance.RoundedImage
+                android:layout_height="100dp"
+                android:layout_width="100dp"
+                android:layout_gravity="left"
+                android:src="@mipmap/user"
+                android:id="@+id/vimage"
+                />
+            <floatt.FloatingActionButton
+                android:id="@+id/photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:src="@android:drawable/ic_menu_camera"
+                fab:fab_colorNormal="@color/orange"
+                fab:fab_colorPressed="@color/primary_pressed"
+                fab:fab_colorRipple="@color/ripple"
+                android:layout_gravity="right"
+                />
+
+
+</LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Enter Vendor's Name"
+                android:id="@+id/textView1"
+                android:textColor="@color/theme"
+                android:layout_alignParentLeft="true"
+                style="@style/CodeFont"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/speccat"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:ems="20"
+                android:id="@+id/name"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:hint="Enter Vendor's Name"
+                android:textColorHint="@color/dark_gray"
+                android:textColorHighlight="@color/black"
+                android:background="@drawable/editview"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                style="@style/CodeFont"
+                android:textCursorDrawable="@null"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="30dp"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Choose Vendor's Products"
+                android:id="@+id/textView2"
+                android:textColor="@color/theme"
+                android:layout_alignParentLeft="true"
+                style="@style/CodeFont"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/spectype"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <Spinner
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:id="@+id/speccat"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <floatt.FloatingActionButton
+                    android:id="@+id/add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:src="@android:drawable/ic_menu_add"
+                    fab:fab_colorNormal="@color/orange"
+                    fab:fab_colorPressed="@color/primary_pressed"
+                    fab:fab_colorRipple="@color/ripple"
+                    android:layout_gravity="bottom|right"
+                    fab:fab_size="mini"
+                    />
+
+                </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Vendor's Contact Information"
+                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
+                style="@style/CodeFont"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textSize="26dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Vendor's PhoneNumber"
+                android:textColor="@color/theme"
+                android:layout_alignParentLeft="true"
+                style="@style/CodeFont"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/speccat"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:ems="20"
+                android:id="@+id/vphonenumber"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:hint="Enter Vendor's Phone Number"
+                android:textColorHint="@color/dark_gray"
+                android:textColorHighlight="@color/black"
+                android:background="@drawable/editview"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                style="@style/CodeFont"
+                android:textCursorDrawable="@null"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Vendor's Email Address"
+                android:textColor="@color/theme"
+                android:layout_alignParentLeft="true"
+                style="@style/CodeFont"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/speccat"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="20"
+                android:id="@+id/vemail"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:hint="Enter Vendor's Email Address"
+                android:textColorHint="@color/dark_gray"
+                android:textColorHighlight="@color/black"
+                android:background="@drawable/editview"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                style="@style/CodeFont"
+                android:textCursorDrawable="@null"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="30dp"
+                />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Vendor's Location Information"
+                android:textColor="@color/black"
+                android:layout_alignParentLeft="true"
+                style="@style/CodeFont"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textSize="26dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Choose Vendor's Country"
+                android:textColor="@color/theme"
+                android:layout_alignParentLeft="true"
+                style="@style/CodeFont"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/speccat"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:id="@+id/speccountry"
+                android:layout_marginTop="10dp"
+                style="@android:style/Widget.Holo.Light.Spinner"
+                android:textColor="@color/blue"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Enter Vendor's State/City/Province"
+                android:textColor="@color/theme"
+                android:layout_alignParentLeft="true"
+                style="@style/CodeFont"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/speccat"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="20"
+                android:id="@+id/vstate"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:hint="Enter Vendor's State/City/Province"
+                android:textColorHint="@color/dark_gray"
+                android:textColorHighlight="@color/black"
+                android:background="@drawable/editview"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                style="@style/CodeFont"
+                android:textCursorDrawable="@null"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="30dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Enter Vendor's Market"
+                android:textColor="@color/theme"
+                android:layout_alignParentLeft="true"
+                style="@style/CodeFont"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/speccat"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="20"
+                android:id="@+id/vmarket"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/black"
+                android:hint="Enter Vendor's Market"
+                android:textColorHint="@color/dark_gray"
+                android:textColorHighlight="@color/black"
+                android:background="@drawable/editview"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                style="@style/CodeFont"
+                android:textCursorDrawable="@null"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="30dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+    <floatt.FloatingActionButton
+        android:id="@+id/proceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_action_done"
+        fab:fab_colorNormal="@color/orange"
+        fab:fab_colorPressed="@color/primary_pressed"
+        fab:fab_colorRipple="@color/ripple"
+        android:layout_gravity="bottom|right"
+        />
+
+</FrameLayout>

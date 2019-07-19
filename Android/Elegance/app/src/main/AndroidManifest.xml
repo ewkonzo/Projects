@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="elegance.hasoft.com.elegance" >
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Creates a custom permission so only this app can receive its messages. -->
+    <permission
+        android:name="elegance.hasoft.com.elegance.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission
+        android:name="elegance.hasoft.com.elegance.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".Main"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="org.achartengine.GraphicalActivity" />
+        <activity
+            android:name=".SetUp"
+            android:label="@string/title_activity_set_up" >
+        </activity>
+        <activity
+            android:name=".LogIn"
+            android:label="@string/title_activity_log_in" >
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home" >
+        </activity>
+        <activity
+            android:name=".New"
+            android:label="@string/title_activity_new"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".Search"
+            android:label="@string/title_activity_search"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".SubItem"
+            android:label="@string/title_activity_sub_item"
+            android:parentActivityName=".Search" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Search" />
+        </activity>
+        <activity
+            android:name=".Results"
+            android:label="@string/title_activity_results"
+            android:parentActivityName=".SubItem" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.SubItem" />
+        </activity>
+        <activity
+            android:name=".Sale"
+            android:label="@string/title_activity_sale"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".Extras"
+            android:label="@string/title_activity_extras"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".Purchase"
+            android:label="@string/title_activity_purchase"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".Cart"
+            android:label="@string/title_activity_cart"
+            android:parentActivityName=".Sale" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Sale" />
+        </activity>
+        <activity
+            android:name=".Discount"
+            android:label="@string/title_activity_discount"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".SwitchUser"
+            android:label="@string/title_activity_switch_user"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".BarCode"
+            android:label="@string/title_activity_bar_code"
+            android:parentActivityName=".Sale" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Sale" />
+        </activity>
+        <activity
+            android:name=".Reports"
+            android:label="@string/title_activity_reports"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".NewUser"
+            android:label="@string/title_activity_new_user"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".NewItems"
+            android:label="@string/title_activity_new_items"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".Buy"
+            android:label="@string/title_activity_buy"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".NewGroup"
+            android:label="@string/title_activity_new_group"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".Notes"
+            android:label="@string/title_activity_notes"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".NewProducts"
+            android:label="@string/title_activity_new_products"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".Buy_Category"
+            android:label="@string/title_activity_buy__category" >
+        </activity>
+        <activity
+            android:name=".Buy_Items"
+            android:label="@string/title_activity_buy__items" >
+        </activity>
+        <activity
+            android:name=".Buy_SubItem"
+            android:label="@string/title_activity_buy__sub_item" >
+        </activity>
+        <activity
+            android:name=".Buy_More"
+            android:label="@string/title_activity_buy__more" >
+        </activity>
+        <activity
+            android:name=".Purchase_Cart"
+            android:label="@string/title_activity_purchase__cart" >
+        </activity>
+        <activity
+            android:name=".Browse"
+            android:label="@string/title_activity_browse" >
+        </activity>
+        <activity
+            android:name=".Add_Customer"
+            android:label="@string/title_activity_add__customer" >
+        </activity>
+        <activity
+            android:name=".Submit_Sales"
+            android:label="@string/title_activity_submit__sales" >
+        </activity>
+        <activity
+            android:name=".ExchangeRate"
+            android:label="@string/title_activity_exchange_rate"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".Expenses"
+            android:label="@string/title_activity_expenses"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".Vendor"
+            android:label="@string/title_activity_vendor"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".Buy_Cards"
+            android:label="@string/title_activity_buy__cards" >
+        </activity>
+        <activity
+            android:name=".AddVendor"
+            android:label="@string/title_activity_add_vendor"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="elegance.hasoft.com.elegance.Home" />
+        </activity>
+        <activity
+            android:name=".Users"
+            android:label="@string/title_activity_users" >
+        </activity>
+    </application>
+
+</manifest>

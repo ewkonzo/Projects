@@ -1,0 +1,36 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="Bandari_Sacco.Login" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+      <title>Bandari Sacco Members Portal.</title>
+
+        <%--<link rel="shortcut icon" href="images/"   type="image/x-icon" />--%>
+            <link rel="Stylesheet" type="text/css" href="Styles/Site.css" />
+            <link rel="Stylesheet" type="text/css" href="Styles/assets/css/bootstrap.css" />
+    <script src="Scripts/jQuery.Bootstrap.min.js"></script>
+    <link href="Content/Bootstrap.FontAwsome.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="row hidden-xs" style="min-height: 150px;"></div>
+    <div class="row hidden-sm hidden-md hidden-lg" style="min-height: 50px;"></div>
+    <form id="form1" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+      </asp:ContentPlaceHolder>
+    </form>
+         <div class="footer text-center"><p>Copyright &copy; <% DateTime dt = DateTime.Now;
+                      Response.Write(dt.Year.ToString()); %> <strong> | </strong>
+                     <a href="http://www.bandarisacco.co.ke/">Bandari Sacco Ltd.</a> <strong> | </strong> 
+                        
+             <b>Powered By </b>
+                      <a href="http://www.iansoftltd.com" target="_blank" style="color: #000">
+                     Iansoft Technologies Ltd</a></p>
+                     
+                        
+                       
+</div>
+</body>
+</html>
+

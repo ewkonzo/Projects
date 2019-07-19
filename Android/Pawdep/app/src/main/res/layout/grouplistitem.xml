@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+    <data class="Grouplist" >
+
+        <variable
+            name="transaction"
+            type="com.example.pawdep.Trans" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+
+        android:layout_margin="3dp">
+
+        <TextView
+            android:id="@+id/transid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="transaction no"
+            android:textSize="10dp"
+            android:ellipsize="start"
+            android:singleLine="true"
+            android:text="@{transaction.Transaction_No}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/date"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Date"
+            android:text="@{``+transaction.Date}"
+            android:textSize="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/transid" />
+
+        <TextView
+            android:id="@+id/groupcode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="groupcode"
+            android:text="@{transaction.Group_Code}"
+
+            app:layout_constraintStart_toEndOf="@id/transid"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/groupname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="group name"
+            android:textSize="10dp"
+            android:ellipsize="marquee"
+            android:text="@{transaction.Group_Name}"
+            app:layout_constraintStart_toEndOf="@id/date"
+            app:layout_constraintEnd_toEndOf="@id/groupcode"
+            app:layout_constraintTop_toBottomOf="@id/groupcode"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/Loan_Principle_Paid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="Loan_Principle_Paid"
+            android:text="@{String.valueOf(transaction.Loan_Principle_Paid)}"
+            app:layout_constraintEnd_toEndOf="@id/Loan_Interest_Paid"
+            app:layout_constraintStart_toEndOf="@id/groupcode"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Loan_Interest_Paid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="Interest paid"
+            android:text="@{String.valueOf(transaction.Loan_Interest_Paid)}"
+            app:layout_constraintEnd_toEndOf="@id/Loan_Principle_Paid"
+            app:layout_constraintStart_toEndOf="@id/groupname"
+            app:layout_constraintTop_toBottomOf="@id/Loan_Principle_Paid" />
+
+        <TextView
+            android:id="@+id/Advance_Principle_Paid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="Advance_Principle_Paid"
+            android:text="@{String.valueOf(transaction.Advance_Principle_Paid)}"
+
+            app:layout_constraintStart_toEndOf="@id/Loan_Principle_Paid"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Advance_Interest_Paid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:hint="Advance_Interest_Paid"
+            android:text="@{String.valueOf(transaction.Advance_Interest_Paid)}"
+            app:layout_constraintEnd_toEndOf="@id/Advance_Principle_Paid"
+            app:layout_constraintStart_toEndOf="@id/Loan_Interest_Paid"
+            app:layout_constraintTop_toBottomOf="@id/Advance_Principle_Paid" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cardview"
+    android:elevation="1dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginBottom="5dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/y"
+          android:textColor="@color/theme"
+          android:textSize="16dp"
+          android:text="Search products..."/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:id="@+id/search"
+            android:textColor="@color/theme"
+            android:hint="Search"
+            android:layout_toLeftOf="@+id/imageButton"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/y"
+            android:maxLines="1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/editview"
+            android:textCursorDrawable="@null"/>
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_search"
+            android:background="@color/white"
+            style="?android:attr/borderlessButtonStyle"
+            android:onClick="search"
+            android:layout_below="@+id/y"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/imageButton"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

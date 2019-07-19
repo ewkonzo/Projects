@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="elegance.hasoft.com.elegance.Sale"
+    android:background="@color/dark_gray">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        >
+    </include>
+    <RelativeLayout
+        android:id="@+id/r"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@+id/toolbar"
+        android:background="@color/white"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Enter product code"
+            android:id="@+id/textView"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/pcode"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/black"
+            android:hint="Enter Product Code"
+            android:textColorHint="@color/dark_gray"
+            android:textColorHighlight="@color/white"
+            android:background="@drawable/editview"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textCursorDrawable="@null"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="30dp"
+            android:layout_toLeftOf="@+id/imageButton"
+            />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_search"
+            android:background="@color/white"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/imageButton"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/textView"
+           />
+</RelativeLayout>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listSearch"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/r"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:divider="@null"
+        android:dividerHeight="10dp"
+        android:layout_above="@+id/toolcart"/>
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/toolcart"
+        layout="@layout/toolcart"
+        android:layout_alignParentBottom="true"
+        >
+    </include>
+</RelativeLayout>

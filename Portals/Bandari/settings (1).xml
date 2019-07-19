@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Serverip>localhost</Serverip>
+  <domain>localhost</domain>
+  <Instance>Bandari</Instance>
+  <Port>342</Port>
+  <Username>Paul</Username>
+  <pass>Rahabgathoni1</pass>
+  <Companyname>IANSOFT</Companyname>
+  <PostIntervalinsec>60</PostIntervalinsec>
+  <Reconnectintervalinsec>3</Reconnectintervalinsec>
+  <logpath>C:\Mobile\Logs\Client\</logpath>
+  <usewindowsauth>true</usewindowsauth>
+</settings> 

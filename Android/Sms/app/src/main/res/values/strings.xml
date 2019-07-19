@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Sms</string>
+    <string name="title_activity_addclient">addclient</string>
+    <string name="title_activity_editsms">editsms</string>
+</resources>

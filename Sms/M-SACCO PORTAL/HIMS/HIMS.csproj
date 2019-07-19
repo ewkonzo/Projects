@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4DDD7052-2AEE-4254-93AA-E0BCCB3F1327}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HIMS</RootNamespace>
+    <AssemblyName>HIMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus, Version=3.1.3.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="AirtimeTopup.aspx" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="AddUsers.aspx" />
+    <Content Include="images\icons\Home.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\trimline.png" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="settings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="smstopupmobilenew.aspx" />
+    <Content Include="smstopupmobile.aspx" />
+    <Content Include="smstopupbulknew.aspx" />
+    <Content Include="smstopupbulk.aspx" />
+    <Content Include="images\icons\adduser.png" />
+    <Content Include="images\icons\airtime.png" />
+    <Content Include="images\icons\bulksms.png" />
+    <Content Include="images\icons\changePass.png" />
+    <Content Include="images\icons\ChangePassword.png" />
+    <Content Include="images\icons\daily-occupancy.png" />
+    <Content Include="images\icons\deposits.png" />
+    <Content Include="images\icons\fundtransfer.png" />
+    <Content Include="images\icons\GuestReport.png" />
+    <Content Include="images\icons\Guests.png" />
+    <Content Include="images\icons\in.png" />
+    <Content Include="images\icons\loanrepayment.jpg" />
+    <Content Include="images\icons\loanrepayment.png" />
+    <Content Include="images\icons\loans.png" />
+    <Content Include="images\icons\LockSystem.png" />
+    <Content Include="images\icons\message.png" />
+    <Content Include="images\icons\mobilesms.png" />
+    <Content Include="images\icons\My_Inbox.png" />
+    <Content Include="images\icons\occupancyRation.png" />
+    <Content Include="images\icons\out.png" />
+    <Content Include="images\icons\Permissions.png" />
+    <Content Include="images\icons\pinreset.png" />
+    <Content Include="images\icons\reservationReport.png" />
+    <Content Include="images\icons\RoomBeds.png" />
+    <Content Include="images\icons\RoomRates.png" />
+    <Content Include="images\icons\roomReport.png" />
+    <Content Include="images\icons\RoomTypes.png" />
+    <Content Include="images\icons\sendbulksms.png" />
+    <Content Include="images\icons\serviceReport.png" />
+    <Content Include="images\icons\serviceTypeReport.png" />
+    <Content Include="images\icons\Settings.png" />
+    <Content Include="images\icons\SwitchUsers.png" />
+    <Content Include="images\icons\Users.png" />
+    <Content Include="images\icons\utility.png" />
+    <Content Include="images\icons\virtual.png" />
+    <Content Include="images\icons\withdraws.png" />
+    <Content Include="images\small_writing.png" />
+    <Content Include="smsmsg.aspx" />
+    <Content Include="mobilesmstopup.aspx" />
+    <Content Include="FundTransfer.aspx" />
+    <Content Include="LoanRepayment.aspx" />
+    <Content Include="message.aspx" />
+    <Content Include="Loandetails.aspx" />
+    <Content Include="MsaccoLoans.aspx" />
+    <Content Include="newbulksmstopup.aspx" />
+    <Content Include="PinReset.aspx" />
+    <Content Include="SendBulkSMS.aspx" />
+    <Content Include="UserFiles\Default.aspx" />
+    <Content Include="Users.aspx" />
+    <Content Include="UtilityPayment.aspx" />
+    <Content Include="VirtualRegistration.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="Withdrawals.aspx" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="Loans.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\bg.jpg" />
+    <Content Include="images\calendar.gif" />
+    <Content Include="images\close.gif" />
+    <Content Include="images\contactus.png" />
+    <Content Include="images\contactus2.png" />
+    <Content Include="images\delete.png" />
+    <Content Include="images\download.png" />
+    <Content Include="images\download4.png" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\endBG.jpg" />
+    <Content Include="images\endprogressBG.jpg" />
+    <Content Include="images\excel.png" />
+    <Content Include="images\faq.png" />
+    <Content Include="images\faq2.png" />
+    <Content Include="images\full.jpg" />
+    <Content Include="images\header.png" />
+    <Content Include="images\home.png" />
+    <Content Include="images\icons\login.png" />
+    <Content Include="images\icons\m-articles.png" />
+    <Content Include="images\icons\m-custom.png" />
+    <Content Include="images\icons\m-files.png" />
+    <Content Include="images\icons\m-gallery.png" />
+    <Content Include="images\icons\m-settings.png" />
+    <Content Include="images\icons\m-statistics.png" />
+    <Content Include="images\icons\m-users.png" />
+    <Content Include="images\icons\reservation.png" />
+    <Content Include="images\icons\search.png" />
+    <Content Include="images\information.gif" />
+    <Content Include="images\instructions.png" />
+    <Content Include="images\instructions2.png" />
+    <Content Include="images\isactive.png" />
+    <Content Include="images\isinactive.png" />
+    <Content Include="images\l.jpg" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\logout.png" />
+    <Content Include="images\lprogressBG.jpg" />
+    <Content Include="images\new.png" />
+    <Content Include="images\new2.png" />
+    <Content Include="images\open.png" />
+    <Content Include="images\print.jpg" />
+    <Content Include="images\print.png" />
+    <Content Include="images\profile.png" />
+    <Content Include="images\progressBG.jpg" />
+    <Content Include="images\r.jpg" />
+    <Content Include="images\refresh.png" />
+    <Content Include="images\remove.png" />
+    <Content Include="images\remove2.png" />
+    <Content Include="images\setup.png" />
+    <Content Include="images\switch_minus.gif" />
+    <Content Include="images\switch_plus.gif" />
+    <Content Include="images\training.png" />
+    <Content Include="images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="images\waiting.gif" />
+    <Content Include="images\waiting2.gif" />
+    <Content Include="images\waiting__.gif" />
+    <Content Include="images\warning.gif" />
+    <Content Include="images\zero.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="Deposits.aspx" />
+    <Content Include="Scripts\calendar.js" />
+    <Content Include="Scripts\date.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\jquery-1.6.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.datePicker.js" />
+    <Content Include="Scripts\jquery.dimensions.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.layout.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.ui.accordion.js" />
+    <Content Include="Scripts\jquery.ui.core.js" />
+    <Content Include="Scripts\jquery.ui.mouse.js" />
+    <Content Include="Scripts\jquery.ui.sortable.js" />
+    <Content Include="Scripts\jquery.ui.tabs.js" />
+    <Content Include="Scripts\jquery.ui.widget.js" />
+    <Content Include="Styles\960.css" />
+    <Content Include="Styles\autocomplete_demos.css" />
+    <Content Include="Styles\caledarstyle.css" />
+    <Content Include="Styles\calendar.css" />
+    <Content Include="Styles\dashboard.css" />
+    <Content Include="Styles\datePicker.css" />
+    <Content Include="Styles\date_picker.css" />
+    <Content Include="Styles\dynarch_calendar.css" />
+    <Content Include="Styles\grid.css" />
+    <Content Include="Styles\home.css" />
+    <Content Include="Styles\ie.css" />
+    <Content Include="Styles\ie6.css" />
+    <Content Include="Styles\jquery-ui.css" />
+    <Content Include="Styles\jquery.ui.accordion.css" />
+    <Content Include="Styles\jquery.ui.all.css" />
+    <Content Include="Styles\jquery.ui.autocomplete.css" />
+    <Content Include="Styles\jquery.ui.base.css" />
+    <Content Include="Styles\jquery.ui.button.css" />
+    <Content Include="Styles\jquery.ui.core.css" />
+    <Content Include="Styles\jquery.ui.datepicker.css" />
+    <Content Include="Styles\jquery.ui.dialog.css" />
+    <Content Include="Styles\jquery.ui.progressbar.css" />
+    <Content Include="Styles\jquery.ui.resizable.css" />
+    <Content Include="Styles\jquery.ui.selectable.css" />
+    <Content Include="Styles\jquery.ui.slider.css" />
+    <Content Include="Styles\jquery.ui.tabs.css" />
+    <Content Include="Styles\jquery.ui.theme.css" />
+    <Content Include="Styles\layout.css" />
+    <Content Include="Styles\layout_receipt.css" />
+    <Content Include="Styles\menu_style.css" />
+    <Content Include="Styles\nav.css" />
+    <Content Include="Styles\new_layout_receipt.css" />
+    <Content Include="Styles\reset.css" />
+    <Content Include="Styles\screen.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Styles\stylesheet.css" />
+    <Content Include="Styles\text.css" />
+    <Content Include="Web.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Access.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AirtimeTopup.aspx.cs">
+      <DependentUpon>AirtimeTopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AirtimeTopup.aspx.designer.cs">
+      <DependentUpon>AirtimeTopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BulkSm.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CommonUtilities.cs" />
+    <Compile Include="AddUsers.aspx.cs">
+      <DependentUpon>AddUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddUsers.aspx.designer.cs">
+      <DependentUpon>AddUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="smstopupmobilenew.aspx.cs">
+      <DependentUpon>smstopupmobilenew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="smstopupmobilenew.aspx.designer.cs">
+      <DependentUpon>smstopupmobilenew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="smstopupmobile.aspx.cs">
+      <DependentUpon>smstopupmobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="smstopupmobile.aspx.designer.cs">
+      <DependentUpon>smstopupmobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="smstopupbulknew.aspx.cs">
+      <DependentUpon>smstopupbulknew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="smstopupbulknew.aspx.designer.cs">
+      <DependentUpon>smstopupbulknew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="smstopupbulk.aspx.cs">
+      <DependentUpon>smstopupbulk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="smstopupbulk.aspx.designer.cs">
+      <DependentUpon>smstopupbulk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="smsmsg.aspx.cs">
+      <DependentUpon>smsmsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="smsmsg.aspx.designer.cs">
+      <DependentUpon>smsmsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FUNCTIONCLASSES\bulkSmsTopup.cs" />
+    <Compile Include="FUNCTIONCLASSES\Connect.cs" />
+    <Compile Include="FUNCTIONCLASSES\DataAccessLayer.cs" />
+    <Compile Include="FUNCTIONCLASSES\mobileSmsTopup.cs" />
+    <Compile Include="FUNCTIONCLASSES\SaccoInformation.cs" />
+    <Compile Include="FUNCTIONCLASSES\SiteFunctions.cs" />
+    <Compile Include="mobilesmstopup.aspx.cs">
+      <DependentUpon>mobilesmstopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="mobilesmstopup.aspx.designer.cs">
+      <DependentUpon>mobilesmstopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FundTransfer.aspx.cs">
+      <DependentUpon>FundTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FundTransfer.aspx.designer.cs">
+      <DependentUpon>FundTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoanRepayment.aspx.cs">
+      <DependentUpon>LoanRepayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoanRepayment.aspx.designer.cs">
+      <DependentUpon>LoanRepayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="message.aspx.cs">
+      <DependentUpon>message.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="message.aspx.designer.cs">
+      <DependentUpon>message.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Loandetails.aspx.cs">
+      <DependentUpon>Loandetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loandetails.aspx.designer.cs">
+      <DependentUpon>Loandetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MsaccoLoans.aspx.cs">
+      <DependentUpon>MsaccoLoans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MsaccoLoans.aspx.designer.cs">
+      <DependentUpon>MsaccoLoans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newbulksmstopup.aspx.cs">
+      <DependentUpon>newbulksmstopup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newbulksmstopup.aspx.designer.cs">
+      <DependentUpon>newbulksmstopup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PinReset.aspx.cs">
+      <DependentUpon>PinReset.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PinReset.aspx.designer.cs">
+      <DependentUpon>PinReset.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SendBulkSMS.aspx.cs">
+      <DependentUpon>SendBulkSMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SendBulkSMS.aspx.designer.cs">
+      <DependentUpon>SendBulkSMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserFiles\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserFiles\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UtilityPayment.aspx.cs">
+      <DependentUpon>UtilityPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UtilityPayment.aspx.designer.cs">
+      <DependentUpon>UtilityPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VirtualRegistration.aspx.cs">
+      <DependentUpon>VirtualRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VirtualRegistration.aspx.designer.cs">
+      <DependentUpon>VirtualRegistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\sms\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Withdrawals.aspx.cs">
+      <DependentUpon>Withdrawals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Withdrawals.aspx.designer.cs">
+      <DependentUpon>Withdrawals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Loans.aspx.cs">
+      <DependentUpon>Loans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Loans.aspx.designer.cs">
+      <DependentUpon>Loans.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Deposits.aspx.cs">
+      <DependentUpon>Deposits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deposits.aspx.designer.cs">
+      <DependentUpon>Deposits.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Login.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Home.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Logging\Logging.csproj">
+      <Project>{1c78e6b7-870d-41d4-8234-fb43fe8b16b9}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sendsmss\smsdll40.csproj">
+      <Project>{231b7d65-2853-4f46-92a8-5a345ee226a0}</Project>
+      <Name>smsdll40</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:866/Service1.svc%3fsingleWsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\sms\</RelPath>
+      <UpdateFromURL>http://localhost:866/Service1.svc%3fsingleWsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>HIMS_sms_Service1</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\sms\CompositeType.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\sms\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\sms\Service1.wsdl" />
+    <Content Include="Web References\sms\sms.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>19024</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

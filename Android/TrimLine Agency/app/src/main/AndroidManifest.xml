@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.agency"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AgencyListActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AccountActivationActivity"
+            android:label="Account Activation"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".AccountOpening"
+            android:label="Account Opening"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".MemberRegistration"
+            android:label="Registration"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".CashWithdraw"
+            android:label="Withdraw Cash"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".CashDeposit"
+            android:label="Deposit Cash"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".LoanRepayment"
+            android:label="Loan Repayment"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".CashTransfer"
+            android:label="Cash Transfer"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".ShareDeposit"
+            android:label="Share Deposit"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".Sharevariation"
+            android:label="Share Variation"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".loanapplication"
+            android:label="Loan Application"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".BalanceEnquiry"
+            android:label="Balance Enquiry"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".Ministatement"
+            android:label="Mini Statement"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".ChangeClientPin"
+            android:label="Change Client Pin"
+            android:parentActivityName=".AgencyListActivity" />
+        <activity
+            android:name=".Settings"
+            android:label="Settings"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DeviceListActivity"
+            android:label="@string/title_activity_summary" />
+        <activity
+            android:name=".BTDeviceList"
+            android:label="@string/app_name" />
+        <activity android:name=".reports" />
+        <activity android:name=".summary"></activity>
+    </application>
+
+</manifest>

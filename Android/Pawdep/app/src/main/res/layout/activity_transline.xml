@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".transline">
+
+    <TextView
+        android:id="@+id/pawdep"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Pawdep No"
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/pawdep"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/savingsbf"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Savings b/F"
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/loansbf"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Loans b/F"
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/savingsbf"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/expprincipal"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Exp. Int"
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/loansbf"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/expectedinterest"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Exp. Prin."
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/expprincipal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Unpaid_Penalty"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Unpaid Pen."
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/expectedinterest"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/totalpaid"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Total"
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/Unpaid_Penalty"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/savings"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Savings"
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/totalpaid"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/penalty"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Penalty"
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/savings"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Loan_Principle_Paid"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Prin. Paid"
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/penalty"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Loan_Interest_Paid"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Int. Paid"
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/Loan_Principle_Paid"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fines"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Fines"
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/Loan_Interest_Paid"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hall"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="Hall"
+        android:theme="@style/tlistheader"
+        app:layout_constraintStart_toEndOf="@id/fines"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transline"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/savingsbf"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>

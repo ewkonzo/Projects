@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/theme</item>
+        <item name="android:alertDialogStyle">@style/MyAlertDialogStyle</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Application theme. -->
+
+    <style name="CodeFont" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">#000</item>
+        <item name="android:typeface">sans</item>
+    </style>
+
+
+    <style name="MyAlertDialogStyle">
+        <item name="android:fullDark">@color/theme</item>
+        <item name="android:topDark">@color/theme</item>
+        <item name="android:centerDark">@color/theme</item>
+        <item name="android:bottomDark">@color/theme</item>
+        <item name="android:fullBright">@color/theme</item>
+        <item name="android:topBright">@color/theme</item>
+        <item name="android:centerBright">@color/theme</item>
+        <item name="android:bottomBright">@color/theme</item>
+        <item name="android:bottomMedium">@color/theme</item>
+        <item name="android:centerMedium">@color/theme</item>
+    </style>
+</resources>

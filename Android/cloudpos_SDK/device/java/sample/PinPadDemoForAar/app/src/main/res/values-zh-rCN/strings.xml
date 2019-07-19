@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="app_name">密码键盘调用Demo</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">密码键盘调用Demo</string>
+    <string name="Open">打开</string>
+    <string name="Close">关闭</string>
+    <string name="PinpadOpening">正在打开密码键盘，请稍后...</string>
+    <string name="PinpadOpenSuc">密码键盘打开成功，请输入密码...</string>
+    <string name="PinblockTimeout">获取pinblock超时...</string>
+    <string name="PinblockFailed">获取pinblock失败...</string>
+    <string name="PinpadOpenFad">密码键盘打开失败...</string>
+    <string name="PinpadCloseSuc">密码键盘关闭成功...</string>
+    <string name="PinpadCloseFad">密码键盘关闭失败...</string>
+
+</resources>

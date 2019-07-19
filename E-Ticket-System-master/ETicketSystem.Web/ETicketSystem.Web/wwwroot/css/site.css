@@ -1,0 +1,45 @@
+﻿@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+li.active,
+li.blocked {
+    pointer-events: none;
+}
+
+li.bus-tickets a::before {
+    font-family: Fontawesome,sans-serif;
+    content: '\f207';
+    color: #9D9D9D;
+    margin-right: 5px;
+}
+
+li.bus-companies a::before {
+    font-family: Fontawesome,sans-serif;
+    content: '\f1ad';
+    color: #9D9D9D;
+    margin-right: 5px;
+}
+
+.alert-message {
+    font-size:1.2em;
+}
+
+footer {
+    text-align:center;
+    background-color:none;
+}
+
+select.disabled {
+    opacity: 0.7;
+    pointer-events: none;
+}

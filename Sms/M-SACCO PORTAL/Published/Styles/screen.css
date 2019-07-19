@@ -1,0 +1,317 @@
+		
+#header
+{
+padding-top: 5px ;
+text-align: center;
+background-image: url("../images/bg.gif"); 
+width: 100%;
+padding-bottom: 23px;
+}
+	
+.header-wrapper{
+width:400px;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+}
+.header-wrapper h2,h4{
+margin: 0;
+padding: 0;
+
+}
+
+.header-wrapper h2{
+font-size: 26px;	
+color: #FFFFFF;
+}
+
+.header-wrapper h4{	
+font-size: 16px;
+color: yellow;
+font-family: "Comic Sans MS",Arial, Helvetica, sans-serif;
+font-style: italic;
+}
+
+img{
+clear:none;
+float:left;
+}
+
+	
+	
+	
+/* CONTENT ------------------------------------------------------------------ */
+	
+#content
+{
+width: 500px;
+position: relative;
+font-size: 14px;
+margin-left: auto;
+margin-right: auto;
+}
+	
+#content a {
+text-decoration: none;
+color: blue;
+}
+		
+#content a:hover {
+text-decoration: underline;
+}
+	
+p
+{
+font-size:1.1em;
+margin-top: 1.5em;
+}
+	
+form
+{
+margin-top: 1.5em;
+}
+	
+	
+
+/*** MASTER FORM WIDTHS - CUSTOMIZE THIS TO CHANGE THE FORM LAYOUT ***/
+
+/*
+form width:		550px
+left column:	190px / 180px + 10px padding
+mid column:		200px
+right column:	160px
+*/
+
+form{
+width:100% !important;
+}
+
+fieldset.submit
+{
+padding-left: 190px !important;
+}
+
+ 
+
+	 		
+
+ 		
+
+
+form .centered{
+margin-left:180px !important;
+width:200px !important;
+}
+	 
+	 
+		
+
+
+
+/*** FIELDSETS AND LEGENDS ***/
+
+	 
+
+form fieldset
+{
+margin: 0 0 1.5em 0;
+padding: 0 0 10px 0px;		
+border: 1px solid #49A5E8; 
+background-image: url(images/fieldset_gradient.jpg);
+background-repeat: repeat-x;	 
+background-image: url(images/fieldset-gradient-02.jpg);
+background-position:bottom;	 
+clear: both;		
+}
+	
+form fieldset.submit
+{
+padding: 0px 10px 10px 190px;
+border-style: none;		
+background-color: transparent;
+background-image: none;	
+float: none;
+width: auto;
+		
+}
+	
+form legend
+{
+color:#000; 
+margin-left:20px; 
+padding-left:10px; 
+padding-right:10px; 
+border: 1px solid #49A5E8; 
+line-height:20px;
+-moz-border-radius:10px 10px 10px 10px; 
+/*background-color:#FFFAC0;*/
+font-weight:bold;    
+}
+		
+form fieldset p{
+margin:10px 0px 0px 10px;
+width:100%;
+}
+	
+/*** FORM BLOCKS ***/
+
+form ul
+{
+padding:5px 10px;
+list-style: none;
+}
+	
+form li
+{
+width: 100%;
+		
+padding:5px 0px 10px 0;
+border-top:1px dotted #ccc;
+		
+display:block;
+float: left;
+clear: left;
+}
+	
+form li:first-child
+{
+border:none;
+}
+
+	
+/*** FORM BLOCK ELEMENTS ***/
+
+ 
+		
+form .error{
+color: #c00;
+}
+ 
+ 
+
+form fieldset fieldset,
+form .group
+{
+width:200px;
+		
+margin: 0;
+border:none;
+		
+background:none;
+		
+float:left;
+clear: none;
+		
+}
+		
+ 
+
+ 
+		
+/* see also the error class at the foot of the page */
+ 
+
+/*** FORM ELEMENT COLUMNS ***/
+ 
+
+
+
+
+/*** FORM ELEMENTS ***/
+
+	 
+
+form textarea, selec 
+ 
+{
+font-size:1.1em;
+line-height:1.6em;
+}
+
+form input, textarea, select
+{
+font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+form .input[type="text"],
+	 
+		
+form .input[type="radio"],
+form .input[type="checkbox"]
+{
+margin:0px;
+padding:0px;
+position:relative;
+top:3px;
+}
+		
+/*** SUPPORTING CLASSES ***/
+
+ 
+	
+form span.required{
+padding-right:15px;
+}
+		
+form .clean
+{
+border:none;
+}
+		
+form .info{
+padding-top:0.5em;
+font-size:80%;
+line-height:100%;
+color:#aaa;
+}
+		
+form .indent{
+padding:2px 20px; 
+width:auto !important;
+white-space:nowrap;
+padding-left: 25px !important;
+}
+		
+	 
+	
+form .highlight{
+background-color:#e2e2e2;
+}
+	
+.off{
+display:none !important;
+}
+		
+.clear{
+clear:both;
+}
+		
+input.textEntry 
+{
+width:220px;
+border: 1px solid #000;
+height:20px;
+}
+fieldset {
+border:1px solid #bbb;
+padding:10px;
+position:relative;
+/*background:#e9e9e9;*/
+margin-bottom:10px;
+}
+legend {
+font-size:1.1em;
+padding:.4em .8em;
+background:#fff;
+border:1px solid #bbb;
+}
+
+.errorlbl
+{ 
+color:Red;
+text-align:center;
+font-weight:bold;
+}
+ 
+ 
+		

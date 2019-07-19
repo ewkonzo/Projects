@@ -1,0 +1,9 @@
+﻿localhost
+212
+Nerverserver
+HP
+Rahabgathoni2
+localhost
+BANDARI TEST
+Bandari
+D:\logs\Msacco\

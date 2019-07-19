@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/NavPortal" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/NavPortal" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/NavPortal" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="AccountStatement">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="memberNo_AccountStatement" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccountStatement_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanGuarantors">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="memberNo_LoansGuarantors" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanGuarantors_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoansGuaranteed">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="memberNo_LoansGuaranteed" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoansGuaranteed_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Dividends">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="memberNo_Dividends" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Dividends_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="AccountStatement">
+    <part name="parameters" element="tns:AccountStatement" />
+  </message>
+  <message name="AccountStatement_Result">
+    <part name="parameters" element="tns:AccountStatement_Result" />
+  </message>
+  <message name="LoanGuarantors">
+    <part name="parameters" element="tns:LoanGuarantors" />
+  </message>
+  <message name="LoanGuarantors_Result">
+    <part name="parameters" element="tns:LoanGuarantors_Result" />
+  </message>
+  <message name="LoansGuaranteed">
+    <part name="parameters" element="tns:LoansGuaranteed" />
+  </message>
+  <message name="LoansGuaranteed_Result">
+    <part name="parameters" element="tns:LoansGuaranteed_Result" />
+  </message>
+  <message name="Dividends">
+    <part name="parameters" element="tns:Dividends" />
+  </message>
+  <message name="Dividends_Result">
+    <part name="parameters" element="tns:Dividends_Result" />
+  </message>
+  <portType name="NavPortal_Port">
+    <operation name="AccountStatement">
+      <input name="AccountStatement" message="tns:AccountStatement" />
+      <output name="AccountStatement_Result" message="tns:AccountStatement_Result" />
+    </operation>
+    <operation name="LoanGuarantors">
+      <input name="LoanGuarantors" message="tns:LoanGuarantors" />
+      <output name="LoanGuarantors_Result" message="tns:LoanGuarantors_Result" />
+    </operation>
+    <operation name="LoansGuaranteed">
+      <input name="LoansGuaranteed" message="tns:LoansGuaranteed" />
+      <output name="LoansGuaranteed_Result" message="tns:LoansGuaranteed_Result" />
+    </operation>
+    <operation name="Dividends">
+      <input name="Dividends" message="tns:Dividends" />
+      <output name="Dividends_Result" message="tns:Dividends_Result" />
+    </operation>
+  </portType>
+  <binding name="NavPortal_Binding" type="tns:NavPortal_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="AccountStatement">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/NavPortal:AccountStatement" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AccountStatement">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AccountStatement_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="LoanGuarantors">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/NavPortal:LoanGuarantors" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="LoanGuarantors">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="LoanGuarantors_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="LoansGuaranteed">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/NavPortal:LoansGuaranteed" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="LoansGuaranteed">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="LoansGuaranteed_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Dividends">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/NavPortal:Dividends" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Dividends">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Dividends_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NavPortal">
+    <port name="NavPortal_Port" binding="tns:NavPortal_Binding">
+      <address location="http://172.17.1.3:5053/Bandari2/WS/Bandari%20Sacco%20Ltd/Codeunit/NavPortal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

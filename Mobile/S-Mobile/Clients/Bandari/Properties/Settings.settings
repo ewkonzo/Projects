@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Client.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Client_Accounts_Accounts_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Accounts</Value>
+    </Setting>
+    <Setting Name="Client_Statement_Account_Entries_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Account_Entries</Value>
+    </Setting>
+    <Setting Name="Client_Transactions_Transactions_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Transactions</Value>
+    </Setting>
+    <Setting Name="Client_S_Mobile_S_Mobile" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Codeunit/S_Mobile</Value>
+    </Setting>
+    <Setting Name="Client_S_Applications_Applications_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Applications</Value>
+    </Setting>
+    <Setting Name="Client_Member_Member_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Member</Value>
+    </Setting>
+    <Setting Name="Client_Loans_Loans_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Loans</Value>
+    </Setting>
+    <Setting Name="Client_Sms_Sms_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Sms</Value>
+    </Setting>
+    <Setting Name="Client_Setup_Setup_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Setup</Value>
+    </Setting>
+    <Setting Name="Client_AccountTypes_Account_Types_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Account_Types</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

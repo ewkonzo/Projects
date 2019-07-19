@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="10dip"
+    android:background="#dedede">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/dataFieldsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            style="@style/Widget.CardContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Please enter your details here."
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#699CFC"/>
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:hint="Name"/>
+
+            <EditText
+                android:id="@+id/telephoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:hint="Telephone Number"
+                android:layout_below="@+id/name"
+                android:inputType="phone"/>
+
+            <EditText
+                android:id="@+id/nationalIdNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:hint="National ID Number"
+                android:layout_below="@+id/telephoneNumber"
+                android:inputType="numberSigned"/>
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_selector"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:layout_below="@+id/nationalIdNumber"
+                android:layout_marginTop="6dip"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/contactsListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dataFieldsLayout"
+        android:layout_marginTop="10dip">
+
+        <RelativeLayout
+            style="@style/Widget.CardContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/contactsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="#dedede"
+                android:dividerHeight="1dip"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

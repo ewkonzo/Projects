@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "com.unionpay.msrdemoforsdk"
+        minSdkVersion 19
+        targetSdkVersion 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs'   // aar目录
+    }
+}
+dependencies {
+    compile(name: 'cloudpossdk', ext: 'aar')
+    compile 'com.android.support:appcompat-v7:26.+'
+//    compile files('libs/cloudpossdkinterface.jar')
+}

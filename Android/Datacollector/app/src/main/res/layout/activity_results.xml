@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="10.0dip"
+    android:layout_marginRight="10.0dip">
+
+    <TextView
+        android:id="@+id/Info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip"
+        android:capitalize="characters"
+        android:gravity="center"
+        android:text="Coffee Delivery Reciept"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20.0sp"
+        android:textStyle="bold" />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2.0dip"
+        android:layout_marginTop="20.0dip"
+        android:background="@android:color/holo_green_dark" />
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Collection No" />
+
+        <TextView
+            android:id="@+id/txtref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:textColor="@android:color/holo_green_dark" />
+    </TableRow>
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Member No" />
+
+        <TextView
+            android:id="@+id/txtmemberno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+                        android:textColor="@android:color/holo_green_dark" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Member name" />
+
+        <TextView
+            android:id="@+id/txtmembername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:hint=""
+            android:textColor="@android:color/holo_green_dark" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Collection Date" />
+
+        <TextView
+            android:id="@+id/txtcolldate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+
+            android:textColor="@android:color/holo_green_dark" />
+    </TableRow>
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Collection Time" />
+
+        <TextView
+            android:id="@+id/txtcolltime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+
+            android:textColor="@android:color/holo_green_dark" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tramount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kg Collected" />
+
+        <TextView
+            android:id="@+id/txtkg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+
+            android:textColor="@android:color/holo_green_dark"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@android:color/holo_green_dark" />
+    <TableRow
+        android:id="@+id/trcumm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cumm. Kg." />
+
+        <TextView
+            android:id="@+id/txtcummkg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:textColor="@android:color/holo_green_dark"
+            android:textStyle="bold" />
+    </TableRow>
+</TableLayout>

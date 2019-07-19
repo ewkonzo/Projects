@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Bridge.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Bridge_Atm_Transactions_Atm_Transactions_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Atm_Transactions</Value>
+    </Setting>
+    <Setting Name="Bridge_Atm_Logs_Atm_Logs_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Atm_Logs</Value>
+    </Setting>
+    <Setting Name="Bridge_Atm_Charges_Atm_Charges_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Atm_Charges</Value>
+    </Setting>
+    <Setting Name="Bridge_Pos_Commissions_Pos_Commissions_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Pos_Commissions</Value>
+    </Setting>
+    <Setting Name="Bridge_Accounts_Accounts_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Accounts</Value>
+    </Setting>
+    <Setting Name="Bridge_Account_Entries_Account_Entries_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Page/Account_Entries</Value>
+    </Setting>
+    <Setting Name="Bridge_PostAtm_PostAtm" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:212/Bandari/WS/BANDARI/Codeunit/PostAtm</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

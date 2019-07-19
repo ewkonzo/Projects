@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:focusable="false"
+  android:background="@drawable/backgroundactionbar"
+    android:descendantFocusability="blocksDescendants"
+    >
+        <TextView
+            android:id="@+id/lblListHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textColor="#000"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="7dp"
+            android:focusable="false"
+            android:textStyle="bold"
+            android:textSize="10dp" />
+        <TextView
+            android:id="@+id/groupcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:focusable="false"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:text="Total trans:" />
+
+        <TextView
+            android:id="@+id/groupcountvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@id/groupcount"
+            android:focusable="false"
+            android:layout_toRightOf="@id/groupcount"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="10dp"
+            android:hint="Count" />
+
+        <TextView
+            android:id="@+id/grouptotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/groupcount"
+            android:layout_below="@id/groupcount"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="3dp"
+            android:focusable="false"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:text="Total Coll.:" />
+
+        <TextView
+            android:id="@+id/grouptotalvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/groupcount"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_alignEnd="@id/groupcountvalue"
+            android:layout_alignRight="@id/groupcountvalue"
+            android:textColor="@android:color/holo_green_light"
+            android:focusable="false"
+            android:textSize="10dp"
+            android:hint="total" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:id="@+id/printdaily"
+            android:background="@null"
+            android:focusable="false"
+            android:src="@drawable/print" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/refresh"
+            android:background="@null"
+            android:focusable="false"
+            android:src="@drawable/refresh" />
+</RelativeLayout>

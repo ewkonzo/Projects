@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Remoteip>192.168.0.140</Remoteip>
+  <RemotePort>7779</RemotePort>
+  <Localip></Localip>
+  <localPort>0</localPort>
+  <Serverip>localhost</Serverip>
+  <domain>localhost</domain>
+  <Instance>Handinhand</Instance>
+  <Port>7002</Port>
+  <Username>Paulo</Username>
+  <pass>Rahabgathoni1</pass>
+  <Companyname>MWEA RICE</Companyname>
+  <PostIntervalinsec>60</PostIntervalinsec>
+  <Reconnectintervalinsec>3</Reconnectintervalinsec>
+  <logpath>C:\ATM Logs\</logpath>
+<Certpath>C:\ATM Logs\</Certpath>
+<CertpathCA>C:\ATM Logs\</CertpathCA>
+</settings>

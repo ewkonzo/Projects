@@ -1,0 +1,62 @@
+﻿@model AllUsers
+
+@{
+    ViewData["Title"] = "All Users";
+}
+
+<environment include="Development">
+    <link rel="stylesheet" href="~/css/admin/admin-users.css" />
+</environment>
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+<hr />
+<div class="container-fluid">
+    @Html.Partial("_SearchListingForm",Model.Pagination)
+</div>
+<hr />
+
+@if (Model.Users.Count() == 0)
+{
+   @Html.Partial("_NoResultsFoundMessageBox")
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var u in Model.Users)
+            {
+                <tr>
+                    <td>@u.Name</td>
+                    <td>@u.Username</td>
+                    <td>@u.Email</td>
+                    <td class="user-roles">@(u.Roles.Count == 0 ? "No roles" : string.Join(", ", u.Roles))</td>
+                    <td>
+                        <form method="post">
+                            <div class="form-group">                              
+                                <select for="role" name="role" asp-items="@Html.GetEnumSelectList(typeof(Role)).Where(r => r.Text != Role.Company.ToString())" class="form-control"></select>
+                            </div>
+                            <button asp-controller="AdminUsers" asp-action="ChangeRolesAsync" asp-route-isRemove="false" asp-route-userId="@u.Id" type="submit" class="btn btn-primary @(u.Roles.Select(ur => ur.ToString()).SequenceEqual(Enum.GetNames (typeof(Role)).Where(r => r.ToString() != Role.Company.ToString())) ? "disabled" : string.Empty)">
+                                Add to role
+                            </button>
+                            <button asp-controller="AdminUsers" asp-action="ChangeRolesAsync" asp-route-isRemove="true" asp-route-userId="@u.Id" type="submit" class="btn btn-danger  @(!u.Roles.Any() ? "disabled" : string.Empty)">
+                                Remove from role
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @Html.Partial("_Pagination", Model.Pagination)
+}
+

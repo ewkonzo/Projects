@@ -1,0 +1,218 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="elegance.hasoft.com.elegance.Buy_More"
+    android:background="@color/white">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            >
+        </include>
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/r"
+                    android:background="@color/blue"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Add more details of this item"
+                        android:id="@+id/textView"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/white"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Enter Quantity"
+                    android:id="@+id/textq"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/editprice"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editquantity"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:hint="Enter Quantity"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColorHighlight="@color/black"
+                    android:background="@drawable/editview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    style="@style/CodeFont"
+                    android:textCursorDrawable="@null"
+                    android:layout_below="@+id/textq"
+                    android:layout_marginTop="30dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Enter Unit Price(USD)"
+                    android:id="@+id/text"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/specfab"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editprice"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:hint="Enter Unit Price"
+                    android:textColorHint="@color/dark_gray"
+                    android:textColorHighlight="@color/black"
+                    android:background="@drawable/editview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    style="@style/CodeFont"
+                    android:textCursorDrawable="@null"
+                    android:layout_below="@+id/text"
+                    android:layout_marginTop="30dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Choose Item Brand"
+                    android:id="@+id/textView1"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/speccat"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView1"
+                    android:id="@+id/specbrand"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Choose Item Pattern"
+                    android:id="@+id/textViewp"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/speccolor"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewp"
+                    android:id="@+id/specpattern"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Choose Item Fabric/Material"
+                    android:id="@+id/textViewfab"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/specgg"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewfab"
+                    android:id="@+id/specfab"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="30dp"
+                    />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <floatt.FloatingActionButton
+        android:id="@+id/proceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_action_done"
+        fab:fab_colorNormal="@color/blue"
+        fab:fab_colorPressed="@color/primary_pressed"
+        fab:fab_colorRipple="@color/ripple"
+        android:layout_gravity="bottom|right"
+        />
+</FrameLayout>
+
+
+

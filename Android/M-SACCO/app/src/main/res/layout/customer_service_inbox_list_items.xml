@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:orientation="vertical" >
+
+    <!-- Title Of Message -->
+
+    <LinearLayout
+        android:id="@+id/heading"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6" >
+
+        <custom_fonts.RobotoTextView
+            android:id="@+id/customerServiceInboxHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="4"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingTop="8dip"
+            android:scrollHorizontally="true"
+            android:textColor="@color/lightgreen"
+            android:textSize="20sp"
+            app:typeface="roboto_light" />
+
+        <custom_fonts.RobotoTextView
+            android:id="@+id/customerServiceInboxDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:paddingTop="10dp"
+            android:textStyle="bold"
+            app:typeface="roboto_regular" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <custom_fonts.RobotoTextView
+            android:id="@+id/customerServiceInboxMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:scrollHorizontally="true"
+            android:textColor="@color/black"
+            app:typeface="roboto_light" />
+    </LinearLayout>
+
+</LinearLayout>

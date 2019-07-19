@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AI_TIME", "AI_TIME.vbproj", "{900AD7BC-FB45-4E18-B4A4-71867B951390}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{900AD7BC-FB45-4E18-B4A4-71867B951390}.Debug.ActiveCfg = Debug|.NET
+		{900AD7BC-FB45-4E18-B4A4-71867B951390}.Debug.Build.0 = Debug|.NET
+		{900AD7BC-FB45-4E18-B4A4-71867B951390}.Release.ActiveCfg = Release|.NET
+		{900AD7BC-FB45-4E18-B4A4-71867B951390}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

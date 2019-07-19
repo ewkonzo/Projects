@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wizarpos.paymenttransdemo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    
+    <!-- 打印机权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PRINTER" />
+    <!-- MSR权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MSR" />
+    <!-- Contactless card权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_CONTACTLESS_CARD" />
+    <!-- SmartCard 权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SMARTCARD" />
+    <!-- Pinpad权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PIN_GET_PIN_BLOCK" />
+    <uses-permission android:name="android.permission.CLOUDPOS_PIN_MAC" />
+    <uses-permission android:name="android.permission.CLOUDPOS_PIN_ENCRYPT_DATA" />
+    <uses-permission android:name="android.permission.CLOUDPOS_PIN_UPDATE_USER_KEY" />
+    <uses-permission android:name="android.permission.CLOUDPOS_PIN_UPDATE_MASTER_KEY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="com.wizarpos.paymenttransdemo.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wizarpos.paymenttransdemo.CardManagerActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.wizarpos.paymenttransdemo.InputPINActivity"
+            android:launchMode="singleInstance" />
+        <activity
+            android:name="com.wizarpos.paymenttransdemo.PayResultPrintActivity"
+            android:launchMode="singleInstance" />
+    </application>
+
+</manifest>

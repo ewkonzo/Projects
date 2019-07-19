@@ -1,0 +1,5 @@
+package com.cloudpos.scan.aidl;
+import com.cloudpos.scan.aidl.ScanResult;
+interface IScanCallBack{
+	void foundBarcode(in ScanResult result);
+}

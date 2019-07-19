@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!--server-->
+<Serverip>144.100.10.12</Serverip>
+<domain>144.100.10.12</domain>	
+<EInstance>MWEASERVICE</EInstance>	
+<Port>2012</Port>
+<EUsername>Navuser</EUsername>
+<Epass>Admin@Mrgm2018</Epass>
+<Companyname>MWEA RICE GROWERS</Companyname>	
+<!--local db-->	
+<Server>localhost</Server>
+<Instance></Instance> 
+<Username>Autoweigh</Username>
+<pass>Rahabgathoni1</pass>
+<database>Rice</database>
+<IntegratedSecurity>true</IntegratedSecurity>
+<!--others-->	
+<PostIntervalinsec>60</PostIntervalinsec>
+<Reconnectintervalinsec>3</Reconnectintervalinsec>
+<logpath>C:\Logs\</logpath>
+</settings>

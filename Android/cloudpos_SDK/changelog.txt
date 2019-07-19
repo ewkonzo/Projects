@@ -1,0 +1,6 @@
+2018-03-22 1.4.0.
+2018-05-11 1.4.1.
+* fix fingerprint SDK bug
+* fix HSM SDK bug
+* add CrossmatchFingerPrint demo for Q2
+* add new EMVSample

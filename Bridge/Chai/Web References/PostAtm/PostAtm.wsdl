@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/PostAtm" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/PostAtm" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/PostAtm" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="Post">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Post_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="Post">
+    <part name="parameters" element="tns:Post" />
+  </message>
+  <message name="Post_Result">
+    <part name="parameters" element="tns:Post_Result" />
+  </message>
+  <portType name="PostAtm_Port">
+    <operation name="Post">
+      <input name="Post" message="tns:Post" />
+      <output name="Post_Result" message="tns:Post_Result" />
+    </operation>
+  </portType>
+  <binding name="PostAtm_Binding" type="tns:PostAtm_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Post">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/PostAtm:Post" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Post">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Post_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PostAtm">
+    <port name="PostAtm_Port" binding="tns:PostAtm_Binding">
+      <address location="http://paulo:212/Bandari/WS/BANDARI/Codeunit/PostAtm" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

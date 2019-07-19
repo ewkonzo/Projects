@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="elegance.hasoft.com.elegance.SwitchUser"
+    android:background="@color/purple">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        >
+    </include>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="You are currently an Admin"
+                    android:id="@+id/textView"
+                    android:layout_marginTop="109dp"
+                    android:textColor="@color/white"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    style="@style/CodeFont"
+                    android:textStyle="bold"/>
+                <elegance.hasoft.com.elegance.RoundedImage
+                    android:id="@+id/menuimage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@mipmap/user"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/textView"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Switch To Sales"
+                    android:id="@+id/setdis"
+                    android:layout_below="@+id/menuimage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="70dp"
+                    android:background="@drawable/cardthemewhite"
+                    android:textColor="@color/theme"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+                </RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

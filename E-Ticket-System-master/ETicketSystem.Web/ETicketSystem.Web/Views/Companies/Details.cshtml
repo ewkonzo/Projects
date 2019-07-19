@@ -1,0 +1,124 @@
+﻿@model  CompanyDetails
+
+@{
+    ViewData["Title"] = "Company Details";
+}
+
+<environment include="Development">
+    <link rel="stylesheet" href="~/css/company/company-details.css" />
+    <link rel="stylesheet" href="~/css/company-details.css" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+</environment>
+
+<a class="btn btn-primary back" asp-controller="Companies" asp-action="All">Back To All</a>
+<div class="container-fluid details-container">
+    <div class="row search-container">
+        @Html.Partial("_SearchRoutesForm", Model.SearchForm)
+    </div>
+</div>
+
+<div class="container-fluid text-center">
+    @if (Model.Company.Logo == null)
+    {
+        <img class="img-responsive logo" src="~/images/common/no-logo.png" alt="@Model.Company.Name" />
+    }
+    else
+    {
+        <img class="img-responsive logo" src="@Model.Company.Logo.ConvertBytesToImage()" alt="@Model.Company.Name" />
+    }
+    <h1>@Model.Company.Name</h1>
+    <div class="row base-info">
+        <p class="description">
+            @Model.Company.Description
+        </p>
+        <div class="icons col-md-12 col-md-offset-1">
+            <div class="info tickets-sold">
+                <i class="fa fa-ticket" aria-hidden="true"></i>
+                <div class="icon-title text-uppercase">tickets</div>
+                <h3>@Model.Company.TicketsSold Tickets sold</h3>
+            </div>
+            <div class="info residence">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <div class="icon-title text-uppercase">residence</div>
+                <h3>@Model.Company.Town</h3>
+            </div>
+            <div class="info chief">
+                <i class="fa fa-id-card" aria-hidden="true"></i>
+                <div class="icon title text-uppercase">chief</div>
+                <h3>@Model.Company.Chief</h3>
+            </div>
+            <div class="info phone">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <div class="icon title text-uppercase">phone</div>
+                <h3>@Model.Company.PhoneNumber</h3>
+            </div>
+        </div>
+    </div>
+    <div class="popular-routes row">
+        <h3>Most popular routes</h3>
+        <hr />
+        @if(Model.Company.Routes.Count() == 0)
+        {
+            <h3>The company haven't sold any tickets yet! Be the first ?</h3>
+        }
+        @foreach (var route in Model.Company.Routes)
+        {
+            <div class="route-info-container col-md-6">
+                <p class="route-info">
+                    <span class="start-town-id" hidden>@route.StartTown</span>
+                    <span class="end-town-id" hidden>@route.EndTown</span>
+                    <span class="col-md-8"><strong>@route.StartTownName</strong> - <strong>@route.EndTownName</strong> Bus Tickets</span>
+                    <a class="btn btn-primary col-md-2" onclick="getSearchedRouteTowns(this)">
+                        @route.Price.ToFormatedPrice() $
+                    </a>
+                </p>
+            </div>
+        }
+    </div>
+</div>
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="container-fluid reviews">
+        <h1 class="text-center">Reviews:</h1>
+        <hr />
+        @if (Model.Reviews.Reviews.Count() == 0)
+        {
+            <div class="alert alert-success col-md-8 col-md-offset-2" role="alert">
+                <h4 class="alert-heading">Oooops!</h4>
+                <p>There are no reviews yet. Be the first to write one!</p>
+            </div>
+        }
+        else
+        {
+            @foreach (var r in Model.Reviews.Reviews)
+            {
+                <div class="user-info container-fluid">
+                    <span class="user">@r.User</span>
+                    <span class="date">@r.PublishDate.ToShortDateString()</span>
+                    @if (User.IsInRole(Role.Moderator.ToString()))
+                    {
+                        @Html.ActionLink(
+                            "Delete",
+                            "Delete",
+                            "Reviews",
+                            new { confirm = true, id = r.Id, companyId = r.CompanyId },
+                            new { onclick = $"return confirm('Do you really want to delete this review from user {r.User} ?');", @class = "btn btn-danger delete" })
+                        <a class="btn btn-primary edit" asp-controller="Reviews" asp-action="Edit" asp-route-id="@r.Id">Edit</a>
+                    }
+                </div>
+                <div class="container-fluid review-container">
+                    <p>@r.Description</p>
+                </div>
+            }
+            @Html.Partial("_Pagination", Model.Reviews.Pagination)
+        }
+        @Html.Partial("_ReviewForm", Model.ReviewForm)
+    </div>
+}
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/route/search-form-validation.js"></script>
+    <script type="text/javascript" src="~/js/route/search-company-routes.js"></script>
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+

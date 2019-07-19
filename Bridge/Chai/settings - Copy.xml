@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!--server-->
+<Serverip>192.168.1.21</Serverip>
+<domain>chai-sacco</domain>	
+<EInstance>TEST</EInstance>	
+<Port>17047</Port>
+<EUsername>SAMUEL.GITHAIGA</EUsername>
+<Epass>Sierra1!</Epass>
+<Companyname>Chai</Companyname>	
+<!--local db-->	
+<Server>localhost</Server>
+<Instance></Instance> 
+<Username>Autoweigh</Username>
+<pass>Rahabgathoni2</pass>
+<database>Rice</database>
+<IntegratedSecurity>true</IntegratedSecurity>
+<!--others-->	
+<PostIntervalinsec>10</PostIntervalinsec>
+<Reconnectintervalinsec>3</Reconnectintervalinsec>
+<logpath>C:\Logs\</logpath>
+</settings>

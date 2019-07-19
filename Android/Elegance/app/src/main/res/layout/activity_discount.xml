@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="elegance.hasoft.com.elegance.Discount"
+    android:background="@color/white">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        >
+    </include>
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+
+                >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Set today's discount.It will be applied to all products sold today.You can change it anytime(Discount should be in %)"
+        android:id="@+id/textView"
+        android:layout_marginTop="109dp"
+        android:textColor="@color/theme"
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        style="@style/CodeFont"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/pass"
+        android:textColor="@color/black"
+        android:hint="Enter Today\'s Discount (%)"
+        android:textColorHint="@color/black"
+        android:textColorHighlight="@color/black"
+        android:drawableBottom="@color/theme"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        style="@style/CodeFont"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textCursorDrawable="@null"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SET DISCOUNT"
+        android:id="@+id/setdis"
+        android:layout_below="@+id/pass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/cardtheme"
+        android:textColor="@color/white"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+</RelativeLayout>
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

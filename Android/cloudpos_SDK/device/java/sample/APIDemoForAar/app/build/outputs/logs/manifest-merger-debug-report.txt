@@ -1,0 +1,236 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:2:1-74:12
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:2:1-74:12
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:2:1-74:12
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:2:1-74:12
+MERGED from [cloudpossdk.aar] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\cloudpossdk.aar\9a01702d9d872e468a1ac9229ece7b21\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\e617329f0458595a8b6381bf49518636\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3c7935bdea5afa1736ae1d79fbb7ed81\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\69f5e16ca047f4aa4c07379ff4af2b46\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\8916723970e9e204295b2a4e56af6528\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\f6a877a8f57861f112fe6db7fc9ac630\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\5d6aabf98534cdc4e5c9f09fccae8c7c\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\48cc310d14d9179a7d9256a749cb236d\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\4b6e22aed9cde7b012557e88c9a8cd86\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\88997aeb9f4d74894da69511d575f0e3\AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6eb28d6ff59b8427363e8d3e69facfd3\AndroidManifest.xml:17:1-30:12
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:2:1-74:12
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:2:1-74:12
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:2:1-74:12
+	package
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:3:5-57
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [cloudpossdk.aar] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\cloudpossdk.aar\9a01702d9d872e468a1ac9229ece7b21\AndroidManifest.xml:7:5-9:41
+MERGED from [cloudpossdk.aar] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\cloudpossdk.aar\9a01702d9d872e468a1ac9229ece7b21\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\e617329f0458595a8b6381bf49518636\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\e617329f0458595a8b6381bf49518636\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3c7935bdea5afa1736ae1d79fbb7ed81\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3c7935bdea5afa1736ae1d79fbb7ed81\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\69f5e16ca047f4aa4c07379ff4af2b46\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\69f5e16ca047f4aa4c07379ff4af2b46\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\8916723970e9e204295b2a4e56af6528\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\8916723970e9e204295b2a4e56af6528\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\f6a877a8f57861f112fe6db7fc9ac630\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\f6a877a8f57861f112fe6db7fc9ac630\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\5d6aabf98534cdc4e5c9f09fccae8c7c\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\5d6aabf98534cdc4e5c9f09fccae8c7c\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\48cc310d14d9179a7d9256a749cb236d\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\48cc310d14d9179a7d9256a749cb236d\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\4b6e22aed9cde7b012557e88c9a8cd86\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\4b6e22aed9cde7b012557e88c9a8cd86\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\88997aeb9f4d74894da69511d575f0e3\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\88997aeb9f4d74894da69511d575f0e3\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6eb28d6ff59b8427363e8d3e69facfd3\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6eb28d6ff59b8427363e8d3e69facfd3\AndroidManifest.xml:20:5-22:41
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:7:5-9:41
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\e617329f0458595a8b6381bf49518636\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:8:9-35
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:12:5-81
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:12:22-78
+uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:14:5-84
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:14:22-81
+uses-permission#android.permission.CLOUDPOS_CLONESCREEN
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:17:22-76
+uses-permission#android.permission.CLOUDPOS_PRINTER
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:20:5-75
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:20:22-72
+uses-permission#android.permission.CLOUDPOS_MSR
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:22:5-70
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:22:22-68
+uses-permission#android.permission.CLOUDPOS_CONTACTLESS_CARD
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:24:5-83
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:24:22-81
+uses-permission#android.permission.CLOUDPOS_SMARTCARD
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:26:5-76
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:26:22-74
+uses-permission#android.permission.CLOUDPOS_SERIAL
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:28:5-74
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:28:22-71
+uses-permission#android.permission.CLOUDPOS_LED
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:30:5-71
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:30:22-68
+uses-permission#android.permission.CLOUDPOS_CUSTOMER_DISPLAY
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:33:5-84
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:33:22-81
+uses-permission#android.permission.CLOUDPOS_PIN_GET_PIN_BLOCK
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:36:5-84
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:36:22-82
+uses-permission#android.permission.CLOUDPOS_PIN_MAC
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:37:5-75
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:37:22-72
+uses-permission#android.permission.CLOUDPOS_PIN_ENCRYPT_DATA
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:38:5-83
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:38:22-81
+uses-permission#android.permission.CLOUDPOS_PIN_UPDATE_USER_KEY
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:39:5-86
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:39:22-84
+uses-permission#android.permission.CLOUDPOS_PIN_UPDATE_MASTER_KEY
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:40:5-88
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:40:22-86
+uses-permission#android.permission.CLOUDPOS_IDCard
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:43:5-73
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:43:22-71
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:45:5-78
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:45:22-76
+uses-permission#android.permission.INTERNET
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:47:5-67
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:47:22-64
+uses-permission#android.permission.CLOUDPOS_MONEYBOX
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:50:5-75
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:50:22-73
+uses-permission#android.permission.CLOUDPOS_FINGERPRINT
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:52:5-78
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:52:22-76
+uses-permission#android.permission.CLOUDPOS_SIGNATURE
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:54:5-76
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:54:22-74
+uses-permission#android.permission.CLOUDPOS_SAFE_MODULE
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:56:5-79
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:56:22-76
+application
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:57:5-72:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\e617329f0458595a8b6381bf49518636\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:appcompat-v7:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\e617329f0458595a8b6381bf49518636\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3c7935bdea5afa1736ae1d79fbb7ed81\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3c7935bdea5afa1736ae1d79fbb7ed81\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\69f5e16ca047f4aa4c07379ff4af2b46\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\69f5e16ca047f4aa4c07379ff4af2b46\AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\8916723970e9e204295b2a4e56af6528\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\8916723970e9e204295b2a4e56af6528\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\f6a877a8f57861f112fe6db7fc9ac630\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\f6a877a8f57861f112fe6db7fc9ac630\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\5d6aabf98534cdc4e5c9f09fccae8c7c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\5d6aabf98534cdc4e5c9f09fccae8c7c\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\48cc310d14d9179a7d9256a749cb236d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\48cc310d14d9179a7d9256a749cb236d\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\4b6e22aed9cde7b012557e88c9a8cd86\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\4b6e22aed9cde7b012557e88c9a8cd86\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\88997aeb9f4d74894da69511d575f0e3\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\88997aeb9f4d74894da69511d575f0e3\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6eb28d6ff59b8427363e8d3e69facfd3\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6eb28d6ff59b8427363e8d3e69facfd3\AndroidManifest.xml:24:5-28:19
+	android:label
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:61:9-41
+	android:icon
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:60:9-45
+	android:allowBackup
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:59:9-35
+	android:theme
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:62:9-40
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:58:9-68
+activity#com.wizarpos.androidmvcmodel.MainActivity
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:63:9-71:20
+	android:label
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:65:13-45
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:64:13-69
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:66:13-70:29
+action#android.intent.action.MAIN
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:67:17-69
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:67:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:69:17-77
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\APIDemoForAar\app\src\main\AndroidManifest.xml:69:27-74
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\e617329f0458595a8b6381bf49518636\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3c7935bdea5afa1736ae1d79fbb7ed81\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:animated-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-26.1.0.aar\3c7935bdea5afa1736ae1d79fbb7ed81\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\69f5e16ca047f4aa4c07379ff4af2b46\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-vector-drawable:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-26.1.0.aar\69f5e16ca047f4aa4c07379ff4af2b46\AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\8916723970e9e204295b2a4e56af6528\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\8916723970e9e204295b2a4e56af6528\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\f6a877a8f57861f112fe6db7fc9ac630\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\f6a877a8f57861f112fe6db7fc9ac630\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\5d6aabf98534cdc4e5c9f09fccae8c7c\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\5d6aabf98534cdc4e5c9f09fccae8c7c\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\48cc310d14d9179a7d9256a749cb236d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\48cc310d14d9179a7d9256a749cb236d\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\4b6e22aed9cde7b012557e88c9a8cd86\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\4b6e22aed9cde7b012557e88c9a8cd86\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\88997aeb9f4d74894da69511d575f0e3\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\88997aeb9f4d74894da69511d575f0e3\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\e617329f0458595a8b6381bf49518636\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:appcompat-v7:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.1.0.aar\e617329f0458595a8b6381bf49518636\AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6eb28d6ff59b8427363e8d3e69facfd3\AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6eb28d6ff59b8427363e8d3e69facfd3\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\6eb28d6ff59b8427363e8d3e69facfd3\AndroidManifest.xml:26:13-58

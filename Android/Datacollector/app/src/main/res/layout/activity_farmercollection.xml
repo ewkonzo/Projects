@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_farmercollection"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.paul.datacollector.farmercollection">
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Farmer Number"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_toRightOf="@id/number"
+        android:gravity="center"
+        android:hint="Month"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/txtfarmerno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/number"
+        android:layout_alignRight="@id/number"
+        android:layout_below="@id/number" />
+
+    <Spinner
+        android:id="@+id/txtmonth"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/month"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toRightOf="@id/txtfarmerno" />
+
+    <TextView
+        android:id="@+id/farmername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtfarmerno"
+        android:gravity="center"
+        android:hint="Farmer Name" />
+
+
+    <ImageButton
+        android:id="@+id/print"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/farmername"
+        android:background="@null"
+        android:src="@drawable/printer_off"
+        android:text="Print" />
+
+    <ImageButton
+        android:id="@+id/find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_below="@+id/farmername"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:background="@null"
+        android:src="@drawable/search"
+        android:text="Find" />
+
+    <View
+        android:id="@+id/seperator"
+        android:layout_width="fill_parent"
+        android:layout_height="2.0dip"
+        android:layout_below="@id/farmername"
+        android:layout_marginTop="20.0dip"
+        android:background="@android:color/holo_green_dark" />
+
+    <ListView
+        android:id="@+id/listfarmerreport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/seperator">
+     </ListView>
+
+</RelativeLayout>

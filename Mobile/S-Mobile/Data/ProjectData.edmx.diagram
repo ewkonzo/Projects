@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="38f4771c8c2143e88ea5fe403892483f" Name="Diagram1">
+        <EntityTypeShape EntityType="MobileModel.Incoming" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MobileModel.Sdp_Acccount" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MobileModel.Sdp_Service_Setup" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MobileModel.Subscription" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MobileModel.BulkSm" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MobileModel.Language" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MobileModel.Customer" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MobileModel.Login" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="MobileModel.Session" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MobileModel.User_Option" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="MobileModel.Menu" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="MobileModel.Ussd" Width="1.5" PointX="4.75" PointY="8.75" />
+        <EntityTypeShape EntityType="MobileModel.Transaction" Width="1.5" PointX="6.75" PointY="8.75" />
+        <EntityTypeShape EntityType="MobileModel.Client" Width="1.5" PointX="6.625" PointY="7.5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

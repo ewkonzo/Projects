@@ -1,0 +1,9 @@
+﻿localhost
+3112
+Capital DB
+Paul
+Rahabgathoni1
+localhost
+IANSOFT
+Trim
+C:\coretec\Msacco\Logs\

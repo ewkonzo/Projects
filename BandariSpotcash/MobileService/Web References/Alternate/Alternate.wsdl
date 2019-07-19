@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/Alternate" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Alternate" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Alternate" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="PostMpesa">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PostMpesa_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Runn">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Runn_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="SendSms">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="source" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="textsms" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="charge" type="boolean" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendSms_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Eligibility">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Eligibility_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="PostMpesa">
+    <part name="parameters" element="tns:PostMpesa" />
+  </message>
+  <message name="PostMpesa_Result">
+    <part name="parameters" element="tns:PostMpesa_Result" />
+  </message>
+  <message name="Runn">
+    <part name="parameters" element="tns:Runn" />
+  </message>
+  <message name="Runn_Result">
+    <part name="parameters" element="tns:Runn_Result" />
+  </message>
+  <message name="SendSms">
+    <part name="parameters" element="tns:SendSms" />
+  </message>
+  <message name="SendSms_Result">
+    <part name="parameters" element="tns:SendSms_Result" />
+  </message>
+  <message name="Eligibility">
+    <part name="parameters" element="tns:Eligibility" />
+  </message>
+  <message name="Eligibility_Result">
+    <part name="parameters" element="tns:Eligibility_Result" />
+  </message>
+  <portType name="Alternate_Port">
+    <operation name="PostMpesa">
+      <input name="PostMpesa" message="tns:PostMpesa" />
+      <output name="PostMpesa_Result" message="tns:PostMpesa_Result" />
+    </operation>
+    <operation name="Runn">
+      <input name="Runn" message="tns:Runn" />
+      <output name="Runn_Result" message="tns:Runn_Result" />
+    </operation>
+    <operation name="SendSms">
+      <input name="SendSms" message="tns:SendSms" />
+      <output name="SendSms_Result" message="tns:SendSms_Result" />
+    </operation>
+    <operation name="Eligibility">
+      <input name="Eligibility" message="tns:Eligibility" />
+      <output name="Eligibility_Result" message="tns:Eligibility_Result" />
+    </operation>
+  </portType>
+  <binding name="Alternate_Binding" type="tns:Alternate_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="PostMpesa">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:PostMpesa" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostMpesa">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostMpesa_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Runn">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:Runn" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Runn">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Runn_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SendSms">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:SendSms" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SendSms">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SendSms_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Eligibility">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:Eligibility" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Eligibility">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Eligibility_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Alternate">
+    <port name="Alternate_Port" binding="tns:Alternate_Binding">
+      <address location="http://paulo:6021/Baraka/WS/APS%20BARAKA%20SACCO%20SOCIETY%20LTD/Codeunit/Alternate" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

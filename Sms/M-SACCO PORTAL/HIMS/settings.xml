@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!--server-->
+<Serverip>localhost</Serverip>
+<domain>localhost</domain>	
+<EInstance></EInstance>	
+<Port>2012</Port>
+<EUsername>Navuser</EUsername>
+<Epass>Mbanking12345*</Epass>
+<Companyname>MWEA RICE</Companyname>	
+<!--local db-->	
+<Server>localhost</Server>
+<Instance></Instance> 
+<Username>Mobile</Username>
+<pass>Mbanking12345*</pass>
+<database>Mobile</database>
+<IntegratedSecurity>true</IntegratedSecurity>
+<!--others-->	
+<PostIntervalinsec>60</PostIntervalinsec>
+<Reconnectintervalinsec>3</Reconnectintervalinsec>
+<logpath>C:\Logs\</logpath>
+</settings>

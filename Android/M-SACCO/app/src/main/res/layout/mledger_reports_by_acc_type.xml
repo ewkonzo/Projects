@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingTop="5dip" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="3dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="5dip"
+            android:paddingLeft="12dip"
+            android:paddingRight="10dip"
+            android:weightSum="12" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_weight="8"
+                android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+                android:paddingTop="10dip"
+                android:text="Account"
+                android:textSize="11dp"
+                android:typeface="sans" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_weight="2"
+                android:padding="5dip"
+                android:text="Deposits"
+                android:textColor="@color/lightgreen"
+                android:textSize="11dp"
+                android:typeface="sans" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_weight="2"
+                android:padding="5dip"
+                android:paddingRight="15dip"
+                android:text="Withdrawals"
+                android:textColor="@color/red"
+                android:textSize="11dp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip" >
+
+            <ExpandableListView
+                android:id="@+id/mledgerReportsByTypeExpLv"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/white"
+                android:dividerHeight="5dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+    </LinearLayout>
+
+</LinearLayout>

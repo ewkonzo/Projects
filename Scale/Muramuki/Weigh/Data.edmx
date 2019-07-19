@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AutoweighModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Crops">
+          <Key>
+            <PropertyRef Name="Crop Name" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Crop Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Open Date" Type="datetime" />
+          <Property Name="Close Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Daily Collections Details">
+          <Key>
+            <PropertyRef Name="Collection Number" />
+          </Key>
+          <Property Name="Farmers Number" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Collections Date" Type="datetime" Nullable="false" />
+          <Property Name="Collection Number" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Coffee Type" Type="varchar" MaxLength="30" />
+          <Property Name="No_" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Farmers Name" Type="varchar" MaxLength="60" />
+          <Property Name="Kg_ Collected" Type="float" />
+          <Property Name="Cancelled" Type="nvarchar" MaxLength="50" />
+          <Property Name="Paid" Type="tinyint" />
+          <Property Name="ID Number" Type="varchar" MaxLength="30" />
+          <Property Name="Factory" Type="varchar" MaxLength="30" />
+          <Property Name="Sent" Type="bit" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="200" />
+          <Property Name="Cumm" Type="float" />
+          <Property Name="User" Type="nvarchar" MaxLength="50" />
+          <Property Name="Can" Type="varchar" MaxLength="30" />
+          <Property Name="Collection time" Type="datetime" />
+          <Property Name="Collect type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Crop" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Farmers">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="No" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Transporter" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cum Cherry" Type="float" />
+          <Property Name="Cum Mbuni" Type="float" />
+        </EntityType>
+        <EntityType Name="Routes">
+          <Key>
+            <PropertyRef Name="Route" />
+          </Key>
+          <Property Name="Route" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Com Port" Type="nvarchar" MaxLength="50" />
+          <Property Name="BaudRate" Type="int" />
+          <Property Name="Coffe type" Type="int" />
+          <Property Name="Branch" Type="nvarchar" MaxLength="50" />
+          <Property Name="Printer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Server url" Type="nvarchar" MaxLength="100" />
+          <Property Name="Factory" Type="nvarchar" MaxLength="50" />
+          <Property Name="Current crop" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pick factory farmers" Type="bit" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date Created" Type="datetime" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="AutoweighModelStoreContainer">
+          <EntitySet Name="Crops" EntityType="Self.Crops" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Daily Collections Details" EntityType="Self.Daily Collections Details" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Farmers" EntityType="Self.Farmers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Routes" EntityType="Self.Routes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Settings" EntityType="Self.Settings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AutoweighModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Route">
+          <Key>
+            <PropertyRef Name="Route1" />
+          </Key>
+          <Property Name="Route1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="AutoweighEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Routes" EntityType="Self.Route" />
+          <EntitySet Name="Settings" EntityType="AutoweighModel.Setting" />
+          <EntitySet Name="Users" EntityType="AutoweighModel.User" />
+          <EntitySet Name="Daily_Collections_Details" EntityType="AutoweighModel.Daily_Collections_Detail" />
+          <EntitySet Name="Crops" EntityType="AutoweighModel.Crop" />
+          <EntitySet Name="Farmers" EntityType="AutoweighModel.Farmer" />
+        </EntityContainer>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Com_Port" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BaudRate" Type="Int32" />
+          <Property Name="Coffe_type" Type="Int32" />
+          <Property Name="Branch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Printer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Server_url" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Factory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Current_crop" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pick_factory_farmers" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date_Created" Type="DateTime" Precision="3" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Daily_Collections_Detail">
+          <Key>
+            <PropertyRef Name="Collection_Number" />
+          </Key>
+          <Property Name="Farmers_Number" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Collections_Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Collection_Number" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Coffee_Type" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="No_" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Farmers_Name" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Kg__Collected" Type="Double" />
+          <Property Name="Cancelled" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Paid" Type="Byte" />
+          <Property Name="ID_Number" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Factory" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Sent" Type="Boolean" />
+          <Property Name="Comments" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Cumm" Type="Double" />
+          <Property Name="User" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Can" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Collection_time" Type="DateTime" Precision="3" />
+          <Property Name="Collect_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Crop" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Crop">
+          <Key>
+            <PropertyRef Name="Crop_Name" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Crop_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Open_Date" Type="DateTime" Precision="3" />
+          <Property Name="Close_Date" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Farmer">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="No" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Transporter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cum_Cherry" Type="Double" />
+          <Property Name="Cum_Mbuni" Type="Double" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AutoweighModelStoreContainer" CdmEntityContainer="AutoweighEntities">
+          <EntitySetMapping Name="Routes">
+            <EntityTypeMapping TypeName="AutoweighModel.Route">
+              <MappingFragment StoreEntitySet="Routes">
+                <ScalarProperty Name="Route1" ColumnName="Route" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="AutoweighModel.Setting">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="Pick_factory_farmers" ColumnName="Pick factory farmers" />
+                <ScalarProperty Name="Current_crop" ColumnName="Current crop" />
+                <ScalarProperty Name="Factory" ColumnName="Factory" />
+                <ScalarProperty Name="Server_url" ColumnName="Server url" />
+                <ScalarProperty Name="Printer" ColumnName="Printer" />
+                <ScalarProperty Name="Branch" ColumnName="Branch" />
+                <ScalarProperty Name="Coffe_type" ColumnName="Coffe type" />
+                <ScalarProperty Name="BaudRate" ColumnName="BaudRate" />
+                <ScalarProperty Name="Com_Port" ColumnName="Com Port" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="AutoweighModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Date_Created" ColumnName="Date Created" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Daily_Collections_Details">
+            <EntityTypeMapping TypeName="AutoweighModel.Daily_Collections_Detail">
+              <MappingFragment StoreEntitySet="Daily Collections Details">
+                <ScalarProperty Name="Crop" ColumnName="Crop" />
+                <ScalarProperty Name="Collect_type" ColumnName="Collect type" />
+                <ScalarProperty Name="Collection_time" ColumnName="Collection time" />
+                <ScalarProperty Name="Can" ColumnName="Can" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="Cumm" ColumnName="Cumm" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Sent" ColumnName="Sent" />
+                <ScalarProperty Name="Factory" ColumnName="Factory" />
+                <ScalarProperty Name="ID_Number" ColumnName="ID Number" />
+                <ScalarProperty Name="Paid" ColumnName="Paid" />
+                <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+                <ScalarProperty Name="Kg__Collected" ColumnName="Kg_ Collected" />
+                <ScalarProperty Name="Farmers_Name" ColumnName="Farmers Name" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+                <ScalarProperty Name="Coffee_Type" ColumnName="Coffee Type" />
+                <ScalarProperty Name="Collection_Number" ColumnName="Collection Number" />
+                <ScalarProperty Name="Collections_Date" ColumnName="Collections Date" />
+                <ScalarProperty Name="Farmers_Number" ColumnName="Farmers Number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Crops">
+            <EntityTypeMapping TypeName="AutoweighModel.Crop">
+              <MappingFragment StoreEntitySet="Crops">
+                <ScalarProperty Name="Close_Date" ColumnName="Close Date" />
+                <ScalarProperty Name="Open_Date" ColumnName="Open Date" />
+                <ScalarProperty Name="Crop_Name" ColumnName="Crop Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Farmers">
+            <EntityTypeMapping TypeName="AutoweighModel.Farmer">
+              <MappingFragment StoreEntitySet="Farmers">
+                <ScalarProperty Name="Cum_Mbuni" ColumnName="Cum Mbuni" />
+                <ScalarProperty Name="Cum_Cherry" ColumnName="Cum Cherry" />
+                <ScalarProperty Name="Transporter" ColumnName="Transporter" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="No" ColumnName="No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

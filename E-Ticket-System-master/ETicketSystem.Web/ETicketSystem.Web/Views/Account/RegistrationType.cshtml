@@ -1,0 +1,21 @@
+﻿<environment include="Development">
+    <link rel="stylesheet" href="~/css/account/registration-type.css" />
+</environment>
+
+<h2 class="text-center">Choose a registration type</h2>
+
+<div class="row registrations-holder">
+    <div class="col-md-6 registration-type">
+        <a asp-controller="Account" asp-action="RegisterUser">
+            <img class="user-register-icon" src="~/images/user/user.png" alt="User" />
+            <div class="">Create new user account</div>
+        </a>
+    </div>
+    <div class="col-md-6 registration-type">
+        <a asp-controller="Account" asp-action="RegisterCompany">
+            <img class="company-register-icon" src="~/images/user/company.png" alt="User" />
+            <div>Create new company account</div>
+        </a>
+    </div>
+</div>
+

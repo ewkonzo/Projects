@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="F:\Paul\Projects\Dropbox\Android\M-SACCO\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="af5110ae2077d4f33b9cd6fed56c9f7627373e1a">
+        <dex dex="F:\Paul\Projects\Dropbox\Android\M-SACCO\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0611b672e1c65094297a0abf288e0b5034d6600b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Paul\AndroidSDK\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="F:\Paul\Projects\Dropbox\Android\M-SACCO\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-v4-18.0.0_69fee991662c60ce805cf2b530fa7f9b8e112f18\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Paul\Projects\Dropbox\Android\M-SACCO\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="bd376d0091cdf6e7fbfe909bbf4b2fbd1f07261e">
+        <dex dex="F:\Paul\Projects\Dropbox\Android\M-SACCO\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_684ad37463127614570c95c26ac028f4ddf7ac8c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Paul\Projects\Dropbox\Android\M-SACCO\app\libs\achartengine-1.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="6b9f421d67b60253072003b2b8a1028b12cb916a">
+        <dex dex="F:\Paul\Projects\Dropbox\Android\M-SACCO\app\build\intermediates\transforms\dex\debug\folders\1000\2\achartengine-1.1.0_3f9ff4a3c9f8ee8a22c726c4bf6ec245bf28bb12\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="F:\Paul\Projects\Dropbox\Android\M-SACCO\app\libs\ksoap2-android-assembly-2.4-jar-with-dependencies.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.0"
+        sha1="e8796346a9191a019e936210a2dc50662c57594b">
+        <dex dex="F:\Paul\Projects\Dropbox\Android\M-SACCO\app\build\intermediates\transforms\dex\debug\folders\1000\2\ksoap2-android-assembly-2.4-jar-with-dependencies_4b762c692f2afb93e7306211443a954017a222b4\classes.dex" />
+    </item>
+
+</items>

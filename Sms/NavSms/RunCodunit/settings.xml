@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+  <Serverip>localhost</Serverip>
+  <domain>localhost</domain>
+  <Instance>Lopha</Instance>
+  <Port>402</Port>
+  <Username>Hp</Username>
+  <pass>Rahabgathoni2</pass>
+  <Companyname>Lopha Live</Companyname>
+  <PostIntervalinsec>5</PostIntervalinsec>
+  <Reconnectintervalinsec>3</Reconnectintervalinsec>
+  <logpath>C:\Logs\</logpath>
+<database>Autoweigh</database>
+<IntegratedSecurity>false</IntegratedSecurity>
+	<certpath>E:\Tray\cert\navcert.cer</certpath>
+	<client>10000</client>
+</settings>

@@ -1,0 +1,7 @@
+#Mon Sep 26 17:23:40 EAT 2016
+base.0=F\:\\Paul\\Projects\\Dropbox\\Android\\M-SACCO\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_684ad37463127614570c95c26ac028f4ddf7ac8c
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=F\:\\Paul\\Projects\\Dropbox\\Android\\M-SACCO\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_0611b672e1c65094297a0abf288e0b5034d6600b\\classes.dex
+base.1=F\:\\Paul\\Projects\\Dropbox\\Android\\M-SACCO\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_0611b672e1c65094297a0abf288e0b5034d6600b
+file.0=F\:\\Paul\\Projects\\Dropbox\\Android\\M-SACCO\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_684ad37463127614570c95c26ac028f4ddf7ac8c\\classes.dex

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/Post" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Post" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Post" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="Post">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Post_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Bal">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="acc" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Bal_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Tcharges">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="type" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Tcharges_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="Post">
+    <part name="parameters" element="tns:Post" />
+  </message>
+  <message name="Post_Result">
+    <part name="parameters" element="tns:Post_Result" />
+  </message>
+  <message name="Bal">
+    <part name="parameters" element="tns:Bal" />
+  </message>
+  <message name="Bal_Result">
+    <part name="parameters" element="tns:Bal_Result" />
+  </message>
+  <message name="Tcharges">
+    <part name="parameters" element="tns:Tcharges" />
+  </message>
+  <message name="Tcharges_Result">
+    <part name="parameters" element="tns:Tcharges_Result" />
+  </message>
+  <portType name="Post_Port">
+    <operation name="Post">
+      <input name="Post" message="tns:Post" />
+      <output name="Post_Result" message="tns:Post_Result" />
+    </operation>
+    <operation name="Bal">
+      <input name="Bal" message="tns:Bal" />
+      <output name="Bal_Result" message="tns:Bal_Result" />
+    </operation>
+    <operation name="Tcharges">
+      <input name="Tcharges" message="tns:Tcharges" />
+      <output name="Tcharges_Result" message="tns:Tcharges_Result" />
+    </operation>
+  </portType>
+  <binding name="Post_Binding" type="tns:Post_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Post">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Post:Post" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Post">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Post_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Bal">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Post:Bal" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Bal">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Bal_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Tcharges">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Post:Tcharges" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Tcharges">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Tcharges_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Post">
+    <port name="Post_Port" binding="tns:Post_Binding">
+      <address location="http://paulo:2012/Coretec/WS/Coretec/Codeunit/Post" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

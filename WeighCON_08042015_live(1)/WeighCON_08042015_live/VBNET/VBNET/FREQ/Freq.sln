@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Freq", "Freq.vbproj", "{AFB1EF45-AD83-4C1D-9DF8-F1BFEA2DE328}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{AFB1EF45-AD83-4C1D-9DF8-F1BFEA2DE328}.Debug.ActiveCfg = Debug|.NET
+		{AFB1EF45-AD83-4C1D-9DF8-F1BFEA2DE328}.Debug.Build.0 = Debug|.NET
+		{AFB1EF45-AD83-4C1D-9DF8-F1BFEA2DE328}.Release.ActiveCfg = Release|.NET
+		{AFB1EF45-AD83-4C1D-9DF8-F1BFEA2DE328}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

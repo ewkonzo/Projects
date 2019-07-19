@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">测试应用</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="logcat_output">logcat output</string>
+    <string name="logcat_clear">logcat clear</string>
+    <string name="interval_format_error">The format of interval-time is error!</string>
+    <string name="introduction">测试简介\n屏蔽状态栏上的虚拟或物理按键的Demo</string>
+    
+    <string name="autotest_run3">测试按钮1</string>
+    <string name="autotest_run4">测试按钮2</string>
+	<string name="autotest_run5_on">测试按钮3</string>
+	
+	<string name="no">不合格</string>
+	<string name="next">下一个</string>
+	<string name="end">结束</string>
+	<string name="yes">合格</string>
+	<string name="clean">清除log</string>
+	<string name="re_new">重新扫描</string>
+	
+	
+	<string name="tools">工具</string>
+</resources>

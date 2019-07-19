@@ -1,0 +1,26 @@
+﻿body {
+    background-image: url('../../images/user/register.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x:hidden;
+}
+
+form.register-form {
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 10px 10px 5px #808080;
+    outline:0 none;
+}
+
+button.register {
+    margin-top: 10px;
+    width: 50%;
+    border-radius: 20px;
+    background: none;
+    border: 1px solid black;
+    padding: 5px 10px;
+    outline: 0 none;
+    color: black;
+}

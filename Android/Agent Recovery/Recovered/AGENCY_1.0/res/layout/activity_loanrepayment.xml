@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TableLayout android:layout_width="fill_parent" android:layout_height="500.0dip">
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <TextView android:id="@id/NationalId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Nationalid" />
+                <EditText android:id="@id/txtnationalid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/Nationalid" android:layout_weight="1.0" android:inputType="textAutoComplete" />
+            </TableRow>
+            <RelativeLayout android:id="@id/loanlayout" android:layout_marginTop="10.0dip">
+                <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/sourceinfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Loan" />
+                <ProgressBar android:id="@id/ploans" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="25.0dip" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <View android:background="@android:color/holo_green_dark" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:id="@id/LoanNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Loanno" />
+                <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/txtloanno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/Loanno" android:layout_weight="1.0" />
+            </TableRow>
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:id="@id/TvLoantype" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loantype" />
+                <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/txtloantype" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/loantype" android:layout_weight="1.0" />
+            </TableRow>
+            <View android:background="@android:color/holo_green_dark" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="20.0dip" />
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <TextView android:id="@id/TVAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/amount" />
+                <EditText android:id="@id/txtamount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/amount" android:layout_weight="1.0" android:inputType="number" />
+            </TableRow>
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <Button android:id="@id/Cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cancel" />
+                <Button android:layout_gravity="right" android:id="@id/Confirm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Confirm" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>

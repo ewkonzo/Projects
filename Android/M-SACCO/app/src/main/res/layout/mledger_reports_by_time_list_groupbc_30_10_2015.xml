@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey"
+        android:orientation="horizontal"
+        android:paddingLeft="0dip"
+        android:paddingRight="0dip"
+        android:weightSum="12" >
+
+        <TextView
+            android:id="@+id/mledgerReportsByTimelblYearListHeader"
+            android:layout_width="110dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+            android:paddingTop="10dip"
+            android:text=""
+            android:textColor="#000000"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/mledgerReportsByTimelblDepListHeader"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_weight="3"
+            android:padding="10dip"
+            android:text=""
+            android:textColor="#008000"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/mledgerReportsByTimelblWithdListHeader"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_weight="3"
+            android:padding="10dip"
+            android:paddingRight="15dip"
+            android:text=""
+            android:textColor="#ff0000"
+            android:textSize="11dp" />
+    </LinearLayout>
+
+</LinearLayout>

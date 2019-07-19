@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/orderlayout" android:background="@drawable/order_selector" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/thumbnail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_alignParentLeft="true">
+        <ImageView android:layout_gravity="top" android:id="@id/list_delete" android:background="@drawable/image_selector" android:layout_width="50.0dip" android:layout_height="50.0dip" android:contentDescription="@string/app_name" />
+    </LinearLayout>
+    <TextView android:textSize="15.0dip" android:typeface="sans" android:textStyle="bold" android:textColor="#ff040404" android:gravity="center" android:id="@id/tvitemname" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginLeft="50.0dip" android:text="stritemname" android:layout_alignTop="@id/thumbnail" />
+</RelativeLayout>

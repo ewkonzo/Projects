@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MClientService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MClientService_Bulk_Sms_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:7002/Hazina2016/WS/Hazina%20Sacco%20Ltd/Page/SMS</Value>
+    </Setting>
+    <Setting Name="MClientService_SmobileTransactions_Smobile_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:7002/Hazina2016/WS/Hazina%20Sacco%20Ltd/Page/Smobile</Value>
+    </Setting>
+    <Setting Name="MClientService_Stypes_SmobileTransactiontypes_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:7002/Hazina2016/WS/Hazina%20Sacco%20Ltd/Page/SmobileTransactiontypes</Value>
+    </Setting>
+    <Setting Name="MClientService_Customers_Smobilemembers_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:7002/Hazina2016/WS/Hazina%20Sacco%20Ltd/Page/Smobilemembers</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MBRANCH</string>
+    <string name="title_activity_splash">Mbranch</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_transfer">transfer</string>
+    <string name="title_activity_loans">loans</string>
+    <string name="tab_text_1">Apply For loan</string>
+    <string name="tab_text_2">Guarantor ship</string>
+
+</resources>

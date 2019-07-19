@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:focusable="false"
+android:background="@drawable/backgroundactionbar"
+    android:descendantFocusability="blocksDescendants"
+    >
+
+    <ImageButton
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/reverse"
+        android:background="@null"
+        android:focusable="false"
+
+        android:src="@drawable/deletered" />
+        <TextView
+            android:id="@+id/lblListHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:layout_marginLeft="55dp"
+            android:layout_marginStart="55dp"
+
+            android:textColor="@android:color/holo_green_dark"
+            android:focusable="false"
+            android:textStyle="bold"
+            android:textSize="10dp" />
+        <TextView
+            android:id="@+id/lblListreceipt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textColor="@android:color/holo_green_dark"
+        android:layout_marginTop="3dp"
+            android:layout_below="@id/lblListHeader"
+            android:focusable="false"
+            android:textStyle="bold"
+            android:layout_marginLeft="55dp"
+            android:layout_marginStart="55dp"
+            android:textSize="8dp" />
+        <TextView
+            android:id="@+id/memberno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:focusable="false"
+            android:layout_toRightOf="@id/lblListHeader"
+            android:textColor="@android:color/holo_green_dark"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:text="No" />
+
+    <TextView
+        android:id="@+id/membername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/memberno"
+        android:layout_marginLeft="50dp"
+        android:layout_toRightOf="@id/lblListHeader"
+        android:focusable="false"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="bold"
+        android:layout_marginTop="3dp"
+        android:textSize="8dp"
+        android:text="Name:" />
+        <TextView
+            android:id="@+id/groupcountvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:focusable="false"
+            android:textColor="@android:color/holo_green_dark"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textSize="10dp"
+          android:text="user" />
+
+        <TextView
+            android:id="@+id/grouptotalvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/memberno"
+            android:layout_marginRight="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@android:color/holo_green_dark"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:text="total" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:id="@+id/printdaily"
+            android:background="@null"
+            android:focusable="false"
+            android:src="@drawable/print" />
+
+</RelativeLayout>

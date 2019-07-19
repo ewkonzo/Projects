@@ -1,0 +1,9 @@
+﻿localhost
+8113
+Mwalimu
+Paul
+Rahabgathoni1
+localhost
+Mwalimu Sacco
+Mwalimu
+C:\coretec\Msacco\Logs\

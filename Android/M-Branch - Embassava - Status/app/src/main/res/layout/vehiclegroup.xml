@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:focusable="false"
+  android:background="@drawable/backgroundactionbar"
+    android:descendantFocusability="blocksDescendants"
+    >
+        <TextView
+            android:id="@+id/vehicleno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle"
+            android:textColor="#000"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="7dp"
+            android:focusable="false"
+            android:textStyle="bold"
+            android:textSize="10dp" />
+        <TextView
+            android:id="@+id/memberno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:focusable="false"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:text="Member no" />
+        <TextView
+            android:id="@+id/membername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/memberno"
+            android:layout_below="@id/memberno"
+            android:layout_marginLeft="120dp"
+
+            android:focusable="false"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textSize="10dp"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/vehiclecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="right"
+            android:textColor="#000"
+            android:textSize="10dp"
+            android:hint="Count"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/membername"
+            android:layout_alignRight="@+id/grouptotalvalue"
+            android:layout_alignEnd="@+id/grouptotalvalue" />
+        <TextView
+            android:id="@+id/grouptotalvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/vehiclecount"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+
+            android:textColor="#000"
+            android:focusable="false"
+            android:textSize="10dp"
+            android:gravity="right"
+            android:hint="total" />
+
+</RelativeLayout>

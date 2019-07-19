@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.msacco.safaricom_sacco"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/sacco_logo"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Mobibanking" >
+        <activity
+            android:name="info.msacco.tabsswipe.Main_Splash_Screen"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.ConfirmSMS"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.Line_Registration"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.HomeActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="Saf Sacco"
+            android:parentActivityName="info.msacco.tabsswipe.loginActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.CustomerServiceMessageActivity"
+            android:label="Message"
+            android:parentActivityName="info.msacco.tabsswipe.CustomerServiceActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.CustomerServiceActivity"
+            android:label="Customer Service"
+            android:parentActivityName="info.msacco.tabsswipe.HomeActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.RununuLoanRequestActivity"
+            android:label="Rununu Advance"
+            android:parentActivityName="info.msacco.tabsswipe.HomeActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MyLoansRepaymentActivity"
+            android:label="Loan Repayment"
+            android:parentActivityName="info.msacco.tabsswipe.HomeActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MLedgerReportsByTime_BC_30_10_2015"
+            android:label="Time"
+            android:parentActivityName="info.msacco.tabsswipe.MLedgerActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MLedgerReportsByTimeDrillDown"
+            android:label="Time"
+            android:parentActivityName="info.msacco.tabsswipe.MLedgerReportsByTime_BC_30_10_2015" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MLedgerReportsByTransType"
+            android:label="Transaction Type"
+            android:parentActivityName="info.msacco.tabsswipe.MLedgerActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MLedgerActivity"
+            android:label="Dashboard"
+            android:parentActivityName="info.msacco.tabsswipe.HomeActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.EPayOnlinePaymentMasterCardActivity"
+            android:label="MasterCard"
+            android:parentActivityName="info.msacco.tabsswipe.EPaymentsActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MLedgerReportsByAccTypePieChart"
+            android:label="Account Type"
+            android:parentActivityName="info.msacco.tabsswipe.MLedgerReportsByAccType" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MLedgerReportsByTransTypePieChart"
+            android:label="Transaction Type"
+            android:parentActivityName="info.msacco.tabsswipe.MLedgerReportsByTransType" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MLedgerReportsByTimePieChart"
+            android:label="Time"
+            android:parentActivityName="info.msacco.tabsswipe.MLedgerReportsByTime_BC_30_10_2015" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.BalEnquiryActivity"
+            android:label="Account Balance"
+            android:parentActivityName="info.msacco.tabsswipe.HomeActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.EPayOnlinePaymentVISAActivity"
+            android:label="Visa"
+            android:parentActivityName="info.msacco.tabsswipe.EPaymentsActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MLedgerReportsByAccType"
+            android:label="Account Type"
+            android:parentActivityName="info.msacco.tabsswipe.MLedgerActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MLedgerReportsByTime"
+            android:label="Time"
+            android:parentActivityName="info.msacco.tabsswipe.MLedgerActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MLedgerReportsByTimeBarChart"
+            android:label="Time"
+            android:parentActivityName="info.msacco.tabsswipe.MLedgerReportsByTime_BC_30_10_2015" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MLedgerReportsByTransTypeBarChart"
+            android:label="Transaction Type"
+            android:parentActivityName="info.msacco.tabsswipe.MLedgerReportsByTransType" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MLedgerReportsByAccTypeBarChart"
+            android:label="Account Type"
+            android:parentActivityName="info.msacco.tabsswipe.MLedgerReportsByAccType" >
+        </activity>
+        <activity android:name="org.achartengine.GraphicalActivity" />
+        <activity
+            android:name="info.msacco.tabsswipe.MyCardsActivity"
+            android:label="My Cards"
+            android:parentActivityName="info.msacco.tabsswipe.HomeActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.EPayPayBillKPLCActivity"
+            android:label="KPLC"
+            android:parentActivityName="info.msacco.tabsswipe.EPaymentsActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.EPayPayBillZUKUActivity"
+            android:label="ZUKU"
+            android:parentActivityName="info.msacco.tabsswipe.EPaymentsActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.EPayPayBillNairobiWaterActivity"
+            android:label="Nairobi Water"
+            android:parentActivityName="info.msacco.tabsswipe.EPaymentsActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.EPayPayBillDSTVActivity"
+            android:label="DSTV"
+            android:parentActivityName="info.msacco.tabsswipe.EPaymentsActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MyAccTransactWithdrawActivity"
+            android:label="Withdraw"
+            android:parentActivityName="info.msacco.tabsswipe.MyAccTransactActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MyAccAirtimeTopUpMyPhoneActivity"
+            android:label="TopUp My Phone"
+            android:parentActivityName="info.msacco.tabsswipe.MyAccAirtimeTopUpMyPhoneActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MyAccAirtimeTopUpOtherActivity"
+            android:label="Top Up Other"
+            android:parentActivityName="info.msacco.tabsswipe.MyAccAirtimeTopUpMyPhoneActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.FundsTransferActivity"
+            android:label="Funds Transfer"
+            android:parentActivityName="info.msacco.tabsswipe.HomeActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.EPaymentsActivity"
+            android:label="E-Payments"
+            android:parentActivityName="info.msacco.tabsswipe.HomeActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MyAccMemberInfoActivity"
+            android:label="Member Information"
+            android:parentActivityName="info.msacco.tabsswipe.MyAccountActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MyAccNextOfKinActivity"
+            android:label="Next Of Kin"
+            android:parentActivityName="info.msacco.tabsswipe.MyAccountActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MyAccountActivity"
+            android:label="My Account"
+            android:parentActivityName="info.msacco.tabsswipe.HomeActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MyAccTransactActivity"
+            android:label="Transact"
+            android:parentActivityName="info.msacco.tabsswipe.HomeActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MyAccTransactDepositActivity"
+            android:label="Deposit Money"
+            android:parentActivityName="info.msacco.tabsswipe.MyAccTransactActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MyAccMiniStatementActivity"
+            android:label="Mini Statement"
+            android:parentActivityName="info.msacco.tabsswipe.HomeActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.LoanCalActivity"
+            android:label="Loan Calculator"
+            android:parentActivityName="info.msacco.tabsswipe.HomeActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.MyAccTransactAirtimeTopUpActivity"
+            android:label="Airtime TopUp"
+            android:parentActivityName="info.msacco.tabsswipe.MyAccTransactActivity" >
+        </activity>
+        <activity
+            android:name="info.msacco.tabsswipe.StartPage"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>

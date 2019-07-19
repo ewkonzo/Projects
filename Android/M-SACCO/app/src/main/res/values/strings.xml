@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Saf Sacco</string>
+    <string name="action_settings">Logout</string>
+    <string name="action_home">Home</string>
+    <string name="sel_acc">Select Account</string>
+    <string name="CompanyName">CoreTEC Systems &amp; Solutions</string>
+    <string name="Terms">Accept Terms &amp; Conditions</string>
+
+    <!-- Action Bar action items -->
+    <string name="action_search">Sarch</string>
+    <string name="action_location_found">Location Found</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_contacts">Contacts</string>
+    <string name="action_Language">Language</string>
+    <string name="action_Logout">Logout</string>
+    <string name="register">Enter Your Phone No Below</string>
+    
+   
+    <!-- Activity Titles -->
+    <string name="HomeActivityTitle">CoreTEC</string>
+    <string name="FeedbackActivityTitle">Feedback</string>
+    <string name="MyLoansActivityTitle">Loans</string>
+    <string name="FundsTransferActivityTitle">Funds Transfer</string>
+    <string name="EPaymentsActivityTitle">E-Payments</string>
+    <string name="MemberInfoActivityTitle">My Account</string>
+    <string name="MinistmtActivityTitle">Ministatement</string>
+    <string name="MyCardsActivityTitle"> My Cards</string>
+    <string name="AccountBalActivityTitle">Balance Enquiry</string>
+    <string name="TransactActivityTitle">Transact</string>
+    <string name="FosaLoansActivityTitle">Loan Repayment</string>
+    <string name="LoanCalcActivityTitle">Loan Calculator</string>
+    <string name="DashBoardActivityTitle">Dashboard</string>
+    <string name="RununuLoanActivityTitle">Rununu Advance</string>
+    <string name="CustomerServiceActivityTitle">Customer Service</string>
+     <string name="splash"><b> SAFARICOM SACCO </b></string>
+      <string name="code"><b> Enter SMS Verification Code Below </b></string>
+    <!-- String Array for paybill KPLC account selection spinner -->
+    <string-array name="paybill_kplc_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <!-- String Array for paybill zuku account selection spinner -->
+    <string-array name="paybill_zuku_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <!-- String Array for paybill nairobi water account selection spinner -->
+    <string-array name="paybill_nair_water_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <!-- String Array for paybill dstv account selection spinner -->
+    <string-array name="paybill_dstv_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <!-- String Array for paybill buy goods account selection spinner -->
+    <string-array name="buy_goods_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+
+    <!-- String Array for paypall account selection spinner -->
+    <string-array name="online_paypal_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <!-- String Array for pesapal account selection spinner -->
+    <string-array name="online_pesapal_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <!-- String Array for visa account selection spinner -->
+    <string-array name="online_visa_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <!-- String Array for master card account selection spinner -->
+    <string-array name="online_master_card_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+
+    <!-- String Array for my account deposits account selection spinner -->
+    <string-array name="my_acc_deposit_acc_selector_array">
+        <item>FOSA</item>
+        <item>BOSA</item>
+        <item>Shares</item>
+        <item>Deposits</item>
+    </string-array>
+    <!-- String Array for my account deposits wallet selection spinner -->
+    <string-array name="my_acc_deposit_wallet_selector_array">
+        <item>MPesa</item>
+        <item>AirTel Money</item>
+        <item>Orange Money</item>
+        <item>Other</item>
+    </string-array>
+    <!-- String Array for my account withdrawal to my phone account selection spinner -->
+    <string-array name="my_acc_withdrawal_my_phone_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <!-- String Array for my account withdrawal to other phone account selection spinner -->
+    <string-array name="my_acc_withdrawal_other_phone_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <!-- spinner -->
+    <string name="cards_spinner_title">Select Branch</string>
+
+</resources>

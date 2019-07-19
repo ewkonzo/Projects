@@ -1,0 +1,108 @@
+﻿@model UserTickets
+
+@{
+    ViewData["Title"] = "My Tickets";
+    Layout = "_UserProfileLayout";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+
+<div class="container-fluid">
+    <div class="row search-container">
+        <form method="get" asp-controller="Users" asp-action="MyTickets" class="search-form col-md-12">
+            <div class="text-danger text-center form-errors" hidden>
+                Start destination and end destination cannot be equal!
+            </div>
+            <div class="form-fields row">
+                <div class="form-group col-md-3">
+                    <label asp-for="StartTown"></label>
+                    <select asp-for="StartTown" asp-items="Model.Towns" class="form-control start-town" required></select>
+                    <span asp-validation-for="StartTown" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="EndTown"></label>
+                    <select asp-for="EndTown" asp-items="Model.Towns" class="form-control end-town" required></select>
+                    <span asp-validation-for="EndTown" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="Date"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="CompanyId"></label>
+                    <select asp-for="CompanyId" asp-items="Model.Companies" class="form-control end-town"></select>
+                    <span asp-validation-for="CompanyId" class="text-danger"></span>
+                </div>
+            </div>
+            <input type="submit" value="Search" class="btn btn-success" onclick="checkTownsEquality()" />
+            <a asp-controller="Users" asp-action="MyTickets" class="btn btn-primary">Clear</a>
+        </form>
+    </div>
+</div>
+<hr />
+
+@if(Model.Tickets.Count() == 0)
+{
+    @Html.Partial("_NoResultsFoundMessageBox")
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Route</th>
+                <th>Seat</th>
+                <th>Departure time</th>
+                <th>Price</th>
+                <th>Download</th>
+                <th>Cancellation</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var t in Model.Tickets)
+            {
+                <tr>
+                    <td>@t.CompanyName</td>
+                    <td>@t.Route</td>
+                    <td>@t.SeatNumber</td>
+                    <td>@t.DepartureTime</td>
+                    <td>@t.Price.ToFormatedPrice() $</td>
+                    <td>
+                        <a asp-controller="Tickets" asp-action="Download" asp-route-id="@t.Id" class="btn btn-primary">Download</a>
+                    </td>
+                    <td>
+                        @{  var timeSpan = t.DepartureTime - DateTime.UtcNow.ToLocalTime();}
+                        @if (timeSpan.TotalMinutes >= WebConstants.Ticket.CancelationMinutesDifference)
+                        {
+                            <a asp-controller="Tickets" asp-action="Cancel" asp-route-id="@t.Id" class="btn btn-danger">Cancel</a>
+                        }
+                        else
+                        {
+                            <span class="success">N/A</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="container-fluid text-center">
+        <ul class="pagination">
+            <li class="page-item @(1 == Model.Pagination.CurrentPage ? "blocked":string.Empty)">
+                <a class="page-link" asp-controller="@Model.Pagination.Controller" asp-action="@Model.Pagination.Action" asp-route-startTown="@Model.StartTown" asp-route-endTown="@Model.EndTown" asp-route-companyId="@Model.CompanyId" asp-route-date="@(Model.Date.HasValue ? Model.Date.Value.ToYearMonthDayFormat() : null)" asp-route-page="@Model.Pagination.PreviousPage">Previous</a>
+            </li>
+            @for (int i = 1; i <= Model.Pagination.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.Pagination.CurrentPage ? "active blocked":string.Empty)">
+                    <a class="page-link" asp-controller="@Model.Pagination.Controller" asp-action="@Model.Pagination.Action" asp-route-startTown="@Model.StartTown" asp-route-endTown="@Model.EndTown" asp-route-companyId="@Model.CompanyId" asp-route-date="@(Model.Date.HasValue ? Model.Date.Value.ToYearMonthDayFormat() : null)" asp-route-page="@i">@i</a>
+                </li>
+            }
+            <li class="page-item @(Model.Pagination.TotalPages == Model.Pagination.CurrentPage ? "blocked":string.Empty)">
+                <a class="page-link" asp-controller="@Model.Pagination.Controller" asp-action="@Model.Pagination.Action" asp-route-startTown="@Model.StartTown" asp-route-endTown="@Model.EndTown" asp-route-companyId="@Model.CompanyId" asp-route-date="@(Model.Date.HasValue ? Model.Date.Value.ToYearMonthDayFormat() : null)" asp-route-page="@Model.Pagination.NextPage">Next</a>
+            </li>
+        </ul>
+    </div>
+}
+

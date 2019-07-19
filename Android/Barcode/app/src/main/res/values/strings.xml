@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Barcode</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_newproduct">New Product</string>
+    <string name="productname">Product Name</string>
+    <string name="productsize">Size</string>
+    <string name="manufacturer">Manufacturer</string>
+    <string name="source">Source</string>
+    <string name="code">Product Code</string>
+    <string name="mandate">Manufacture Date</string>
+    <string name="exdate">Exiry Date</string>
+    <string name="save">Save</string>
+    <string name="title_activity_barcodeview">barcodeview</string>
+</resources>

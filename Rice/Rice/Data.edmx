@@ -1,0 +1,1798 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RiceModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Bag Weight">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Bag Type" Type="int" />
+          <Property Name="Weight" Type="decimal" Precision="38" Scale="20" />
+        </EntityType>
+        <EntityType Name="Bank Account">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Category locations">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Location" Type="nvarchar" MaxLength="50" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="30" />
+          <Property Name="Phone No_" Type="nvarchar" MaxLength="30" />
+          <Property Name="Telex No_" Type="nvarchar" MaxLength="30" />
+          <Property Name="Fax No_" Type="nvarchar" MaxLength="30" />
+          <Property Name="VAT Registration No_" Type="nvarchar" MaxLength="20" />
+          <Property Name="Registration No_" Type="nvarchar" MaxLength="20" />
+          <Property Name="Picture" Type="image" />
+          <Property Name="Post Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="County" Type="nvarchar" MaxLength="30" />
+          <Property Name="E-Mail" Type="nvarchar" MaxLength="80" />
+          <Property Name="Company P_I_N" Type="nvarchar" MaxLength="30" />
+          <Property Name="Company code" Type="nvarchar" MaxLength="10" />
+          <Property Name="Company Watermark" Type="image" />
+          <Property Name="PIN No" Type="nvarchar" MaxLength="30" />
+          <Property Name="Home Page" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mission" Type="nvarchar" MaxLength="100" />
+          <Property Name="Vision" Type="nvarchar" MaxLength="100" />
+          <Property Name="Location" Type="nvarchar" MaxLength="100" />
+          <Property Name="Branch Location" Type="nvarchar" MaxLength="100" />
+          <Property Name="Managers Phone No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Operations Phone No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sales Supervisor" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="No_" Type="nvarchar" MaxLength="20" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="30" />
+          <Property Name="Phone No_" Type="nvarchar" MaxLength="30" />
+          <Property Name="Picture" Type="image" />
+          <Property Name="Post Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="E-Mail" Type="nvarchar" MaxLength="80" />
+          <Property Name="Home Page" Type="nvarchar" MaxLength="80" />
+          <Property Name="Mobile Phone No_" Type="nvarchar" MaxLength="30" />
+          <Property Name="National ID" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Passport No" Type="nvarchar" MaxLength="20" />
+          <Property Name="Registration No" Type="nvarchar" MaxLength="20" />
+          <Property Name="PIN No" Type="nvarchar" MaxLength="20" />
+          <Property Name="DOB_" Type="datetime" />
+          <Property Name="Gender" Type="int" />
+          <Property Name="Marital Status" Type="int" />
+          <Property Name="Date of Join" Type="datetime" />
+          <Property Name="Created Date" Type="datetime" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Bank Name" Type="nvarchar" MaxLength="30" />
+          <Property Name="Bank Branch Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="Bank Account No" Type="nvarchar" MaxLength="20" />
+          <Property Name="MPESA Mobile No" Type="nvarchar" MaxLength="30" />
+          <Property Name="Account Types" Type="int" />
+          <Property Name="Account Status" Type="int" />
+          <Property Name="Created By" Type="nvarchar" MaxLength="50" />
+          <Property Name="Section" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Member No" Type="nvarchar" MaxLength="100" />
+          <Property Name="Membership Class" Type="int" />
+          <Property Name="Payee Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Farmer Number" Type="nvarchar" MaxLength="30" />
+          <Property Name="Total Acreage" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Entry" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Sent" Type="bit" />
+          <Property Name="Village" Type="nvarchar" MaxLength="50" />
+          <Property Name="Main Season" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Crops">
+          <Key>
+            <PropertyRef Name="Crop Name" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Crop Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Open Date" Type="datetime" />
+          <Property Name="Close Date" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank Account" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Dimension">
+          <Key>
+            <PropertyRef Name="Dimension Code" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Dimension Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Farmers">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="No" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Updated" Type="bit" />
+          <Property Name="Class" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="100" />
+          <Property Name="Gender" Type="int" />
+          <Property Name="Bank" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank Account" Type="nvarchar" MaxLength="50" />
+          <Property Name="Acreage" Type="float" />
+          <Property Name="Section" Type="nvarchar" MaxLength="50" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Photo" Type="image" />
+          <Property Name="Entry" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="New" Type="bit" />
+          <Property Name="E_Mail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Marital Status" Type="int" />
+          <Property Name="Account_Types" Type="int" />
+          <Property Name="Serviced Acres" Type="float" />
+          <Property Name="Customer Posting Group" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <EntityType Name="Item Balance">
+          <Key>
+            <PropertyRef Name="Item" />
+            <PropertyRef Name="Variant" />
+            <PropertyRef Name="Location" />
+            <PropertyRef Name="Entry No" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Ref" />
+          </Key>
+          <Property Name="Entry" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Item" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Variant" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Location" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Balance" Type="float" />
+          <Property Name="Entry No" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Move Type" Type="int" />
+          <Property Name="Ref" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="From Location" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Item Conversion Matrix">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Item" Type="nvarchar" MaxLength="30" />
+          <Property Name="Variant" Type="nvarchar" MaxLength="30" />
+          <Property Name="To Item" Type="nvarchar" MaxLength="30" />
+          <Property Name="To Variant" Type="nvarchar" MaxLength="30" />
+          <Property Name="Units" Type="int" />
+        </EntityType>
+        <EntityType Name="Item Movement">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Item" Type="nvarchar" MaxLength="30" />
+          <Property Name="Variant" Type="nvarchar" MaxLength="20" />
+          <Property Name="Qty" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Movement Type" Type="int" />
+          <Property Name="Location" Type="nvarchar" MaxLength="20" />
+          <Property Name="Location To" Type="nvarchar" MaxLength="20" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="Convert to" Type="nvarchar" MaxLength="20" />
+          <Property Name="User" Type="nvarchar" MaxLength="30" />
+          <Property Name="Posted" Type="tinyint" />
+          <Property Name="Datetime Posted" Type="datetime" />
+          <Property Name="Reference" Type="nvarchar" MaxLength="50" />
+          <Property Name="Purchase Price" Type="float" />
+          <Property Name="Sales Price" Type="float" />
+          <Property Name="Balance" Type="float" />
+          <Property Name="Season" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sent" Type="bit" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Reversed" Type="bit" />
+          <Property Name="Reversed by entry" Type="int" />
+          <Property Name="Recid" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Item Movement Header">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Reference" Type="nvarchar" MaxLength="30" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="Created By" Type="nvarchar" MaxLength="30" />
+          <Property Name="Movement Type" Type="int" />
+          <Property Name="Posted" Type="tinyint" />
+          <Property Name="DateTime Posted" Type="datetime" />
+          <Property Name="Location" Type="nvarchar" MaxLength="30" />
+          <Property Name="Entry" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Season" Type="nvarchar" MaxLength="50" />
+          <Property Name="Supplier" Type="nvarchar" MaxLength="50" />
+          <Property Name="Invoice" Type="nvarchar" MaxLength="50" />
+          <Property Name="Grn No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Location To" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sent" Type="bit" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="200" />
+          <Property Name="Item" Type="nvarchar" MaxLength="30" />
+          <Property Name="Variant" Type="nvarchar" MaxLength="30" />
+          <Property Name="To Item" Type="nvarchar" MaxLength="30" />
+          <Property Name="To Variant" Type="nvarchar" MaxLength="30" />
+          <Property Name="Qty" Type="int" />
+          <Property Name="Balance" Type="int" />
+          <Property Name="Converted" Type="bit" />
+          <Property Name="Balance 2" Type="int" />
+        </EntityType>
+        <EntityType Name="Item Reversals">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Reversal Id" Type="nvarchar" MaxLength="50" />
+          <Property Name="Entry Type" Type="int" />
+          <Property Name="Qty" Type="int" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="100" />
+          <Property Name="Posted" Type="tinyint" />
+          <Property Name="Datetime Posted" Type="datetime" />
+          <Property Name="Reversed By" Type="nvarchar" MaxLength="30" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="Location" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Reversed" Type="bit" />
+          <Property Name="Sent" Type="bit" />
+          <Property Name="Reverse document" Type="bit" />
+          <Property Name="Reference" Type="varchar" MaxLength="50" />
+          <Property Name="Item" Type="nvarchar" MaxLength="50" />
+          <Property Name="Variant" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Items Header">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Collection No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Farmer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Posted" Type="bit" />
+          <Property Name="Season" Type="nvarchar" MaxLength="50" />
+          <Property Name="User Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Payment Mode" Type="int" />
+          <Property Name="Phone No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Customer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reference" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sales Type" Type="int" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="Discount" Type="float" />
+          <Property Name="Cash" Type="float" />
+          <Property Name="Change" Type="float" />
+          <Property Name="Balance" Type="float" />
+          <Property Name="Outlet" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Machine" Type="nvarchar" MaxLength="50" />
+          <Property Name="Machine Cagegory" Type="int" />
+          <Property Name="Operator" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Items&amp;Services">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Items&amp;Services List">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Source no" Type="int" />
+          <Property Name="Entry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Farmer" Type="nvarchar" MaxLength="30" />
+          <Property Name="Item" Type="nvarchar" MaxLength="30" />
+          <Property Name="Qty" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Unit Cost" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Total Cost" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="Posted" Type="tinyint" />
+          <Property Name="Date lastupdated" Type="datetime" />
+          <Property Name="Date Sent" Type="datetime" />
+          <Property Name="User" Type="nvarchar" MaxLength="50" />
+          <Property Name="Receipt No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Variant" Type="nvarchar" MaxLength="30" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Season" Type="nvarchar" MaxLength="50" />
+          <Property Name="Outlet" Type="nvarchar" MaxLength="50" />
+          <Property Name="Payment Mode" Type="int" />
+          <Property Name="Phone No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Customer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reference" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sales Type" Type="int" />
+          <Property Name="Sent" Type="bit" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Category" Type="nvarchar" MaxLength="50" />
+          <Property Name="Balance" Type="float" />
+          <Property Name="Recid" Type="bigint" />
+          <Property Name="Reversed" Type="bit" />
+          <Property Name="Reversed by Entry" Type="int" />
+          <Property Name="Resource" Type="nvarchar" MaxLength="50" />
+          <Property Name="Machine Cagegory" Type="int" />
+          <Property Name="Operator" Type="nvarchar" MaxLength="50" />
+          <Property Name="Entry Type" Type="int" />
+          <Property Name="Pull Item" Type="bit" />
+          <Property Name="Machine" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Outlets">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Code" Type="nvarchar" MaxLength="30" />
+          <Property Name="Entry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="int" />
+          <Property Name="Field Location" Type="bit" />
+        </EntityType>
+        <EntityType Name="Paddy Bags">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Paddy" Type="nvarchar" MaxLength="30" />
+          <Property Name="Bag type" Type="int" />
+          <Property Name="No of bags" Type="float" />
+          <Property Name="Entry" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Variety" Type="nvarchar" MaxLength="50" />
+          <Property Name="Action" Type="int" />
+          <Property Name="Weight" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Gross kg" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Net kg" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Bag weight" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Moisture Weight" Type="float" />
+          <Property Name="Sent" Type="bit" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Farmer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date Changed" Type="datetime" />
+          <Property Name="Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Weighed by" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reversed" Type="bit" />
+        </EntityType>
+        <EntityType Name="Paddy Details">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="Farmers Number" Type="nvarchar" MaxLength="30" />
+          <Property Name="Collections Date" Type="datetime" />
+          <Property Name="Collection Number" Type="nvarchar" MaxLength="30" />
+          <Property Name="No_" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Farmers Name" Type="nvarchar" MaxLength="60" />
+          <Property Name="Gross kg" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Amount Expected" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Processed" Type="tinyint" />
+          <Property Name="Paid" Type="tinyint" />
+          <Property Name="Member Number" Type="nvarchar" MaxLength="30" />
+          <Property Name="Crop" Type="nvarchar" MaxLength="30" />
+          <Property Name="Collected by" Type="nvarchar" MaxLength="30" />
+          <Property Name="Collect type" Type="int" />
+          <Property Name="Collections Time" Type="datetime" />
+          <Property Name="Variety" Type="nvarchar" MaxLength="50" />
+          <Property Name="Recovery" Type="float" />
+          <Property Name="Moisture" Type="float" />
+          <Property Name="Net kg" Type="float" />
+          <Property Name="Bag weight" Type="float" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Bag type" Type="int" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Transport Mode" Type="int" />
+          <Property Name="Vehicle No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Section" Type="nvarchar" MaxLength="50" />
+          <Property Name="Transporter Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Transporter Number" Type="nvarchar" MaxLength="100" />
+          <Property Name="Driver id" Type="nvarchar" MaxLength="50" />
+          <Property Name="Unit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sent" Type="bit" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Store" Type="nvarchar" MaxLength="50" />
+          <Property Name="Weighed by" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date Changed" Type="datetime" />
+          <Property Name="No of bags Delivered" Type="float" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="No" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Category" Type="int" />
+        </EntityType>
+        <EntityType Name="Sales Price">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Item No_" Type="nvarchar" MaxLength="20" />
+          <Property Name="Sales Type" Type="int" />
+          <Property Name="Sales Code" Type="nvarchar" MaxLength="20" />
+          <Property Name="Starting Date" Type="date" />
+          <Property Name="Currency Code" Type="nvarchar" MaxLength="10" />
+          <Property Name="Variant Code" Type="nvarchar" MaxLength="10" />
+          <Property Name="Unit of Measure Code" Type="nvarchar" MaxLength="10" />
+          <Property Name="Minimum Quantity" Type="float" />
+          <Property Name="Unit Price" Type="float" />
+          <Property Name="Price Includes VAT" Type="tinyint" />
+          <Property Name="Allow Invoice Disc_" Type="tinyint" />
+          <Property Name="VAT Bus_ Posting Gr_ (Price)" Type="nvarchar" MaxLength="10" />
+          <Property Name="Ending Date" Type="date" />
+          <Property Name="Allow Line Disc_" Type="tinyint" />
+          <Property Name="Entry" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Com Port" Type="nvarchar" MaxLength="50" />
+          <Property Name="BaudRate" Type="int" />
+          <Property Name="Coffe type" Type="int" />
+          <Property Name="Branch" Type="nvarchar" MaxLength="50" />
+          <Property Name="Printer" Type="nvarchar" MaxLength="50" />
+          <Property Name="Server url" Type="nvarchar" MaxLength="100" />
+          <Property Name="Factory" Type="nvarchar" MaxLength="50" />
+          <Property Name="Current crop" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pick factory farmers" Type="bit" />
+          <Property Name="Bag weight" Type="float" />
+          <Property Name="Stores receipts copies" Type="int" />
+          <Property Name="Motto" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="No of sales per day" Type="int" />
+          <Property Name="Allow Multiple sales" Type="bit" />
+          <Property Name="POS Outlet" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sales receipt Printer" Type="nvarchar" MaxLength="50" />
+          <Property Name="receive copies" Type="int" />
+          <Property Name="Transfer copies" Type="int" />
+          <Property Name="Convert copies" Type="int" />
+          <Property Name="Load item with stock" Type="bit" />
+          <Property Name="Inputs Receipts" Type="int" />
+          <Property Name="Max moisture" Type="float" />
+          <Property Name="Max Recovery" Type="float" />
+          <Property Name="Bags Weight" Type="float" />
+          <Property Name="Validate weight" Type="bit" />
+          <Property Name="Override Settings" Type="bit" />
+          <Property Name="Scale Autoconnect" Type="bit" />
+          <Property Name="Stock Calculation" Type="int" />
+        </EntityType>
+        <EntityType Name="Transferred Items">
+          <Key>
+            <PropertyRef Name="Item" />
+            <PropertyRef Name="Variant" />
+            <PropertyRef Name="Reference" />
+          </Key>
+          <Property Name="Item" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Variant" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Reference" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Entry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Qty" Type="float" />
+          <Property Name="Balance" Type="float" />
+        </EntityType>
+        <EntityType Name="Transporters">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Vehicle No" Type="nvarchar" MaxLength="30" />
+          <Property Name="ID No" Type="nvarchar" MaxLength="30" />
+          <Property Name="Phone No" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Units">
+          <Key>
+            <PropertyRef Name="Section" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Section" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User outlets">
+          <Key>
+            <PropertyRef Name="User Name" />
+            <PropertyRef Name="Active Outlet" />
+          </Key>
+          <Property Name="User Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Active Outlet" Type="nvarchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date Created" Type="datetime" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password Changed" Type="bit" />
+          <Property Name="Date Password Changed" Type="datetime" />
+          <Property Name="Updated" Type="bit" />
+          <Property Name="Outlet" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Full Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Inputs supply note copies" Type="int" />
+        </EntityType>
+        <EntityType Name="Variants">
+          <Key>
+            <PropertyRef Name="Code" />
+            <PropertyRef Name="Item Code" />
+          </Key>
+          <Property Name="Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Item Code" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Price" Type="float" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="No" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Vendor Posting Group" Type="nvarchar" MaxLength="50" />
+          <Property Name="Updated" Type="bit" />
+          <Property Name="Bank" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank Account" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="RiceModelStoreContainer">
+          <EntitySet Name="Bag Weight" EntityType="Self.Bag Weight" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Bank Account" EntityType="Self.Bank Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category locations" EntityType="Self.Category locations" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Crops" EntityType="Self.Crops" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Dimension" EntityType="Self.Dimension" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Farmers" EntityType="Self.Farmers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Item Balance" EntityType="Self.Item Balance" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Item Conversion Matrix" EntityType="Self.Item Conversion Matrix" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Item Movement" EntityType="Self.Item Movement" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Item Movement Header" EntityType="Self.Item Movement Header" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Item Reversals" EntityType="Self.Item Reversals" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Items Header" EntityType="Self.Items Header" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Items&amp;Services" EntityType="Self.Items&amp;Services" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Items&amp;Services List" EntityType="Self.Items&amp;Services List" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Outlets" EntityType="Self.Outlets" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Paddy Bags" EntityType="Self.Paddy Bags" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Paddy Details" EntityType="Self.Paddy Details" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Resource" EntityType="Self.Resource" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sales Price" EntityType="Self.Sales Price" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Settings" EntityType="Self.Settings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transferred Items" EntityType="Self.Transferred Items" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transporters" EntityType="Self.Transporters" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Units" EntityType="Self.Units" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User outlets" EntityType="Self.User outlets" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Variants" EntityType="Self.Variants" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Vendor" EntityType="Self.Vendor" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RiceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="RiceEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Crops" EntityType="RiceModel.Crop" />
+          <EntitySet Name="Users" EntityType="RiceModel.User" />
+          <EntitySet Name="Dimensions" EntityType="RiceModel.Dimension" />
+          <EntitySet Name="Customers" EntityType="RiceModel.Customer" />
+          <EntitySet Name="Paddy_Details" EntityType="RiceModel.Paddy_Detail" />
+          <EntitySet Name="Bag_Weights" EntityType="RiceModel.Bag_Weight" />
+          <EntitySet Name="Transporters" EntityType="RiceModel.Transporter" />
+          <EntitySet Name="Units" EntityType="RiceModel.Unit" />
+          <EntitySet Name="Bank_Accounts" EntityType="RiceModel.Bank_Account" />
+          <EntitySet Name="Contacts" EntityType="RiceModel.Contact" />
+          <EntitySet Name="Farmers" EntityType="RiceModel.Farmer" />
+          <EntitySet Name="Companies" EntityType="RiceModel.Company" />
+          <EntitySet Name="Variants" EntityType="RiceModel.Variant" />
+          <EntitySet Name="Sales_Prices" EntityType="RiceModel.Sales_Price" />
+          <EntitySet Name="Items_Headers" EntityType="RiceModel.Items_Header" />
+          <EntitySet Name="Outlets" EntityType="RiceModel.Outlet" />
+          <EntitySet Name="Items_Services_List" EntityType="RiceModel.Items_Services_List" />
+          <EntitySet Name="Category_locations" EntityType="RiceModel.Category_location" />
+          <EntitySet Name="Items_Services" EntityType="RiceModel.Items_Services" />
+          <EntitySet Name="Vendors" EntityType="RiceModel.Vendor" />
+          <EntitySet Name="Item_Movements" EntityType="RiceModel.Item_Movement" />
+          <EntitySet Name="Item_Movement_Headers" EntityType="RiceModel.Item_Movement_Header" />
+          <EntitySet Name="Item_Conversion_Matrices" EntityType="RiceModel.Item_Conversion_Matrix" />
+          <EntitySet Name="Item_Reversals" EntityType="RiceModel.Item_Reversal" />
+          <EntitySet Name="Settings" EntityType="RiceModel.Setting" />
+          <EntitySet Name="User_outlets" EntityType="RiceModel.User_outlet" />
+          <EntitySet Name="Resources" EntityType="RiceModel.Resource" />
+          <EntitySet Name="Item_Balances" EntityType="RiceModel.Item_Balance" />
+          <EntitySet Name="Paddy_Bags" EntityType="RiceModel.Paddy_Bag" />
+          <EntitySet Name="Transferred_Items" EntityType="RiceModel.Transferred_Item" />
+        </EntityContainer>
+        <EntityType Name="Crop">
+          <Key>
+            <PropertyRef Name="Crop_Name" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Crop_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Open_Date" Type="DateTime" Precision="3" />
+          <Property Name="Close_Date" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Name" />
+          </Key>
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date_Created" Type="DateTime" Precision="3" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password_Changed" Type="Boolean" />
+          <Property Name="Date_Password_Changed" Type="DateTime" Precision="3" />
+          <Property Name="Updated" Type="Boolean" />
+          <Property Name="Outlet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Full_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Inputs_supply_note_copies" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Dimension">
+          <Key>
+            <PropertyRef Name="Dimension_Code" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Dimension_Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Paddy_Detail">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="Farmers_Number" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Collections_Date" Type="DateTime" Precision="3" />
+          <Property Name="Collection_Number" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="No_" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Farmers_Name" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Gross_kg" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Amount_Expected" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Processed" Type="Byte" />
+          <Property Name="Paid" Type="Byte" />
+          <Property Name="Member_Number" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Crop" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Collected_by" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Collect_type" Type="Int32" />
+          <Property Name="Collections_Time" Type="DateTime" Precision="3" />
+          <Property Name="Variety" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Recovery" Type="Double" />
+          <Property Name="Moisture" Type="Double" />
+          <Property Name="Net_kg" Type="Double" />
+          <Property Name="Bag_weight" Type="Double" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Bag_type" Type="Int32" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Transport_Mode" Type="Int32" />
+          <Property Name="Vehicle_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Transporter_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Transporter_Number" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Driver_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sent" Type="Boolean" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Store" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Weighed_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date_Changed" Type="DateTime" Precision="3" />
+          <Property Name="No_of_bags_Delivered" Type="Double" />
+        </EntityType>
+        <EntityType Name="Bag_Weight">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Bag_Type" Type="Int32" />
+          <Property Name="Weight" Type="Decimal" Precision="38" Scale="20" />
+        </EntityType>
+        <EntityType Name="Transporter">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Vehicle_No" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ID_No" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_No" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Unit">
+          <Key>
+            <PropertyRef Name="Section" />
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Section" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Bank_Account">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="No_" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_No_" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Post_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="E_Mail" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Home_Page" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_Phone_No_" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="National_ID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Passport_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Registration_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PIN_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DOB_" Type="DateTime" Precision="3" />
+          <Property Name="Gender" Type="Int32" />
+          <Property Name="Marital_Status" Type="Int32" />
+          <Property Name="Date_of_Join" Type="DateTime" Precision="3" />
+          <Property Name="Created_Date" Type="DateTime" Precision="3" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Bank_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Branch_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Account_No" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MPESA_Mobile_No" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Account_Types" Type="Int32" />
+          <Property Name="Account_Status" Type="Int32" />
+          <Property Name="Created_By" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Section" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Unit" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Member_No" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Membership_Class" Type="Int32" />
+          <Property Name="Payee_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Farmer_Number" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Total_Acreage" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Entry" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Sent" Type="Boolean" />
+          <Property Name="Village" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Main_Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Farmer">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="No" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Updated" Type="Boolean" />
+          <Property Name="Class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="Int32" />
+          <Property Name="Bank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Acreage" Type="Double" />
+          <Property Name="Section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Entry" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="New" Type="Boolean" />
+          <Property Name="E_Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Marital_Status" Type="Int32" />
+          <Property Name="Account_Types" Type="Int32" />
+          <Property Name="Serviced_Acres" Type="Double" />
+          <Property Name="Customer_Posting_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_No_" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Telex_No_" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Fax_No_" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="VAT_Registration_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Registration_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Post_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="County" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="E_Mail" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Company_P_I_N" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Company_code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Company_Watermark" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="PIN_No" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Home_Page" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mission" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Vision" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Branch_Location" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Managers_Phone_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Operations_Phone_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sales_Supervisor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Variant">
+          <Key>
+            <PropertyRef Name="Code" />
+            <PropertyRef Name="Item_Code" />
+          </Key>
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Item_Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Double" />
+        </EntityType>
+        <EntityType Name="Sales_Price">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Item_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Sales_Type" Type="Int32" />
+          <Property Name="Sales_Code" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Starting_Date" Type="DateTime" Precision="0" />
+          <Property Name="Currency_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Variant_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Unit_of_Measure_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Minimum_Quantity" Type="Double" />
+          <Property Name="Unit_Price" Type="Double" />
+          <Property Name="Price_Includes_VAT" Type="Byte" />
+          <Property Name="Allow_Invoice_Disc_" Type="Byte" />
+          <Property Name="VAT_Bus__Posting_Gr___Price_" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Ending_Date" Type="DateTime" Precision="0" />
+          <Property Name="Allow_Line_Disc_" Type="Byte" />
+          <Property Name="Entry" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Items_Header">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Collection_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Farmer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Posted" Type="Boolean" />
+          <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="User_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Payment_Mode" Type="Int32" />
+          <Property Name="Phone_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Customer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Reference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sales_Type" Type="Int32" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="Discount" Type="Double" />
+          <Property Name="Cash" Type="Double" />
+          <Property Name="Change" Type="Double" />
+          <Property Name="Balance" Type="Double" />
+          <Property Name="Outlet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Machine" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Machine_Cagegory" Type="Int32" />
+          <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Outlet">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Code" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Entry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="Field_Location" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Items_Services_List">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Source_no" Type="Int32" />
+          <Property Name="Entry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Farmer" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Item" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Qty" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Unit_Cost" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Total_Cost" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <Property Name="Posted" Type="Byte" />
+          <Property Name="Date_lastupdated" Type="DateTime" Precision="3" />
+          <Property Name="Date_Sent" Type="DateTime" Precision="3" />
+          <Property Name="User" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Receipt_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Variant" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Outlet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Payment_Mode" Type="Int32" />
+          <Property Name="Phone_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Customer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Reference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sales_Type" Type="Int32" />
+          <Property Name="Sent" Type="Boolean" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Balance" Type="Double" />
+          <Property Name="Recid" Type="Int64" />
+          <Property Name="Reversed" Type="Boolean" />
+          <Property Name="Reversed_by_Entry" Type="Int32" />
+          <Property Name="Resource" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Machine_Cagegory" Type="Int32" />
+          <Property Name="Operator" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Entry_Type" Type="Int32" />
+          <Property Name="Pull_Item" Type="Boolean" />
+          <Property Name="Machine" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Category_location">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Items_Services">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Category" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Vendor">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="No" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Vendor_Posting_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Updated" Type="Boolean" />
+          <Property Name="Bank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bank_Account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Item_Movement">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Item" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Variant" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Qty" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Movement_Type" Type="Int32" />
+          <Property Name="Location" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Location_To" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <Property Name="Convert_to" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="User" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Posted" Type="Byte" />
+          <Property Name="Datetime_Posted" Type="DateTime" Precision="3" />
+          <Property Name="Reference" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Purchase_Price" Type="Double" />
+          <Property Name="Sales_Price" Type="Double" />
+          <Property Name="Balance" Type="Double" />
+          <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sent" Type="Boolean" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Reversed" Type="Boolean" />
+          <Property Name="Reversed_by_entry" Type="Int32" />
+          <Property Name="Recid" Type="Int64" />
+        </EntityType>
+        <EntityType Name="Item_Movement_Header">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Reference" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <Property Name="Created_By" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Movement_Type" Type="Int32" />
+          <Property Name="Posted" Type="Byte" />
+          <Property Name="DateTime_Posted" Type="DateTime" Precision="3" />
+          <Property Name="Location" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Entry" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Season" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Supplier" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Invoice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Grn_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Location_To" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sent" Type="Boolean" />
+          <Property Name="Comments" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Item" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Variant" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="To_Item" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="To_Variant" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Qty" Type="Int32" />
+          <Property Name="Balance" Type="Int32" />
+          <Property Name="Converted" Type="Boolean" />
+          <Property Name="Balance_2" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Item_Conversion_Matrix">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Item" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Variant" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="To_Item" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="To_Variant" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Units" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Item_Reversal">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Reversal_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Entry_Type" Type="Int32" />
+          <Property Name="Qty" Type="Int32" />
+          <Property Name="Comments" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Posted" Type="Byte" />
+          <Property Name="Datetime_Posted" Type="DateTime" Precision="3" />
+          <Property Name="Reversed_By" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <Property Name="Location" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Reversed" Type="Boolean" />
+          <Property Name="Sent" Type="Boolean" />
+          <Property Name="Reverse_document" Type="Boolean" />
+          <Property Name="Reference" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Item" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Variant" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Com_Port" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BaudRate" Type="Int32" />
+          <Property Name="Coffe_type" Type="Int32" />
+          <Property Name="Branch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sales_receipt_Printer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Server_url" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Factory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Current_crop" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pick_factory_farmers" Type="Boolean" />
+          <Property Name="Bag_weight" Type="Double" />
+          <Property Name="receive_copies" Type="Int32" />
+          <Property Name="Motto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="No_of_sales_per_day" Type="Int32" />
+          <Property Name="Allow_Multiple_sales" Type="Boolean" />
+          <Property Name="POS_Outlet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Transfer_copies" Type="Int32" />
+          <Property Name="Convert_copies" Type="Int32" />
+          <Property Name="Printer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Stores_receipts_copies" Type="Int32" />
+          <Property Name="Load_item_with_stock" Type="Boolean" />
+          <Property Name="Inputs_Receipts" Type="Int32" />
+          <Property Name="Max_moisture" Type="Double" />
+          <Property Name="Max_Recovery" Type="Double" />
+          <Property Name="Bags_Weight" Type="Double" />
+          <Property Name="Validate_weight" Type="Boolean" />
+          <Property Name="Override_Settings" Type="Boolean" />
+          <Property Name="Scale_Autoconnect" Type="Boolean" />
+          <Property Name="Stock_Calculation" Type="Int32" />
+        </EntityType>
+        <EntityType Name="User_outlet">
+          <Key>
+            <PropertyRef Name="User_Name" />
+            <PropertyRef Name="Active_Outlet" />
+          </Key>
+          <Property Name="User_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active_Outlet" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="No" />
+          </Key>
+          <Property Name="No" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Category" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Item_Balance">
+          <Key>
+            <PropertyRef Name="Item" />
+            <PropertyRef Name="Variant" />
+            <PropertyRef Name="Location" />
+            <PropertyRef Name="Entry_No" />
+            <PropertyRef Name="Type" />
+            <PropertyRef Name="Ref" />
+          </Key>
+          <Property Name="Entry" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Item" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Variant" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Location" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Balance" Type="Double" />
+          <Property Name="Entry_No" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Move_Type" Type="Int32" />
+          <Property Name="Ref" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="From_Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Paddy_Bag">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Paddy" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Bag_type" Type="Int32" />
+          <Property Name="No_of_bags" Type="Double" />
+          <Property Name="Entry" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Variety" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Action" Type="Int32" />
+          <Property Name="Weight" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Gross_kg" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Net_kg" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Bag_weight" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Moisture_Weight" Type="Double" />
+          <Property Name="Sent" Type="Boolean" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Farmer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date_Changed" Type="DateTime" Precision="3" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Weighed_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Reversed" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Transferred_Item">
+          <Key>
+            <PropertyRef Name="Item" />
+            <PropertyRef Name="Variant" />
+            <PropertyRef Name="Reference" />
+          </Key>
+          <Property Name="Item" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Variant" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Reference" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Entry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Qty" Type="Double" />
+          <Property Name="Balance" Type="Double" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RiceModelStoreContainer" CdmEntityContainer="RiceEntities">
+          <EntitySetMapping Name="Crops">
+            <EntityTypeMapping TypeName="RiceModel.Crop">
+              <MappingFragment StoreEntitySet="Crops">
+                <ScalarProperty Name="Close_Date" ColumnName="Close Date" />
+                <ScalarProperty Name="Open_Date" ColumnName="Open Date" />
+                <ScalarProperty Name="Crop_Name" ColumnName="Crop Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="RiceModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Inputs_supply_note_copies" ColumnName="Inputs supply note copies" />
+                <ScalarProperty Name="Full_Name" ColumnName="Full Name" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Outlet" ColumnName="Outlet" />
+                <ScalarProperty Name="Updated" ColumnName="Updated" />
+                <ScalarProperty Name="Date_Password_Changed" ColumnName="Date Password Changed" />
+                <ScalarProperty Name="Password_Changed" ColumnName="Password Changed" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Date_Created" ColumnName="Date Created" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dimensions">
+            <EntityTypeMapping TypeName="RiceModel.Dimension">
+              <MappingFragment StoreEntitySet="Dimension">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Dimension_Code" ColumnName="Dimension Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="RiceModel.Customer">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="Bank_Account" ColumnName="Bank Account" />
+                <ScalarProperty Name="Bank" ColumnName="Bank" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Paddy_Details">
+            <EntityTypeMapping TypeName="RiceModel.Paddy_Detail">
+              <MappingFragment StoreEntitySet="Paddy Details">
+                <ScalarProperty Name="No_of_bags_Delivered" ColumnName="No of bags Delivered" />
+                <ScalarProperty Name="Date_Changed" ColumnName="Date Changed" />
+                <ScalarProperty Name="Weighed_by" ColumnName="Weighed by" />
+                <ScalarProperty Name="Store" ColumnName="Store" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Sent" ColumnName="Sent" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Driver_id" ColumnName="Driver id" />
+                <ScalarProperty Name="Transporter_Number" ColumnName="Transporter Number" />
+                <ScalarProperty Name="Transporter_Name" ColumnName="Transporter Name" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="Vehicle_No" ColumnName="Vehicle No" />
+                <ScalarProperty Name="Transport_Mode" ColumnName="Transport Mode" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Bag_type" ColumnName="Bag type" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Bag_weight" ColumnName="Bag weight" />
+                <ScalarProperty Name="Net_kg" ColumnName="Net kg" />
+                <ScalarProperty Name="Moisture" ColumnName="Moisture" />
+                <ScalarProperty Name="Recovery" ColumnName="Recovery" />
+                <ScalarProperty Name="Variety" ColumnName="Variety" />
+                <ScalarProperty Name="Collections_Time" ColumnName="Collections Time" />
+                <ScalarProperty Name="Collect_type" ColumnName="Collect type" />
+                <ScalarProperty Name="Collected_by" ColumnName="Collected by" />
+                <ScalarProperty Name="Crop" ColumnName="Crop" />
+                <ScalarProperty Name="Member_Number" ColumnName="Member Number" />
+                <ScalarProperty Name="Paid" ColumnName="Paid" />
+                <ScalarProperty Name="Processed" ColumnName="Processed" />
+                <ScalarProperty Name="Amount_Expected" ColumnName="Amount Expected" />
+                <ScalarProperty Name="Gross_kg" ColumnName="Gross kg" />
+                <ScalarProperty Name="Farmers_Name" ColumnName="Farmers Name" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+                <ScalarProperty Name="Collection_Number" ColumnName="Collection Number" />
+                <ScalarProperty Name="Collections_Date" ColumnName="Collections Date" />
+                <ScalarProperty Name="Farmers_Number" ColumnName="Farmers Number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bag_Weights">
+            <EntityTypeMapping TypeName="RiceModel.Bag_Weight">
+              <MappingFragment StoreEntitySet="Bag Weight">
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Bag_Type" ColumnName="Bag Type" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transporters">
+            <EntityTypeMapping TypeName="RiceModel.Transporter">
+              <MappingFragment StoreEntitySet="Transporters">
+                <ScalarProperty Name="Phone_No" ColumnName="Phone No" />
+                <ScalarProperty Name="ID_No" ColumnName="ID No" />
+                <ScalarProperty Name="Vehicle_No" ColumnName="Vehicle No" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Units">
+            <EntityTypeMapping TypeName="RiceModel.Unit">
+              <MappingFragment StoreEntitySet="Units">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Bank_Accounts">
+            <EntityTypeMapping TypeName="RiceModel.Bank_Account">
+              <MappingFragment StoreEntitySet="Bank Account">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="RiceModel.Contact">
+              <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="Main_Season" ColumnName="Main Season" />
+                <ScalarProperty Name="Village" ColumnName="Village" />
+                <ScalarProperty Name="Sent" ColumnName="Sent" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="Total_Acreage" ColumnName="Total Acreage" />
+                <ScalarProperty Name="Farmer_Number" ColumnName="Farmer Number" />
+                <ScalarProperty Name="Payee_Name" ColumnName="Payee Name" />
+                <ScalarProperty Name="Membership_Class" ColumnName="Membership Class" />
+                <ScalarProperty Name="Member_No" ColumnName="Member No" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="Created_By" ColumnName="Created By" />
+                <ScalarProperty Name="Account_Status" ColumnName="Account Status" />
+                <ScalarProperty Name="Account_Types" ColumnName="Account Types" />
+                <ScalarProperty Name="MPESA_Mobile_No" ColumnName="MPESA Mobile No" />
+                <ScalarProperty Name="Bank_Account_No" ColumnName="Bank Account No" />
+                <ScalarProperty Name="Bank_Branch_Code" ColumnName="Bank Branch Code" />
+                <ScalarProperty Name="Bank_Name" ColumnName="Bank Name" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Created_Date" ColumnName="Created Date" />
+                <ScalarProperty Name="Date_of_Join" ColumnName="Date of Join" />
+                <ScalarProperty Name="Marital_Status" ColumnName="Marital Status" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DOB_" ColumnName="DOB_" />
+                <ScalarProperty Name="PIN_No" ColumnName="PIN No" />
+                <ScalarProperty Name="Registration_No" ColumnName="Registration No" />
+                <ScalarProperty Name="Passport_No" ColumnName="Passport No" />
+                <ScalarProperty Name="National_ID" ColumnName="National ID" />
+                <ScalarProperty Name="Mobile_Phone_No_" ColumnName="Mobile Phone No_" />
+                <ScalarProperty Name="Home_Page" ColumnName="Home Page" />
+                <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+                <ScalarProperty Name="Post_Code" ColumnName="Post Code" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Phone_No_" ColumnName="Phone No_" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Farmers">
+            <EntityTypeMapping TypeName="RiceModel.Farmer">
+              <MappingFragment StoreEntitySet="Farmers">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Customer_Posting_Group" ColumnName="Customer Posting Group" />
+                <ScalarProperty Name="Serviced_Acres" ColumnName="Serviced Acres" />
+                <ScalarProperty Name="Account_Types" ColumnName="Account_Types" />
+                <ScalarProperty Name="Marital_Status" ColumnName="Marital Status" />
+                <ScalarProperty Name="E_Mail" ColumnName="E_Mail" />
+                <ScalarProperty Name="New" ColumnName="New" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="Acreage" ColumnName="Acreage" />
+                <ScalarProperty Name="Bank_Account" ColumnName="Bank Account" />
+                <ScalarProperty Name="Bank" ColumnName="Bank" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Class" ColumnName="Class" />
+                <ScalarProperty Name="Updated" ColumnName="Updated" />
+                <ScalarProperty Name="ID_No" ColumnName="ID No" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="No" ColumnName="No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="RiceModel.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="Sales_Supervisor" ColumnName="Sales Supervisor" />
+                <ScalarProperty Name="Operations_Phone_No" ColumnName="Operations Phone No" />
+                <ScalarProperty Name="Managers_Phone_No" ColumnName="Managers Phone No" />
+                <ScalarProperty Name="Branch_Location" ColumnName="Branch Location" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Vision" ColumnName="Vision" />
+                <ScalarProperty Name="Mission" ColumnName="Mission" />
+                <ScalarProperty Name="Home_Page" ColumnName="Home Page" />
+                <ScalarProperty Name="PIN_No" ColumnName="PIN No" />
+                <ScalarProperty Name="Company_Watermark" ColumnName="Company Watermark" />
+                <ScalarProperty Name="Company_code" ColumnName="Company code" />
+                <ScalarProperty Name="Company_P_I_N" ColumnName="Company P_I_N" />
+                <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="Post_Code" ColumnName="Post Code" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Registration_No_" ColumnName="Registration No_" />
+                <ScalarProperty Name="VAT_Registration_No_" ColumnName="VAT Registration No_" />
+                <ScalarProperty Name="Fax_No_" ColumnName="Fax No_" />
+                <ScalarProperty Name="Telex_No_" ColumnName="Telex No_" />
+                <ScalarProperty Name="Phone_No_" ColumnName="Phone No_" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Variants">
+            <EntityTypeMapping TypeName="RiceModel.Variant">
+              <MappingFragment StoreEntitySet="Variants">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Item_Code" ColumnName="Item Code" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sales_Prices">
+            <EntityTypeMapping TypeName="RiceModel.Sales_Price">
+              <MappingFragment StoreEntitySet="Sales Price">
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="Allow_Line_Disc_" ColumnName="Allow Line Disc_" />
+                <ScalarProperty Name="Ending_Date" ColumnName="Ending Date" />
+                <ScalarProperty Name="VAT_Bus__Posting_Gr___Price_" ColumnName="VAT Bus_ Posting Gr_ (Price)" />
+                <ScalarProperty Name="Allow_Invoice_Disc_" ColumnName="Allow Invoice Disc_" />
+                <ScalarProperty Name="Price_Includes_VAT" ColumnName="Price Includes VAT" />
+                <ScalarProperty Name="Unit_Price" ColumnName="Unit Price" />
+                <ScalarProperty Name="Minimum_Quantity" ColumnName="Minimum Quantity" />
+                <ScalarProperty Name="Unit_of_Measure_Code" ColumnName="Unit of Measure Code" />
+                <ScalarProperty Name="Variant_Code" ColumnName="Variant Code" />
+                <ScalarProperty Name="Currency_Code" ColumnName="Currency Code" />
+                <ScalarProperty Name="Starting_Date" ColumnName="Starting Date" />
+                <ScalarProperty Name="Sales_Code" ColumnName="Sales Code" />
+                <ScalarProperty Name="Sales_Type" ColumnName="Sales Type" />
+                <ScalarProperty Name="Item_No_" ColumnName="Item No_" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items_Headers">
+            <EntityTypeMapping TypeName="RiceModel.Items_Header">
+              <MappingFragment StoreEntitySet="Items Header">
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="Machine_Cagegory" ColumnName="Machine Cagegory" />
+                <ScalarProperty Name="Machine" ColumnName="Machine" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Outlet" ColumnName="Outlet" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Change" ColumnName="Change" />
+                <ScalarProperty Name="Cash" ColumnName="Cash" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Sales_Type" ColumnName="Sales Type" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="Phone_No" ColumnName="Phone No" />
+                <ScalarProperty Name="Payment_Mode" ColumnName="Payment Mode" />
+                <ScalarProperty Name="User_Name" ColumnName="User Name" />
+                <ScalarProperty Name="Season" ColumnName="Season" />
+                <ScalarProperty Name="Posted" ColumnName="Posted" />
+                <ScalarProperty Name="Farmer" ColumnName="Farmer" />
+                <ScalarProperty Name="Collection_No" ColumnName="Collection No" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Outlets">
+            <EntityTypeMapping TypeName="RiceModel.Outlet">
+              <MappingFragment StoreEntitySet="Outlets">
+                <ScalarProperty Name="Field_Location" ColumnName="Field Location" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items_Services_List">
+            <EntityTypeMapping TypeName="RiceModel.Items_Services_List">
+              <MappingFragment StoreEntitySet="Items&amp;Services List">
+                <ScalarProperty Name="Machine" ColumnName="Machine" />
+                <ScalarProperty Name="Pull_Item" ColumnName="Pull Item" />
+                <ScalarProperty Name="Entry_Type" ColumnName="Entry Type" />
+                <ScalarProperty Name="Operator" ColumnName="Operator" />
+                <ScalarProperty Name="Machine_Cagegory" ColumnName="Machine Cagegory" />
+                <ScalarProperty Name="Resource" ColumnName="Resource" />
+                <ScalarProperty Name="Reversed_by_Entry" ColumnName="Reversed by Entry" />
+                <ScalarProperty Name="Reversed" ColumnName="Reversed" />
+                <ScalarProperty Name="Recid" ColumnName="Recid" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Sent" ColumnName="Sent" />
+                <ScalarProperty Name="Sales_Type" ColumnName="Sales Type" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Customer" ColumnName="Customer" />
+                <ScalarProperty Name="Phone_No" ColumnName="Phone No" />
+                <ScalarProperty Name="Payment_Mode" ColumnName="Payment Mode" />
+                <ScalarProperty Name="Outlet" ColumnName="Outlet" />
+                <ScalarProperty Name="Season" ColumnName="Season" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Variant" ColumnName="Variant" />
+                <ScalarProperty Name="Receipt_No" ColumnName="Receipt No" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="Date_Sent" ColumnName="Date Sent" />
+                <ScalarProperty Name="Date_lastupdated" ColumnName="Date lastupdated" />
+                <ScalarProperty Name="Posted" ColumnName="Posted" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Total_Cost" ColumnName="Total Cost" />
+                <ScalarProperty Name="Unit_Cost" ColumnName="Unit Cost" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Farmer" ColumnName="Farmer" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="Source_no" ColumnName="Source no" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Category_locations">
+            <EntityTypeMapping TypeName="RiceModel.Category_location">
+              <MappingFragment StoreEntitySet="Category locations">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Items_Services">
+            <EntityTypeMapping TypeName="RiceModel.Items_Services">
+              <MappingFragment StoreEntitySet="Items&amp;Services">
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Vendors">
+            <EntityTypeMapping TypeName="RiceModel.Vendor">
+              <MappingFragment StoreEntitySet="Vendor">
+                <ScalarProperty Name="Bank_Account" ColumnName="Bank Account" />
+                <ScalarProperty Name="Bank" ColumnName="Bank" />
+                <ScalarProperty Name="Updated" ColumnName="Updated" />
+                <ScalarProperty Name="Vendor_Posting_Group" ColumnName="Vendor Posting Group" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="No" ColumnName="No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Item_Movements">
+            <EntityTypeMapping TypeName="RiceModel.Item_Movement">
+              <MappingFragment StoreEntitySet="Item Movement">
+                <ScalarProperty Name="Recid" ColumnName="Recid" />
+                <ScalarProperty Name="Reversed_by_entry" ColumnName="Reversed by entry" />
+                <ScalarProperty Name="Reversed" ColumnName="Reversed" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Sent" ColumnName="Sent" />
+                <ScalarProperty Name="Season" ColumnName="Season" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Sales_Price" ColumnName="Sales Price" />
+                <ScalarProperty Name="Purchase_Price" ColumnName="Purchase Price" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Datetime_Posted" ColumnName="Datetime Posted" />
+                <ScalarProperty Name="Posted" ColumnName="Posted" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="Convert_to" ColumnName="Convert to" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Location_To" ColumnName="Location To" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Movement_Type" ColumnName="Movement Type" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Variant" ColumnName="Variant" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Item_Movement_Headers">
+            <EntityTypeMapping TypeName="RiceModel.Item_Movement_Header">
+              <MappingFragment StoreEntitySet="Item Movement Header">
+                <ScalarProperty Name="Balance_2" ColumnName="Balance 2" />
+                <ScalarProperty Name="Converted" ColumnName="Converted" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="To_Variant" ColumnName="To Variant" />
+                <ScalarProperty Name="To_Item" ColumnName="To Item" />
+                <ScalarProperty Name="Variant" ColumnName="Variant" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Sent" ColumnName="Sent" />
+                <ScalarProperty Name="Location_To" ColumnName="Location To" />
+                <ScalarProperty Name="Grn_No" ColumnName="Grn No" />
+                <ScalarProperty Name="Invoice" ColumnName="Invoice" />
+                <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+                <ScalarProperty Name="Season" ColumnName="Season" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="DateTime_Posted" ColumnName="DateTime Posted" />
+                <ScalarProperty Name="Posted" ColumnName="Posted" />
+                <ScalarProperty Name="Movement_Type" ColumnName="Movement Type" />
+                <ScalarProperty Name="Created_By" ColumnName="Created By" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Item_Conversion_Matrices">
+            <EntityTypeMapping TypeName="RiceModel.Item_Conversion_Matrix">
+              <MappingFragment StoreEntitySet="Item Conversion Matrix">
+                <ScalarProperty Name="Units" ColumnName="Units" />
+                <ScalarProperty Name="To_Variant" ColumnName="To Variant" />
+                <ScalarProperty Name="To_Item" ColumnName="To Item" />
+                <ScalarProperty Name="Variant" ColumnName="Variant" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Item_Reversals">
+            <EntityTypeMapping TypeName="RiceModel.Item_Reversal">
+              <MappingFragment StoreEntitySet="Item Reversals">
+                <ScalarProperty Name="Variant" ColumnName="Variant" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Reverse_document" ColumnName="Reverse document" />
+                <ScalarProperty Name="Sent" ColumnName="Sent" />
+                <ScalarProperty Name="Reversed" ColumnName="Reversed" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Reversed_By" ColumnName="Reversed By" />
+                <ScalarProperty Name="Datetime_Posted" ColumnName="Datetime Posted" />
+                <ScalarProperty Name="Posted" ColumnName="Posted" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Entry_Type" ColumnName="Entry Type" />
+                <ScalarProperty Name="Reversal_Id" ColumnName="Reversal Id" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="RiceModel.Setting">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="Stock_Calculation" ColumnName="Stock Calculation" />
+                <ScalarProperty Name="Scale_Autoconnect" ColumnName="Scale Autoconnect" />
+                <ScalarProperty Name="Override_Settings" ColumnName="Override Settings" />
+                <ScalarProperty Name="Validate_weight" ColumnName="Validate weight" />
+                <ScalarProperty Name="Bags_Weight" ColumnName="Bags Weight" />
+                <ScalarProperty Name="Max_Recovery" ColumnName="Max Recovery" />
+                <ScalarProperty Name="Max_moisture" ColumnName="Max moisture" />
+                <ScalarProperty Name="Inputs_Receipts" ColumnName="Inputs Receipts" />
+                <ScalarProperty Name="Load_item_with_stock" ColumnName="Load item with stock" />
+                <ScalarProperty Name="Stores_receipts_copies" ColumnName="Stores receipts copies" />
+                <ScalarProperty Name="Printer" ColumnName="Printer" />
+                <ScalarProperty Name="Convert_copies" ColumnName="Convert copies" />
+                <ScalarProperty Name="Transfer_copies" ColumnName="Transfer copies" />
+                <ScalarProperty Name="POS_Outlet" ColumnName="POS Outlet" />
+                <ScalarProperty Name="Allow_Multiple_sales" ColumnName="Allow Multiple sales" />
+                <ScalarProperty Name="No_of_sales_per_day" ColumnName="No of sales per day" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Motto" ColumnName="Motto" />
+                <ScalarProperty Name="receive_copies" ColumnName="receive copies" />
+                <ScalarProperty Name="Bag_weight" ColumnName="Bag weight" />
+                <ScalarProperty Name="Pick_factory_farmers" ColumnName="Pick factory farmers" />
+                <ScalarProperty Name="Current_crop" ColumnName="Current crop" />
+                <ScalarProperty Name="Factory" ColumnName="Factory" />
+                <ScalarProperty Name="Server_url" ColumnName="Server url" />
+                <ScalarProperty Name="Sales_receipt_Printer" ColumnName="Sales receipt Printer" />
+                <ScalarProperty Name="Branch" ColumnName="Branch" />
+                <ScalarProperty Name="Coffe_type" ColumnName="Coffe type" />
+                <ScalarProperty Name="BaudRate" ColumnName="BaudRate" />
+                <ScalarProperty Name="Com_Port" ColumnName="Com Port" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_outlets">
+            <EntityTypeMapping TypeName="RiceModel.User_outlet">
+              <MappingFragment StoreEntitySet="User outlets">
+                <ScalarProperty Name="Active_Outlet" ColumnName="Active Outlet" />
+                <ScalarProperty Name="User_Name" ColumnName="User Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resources">
+            <EntityTypeMapping TypeName="RiceModel.Resource">
+              <MappingFragment StoreEntitySet="Resource">
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="No" ColumnName="No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Item_Balances">
+            <EntityTypeMapping TypeName="RiceModel.Item_Balance">
+              <MappingFragment StoreEntitySet="Item Balance">
+                <ScalarProperty Name="From_Location" ColumnName="From Location" />
+                <ScalarProperty Name="Ref" ColumnName="Ref" />
+                <ScalarProperty Name="Move_Type" ColumnName="Move Type" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Entry_No" ColumnName="Entry No" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Variant" ColumnName="Variant" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Paddy_Bags">
+            <EntityTypeMapping TypeName="RiceModel.Paddy_Bag">
+              <MappingFragment StoreEntitySet="Paddy Bags">
+                <ScalarProperty Name="Reversed" ColumnName="Reversed" />
+                <ScalarProperty Name="Weighed_by" ColumnName="Weighed by" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Date_Changed" ColumnName="Date Changed" />
+                <ScalarProperty Name="Farmer" ColumnName="Farmer" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Sent" ColumnName="Sent" />
+                <ScalarProperty Name="Moisture_Weight" ColumnName="Moisture Weight" />
+                <ScalarProperty Name="Bag_weight" ColumnName="Bag weight" />
+                <ScalarProperty Name="Net_kg" ColumnName="Net kg" />
+                <ScalarProperty Name="Gross_kg" ColumnName="Gross kg" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="Variety" ColumnName="Variety" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="No_of_bags" ColumnName="No of bags" />
+                <ScalarProperty Name="Bag_type" ColumnName="Bag type" />
+                <ScalarProperty Name="Paddy" ColumnName="Paddy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transferred_Items">
+            <EntityTypeMapping TypeName="RiceModel.Transferred_Item">
+              <MappingFragment StoreEntitySet="Transferred Items">
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Variant" ColumnName="Variant" />
+                <ScalarProperty Name="Item" ColumnName="Item" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

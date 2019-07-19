@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="UKULIMA SACCO LTD$ATM Transactions" EntityType="Model.Store.UKULIMA SACCO LTD$ATM Transactions" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="UKULIMA SACCO LTD$Vendor" EntityType="Model.Store.UKULIMA SACCO LTD$Vendor" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+  </EntityContainer>
+  <EntityType Name="UKULIMA SACCO LTD$ATM Transactions">
+    <Key>
+      <PropertyRef Name="Entry No" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="Entry No" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Trace ID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Posting Date" Type="datetime" Nullable="false" />
+    <Property Name="Account No" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Amount" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Posting S" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Posted" Type="tinyint" Nullable="false" />
+    <Property Name="Unit ID" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Transaction Type" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Trans Time" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Process Code" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Reversed" Type="tinyint" Nullable="false" />
+    <Property Name="Reversed Posted" Type="tinyint" Nullable="false" />
+    <Property Name="Reversal Trace ID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Transaction Description" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="Withdrawal Location" Type="varchar" Nullable="false" MaxLength="150" />
+    <Property Name="Source" Type="int" Nullable="false" />
+    <Property Name="Transaction Type Charges" Type="int" Nullable="false" />
+    <Property Name="Card Acceptor Terminal ID" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ATM Card No" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Transaction Date" Type="datetime" Nullable="false" />
+    <Property Name="Is Coop Bank" Type="tinyint" Nullable="false" />
+    <Property Name="POS Vendor" Type="int" Nullable="false" />
+    <Property Name="Reference No" Type="varchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="UKULIMA SACCO LTD$Vendor">
+    <Key>
+      <PropertyRef Name="No_" />
+    </Key>
+    <Property Name="timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+    <Property Name="No_" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Search Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Name 2" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Address" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Address 2" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="City" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Contact" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Phone No_" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Telex No_" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Our Account No_" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Territory Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Global Dimension 1 Code" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Global Dimension 2 Code" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Budgeted Amount" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Vendor Posting Group" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Currency Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Language Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Statistics Group" Type="int" Nullable="false" />
+    <Property Name="Payment Terms Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Fin_ Charge Terms Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Purchaser Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Shipment Method Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Shipping Agent Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Invoice Disc_ Code" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Country_Region Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Blocked" Type="int" Nullable="false" />
+    <Property Name="Pay-to Vendor No_" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Priority" Type="int" Nullable="false" />
+    <Property Name="Payment Method Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Last Date Modified" Type="datetime" Nullable="false" />
+    <Property Name="Application Method" Type="int" Nullable="false" />
+    <Property Name="Prices Including VAT" Type="tinyint" Nullable="false" />
+    <Property Name="Fax No_" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Telex Answer Back" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="VAT Registration No_" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Gen_ Bus_ Posting Group" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Picture" Type="image" />
+    <Property Name="Post Code" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="County" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="E-Mail" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="Home Page" Type="varchar" Nullable="false" MaxLength="80" />
+    <Property Name="No_ Series" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Tax Area Code" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Tax Liable" Type="tinyint" Nullable="false" />
+    <Property Name="VAT Bus_ Posting Group" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Block Payment Tolerance" Type="tinyint" Nullable="false" />
+    <Property Name="IC Partner Code" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Prepayment %" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Primary Contact No_" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Responsibility Center" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Location Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Lead Time Calculation" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="Base Calendar Code" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Creditor Type" Type="int" Nullable="false" />
+    <Property Name="Staff No" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ID No_" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Last Maintenance Date" Type="datetime" Nullable="false" />
+    <Property Name="Activate Sweeping Arrangement" Type="tinyint" Nullable="false" />
+    <Property Name="Sweeping Balance" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Sweep To Account" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Fixed Deposit Status" Type="int" Nullable="false" />
+    <Property Name="Call Deposit" Type="tinyint" Nullable="false" />
+    <Property Name="Mobile Phone No" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Marital Status" Type="int" Nullable="false" />
+    <Property Name="Registration Date" Type="datetime" Nullable="false" />
+    <Property Name="BOSA Account No" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Signature" Type="image" />
+    <Property Name="Passport No_" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Company Code" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="Account Type" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Account Category" Type="int" Nullable="false" />
+    <Property Name="FD Marked for Closure" Type="tinyint" Nullable="false" />
+    <Property Name="Last Withdrawal Date" Type="datetime" Nullable="false" />
+    <Property Name="Last Overdraft Date" Type="datetime" Nullable="false" />
+    <Property Name="Last Min_ Balance Date" Type="datetime" Nullable="false" />
+    <Property Name="Last Deposit Date" Type="datetime" Nullable="false" />
+    <Property Name="Last Transaction Posting Date" Type="datetime" Nullable="false" />
+    <Property Name="Date Closed" Type="datetime" Nullable="false" />
+    <Property Name="Expected Maturity Date" Type="datetime" Nullable="false" />
+    <Property Name="Date of Birth" Type="datetime" Nullable="false" />
+    <Property Name="E-Mail (Personal)" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Section" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="ATM No_" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Home Address" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Location" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Sub-Location" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="District" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Resons for Status Change" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Closure Notice Date" Type="datetime" Nullable="false" />
+    <Property Name="Fixed Deposit Type" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="FD Maturity Date" Type="datetime" Nullable="false" />
+    <Property Name="Savings Account No_" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Old Account No_" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Salary Processing" Type="tinyint" Nullable="false" />
+    <Property Name="Amount to Transfer" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Proffesion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Signing Instructions" Type="varchar" Nullable="false" MaxLength="250" />
+    <Property Name="Hide" Type="tinyint" Nullable="false" />
+    <Property Name="Monthly Contribution" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Not Qualify for Interest" Type="tinyint" Nullable="false" />
+    <Property Name="Gender" Type="int" Nullable="false" />
+    <Property Name="Fixed Duration" Type="varchar" Nullable="false" MaxLength="32" />
+    <Property Name="System Created" Type="tinyint" Nullable="false" />
+    <Property Name="External Account No" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Bank Code" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Enabled" Type="tinyint" Nullable="false" />
+    <Property Name="Defaulted Loans Recovered" Type="tinyint" Nullable="false" />
+    <Property Name="Formation_Province" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Division_Department" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Station_Sections" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Neg_ Interest Rate" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="Date Renewed" Type="datetime" Nullable="false" />
+    <Property Name="Don_t Transfer to Savings" Type="tinyint" Nullable="false" />
+    <Property Name="Type Of Organisation" Type="int" Nullable="false" />
+    <Property Name="Source Of Funds" Type="int" Nullable="false" />
+    <Property Name="MPESA Mobile No" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Force No_" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Card Expiry Date" Type="datetime" Nullable="false" />
+    <Property Name="Card Valid From" Type="datetime" Nullable="false" />
+    <Property Name="Card Valid To" Type="datetime" Nullable="false" />
+    <Property Name="Service" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Fox SBal" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="ABal Fox" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+    <Property Name="ATM Prov_ No" Type="varchar" Nullable="false" MaxLength="18" />
+    <Property Name="ATM Approve" Type="tinyint" Nullable="false" />
+    <Property Name="Reconciled" Type="tinyint" Nullable="false" />
+    <Property Name="FD Duration" Type="int" Nullable="false" />
+    <Property Name="Employer P_F" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Atm card ready" Type="tinyint" Nullable="false" />
+    <Property Name="Date ATM Linked" Type="datetime" Nullable="false" />
+    <Property Name="Fosa_s no Bosa No" Type="tinyint" Nullable="false" />
+    <Property Name="Outstanding Balance" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+  </EntityType>
+</Schema>

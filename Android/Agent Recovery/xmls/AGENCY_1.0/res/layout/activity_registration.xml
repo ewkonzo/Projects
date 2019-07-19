@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/sourceinfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Account Details" />
+            <View android:background="@android:color/holo_green_dark" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <TextView android:id="@id/TvAccountName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accountname" />
+                <EditText android:id="@id/txtaccountname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/accountname" android:maxLines="3" android:capitalize="words" android:layout_weight="1.0" />
+            </TableRow>
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:id="@id/NationalId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Nationalid" />
+                <EditText android:id="@id/txtnationalid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/Nationalid" android:layout_weight="1.0" android:inputType="textAutoComplete" />
+            </TableRow>
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:id="@id/Phoneno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/telephone" />
+                <EditText android:id="@id/txtphoneno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/telephone" android:maxLength="13" android:layout_weight="1.0" android:inputType="phone" />
+            </TableRow>
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:id="@id/society" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/society" />
+                <AutoCompleteTextView android:id="@id/txtsociety" android:background="#ffffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/society" android:maxLength="13" android:layout_weight="1.0" />
+            </TableRow>
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:id="@id/societyno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/societyno" />
+                <EditText android:id="@id/txtsocietyno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/societyno" android:maxLength="13" android:layout_weight="1.0" android:inputType="phone" />
+            </TableRow>
+            <View android:background="@android:color/holo_green_dark" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="10.0dip" />
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:id="@id/TVAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/amount" />
+                <EditText android:id="@id/txtamount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/amount" android:layout_weight="1.0" android:inputType="number" />
+            </TableRow>
+            <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <Button android:id="@id/Cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="Cancel" android:layout_marginEnd="50.0dip" />
+                <Button android:id="@id/Confirm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Confirm" />
+            </LinearLayout>
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>

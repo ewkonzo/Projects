@@ -1,0 +1,21 @@
+<resources>
+
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">@drawable/gradient_bg</item>
+        <item name="android:editTextStyle">@style/App_EditTextStyle</item>
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+        <item name="android:actionBarSize">40.0dip</item>
+    </style>
+    <style name="App_EditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">#ff808080</item>
+        <item name="android:background">@drawable/textborder</item>
+        <item name="android:layout_height">45.0dip</item>
+    </style>
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/action_selector</item>
+    </style>
+
+</resources>

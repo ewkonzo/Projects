@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="F:\Paul\AndroidSDK\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="F:\Paul\Projects\Android\S-Agency\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_69fee991662c60ce805cf2b530fa7f9b8e112f18.jar" />
+    </item>
+    <item
+        jar="F:\Paul\Projects\Android\S-Agency\app\libs\ksoap2-android-assembly-2.4-jar-with-dependencies.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="e8796346a9191a019e936210a2dc50662c57594b">
+        <dex dex="F:\Paul\Projects\Android\S-Agency\app\build\intermediates\pre-dexed\debug\ksoap2-android-assembly-2.4-jar-with-dependencies_5c843c59e762401db0823994ceccc7d2d4e22eb4.jar" />
+    </item>
+    <item
+        jar="F:\Paul\Projects\Android\S-Agency\app\libs\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="F:\Paul\Projects\Android\S-Agency\app\build\intermediates\pre-dexed\debug\gson-2.2.4_809ab52ee72861d302bc463edd5d9baa9fe57373.jar" />
+    </item>
+
+</items>

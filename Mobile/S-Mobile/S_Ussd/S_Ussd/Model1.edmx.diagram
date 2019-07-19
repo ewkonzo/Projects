@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1f04c95a7ae84db994cd79e7d3e4349b" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="MobileModel.BulkSm" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MobileModel.Client" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MobileModel.Setting" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MobileModel.Transaction" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MobileModel.User" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MobileModel.Ussd" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MobileModel.Ussd_Language" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MobileModel.Session" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MobileModel.session_variable" Width="1.5" PointX="9.375" PointY="4.75" />
+        <EntityTypeShape EntityType="MobileModel.Customer" Width="1.5" PointX="9.375" PointY="7.75" />
+        <EntityTypeShape EntityType="MobileModel.Client_Menu" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="MobileModel.Login" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MobileModel.Menu" Width="1.5" PointX="11.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MobileModel.Utility" Width="1.5" PointX="11.375" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

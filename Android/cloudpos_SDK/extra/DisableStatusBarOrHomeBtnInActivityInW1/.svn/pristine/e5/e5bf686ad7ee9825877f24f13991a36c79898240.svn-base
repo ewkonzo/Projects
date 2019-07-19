@@ -1,0 +1,109 @@
+package com.wizarpos.util;
+
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
+
+import org.apache.http.util.ByteArrayBuffer;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+
+public class NetWorkConnectionTester {
+
+	/**
+	 * use URL get network data.
+	 * 
+	 * @param webTextURL
+	 *            : webTextURL used for testing connection network
+	 * */
+	public static String connectionNetWorkGetText(String webTextURL) {
+		/* Will be filled and displayed later. */
+		String myString = null;//"Message From :" + webTextURL + "\n"
+		try {
+			/* Define the URL we want to load data from. */
+			URL myURL = new URL(webTextURL);
+			/* Open a connection to that URL. */
+
+			URLConnection ucon = myURL.openConnection();
+			/*
+			 * Define InputStreams to read from the URLConnection.
+			 */
+
+			InputStream is = ucon.getInputStream();
+			if (is == null) {
+				throw new RuntimeException("stream is null");
+			}
+
+			BufferedInputStream bis = new BufferedInputStream(is);
+
+			/*
+			 * Read bytes to the Buffer until there is nothing more to read(-1).
+			 */
+			ByteArrayBuffer baf = new ByteArrayBuffer(50);
+			int current = 0;
+			while ((current = bis.read()) != -1) {
+				baf.append((byte) current);
+			}
+			/* Convert the Bytes read to a String. */
+			myString = new String(baf.toByteArray());
+
+			is.close();
+			bis.close();
+//			baf.clear();
+		} catch (Exception e) {
+			/* On any Error we want to display it. */
+			if (e.getMessage() != null) {
+				myString += "\nException:\n" + e.getMessage();
+			}
+		}
+		/* Show the String on the GUI. */
+//		LogHelper.infoMsgAndColor(text, myString, 1);
+		return myString;
+	}
+
+	public static NetworkInfo getNetworkInfo(Activity host) {
+		ConnectivityManager connManager = (ConnectivityManager) host
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		// get etWorkInfo Object
+//		connManager.setMobileDataEnabled(false);
+		NetworkInfo networkInfo = connManager.getActiveNetworkInfo();
+		return networkInfo;
+	}
+	//http://www.baidu.com/img/baidu_sylogo1.gif
+	/**Define the URL we want to load data from. url
+	 * @param url :Define the URL we want to load image from. network 
+	 * @return image;
+	 * 
+	 * */
+	public static Bitmap getBitMap(String url) {
+		URL myFileUrl = null;
+		Bitmap bitmap = null;
+		try {
+			myFileUrl = new URL(url);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		try {
+			HttpURLConnection conn = (HttpURLConnection) myFileUrl
+					.openConnection();
+			conn.setDoInput(true);
+			conn.connect();
+			InputStream is = conn.getInputStream();
+			bitmap = BitmapFactory.decodeStream(is);
+			is.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return bitmap;
+	}
+
+}

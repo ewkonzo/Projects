@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <!--
+             <ImageView
+            android:id="@+id/customer_imageview"
+            android:layout_width="250dp"
+            android:layout_height="250dp" />
+            -->
+
+            <TextView
+                android:id="@+id/customer_tishi"
+                android:layout_width="550dp"
+                android:layout_height="310dp"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="550dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/customer_no"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/button_selector"
+                android:text="@string/no"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/customer_next"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1.0"
+                android:background="@drawable/button_selector"
+                android:text="@string/next"
+                android:textSize="40sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/customer_image"
+        android:contentDescription="@string/app_name"
+        android:layout_width="240dp"
+        android:layout_height="400dp"
+        android:scaleType="fitCenter"
+         />
+
+</LinearLayout>

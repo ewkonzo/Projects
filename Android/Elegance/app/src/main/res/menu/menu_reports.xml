@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="elegance.hasoft.com.elegance.Reports">
+    <item android:id="@+id/action_today"
+        android:title="Today"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_thisweek"
+        android:title="This Week"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_month"
+        android:title="By Month"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_year"
+        android:title="By Year"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_all"
+        android:title="All Reports"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_detailed"
+        android:title="Filter Reports"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>

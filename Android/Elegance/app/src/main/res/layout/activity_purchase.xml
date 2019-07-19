@@ -1,0 +1,433 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="elegance.hasoft.com.elegance.Purchase"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        >
+    </include>
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Select The Vendor You Are Buying From"
+                    android:id="@+id/textViewv"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewv"
+                    android:id="@+id/specvendor"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Select The Type Of Item To Add"
+                    android:id="@+id/textView"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/specvendor"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView"
+                    android:id="@+id/spectype"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Choose The Item Category"
+                    android:id="@+id/textView2"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/spectype"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView2"
+                    android:id="@+id/speccat"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Choose Item Brand"
+                    android:id="@+id/textView1"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/speccat"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView1"
+                    android:id="@+id/specbrand"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Choose Item Size"
+                    android:id="@+id/textViews"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/specbrand"/>
+
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editsize"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:hint="Enter Item Size"
+                    android:textColorHint="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:background="@drawable/editview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    style="@style/CodeFont"
+                    android:textCursorDrawable="@null"
+                    android:layout_below="@+id/textViews"
+                    android:layout_marginTop="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Choose Item Color"
+                    android:id="@+id/textViewsz"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/editsize"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewsz"
+                    android:id="@+id/speccolor"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Choose Item Pattern"
+                    android:id="@+id/textViewp"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/speccolor"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewp"
+                    android:id="@+id/specpattern"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Choose Item Consumer Group"
+                    android:id="@+id/textViewcg"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/specpattern"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewcg"
+                    android:id="@+id/speccg"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Choose Item Gender Group"
+                    android:id="@+id/textViewgg"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/speccg"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewgg"
+                    android:id="@+id/specgg"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Choose Item Fabric/Material"
+                    android:id="@+id/textViewfab"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/specgg"/>
+
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewfab"
+                    android:id="@+id/specfab"
+                    android:layout_marginTop="10dp"
+                    style="@android:style/Widget.Holo.Light.Spinner"
+                    android:textColor="@color/blue"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Enter Unit Price"
+                    android:id="@+id/text"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/specfab"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editprice"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:hint="Enter Unit Price"
+                    android:textColorHint="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:background="@drawable/editview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    style="@style/CodeFont"
+                    android:textCursorDrawable="@null"
+                    android:layout_below="@+id/text"
+                    android:layout_marginTop="30dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Enter Quantity"
+                    android:id="@+id/textq"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/editprice"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editquantity"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:hint="Enter Quantity"
+                    android:textColorHint="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:background="@drawable/editview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    style="@style/CodeFont"
+                    android:textCursorDrawable="@null"
+                    android:layout_below="@+id/textq"
+                    android:layout_marginTop="30dp"
+                    />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Enter Discount Percentage"
+                    android:id="@+id/textdis"
+                    android:textColor="@color/theme"
+                    android:layout_alignParentLeft="true"
+                    style="@style/CodeFont"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/editquantity"/>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editdiscount"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/black"
+                    android:hint="Enter Discount (%)"
+                    android:textColorHint="@color/black"
+                    android:textColorHighlight="@color/black"
+                    android:background="@drawable/editview"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    style="@style/CodeFont"
+                    android:textCursorDrawable="@null"
+                    android:layout_below="@+id/textdis"
+                    android:layout_marginTop="30dp"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ADD THIS PRODUCT"
+                    android:id="@+id/add"
+                    android:layout_below="@+id/editdiscount"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/cardtheme"
+                    android:textColor="@color/white"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"/>
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+

@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="elegance.hasoft.com.elegance.Notes">
+    <item android:id="@+id/action_save"
+        android:title="Save"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_newnotes"
+        android:title="New Note"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_assign"
+        android:title="Assign"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_mynotes"
+        android:title="My Notes"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+</menu>

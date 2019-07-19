@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RealFullScreenSample</string>
+    <string name="title">Real Full Screen Sample!</string>
+    <string name="hide_status">Hide Statusbar</string>
+    <string name="hide_nav">Hide Navigationbar</string>
+    <string name="full_screen">Full Screen</string>
+
+</resources>

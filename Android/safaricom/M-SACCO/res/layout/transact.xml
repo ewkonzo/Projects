@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin1"
+        android:paddingRight="@dimen/activity_horizontal_margin1"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/myAccountMainPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <custom_fonts.RobotoButton
+                android:id="@+id/myAccTransactDepositBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/card_layout"
+                android:drawableLeft="@drawable/icon_saf_deposit"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="   Deposit"
+                android:textColor="@color/lightgreen"
+                android:textSize="20dp"
+                app:typeface="roboto_light" />
+
+            <custom_fonts.RobotoButton
+                android:id="@+id/myAccTransactWithdrawBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/card_layout"
+                android:drawableLeft="@drawable/icon_saf_withdraw"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="   Withdraw"
+                android:textColor="@color/lightgreen"
+                android:textSize="20dp"
+                app:typeface="roboto_light" />
+
+            <custom_fonts.RobotoButton
+                android:id="@+id/myAccTransactAirtimeTopUpBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/card_layout"
+                android:drawableLeft="@drawable/icon_saf_airtime"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:text="   Airtime TopUp"
+                android:textColor="@color/lightgreen"
+                android:textSize="20dp"
+                android:visibility="invisible"
+                app:typeface="roboto_light" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  
+  <Serverip>localhost</Serverip>
+  <domain>localhost</domain>
+  <Instance></Instance>
+  <Port>7002</Port>
+  <Username>Autoweigh</Username>
+  <pass>Mbanking12345*</pass>
+  <Companyname>HiHEA</Companyname>
+  <PostIntervalinsec>60</PostIntervalinsec>
+  <Reconnectintervalinsec>3</Reconnectintervalinsec>
+  <logpath>C:\Logs\</logpath>
+<database>Autoweigh</database>
+<IntegratedSecurity>true</IntegratedSecurity>
+</settings>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Serverip>192.168.30.104</Serverip>
+  <domain>SACCO</domain>
+  <Instance>SHERIALIVE</Instance>
+  <Port>9012</Port>
+  <Username>Mobile</Username>
+  <pass>Bosa1972</pass>
+  <Companyname>SHERIA SACCO SOCIETY LTD.</Companyname>
+  <PostIntervalinsec>60</PostIntervalinsec>
+  <Reconnectintervalinsec>3</Reconnectintervalinsec>
+  <logpath>C:\Mobile\Logs\Client\</logpath>
+  <usewindowsauth>true</usewindowsauth>
+</settings>

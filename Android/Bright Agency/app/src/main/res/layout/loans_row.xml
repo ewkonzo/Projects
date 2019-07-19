@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/orderlayout"
+    android:layout_width="fill_parent"
+
+    android:layout_height="wrap_content"
+    android:background="@drawable/order_selector"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/radio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30.0dip">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvloancode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Loan Type"
+                android:textColor="#ff040404"
+                android:textSize="18.0sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+        </TableRow>
+
+        <TableRow android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvloanNo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginStart="10.0dip"
+                android:text="Loan No"
+                android:textColor="#ff040404"
+                android:textSize="15.0sp"
+                android:textStyle="bold"
+                android:typeface="sans" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

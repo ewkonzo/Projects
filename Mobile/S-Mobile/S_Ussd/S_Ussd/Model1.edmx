@@ -1,0 +1,773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MobileModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BulkSms">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Source Id" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Value" Type="int" />
+          <Property Name="Message" Type="nvarchar" MaxLength="500" />
+          <Property Name="Datetime" Type="datetime" />
+          <Property Name="Client" Type="nvarchar" MaxLength="50" />
+          <Property Name="Balance" Type="int" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Destination Id" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Trace" Type="nvarchar" MaxLength="100" />
+          <Property Name="SMSCost" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SMSCharged" Type="bit" />
+          <Property Name="Time stamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="Scheduled" Type="bit" />
+          <Property Name="Scheduled Time" Type="datetime" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Client Menu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Client" Type="nvarchar" MaxLength="50" />
+          <Property Name="Level" Type="int" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Menu Id" Type="int" />
+        </EntityType>
+        <EntityType Name="Clients">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Client Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Client Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Pin Retries" Type="int" />
+          <Property Name="Show bal for overdrawan acc" Type="bit" />
+          <Property Name="Url" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sms Outlet" Type="nvarchar" MaxLength="50" />
+          <Property Name="Sms Balance" Type="float" />
+          <Property Name="Security Crudential" Type="nvarchar" MaxLength="500" />
+          <Property Name="Customer Key" Type="nvarchar" MaxLength="50" />
+          <Property Name="Customer Secret" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bulk account" Type="nvarchar" MaxLength="50" />
+          <Property Name="Initiator Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Paybill No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Passkey" Type="nvarchar" MaxLength="100" />
+          <Property Name="Push Call Back" Type="nvarchar" MaxLength="100" />
+          <Property Name="Notify low sms" Type="bit" />
+          <Property Name="Sms reorder level" Type="int" />
+          <Property Name="Notification interval" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="500" />
+          <Property Name="Contact" Type="nvarchar" MaxLength="500" />
+          <Property Name="Interval Type" Type="int" />
+          <Property Name="email cc" Type="nvarchar" MaxLength="500" />
+          <Property Name="Incoming sms" Type="bit" />
+          <Property Name="Charge Incoming" Type="bit" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Telephone" />
+            <PropertyRef Name="Client" />
+          </Key>
+          <Property Name="Telephone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Client" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Comments" Type="text" />
+          <Property Name="Daily_Limit" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Date_Registered" Type="datetime" />
+          <Property Name="Language" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="PinChanged" Type="bit" />
+          <Property Name="Status" Type="smallint" />
+          <Property Name="Subscribed" Type="smallint" />
+          <Property Name="Transaction_Limit" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Verification Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Registration Sms sent" Type="bit" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="Telephone" />
+          </Key>
+          <Property Name="Telephone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Start Pin" Type="nvarchar" MaxLength="50" />
+          <Property Name="PIN_Encrypted" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Menu" Type="nvarchar" MaxLength="50" />
+          <Property Name="Client" Type="nvarchar" MaxLength="50" />
+          <Property Name="Level" Type="int" />
+          <Property Name="Order" Type="int" />
+          <Property Name="Active" Type="bit" />
+        </EntityType>
+        <EntityType Name="Session">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="SESSION_ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="Option" Type="int" />
+          <Property Name="Value" Type="nvarchar" MaxLength="50" />
+          <Property Name="Transaction Time" Type="datetime" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Selection" Type="int" />
+        </EntityType>
+        <EntityType Name="session variables">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="session" Type="nvarchar" MaxLength="50" />
+          <Property Name="var key" Type="nvarchar" MaxLength="50" />
+          <Property Name="var value" Type="nvarchar" MaxLength="50" />
+          <Property Name="var id" Type="int" />
+          <Property Name="type" Type="nchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Settings">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Default Language" Type="nvarchar" MaxLength="50" />
+          <Property Name="AutoResponse" Type="nvarchar" MaxLength="500" />
+          <Property Name="No Response Alerts" Type="nvarchar" MaxLength="200" />
+          <Property Name="alert message" Type="nvarchar" MaxLength="500" />
+          <Property Name="Time stamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="Reg wrong response" Type="nvarchar" MaxLength="500" />
+          <Property Name="Success reg" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Account No" Type="varchar" MaxLength="30" />
+          <Property Name="Account Name" Type="varchar" MaxLength="50" />
+          <Property Name="Reference" Type="varchar" MaxLength="100" />
+          <Property Name="Transaction Date" Type="datetime" />
+          <Property Name="Transaction Time" Type="datetime" />
+          <Property Name="Transaction Type" Type="int" />
+          <Property Name="MSISDN" Type="varchar" MaxLength="30" />
+          <Property Name="Posted" Type="bit" />
+          <Property Name="Date Posted" Type="datetime" />
+          <Property Name="Account 2" Type="varchar" MaxLength="30" />
+          <Property Name="Loan" Type="varchar" MaxLength="30" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Comments" Type="varchar" MaxLength="250" />
+          <Property Name="Amount" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Charge" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Description" Type="varchar" MaxLength="100" />
+          <Property Name="Recover Loan From" Type="int" />
+          <Property Name="Entry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Advance Type" Type="int" />
+          <Property Name="Client" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Source" Type="int" />
+          <Property Name="Min_size" Type="int" />
+          <Property Name="Send to" Type="nvarchar" MaxLength="50" />
+          <Property Name="Deposit type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Member No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Document No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Eligibility" Type="float" />
+          <Property Name="Conversation ID" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mpesa Status" Type="int" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Changed" Type="bit" />
+          <Property Name="Date Changed" Type="nvarchar" MaxLength="50" />
+          <Property Name="Client" Type="nvarchar" MaxLength="50" />
+          <Property Name="User Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Time stamp" Type="timestamp" StoreGeneratedPattern="Computed" />
+          <Property Name="UserID" Type="uniqueidentifier" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Ussd">
+          <Key>
+            <PropertyRef Name="SESSION" />
+          </Key>
+          <Property Name="SESSION" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Client" Type="nvarchar(max)" />
+          <Property Name="Code" Type="nvarchar(max)" />
+          <Property Name="Entry" Type="int" Nullable="false" />
+          <Property Name="Menu_Count" Type="int" />
+          <Property Name="OPTION" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="Transaction_Time" Type="datetime" />
+          <Property Name="Trans_Type" Type="int" />
+          <Property Name="USSD_STRING" Type="nvarchar(max)" />
+          <Property Name="Value" Type="nvarchar(max)" />
+          <Property Name="Status" Type="int" />
+          <Property Name="comments" Type="nvarchar(max)" />
+          <Property Name="Menu" Type="int" />
+        </EntityType>
+        <EntityType Name="Ussd Languages">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Languagecode" Type="nvarchar(max)" />
+          <Property Name="Message" Type="nvarchar(max)" />
+          <Property Name="Messagecode" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Utilities">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="MobileModelStoreContainer">
+          <EntitySet Name="BulkSms" EntityType="Self.BulkSms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Client Menu" EntityType="Self.Client Menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Session" EntityType="Self.Session" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="session variables" EntityType="Self.session variables" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Settings" EntityType="Self.Settings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Transaction" EntityType="Self.Transaction" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ussd" EntityType="Self.Ussd" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ussd Languages" EntityType="Self.Ussd Languages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Utilities" EntityType="Self.Utilities" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MobileModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BulkSm">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Source_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Value" Type="Int32" />
+          <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Datetime" Type="DateTime" Precision="3" />
+          <Property Name="Client" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Balance" Type="Int32" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Destination_Id" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Trace" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SMSCost" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SMSCharged" Type="Boolean" />
+          <Property Name="Time_stamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Scheduled" Type="Boolean" />
+          <Property Name="Scheduled_Time" Type="DateTime" Precision="3" />
+          <Property Name="Comments" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Client">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Client_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Pin_Retries" Type="Int32" />
+          <Property Name="Show_bal_for_overdrawan_acc" Type="Boolean" />
+          <Property Name="Url" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sms_Outlet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sms_Balance" Type="Double" />
+          <Property Name="Security_Crudential" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Key" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Customer_Secret" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Bulk_account" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Initiator_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Paybill_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Passkey" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Push_Call_Back" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Notify_low_sms" Type="Boolean" />
+          <Property Name="Sms_reorder_level" Type="Int32" />
+          <Property Name="Notification_interval" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Contact" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Interval_Type" Type="Int32" />
+          <Property Name="email_cc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Incoming_sms" Type="Boolean" />
+          <Property Name="Charge_Incoming" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Setting">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Default_Language" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AutoResponse" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="No_Response_Alerts" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="alert_message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Time_stamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="Reg_wrong_response" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Success_reg" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Transaction">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Account_No" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Account_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Reference" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Transaction_Date" Type="DateTime" Precision="3" />
+          <Property Name="Transaction_Time" Type="DateTime" Precision="3" />
+          <Property Name="Transaction_Type" Type="Int32" />
+          <Property Name="MSISDN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Posted" Type="Boolean" />
+          <Property Name="Date_Posted" Type="DateTime" Precision="3" />
+          <Property Name="Account_2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Loan" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Comments" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Amount" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Charge" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Recover_Loan_From" Type="Int32" />
+          <Property Name="Entry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Advance_Type" Type="Int32" />
+          <Property Name="Client" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Source" Type="Int32" />
+          <Property Name="Min_size" Type="Int32" />
+          <Property Name="Send_to" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Deposit_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Member_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Document_No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Eligibility" Type="Double" />
+          <Property Name="Conversation_ID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mpesa_Status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Changed" Type="Boolean" />
+          <Property Name="Date_Changed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="User_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Time_stamp" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="UserID" Type="Guid" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Ussd">
+          <Key>
+            <PropertyRef Name="SESSION" />
+          </Key>
+          <Property Name="SESSION" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Client" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Entry" Type="Int32" Nullable="false" />
+          <Property Name="Menu_Count" Type="Int32" />
+          <Property Name="OPTION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Transaction_Time" Type="DateTime" Precision="3" />
+          <Property Name="Trans_Type" Type="Int32" />
+          <Property Name="USSD_STRING" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Value" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Menu" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Ussd_Language">
+          <Key>
+            <PropertyRef Name="Entry" />
+          </Key>
+          <Property Name="Entry" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Languagecode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Messagecode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="MobileEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BulkSms" EntityType="Self.BulkSm" />
+          <EntitySet Name="Clients" EntityType="Self.Client" />
+          <EntitySet Name="Settings" EntityType="Self.Setting" />
+          <EntitySet Name="Transactions" EntityType="Self.Transaction" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Ussds" EntityType="Self.Ussd" />
+          <EntitySet Name="Ussd_Languages" EntityType="Self.Ussd_Language" />
+          <EntitySet Name="Sessions" EntityType="MobileModel.Session" />
+          <EntitySet Name="session_variables" EntityType="MobileModel.session_variable" />
+          <EntitySet Name="Customers" EntityType="MobileModel.Customer" />
+          <EntitySet Name="Client_Menus" EntityType="MobileModel.Client_Menu" />
+          <EntitySet Name="Logins" EntityType="MobileModel.Login" />
+          <EntitySet Name="Menus" EntityType="MobileModel.Menu" />
+          <EntitySet Name="Utilities" EntityType="MobileModel.Utility" />
+        </EntityContainer>
+        <EntityType Name="Session">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SESSION_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Option" Type="Int32" />
+          <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Transaction_Time" Type="DateTime" Precision="3" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Selection" Type="Int32" />
+        </EntityType>
+        <EntityType Name="session_variable">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="session" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="var_key" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="var_value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="var_id" Type="Int32" />
+          <Property Name="type" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Customer">
+          <Key>
+            <PropertyRef Name="Telephone" />
+            <PropertyRef Name="Client" />
+          </Key>
+          <Property Name="Telephone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Client" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Daily_Limit" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Date_Registered" Type="DateTime" Precision="3" />
+          <Property Name="Language" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PinChanged" Type="Boolean" />
+          <Property Name="Status" Type="Int16" />
+          <Property Name="Subscribed" Type="Int16" />
+          <Property Name="Transaction_Limit" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Verification_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Registration_Sms_sent" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Client_Menu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Level" Type="Int32" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="Menu_Id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="Telephone" />
+          </Key>
+          <Property Name="Telephone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Start_Pin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PIN_Encrypted" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Menu1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Level" Type="Int32" />
+          <Property Name="Order" Type="Int32" />
+          <Property Name="Active" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Utility">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MobileModelStoreContainer" CdmEntityContainer="MobileEntities">
+          <EntitySetMapping Name="BulkSms">
+            <EntityTypeMapping TypeName="MobileModel.BulkSm">
+              <MappingFragment StoreEntitySet="BulkSms">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Source_Id" ColumnName="Source Id" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Destination_Id" ColumnName="Destination Id" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Trace" ColumnName="Trace" />
+                <ScalarProperty Name="SMSCost" ColumnName="SMSCost" />
+                <ScalarProperty Name="SMSCharged" ColumnName="SMSCharged" />
+                <ScalarProperty Name="Time_stamp" ColumnName="Time stamp" />
+                <ScalarProperty Name="Scheduled" ColumnName="Scheduled" />
+                <ScalarProperty Name="Scheduled_Time" ColumnName="Scheduled Time" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clients">
+            <EntityTypeMapping TypeName="MobileModel.Client">
+              <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Client_Code" ColumnName="Client Code" />
+                <ScalarProperty Name="Client_Name" ColumnName="Client Name" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Pin_Retries" ColumnName="Pin Retries" />
+                <ScalarProperty Name="Show_bal_for_overdrawan_acc" ColumnName="Show bal for overdrawan acc" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Sms_Outlet" ColumnName="Sms Outlet" />
+                <ScalarProperty Name="Sms_Balance" ColumnName="Sms Balance" />
+                <ScalarProperty Name="Security_Crudential" ColumnName="Security Crudential" />
+                <ScalarProperty Name="Customer_Key" ColumnName="Customer Key" />
+                <ScalarProperty Name="Customer_Secret" ColumnName="Customer Secret" />
+                <ScalarProperty Name="Bulk_account" ColumnName="Bulk account" />
+                <ScalarProperty Name="Initiator_Name" ColumnName="Initiator Name" />
+                <ScalarProperty Name="Paybill_No" ColumnName="Paybill No" />
+                <ScalarProperty Name="Passkey" ColumnName="Passkey" />
+                <ScalarProperty Name="Push_Call_Back" ColumnName="Push Call Back" />
+                <ScalarProperty Name="Notify_low_sms" ColumnName="Notify low sms" />
+                <ScalarProperty Name="Sms_reorder_level" ColumnName="Sms reorder level" />
+                <ScalarProperty Name="Notification_interval" ColumnName="Notification interval" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="Interval_Type" ColumnName="Interval Type" />
+                <ScalarProperty Name="email_cc" ColumnName="email cc" />
+                <ScalarProperty Name="Incoming_sms" ColumnName="Incoming sms" />
+                <ScalarProperty Name="Charge_Incoming" ColumnName="Charge Incoming" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Settings">
+            <EntityTypeMapping TypeName="MobileModel.Setting">
+              <MappingFragment StoreEntitySet="Settings">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Default_Language" ColumnName="Default Language" />
+                <ScalarProperty Name="AutoResponse" ColumnName="AutoResponse" />
+                <ScalarProperty Name="No_Response_Alerts" ColumnName="No Response Alerts" />
+                <ScalarProperty Name="alert_message" ColumnName="alert message" />
+                <ScalarProperty Name="Time_stamp" ColumnName="Time stamp" />
+                <ScalarProperty Name="Reg_wrong_response" ColumnName="Reg wrong response" />
+                <ScalarProperty Name="Success_reg" ColumnName="Success reg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Transactions">
+            <EntityTypeMapping TypeName="MobileModel.Transaction">
+              <MappingFragment StoreEntitySet="Transaction">
+                <ScalarProperty Name="Account_No" ColumnName="Account No" />
+                <ScalarProperty Name="Account_Name" ColumnName="Account Name" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="Transaction_Date" ColumnName="Transaction Date" />
+                <ScalarProperty Name="Transaction_Time" ColumnName="Transaction Time" />
+                <ScalarProperty Name="Transaction_Type" ColumnName="Transaction Type" />
+                <ScalarProperty Name="MSISDN" ColumnName="MSISDN" />
+                <ScalarProperty Name="Posted" ColumnName="Posted" />
+                <ScalarProperty Name="Date_Posted" ColumnName="Date Posted" />
+                <ScalarProperty Name="Account_2" ColumnName="Account 2" />
+                <ScalarProperty Name="Loan" ColumnName="Loan" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Charge" ColumnName="Charge" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Recover_Loan_From" ColumnName="Recover Loan From" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="Advance_Type" ColumnName="Advance Type" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="ID_No" ColumnName="ID No" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Min_size" ColumnName="Min_size" />
+                <ScalarProperty Name="Send_to" ColumnName="Send to" />
+                <ScalarProperty Name="Deposit_type" ColumnName="Deposit type" />
+                <ScalarProperty Name="Member_No" ColumnName="Member No" />
+                <ScalarProperty Name="Document_No" ColumnName="Document No" />
+                <ScalarProperty Name="Eligibility" ColumnName="Eligibility" />
+                <ScalarProperty Name="Conversation_ID" ColumnName="Conversation ID" />
+                <ScalarProperty Name="Mpesa_Status" ColumnName="Mpesa Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="MobileModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Changed" ColumnName="Changed" />
+                <ScalarProperty Name="Date_Changed" ColumnName="Date Changed" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="User_Type" ColumnName="User Type" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Time_stamp" ColumnName="Time stamp" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ussds">
+            <EntityTypeMapping TypeName="MobileModel.Ussd">
+              <MappingFragment StoreEntitySet="Ussd">
+                <ScalarProperty Name="SESSION" ColumnName="SESSION" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="Menu_Count" ColumnName="Menu_Count" />
+                <ScalarProperty Name="OPTION" ColumnName="OPTION" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Transaction_Time" ColumnName="Transaction_Time" />
+                <ScalarProperty Name="Trans_Type" ColumnName="Trans_Type" />
+                <ScalarProperty Name="USSD_STRING" ColumnName="USSD_STRING" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="Menu" ColumnName="Menu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ussd_Languages">
+            <EntityTypeMapping TypeName="MobileModel.Ussd_Language">
+              <MappingFragment StoreEntitySet="Ussd Languages">
+                <ScalarProperty Name="Entry" ColumnName="Entry" />
+                <ScalarProperty Name="Languagecode" ColumnName="Languagecode" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Messagecode" ColumnName="Messagecode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sessions">
+            <EntityTypeMapping TypeName="MobileModel.Session">
+              <MappingFragment StoreEntitySet="Session">
+                <ScalarProperty Name="Selection" ColumnName="Selection" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Transaction_Time" ColumnName="Transaction Time" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Option" ColumnName="Option" />
+                <ScalarProperty Name="SESSION_ID" ColumnName="SESSION_ID" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="session_variables">
+            <EntityTypeMapping TypeName="MobileModel.session_variable">
+              <MappingFragment StoreEntitySet="session variables">
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="var_id" ColumnName="var id" />
+                <ScalarProperty Name="var_value" ColumnName="var value" />
+                <ScalarProperty Name="var_key" ColumnName="var key" />
+                <ScalarProperty Name="session" ColumnName="session" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="MobileModel.Customer">
+              <MappingFragment StoreEntitySet="Customer">
+                <ScalarProperty Name="Registration_Sms_sent" ColumnName="Registration Sms sent" />
+                <ScalarProperty Name="Verification_Code" ColumnName="Verification Code" />
+                <ScalarProperty Name="Transaction_Limit" ColumnName="Transaction_Limit" />
+                <ScalarProperty Name="Subscribed" ColumnName="Subscribed" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PinChanged" ColumnName="PinChanged" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="Date_Registered" ColumnName="Date_Registered" />
+                <ScalarProperty Name="Daily_Limit" ColumnName="Daily_Limit" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Client_Menus">
+            <EntityTypeMapping TypeName="MobileModel.Client_Menu">
+              <MappingFragment StoreEntitySet="Client Menu">
+                <ScalarProperty Name="Menu_Id" ColumnName="Menu Id" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="MobileModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="PIN_Encrypted" ColumnName="PIN_Encrypted" />
+                <ScalarProperty Name="Start_Pin" ColumnName="Start Pin" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Menus">
+            <EntityTypeMapping TypeName="MobileModel.Menu">
+              <MappingFragment StoreEntitySet="Menu">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Order" ColumnName="Order" />
+                <ScalarProperty Name="Level" ColumnName="Level" />
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="Menu1" ColumnName="Menu" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Utilities">
+            <EntityTypeMapping TypeName="MobileModel.Utility">
+              <MappingFragment StoreEntitySet="Utilities">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

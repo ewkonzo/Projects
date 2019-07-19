@@ -1,0 +1,1130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/MSACCO" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/MSACCO" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/MSACCO" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="BalanceEnquiry">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="reference" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="BalanceEnquiry_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccountBalance">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccountBalance_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccountName">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccountName_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertToBuffer">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="trace" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertToBuffer_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Decline">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="trace" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Decline_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Inserttojournal">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transType" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tranDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="otherd" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephoneNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Inserttojournal_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Accounts">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Accounts_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Ministatement">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="reference" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Ministatement_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="NewRegistration">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="NewRegistration_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Loanbalances">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Loanbalances_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Sms">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Sms_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetSms">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="requestCount" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetSms_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PayLoan">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="loanno" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="accountNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="documentno" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PayLoan_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Transfer">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="debitacc" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="creditacc" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="reference" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transfertype" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Transfer_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Payutility">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="utility" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="reference" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Payutility_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Advance">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="reference" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Advance_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Minicharge">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Minicharge_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Balcharge">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Balcharge_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Msacocharge">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Msacocharge_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Transfercharge">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Transfercharge_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Smsupdate">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entryNo" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="status" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="balance" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Smsupdate_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Postmanual">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Postmanual_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="InserttojournalM">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transType" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tranDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="otherd" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InserttojournalM_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UtilityPayment">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transType" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="description" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="tranDate" type="date" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="otherd" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="UtilityPayment_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PostManualUtilityPayment">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PostManualUtilityPayment_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="InsertMsaccoOtherServices">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="traceID" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="accountNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephoneNo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transactionType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="chequeLeafFrom" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="chequeLeafTo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="transactionDate" type="dateTime" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="InsertMsaccoOtherServices_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="BlockATM">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="BlockATM_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="LoanStatus">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanStatus_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="TransferToAccountName">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="accountNumberTo" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="TransferToAccountName_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CallExecuteFunction">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="functionID" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CallExecuteFunction_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="CallManualFunctions">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="CallManualFunctions_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetBOSANumber">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetBOSANumber_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanRequest">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="reference" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="reqAmount" type="decimal" />
+            <element minOccurs="1" maxOccurs="1" name="loanType" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="installment" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanRequest_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="BalanceEnquiry">
+    <part name="parameters" element="tns:BalanceEnquiry" />
+  </message>
+  <message name="BalanceEnquiry_Result">
+    <part name="parameters" element="tns:BalanceEnquiry_Result" />
+  </message>
+  <message name="AccountBalance">
+    <part name="parameters" element="tns:AccountBalance" />
+  </message>
+  <message name="AccountBalance_Result">
+    <part name="parameters" element="tns:AccountBalance_Result" />
+  </message>
+  <message name="AccountName">
+    <part name="parameters" element="tns:AccountName" />
+  </message>
+  <message name="AccountName_Result">
+    <part name="parameters" element="tns:AccountName_Result" />
+  </message>
+  <message name="InsertToBuffer">
+    <part name="parameters" element="tns:InsertToBuffer" />
+  </message>
+  <message name="InsertToBuffer_Result">
+    <part name="parameters" element="tns:InsertToBuffer_Result" />
+  </message>
+  <message name="Decline">
+    <part name="parameters" element="tns:Decline" />
+  </message>
+  <message name="Decline_Result">
+    <part name="parameters" element="tns:Decline_Result" />
+  </message>
+  <message name="Inserttojournal">
+    <part name="parameters" element="tns:Inserttojournal" />
+  </message>
+  <message name="Inserttojournal_Result">
+    <part name="parameters" element="tns:Inserttojournal_Result" />
+  </message>
+  <message name="Accounts">
+    <part name="parameters" element="tns:Accounts" />
+  </message>
+  <message name="Accounts_Result">
+    <part name="parameters" element="tns:Accounts_Result" />
+  </message>
+  <message name="Ministatement">
+    <part name="parameters" element="tns:Ministatement" />
+  </message>
+  <message name="Ministatement_Result">
+    <part name="parameters" element="tns:Ministatement_Result" />
+  </message>
+  <message name="NewRegistration">
+    <part name="parameters" element="tns:NewRegistration" />
+  </message>
+  <message name="NewRegistration_Result">
+    <part name="parameters" element="tns:NewRegistration_Result" />
+  </message>
+  <message name="Loanbalances">
+    <part name="parameters" element="tns:Loanbalances" />
+  </message>
+  <message name="Loanbalances_Result">
+    <part name="parameters" element="tns:Loanbalances_Result" />
+  </message>
+  <message name="Sms">
+    <part name="parameters" element="tns:Sms" />
+  </message>
+  <message name="Sms_Result">
+    <part name="parameters" element="tns:Sms_Result" />
+  </message>
+  <message name="GetSms">
+    <part name="parameters" element="tns:GetSms" />
+  </message>
+  <message name="GetSms_Result">
+    <part name="parameters" element="tns:GetSms_Result" />
+  </message>
+  <message name="PayLoan">
+    <part name="parameters" element="tns:PayLoan" />
+  </message>
+  <message name="PayLoan_Result">
+    <part name="parameters" element="tns:PayLoan_Result" />
+  </message>
+  <message name="Transfer">
+    <part name="parameters" element="tns:Transfer" />
+  </message>
+  <message name="Transfer_Result">
+    <part name="parameters" element="tns:Transfer_Result" />
+  </message>
+  <message name="Payutility">
+    <part name="parameters" element="tns:Payutility" />
+  </message>
+  <message name="Payutility_Result">
+    <part name="parameters" element="tns:Payutility_Result" />
+  </message>
+  <message name="Advance">
+    <part name="parameters" element="tns:Advance" />
+  </message>
+  <message name="Advance_Result">
+    <part name="parameters" element="tns:Advance_Result" />
+  </message>
+  <message name="Minicharge">
+    <part name="parameters" element="tns:Minicharge" />
+  </message>
+  <message name="Minicharge_Result">
+    <part name="parameters" element="tns:Minicharge_Result" />
+  </message>
+  <message name="Balcharge">
+    <part name="parameters" element="tns:Balcharge" />
+  </message>
+  <message name="Balcharge_Result">
+    <part name="parameters" element="tns:Balcharge_Result" />
+  </message>
+  <message name="Msacocharge">
+    <part name="parameters" element="tns:Msacocharge" />
+  </message>
+  <message name="Msacocharge_Result">
+    <part name="parameters" element="tns:Msacocharge_Result" />
+  </message>
+  <message name="Transfercharge">
+    <part name="parameters" element="tns:Transfercharge" />
+  </message>
+  <message name="Transfercharge_Result">
+    <part name="parameters" element="tns:Transfercharge_Result" />
+  </message>
+  <message name="Smsupdate">
+    <part name="parameters" element="tns:Smsupdate" />
+  </message>
+  <message name="Smsupdate_Result">
+    <part name="parameters" element="tns:Smsupdate_Result" />
+  </message>
+  <message name="Postmanual">
+    <part name="parameters" element="tns:Postmanual" />
+  </message>
+  <message name="Postmanual_Result">
+    <part name="parameters" element="tns:Postmanual_Result" />
+  </message>
+  <message name="InserttojournalM">
+    <part name="parameters" element="tns:InserttojournalM" />
+  </message>
+  <message name="InserttojournalM_Result">
+    <part name="parameters" element="tns:InserttojournalM_Result" />
+  </message>
+  <message name="UtilityPayment">
+    <part name="parameters" element="tns:UtilityPayment" />
+  </message>
+  <message name="UtilityPayment_Result">
+    <part name="parameters" element="tns:UtilityPayment_Result" />
+  </message>
+  <message name="PostManualUtilityPayment">
+    <part name="parameters" element="tns:PostManualUtilityPayment" />
+  </message>
+  <message name="PostManualUtilityPayment_Result">
+    <part name="parameters" element="tns:PostManualUtilityPayment_Result" />
+  </message>
+  <message name="InsertMsaccoOtherServices">
+    <part name="parameters" element="tns:InsertMsaccoOtherServices" />
+  </message>
+  <message name="InsertMsaccoOtherServices_Result">
+    <part name="parameters" element="tns:InsertMsaccoOtherServices_Result" />
+  </message>
+  <message name="BlockATM">
+    <part name="parameters" element="tns:BlockATM" />
+  </message>
+  <message name="BlockATM_Result">
+    <part name="parameters" element="tns:BlockATM_Result" />
+  </message>
+  <message name="LoanStatus">
+    <part name="parameters" element="tns:LoanStatus" />
+  </message>
+  <message name="LoanStatus_Result">
+    <part name="parameters" element="tns:LoanStatus_Result" />
+  </message>
+  <message name="TransferToAccountName">
+    <part name="parameters" element="tns:TransferToAccountName" />
+  </message>
+  <message name="TransferToAccountName_Result">
+    <part name="parameters" element="tns:TransferToAccountName_Result" />
+  </message>
+  <message name="CallExecuteFunction">
+    <part name="parameters" element="tns:CallExecuteFunction" />
+  </message>
+  <message name="CallExecuteFunction_Result">
+    <part name="parameters" element="tns:CallExecuteFunction_Result" />
+  </message>
+  <message name="CallManualFunctions">
+    <part name="parameters" element="tns:CallManualFunctions" />
+  </message>
+  <message name="CallManualFunctions_Result">
+    <part name="parameters" element="tns:CallManualFunctions_Result" />
+  </message>
+  <message name="GetBOSANumber">
+    <part name="parameters" element="tns:GetBOSANumber" />
+  </message>
+  <message name="GetBOSANumber_Result">
+    <part name="parameters" element="tns:GetBOSANumber_Result" />
+  </message>
+  <message name="LoanRequest">
+    <part name="parameters" element="tns:LoanRequest" />
+  </message>
+  <message name="LoanRequest_Result">
+    <part name="parameters" element="tns:LoanRequest_Result" />
+  </message>
+  <portType name="MSACCO_Port">
+    <operation name="BalanceEnquiry">
+      <input name="BalanceEnquiry" message="tns:BalanceEnquiry" />
+      <output name="BalanceEnquiry_Result" message="tns:BalanceEnquiry_Result" />
+    </operation>
+    <operation name="AccountBalance">
+      <input name="AccountBalance" message="tns:AccountBalance" />
+      <output name="AccountBalance_Result" message="tns:AccountBalance_Result" />
+    </operation>
+    <operation name="AccountName">
+      <input name="AccountName" message="tns:AccountName" />
+      <output name="AccountName_Result" message="tns:AccountName_Result" />
+    </operation>
+    <operation name="InsertToBuffer">
+      <input name="InsertToBuffer" message="tns:InsertToBuffer" />
+      <output name="InsertToBuffer_Result" message="tns:InsertToBuffer_Result" />
+    </operation>
+    <operation name="Decline">
+      <input name="Decline" message="tns:Decline" />
+      <output name="Decline_Result" message="tns:Decline_Result" />
+    </operation>
+    <operation name="Inserttojournal">
+      <input name="Inserttojournal" message="tns:Inserttojournal" />
+      <output name="Inserttojournal_Result" message="tns:Inserttojournal_Result" />
+    </operation>
+    <operation name="Accounts">
+      <input name="Accounts" message="tns:Accounts" />
+      <output name="Accounts_Result" message="tns:Accounts_Result" />
+    </operation>
+    <operation name="Ministatement">
+      <input name="Ministatement" message="tns:Ministatement" />
+      <output name="Ministatement_Result" message="tns:Ministatement_Result" />
+    </operation>
+    <operation name="NewRegistration">
+      <input name="NewRegistration" message="tns:NewRegistration" />
+      <output name="NewRegistration_Result" message="tns:NewRegistration_Result" />
+    </operation>
+    <operation name="Loanbalances">
+      <input name="Loanbalances" message="tns:Loanbalances" />
+      <output name="Loanbalances_Result" message="tns:Loanbalances_Result" />
+    </operation>
+    <operation name="Sms">
+      <input name="Sms" message="tns:Sms" />
+      <output name="Sms_Result" message="tns:Sms_Result" />
+    </operation>
+    <operation name="GetSms">
+      <input name="GetSms" message="tns:GetSms" />
+      <output name="GetSms_Result" message="tns:GetSms_Result" />
+    </operation>
+    <operation name="PayLoan">
+      <input name="PayLoan" message="tns:PayLoan" />
+      <output name="PayLoan_Result" message="tns:PayLoan_Result" />
+    </operation>
+    <operation name="Transfer">
+      <input name="Transfer" message="tns:Transfer" />
+      <output name="Transfer_Result" message="tns:Transfer_Result" />
+    </operation>
+    <operation name="Payutility">
+      <input name="Payutility" message="tns:Payutility" />
+      <output name="Payutility_Result" message="tns:Payutility_Result" />
+    </operation>
+    <operation name="Advance">
+      <input name="Advance" message="tns:Advance" />
+      <output name="Advance_Result" message="tns:Advance_Result" />
+    </operation>
+    <operation name="Minicharge">
+      <input name="Minicharge" message="tns:Minicharge" />
+      <output name="Minicharge_Result" message="tns:Minicharge_Result" />
+    </operation>
+    <operation name="Balcharge">
+      <input name="Balcharge" message="tns:Balcharge" />
+      <output name="Balcharge_Result" message="tns:Balcharge_Result" />
+    </operation>
+    <operation name="Msacocharge">
+      <input name="Msacocharge" message="tns:Msacocharge" />
+      <output name="Msacocharge_Result" message="tns:Msacocharge_Result" />
+    </operation>
+    <operation name="Transfercharge">
+      <input name="Transfercharge" message="tns:Transfercharge" />
+      <output name="Transfercharge_Result" message="tns:Transfercharge_Result" />
+    </operation>
+    <operation name="Smsupdate">
+      <input name="Smsupdate" message="tns:Smsupdate" />
+      <output name="Smsupdate_Result" message="tns:Smsupdate_Result" />
+    </operation>
+    <operation name="Postmanual">
+      <input name="Postmanual" message="tns:Postmanual" />
+      <output name="Postmanual_Result" message="tns:Postmanual_Result" />
+    </operation>
+    <operation name="InserttojournalM">
+      <input name="InserttojournalM" message="tns:InserttojournalM" />
+      <output name="InserttojournalM_Result" message="tns:InserttojournalM_Result" />
+    </operation>
+    <operation name="UtilityPayment">
+      <input name="UtilityPayment" message="tns:UtilityPayment" />
+      <output name="UtilityPayment_Result" message="tns:UtilityPayment_Result" />
+    </operation>
+    <operation name="PostManualUtilityPayment">
+      <input name="PostManualUtilityPayment" message="tns:PostManualUtilityPayment" />
+      <output name="PostManualUtilityPayment_Result" message="tns:PostManualUtilityPayment_Result" />
+    </operation>
+    <operation name="InsertMsaccoOtherServices">
+      <input name="InsertMsaccoOtherServices" message="tns:InsertMsaccoOtherServices" />
+      <output name="InsertMsaccoOtherServices_Result" message="tns:InsertMsaccoOtherServices_Result" />
+    </operation>
+    <operation name="BlockATM">
+      <input name="BlockATM" message="tns:BlockATM" />
+      <output name="BlockATM_Result" message="tns:BlockATM_Result" />
+    </operation>
+    <operation name="LoanStatus">
+      <input name="LoanStatus" message="tns:LoanStatus" />
+      <output name="LoanStatus_Result" message="tns:LoanStatus_Result" />
+    </operation>
+    <operation name="TransferToAccountName">
+      <input name="TransferToAccountName" message="tns:TransferToAccountName" />
+      <output name="TransferToAccountName_Result" message="tns:TransferToAccountName_Result" />
+    </operation>
+    <operation name="CallExecuteFunction">
+      <input name="CallExecuteFunction" message="tns:CallExecuteFunction" />
+      <output name="CallExecuteFunction_Result" message="tns:CallExecuteFunction_Result" />
+    </operation>
+    <operation name="CallManualFunctions">
+      <input name="CallManualFunctions" message="tns:CallManualFunctions" />
+      <output name="CallManualFunctions_Result" message="tns:CallManualFunctions_Result" />
+    </operation>
+    <operation name="GetBOSANumber">
+      <input name="GetBOSANumber" message="tns:GetBOSANumber" />
+      <output name="GetBOSANumber_Result" message="tns:GetBOSANumber_Result" />
+    </operation>
+    <operation name="LoanRequest">
+      <input name="LoanRequest" message="tns:LoanRequest" />
+      <output name="LoanRequest_Result" message="tns:LoanRequest_Result" />
+    </operation>
+  </portType>
+  <binding name="MSACCO_Binding" type="tns:MSACCO_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="BalanceEnquiry">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:BalanceEnquiry" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="BalanceEnquiry">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="BalanceEnquiry_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AccountBalance">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:AccountBalance" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AccountBalance">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AccountBalance_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AccountName">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:AccountName" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AccountName">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AccountName_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InsertToBuffer">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:InsertToBuffer" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InsertToBuffer">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InsertToBuffer_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Decline">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Decline" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Decline">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Decline_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Inserttojournal">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Inserttojournal" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Inserttojournal">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Inserttojournal_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Accounts">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Accounts" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Accounts">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Accounts_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Ministatement">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Ministatement" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Ministatement">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Ministatement_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="NewRegistration">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:NewRegistration" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="NewRegistration">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="NewRegistration_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Loanbalances">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Loanbalances" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Loanbalances">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Loanbalances_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Sms">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Sms" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Sms">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Sms_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetSms">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:GetSms" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetSms">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetSms_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PayLoan">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:PayLoan" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PayLoan">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PayLoan_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Transfer">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Transfer" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Transfer">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Transfer_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Payutility">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Payutility" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Payutility">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Payutility_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Advance">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Advance" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Advance">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Advance_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Minicharge">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Minicharge" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Minicharge">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Minicharge_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Balcharge">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Balcharge" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Balcharge">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Balcharge_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Msacocharge">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Msacocharge" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Msacocharge">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Msacocharge_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Transfercharge">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Transfercharge" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Transfercharge">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Transfercharge_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Smsupdate">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Smsupdate" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Smsupdate">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Smsupdate_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Postmanual">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:Postmanual" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Postmanual">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Postmanual_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InserttojournalM">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:InserttojournalM" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InserttojournalM">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InserttojournalM_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UtilityPayment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:UtilityPayment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UtilityPayment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UtilityPayment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PostManualUtilityPayment">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:PostManualUtilityPayment" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PostManualUtilityPayment">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PostManualUtilityPayment_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="InsertMsaccoOtherServices">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:InsertMsaccoOtherServices" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="InsertMsaccoOtherServices">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="InsertMsaccoOtherServices_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="BlockATM">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:BlockATM" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="BlockATM">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="BlockATM_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="LoanStatus">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:LoanStatus" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="LoanStatus">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="LoanStatus_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="TransferToAccountName">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:TransferToAccountName" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="TransferToAccountName">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="TransferToAccountName_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CallExecuteFunction">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:CallExecuteFunction" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CallExecuteFunction">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CallExecuteFunction_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CallManualFunctions">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:CallManualFunctions" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CallManualFunctions">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CallManualFunctions_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetBOSANumber">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:GetBOSANumber" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetBOSANumber">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetBOSANumber_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="LoanRequest">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/MSACCO:LoanRequest" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="LoanRequest">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="LoanRequest_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="MSACCO">
+    <port name="MSACCO_Port" binding="tns:MSACCO_Binding">
+      <address location="http://paulo:212/Bandari/WS/BANDARI%20TEST/Codeunit/MSACCO" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

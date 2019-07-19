@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/collectionid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_toRightOf="@+id/farmerno"
+        android:hint="Collection Number" />
+
+    <TextView
+        android:id="@+id/Datetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/collectionid"
+        android:gravity="end"
+        android:hint="Date time" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/Datetime"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/Datetime"
+        android:gravity="end"
+        android:hint="Time" />
+
+    <TextView
+        android:id="@+id/collectby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_below="@+id/collectionid"
+          android:hint="Collectedby" />
+    <TextView
+        android:id="@+id/Kgcollected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/Datetime"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="right"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="right|center"
+        android:hint="Kg collected" />
+    <ImageView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Kgcollected"
+     android:layout_alignRight="@id/Kgcollected"
+        android:hint="status"
+        android:src="@drawable/sent"
+        android:textSize="10dp" />
+    <ImageButton
+        android:id="@+id/printsingle"
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@id/Datetime"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@null"
+        android:src="@drawable/print"
+
+        android:text="Print"
+        android:textSize="10dp" />
+
+
+</RelativeLayout>

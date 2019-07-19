@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginLeft="10.0dip"
+    android:layout_marginRight="10.0dip" >
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="10.0dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Pin:" />
+
+        <EditText
+            android:id="@+id/txtcpin"            
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:layout_weight="1.0"            
+            android:hint="Current Pin"
+            android:inputType="numberPassword"
+            android:maxLength="4" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Pin:" />
+
+        <EditText
+            android:id="@+id/txtnpin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:layout_weight="1.0"
+            android:hint="New Pin"
+            android:inputType="numberPassword"
+            android:maxLength="4" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10.0dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Pin" />
+
+        <EditText
+            android:id="@+id/txtconpin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5.0dip"
+            android:layout_weight="1.0"
+            android:hint="Confirm Pin:"
+            android:inputType="numberPassword"
+            android:maxLength="4" />
+    </TableRow>
+
+</TableLayout>

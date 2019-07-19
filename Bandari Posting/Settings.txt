@@ -1,0 +1,10 @@
+﻿172.17.1.3
+1012
+Nerverserver
+MSACCO
+Mbanking12345*
+172.17.1.3
+BANDARI
+Service
+D:\logs\Atm\
+10

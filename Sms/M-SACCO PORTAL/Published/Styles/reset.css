@@ -1,0 +1,210 @@
+html {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+	.contents{
+	width:560px;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:10px;
+	margin-bottom:60px;
+	border:1px solid #49A5E8; 
+	padding:50px;
+	}
+	
+	.contents table
+	{
+	width:100%;
+/*	border:1px solid #000;*/
+	margin-bottom:10px;
+	border-collapse:collapse;
+	    
+	 }
+	    
+.contents table tr
+	{
+	    
+	}
+	    
+.contents table td
+	{
+	border-top:0px solid #;
+	border-bottom:0px solid #bbb;	    
+	}
+	
+.contents tbody td {
+	border-top:0px solid #bbb;
+	border-bottom:0px solid #bbb;
+	background:#EDF5FF;
+}
+
+.contents a
+{
+    color: #034af3;
+}
+
+input.textEntry 
+{
+   
+    border: 1px solid #ccc;
+    margin-left: 0px;
+}
+
+input.passwordEntry 
+{
+    width: 320px;
+    border: 1px solid #ccc;
+}
+	
+    .label
+    {
+    color:Black;
+	
+    }
+    .errorlbl
+    {
+    color:Red;
+    text-align:center;
+    font-weight:bold;
+    }
+		
+    .regTable tr
+    {
+    padding-top:40px;
+    
+    }
+    
+     .ProgressBar
+    {
+    border:solid 1px #FFCC00;
+    background-color:#FFFFCC;
+    padding-top:5px;
+    padding-bottom:10px;
+    margin:auto;
+    padding-left:5px;
+    font-weight:normal;
+    width:300px;
+            
+    }
+    
+    .warnig
+    {
+    border:solid 1px #FFCC00;
+    background-color:#FFFFCC;
+    padding-top:5px;
+    padding-bottom:10px;
+    margin:auto;
+    padding-left:5px;
+    font-weight:normal;
+    width:400px;
+            
+    }
+            
+    .informations
+    {
+    border:solid 1px blue;
+    background-color:#CCDDEE;
+    padding-top:5px;
+    padding-bottom:10px;
+    margin-left:120px;
+    padding-left:5px;
+    font-weight:normal;
+            
+    }
+ 
+.breadcrum
+{
+
+   
+}
+
+	.signingup table
+	{
+	/*	border:1px solid #000;*/
+	margin-bottom:10px;
+	border-collapse:collapse;
+	    
+	 }
+	    
+.signingup table tr
+	{
+	    
+	}
+	    
+.signingup table td
+	{
+	border-top:0px solid #;
+	border-bottom:0px solid #bbb;	    
+	}
+	
+.signingup tbody td {
+	border-top:0px solid #bbb;
+	border-bottom:0px solid #bbb;
+	background:#EDF5FF;
+}
+
+.signingup a
+{
+    color: #034af3;
+}
+
+	.manageUsers table
+	{
+	width:100%;
+/*	border:1px solid #000;*/
+	margin-bottom:10px;
+	border-collapse:collapse;
+	    
+	 }
+	    
+.manageUsers table tr
+	{
+	    
+	}
+	    
+.manageUsers table td
+	{
+	border-top:0px solid #;
+	border-bottom:0px solid #bbb;	    
+	}
+	
+.manageUsers tbody td {
+	border-top:0px solid #bbb;
+	border-bottom:0px solid #bbb;
+	background:#EDF5FF;
+}
+
+.Back_Click table
+{
+width:100%;
+/*	border:1px solid #000;*/
+margin-bottom:10px;
+border-collapse:collapse;
+	    
+}
+	    
+.Back_Click table tr
+{
+	    
+}
+	    
+.Back_Click table td
+{
+border-top:0px solid #;
+border-bottom:0px solid #bbb;	    
+}
+	
+.Back_Click tbody td {
+border-top:0px solid #bbb;
+border-bottom:0px solid #bbb;
+background:#EDF5FF;
+}
+.supplierInfo
+{
+    font-weight:bold;
+}

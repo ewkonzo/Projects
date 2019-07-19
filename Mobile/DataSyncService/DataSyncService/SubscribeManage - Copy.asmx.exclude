@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="DataSync.asmx.cs" Class="DataSyncService.DataSync" %>

@@ -1,0 +1,512 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body   
+{
+background: #EEEEEE;
+font-size: .80em;
+font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+margin: 0px;
+padding: 0px;
+color: #696969;
+
+}
+
+.container_12
+{
+/*background: none repeat scroll 0 0 #FFFFFF;*/
+margin-left: auto;
+margin-right: auto;
+width: 960px;   
+}
+
+
+a:active
+{
+color: #034af3;
+}
+
+p
+{
+margin-bottom: 10px;
+line-height: 1.6em;
+}
+
+
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+{
+font-size: 1.5em;
+color: #666666;
+font-variant: small-caps;
+text-transform: none;
+font-weight: 200;
+margin-bottom: 0px;
+}
+
+h1
+{
+font-size: 1.6em;
+padding-bottom: 0px;
+margin-bottom: 0px;
+}
+
+h2
+{
+font-size: 1.5em;
+font-weight: 600;
+}
+
+h3
+{
+font-size: 1.2em;
+}
+
+h4
+{
+font-size: 1.1em;
+}
+
+h5, h6
+{
+font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
+{
+margin-top: 0px;
+}
+
+
+/* PRIMARY LAYOUT ELEMENTS   
+----------------------------------------------------------*/
+
+.page
+{
+width: 960px;
+background-color: #fff;
+margin: 20px auto 0px auto;
+border: 1px solid #496077;
+}
+
+.header {
+padding-top: 0px;
+color: #FFFFFF;
+position: fixed;
+height: 116px;
+font-size:10px;
+font-weight:normal;
+width:100%;
+
+/* background-image: url("../images/header.png");*/
+}
+
+.header h1
+{
+font-weight: 700;
+margin: 0px;
+padding: 0px 0px 0px 20px;
+color: #f9f9f9;
+border: none;
+line-height: 2em;
+font-size: 2em;
+}
+
+.main
+{
+padding: 0px 12px;
+margin: 12px 8px 8px 8px;
+min-height: 420px;
+}
+
+.leftCol
+{
+padding: 6px 0px;
+margin: 12px 8px 8px 8px;
+width: 200px;
+min-height: 200px;
+}
+
+.footer
+{
+color: #4e5766;
+padding: 8px 0px 0px 0px;
+margin: 0px auto;
+text-align: center;
+line-height: normal;
+}
+
+
+/* TAB MENU   
+----------------------------------------------------------*/
+
+div.hideSkiplink
+{
+background-color:#3a4f63;
+width:100%;
+}
+
+div.menu
+{
+padding: 4px 0px 4px 8px;
+}
+
+div.menu ul
+{
+list-style: none;
+margin: 0px;
+padding: 0px;
+width: auto;
+}
+
+div.menu ul li a, div.menu ul li a:visited
+{
+background-color: #465c71;
+border: 1px #4e667d solid;
+color: #dde4ec;
+display: block;
+line-height: 1.35em;
+padding: 4px 20px;
+text-decoration: none;
+white-space: nowrap;
+}
+
+div.menu ul li a:hover
+{
+background-color: #bfcbd6;
+color: #465c71;
+text-decoration: none;
+}
+
+div.menu ul li a:active
+{
+background-color: #465c71;
+color: #cfdbe6;
+text-decoration: none;
+}
+
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+form fieldset
+{
+margin: auto;
+margin-top:20px;
+padding: 0 0 10px 0px;		
+border: 1px solid #49A5E8; 
+background-image: url(images/fieldset_gradient.jpg);
+background-repeat: repeat-x;	 
+background-image: url(images/fieldset-gradient-02.jpg);
+background-position:bottom;	 
+clear: both;
+width:100%;	
+
+margin-bottom:20px;	
+}
+
+.regTable
+{
+margin: auto;
+clear: both;
+width:100%;
+padding-left:35px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+display: block;
+}
+
+fieldset label.inline 
+{
+display: inline;
+}
+
+form legend
+{
+color:#000; 
+margin-left:20px; 
+padding-left:10px; 
+padding-right:10px; 
+border: 1px solid #49A5E8; 
+line-height:20px;
+-moz-border-radius:10px 10px 10px 10px; 
+/*background-color:#FFFAC0;*/
+font-weight:bold;    
+}
+
+input.textEntry 
+{
+width: 320px;
+border: 1px solid #ccc;
+margin-left: 3px;
+}
+
+input.passwordEntry 
+{
+width: 320px;
+border: 1px solid #ccc;
+}
+
+div.accountInfo
+{
+width: 42%;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+clear: both;
+}
+
+.title
+{
+display: block;
+float: left;
+text-align: left;
+width: auto;
+}
+
+.loginDisplay
+{
+font-size: 1.1em;
+display: block;
+text-align: right;
+padding: 10px;
+color: White;
+}
+
+.loginDisplay a:link
+{
+color: white;
+}
+
+.loginDisplay a:visited
+{
+color: white;
+}
+
+.loginDisplay a:hover
+{
+color: white;
+}
+
+.failureNotification
+{
+font-size: 1.2em;
+color: Red;
+}
+
+.bold
+{
+font-weight: bold;
+}
+
+.submitButton
+{
+text-align: right;
+padding-right: 10px;
+}
+
+.submitButton2
+{
+text-align: left;
+padding-right: 10px;
+}
+
+.head{
+
+width:100%;
+/*background-color: #0897D9;*/
+color:#ffffff;
+height: 80px;
+line-height: 80px;
+padding-left: 0px;
+font-weight: bold;
+
+}
+
+.sub{
+width: 100%;
+font-family: "Trebuchet MS";
+background-color: #EEEEEE;
+width: 100%;
+height:25px;
+line-height:25px;
+color: rgb(32, 51, 96);
+}
+	
+.footer{
+width:100%;
+/*background-color:#0897D9 ;*/
+color:#000;
+text-align: center;
+height: 20px;
+line-height: 5px;
+font-size: 11px;
+}
+.contents{
+width:100%;
+margin-right:auto;
+margin-left:auto;
+margin-top:0px;
+margin-bottom:0px;
+border:solid 0px #49A5E8;
+padding:0px;
+
+}
+	
+.label
+{
+color:Black;
+	
+}
+.errorlbl
+{
+color:Red;
+text-align:center;
+font-weight:bold;
+}
+		
+.regTable tr
+{
+padding-top:40px;
+    
+}
+    
+.warnig
+{
+border:solid 1px #FFCC00;
+background-color:#FFFFCC;
+padding-top:5px;
+padding-bottom:10px;
+/*margin-left:120px;*/
+padding-left:5px;
+font-weight:normal;
+margin:auto;
+width:400px;           
+}
+            
+.information
+{
+border:solid 1px blue;
+background-color:#CCDDEE;
+padding-top:5px;
+padding-bottom:10px;
+padding-left:5px;
+font-weight:normal;
+margin:auto;
+width:400px;
+            
+} 
+.DropdownSel {
+height: 25px; 
+font-size: 110%;	
+width: 320px;
+border: 0.1px solid #ccc;
+margin-left: 3px;
+}
+
+.manageUsers
+{
+    
+}
+
+.button
+{
+display:inline-block;
+margin:0 .7em 0 0;
+padding:5px 10px 6px 10px;
+border:1px solid #BBB;
+border-right:1px solid #BBB;
+border-bottom:1px solid #BBB;
+background-color:#fff;
+background:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#e9e9e9));
+background:-webkit-linear-gradient(top, #fff, #e9e9e9);
+background:-moz-linear-gradient(top, #fff, #e9e9e9);
+background:-ms-linear-gradient(top, #fff, #e9e9e9);
+background:-o-linear-gradient(top, #fff, #e9e9e9);
+font-family:"Lucida Grande", Tahoma, Arial, sans-serif;
+font-size:100%;line-height:130%;
+color:#464646;
+cursor:pointer;
+text-decoration:none;
+-webkit-border-radius:11px;
+-moz-border-radius:11px;
+border-radius:11px;
+-moz-background-clip:padding;
+-webkit-background-clip:padding-box;
+background-clip:padding-box;
+-webkit-box-shadow:rgba(0,0,0,0.1) 0px 1px 1px;
+-moz-box-shadow:rgba(0,0,0,0.1) 0px 1px 1px;
+box-shadow:rgba(0,0,0,0.1) 0px 1px 1px;
+/*
+background-repeat: no-repeat;
+ background-image: url(../images/icons/login.png) ;
+ */
+}
+
+
+
+a.bigpush{font-size:140%}
+button{width:auto !important;overflow:visible !important
+}
+button.button{
+padding:4px 10px 3px 7px
+}
+.button:hover,button.button:hover,a.button:focus,button.button:focus{
+color:#000;-webkit-box-shadow:rgba(0,0,0,0.25) 1px 1px 3px;
+-moz-box-shadow:rgba(0,0,0,0.25) 1px 1px 3px;
+box-shadow:rgba(0,0,0,0.25) 1px 1px 3px
+}
+
+
+
+#lightbox.done
+{
+background:#BFDBFF;
+border:1px solid #BBBBBB;
+border-right:1px solid #BBBBBB;
+border-bottom:1px solid #BBBBBB;
+-webkit-border-radius:50px;
+-moz-border-radius:50px;
+border-radius:50px;
+margin-top:7%;
+}
+#lbContent
+{
+ position:relative;
+ height:223px;
+ margin:25px;
+ padding:25px 30px;
+ background:#EEEEEE;
+ border:1px solid #BBBBBB;
+ -webkit-border-radius:30px;
+ -moz-border-radius:30px;
+ border-radius:30px;
+ padding-left:7%;
+  padding-top:5%;
+ }
+ #lbContent[id]{height:auto;min-height:223px}#lightbox.loadin{background-color:#222;border:1px solid #ccc}#lbLoadMessage p{color:#fff;text-align:center;font-size:150%;line-height:380px}#lightbox.done #lbLoadMessage,#lightbox.loadin #lbContent{display:none}#lightbox.done #lbContent,#lightbox.loadin #lbLoadMessage{display:block}#lightbox.blue,.blue #lightbox{background:#61A9DF;border-color:#61A9DF}.blue #lbContent{border-color:#338DCF}#lightbox.green,.green #lightbox{background:#A4DE5D;border-color:#A4DE5D}.green #lbContent{border-color:#85CE2C}#lightbox.error,.error #lightbox{background:#EA3109;border-color:#BE2700}.error #lbContent{border-color:#eee}* html.prepIE{overflow-y:hidden}* html.prepIE body{height:100%}* html.prepIE select{visibility:hidden}* html.prepIE #lightbox select{visibility:visible}#lightbox.image,#lightbox.image #lbContent,#lightbox.movie,#lightbox.movie #lbContent{border:none !important;background:none !important;text-align:center;padding:0 !important;height:auto !important;width:900px;margin-left:-450px}#lightbox.image #lbContent,#lightbox.movie #lbContent{margin:0 !important}#lightbox .button.dark{font-size:85%;background:#333;border:1px solid transparent;border-right:1px solid #111;border-bottom:1px solid #111;padding-left:8px}#lightbox .button.dark img{height:13px;margin-bottom:-2px !important}* html #lightbox.image,* html #lightbox.image #lbContent,* html #lightbox.movie,* html #lightbox.movie #lbContent{background:#000 !important;border:#000 !important}
+#lbImage,#lbMovie object,#lbMovie video{max-width:900px;border:1px solid #555;border-right:1px solid #777;border-bottom:1px solid #777;background:#000 url(/images/lbProgress.gif) no-repeat center center}
+h4#lbCaption{padding:20px 0 15px 0;font-size:120%;color:#f5f5f5 !important;text-shadow:rgba(0,0,0,0.9) 1px 1px 2px}
+#lightbox h3{color:#222;font-size:100%;margin:0 0 1.2em 0}#lightbox form ul{margin:0 0 10px 0;padding:0}
+#lightbox form li{position:static;width:97%}
+#lightbox div.buttons{margin:0 0 1.2em 0}
+#lightbox .stuff p{font-size:100%;line-height:150%;margin:0 0 1em 0}
+
+ .UpperFooter 
+  {
+   border-top:solid 1px red;
+   position:fixed;
+   left:182px;
+   bottom:0px;
+   height:70px;
+   width:100%;
+  }

@@ -1,0 +1,1680 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF477D56-BC33-4B11-98E7-F870BE5D1576}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rice</RootNamespace>
+    <AssemblyName>Rice</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Logging, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>packages\Common.Logging.3.4.1\lib\net40\Common.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Common.Logging.Core, Version=3.4.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>packages\Common.Logging.Core.3.4.1\lib\net40\Common.Logging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Win.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Images.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Pdf.v18.1.Drawing, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Export, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.Bootstrap.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.Resources.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1.Wizard, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v18.1.UI, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1.Extensions, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraRichEdit.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net40\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hangfire.Core, Version=1.6.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Hangfire.Core.1.6.17\lib\net45\Hangfire.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer, Version=1.6.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Hangfire.SqlServer.1.6.17\lib\net45\Hangfire.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Smo, Version=14.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bags.Designer.cs">
+      <DependentUpon>Bags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bag_Weight.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Bank_Account.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Category_location.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Company.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts.Designer.cs">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dimension.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Editform.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editform.Designer.cs">
+      <DependentUpon>Editform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="externaldata.cs" />
+    <Compile Include="Filter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Filter.Designer.cs">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gridcolumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Inventory tracker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory tracker.Designer.cs">
+      <DependentUpon>Inventory tracker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Itemlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Itemlist.Designer.cs">
+      <DependentUpon>Itemlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemMovement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemMovement.Designer.cs">
+      <DependentUpon>ItemMovement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items  and services.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items  and services.Designer.cs">
+      <DependentUpon>Items  and services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items.Designer.cs">
+      <DependentUpon>Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Items_Header.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Items_Services.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Items_Services_List.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Item_Balance.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Item_Conversion_Matrix.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Item_Movement.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Item_Movement_Header.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Item_Reversal.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Navigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Navigation.Designer.cs">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryList.Designer.cs">
+      <DependentUpon>DeliveryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outlet.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Paddy list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paddy list.Designer.cs">
+      <DependentUpon>Paddy list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paddy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paddy.Designer.cs">
+      <DependentUpon>Paddy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paddy_Bag.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="POS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="POS.Designer.cs">
+      <DependentUpon>POS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PosCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PosCash.Designer.cs">
+      <DependentUpon>PosCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Convertstock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Convertstock.Designer.cs">
+      <DependentUpon>Convertstock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Delivery - Customer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Delivery - Customer.Designer.cs">
+      <DependentUpon>Delivery - Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Garage\garageexpenditure.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Garage\garageexpenditure.Designer.cs">
+      <DependentUpon>garageexpenditure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Farmer_statement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Farmer_statement.Designer.cs">
+      <DependentUpon>Farmer_statement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Inputsgrn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Inputsgrn.Designer.cs">
+      <DependentUpon>Inputsgrn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Machineexp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Machineexp.Designer.cs">
+      <DependentUpon>Machineexp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pos\Return.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pos\Return.Designer.cs">
+      <DependentUpon>Return.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Paddy list.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Paddy list.Designer.cs">
+      <DependentUpon>Paddy list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Weighslip - Customer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Weighslip - Customer.Designer.cs">
+      <DependentUpon>Weighslip - Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SupplyNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplyNote.Designer.cs">
+      <DependentUpon>SupplyNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report Preview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Preview.Designer.cs">
+      <DependentUpon>Report Preview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pos\Purchases Cumm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pos\Purchases Cumm.Designer.cs">
+      <DependentUpon>Purchases Cumm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pos\Sale analysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pos\Sale analysis.Designer.cs">
+      <DependentUpon>Sale analysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pos\Convert.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pos\Convert.Designer.cs">
+      <DependentUpon>Convert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pos\item analysis.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pos\item analysis.Designer.cs">
+      <DependentUpon>item analysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pos\Sales cummulative.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pos\Sales cummulative.Designer.cs">
+      <DependentUpon>Sales cummulative.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pos\Transfer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pos\Transfer.Designer.cs">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reversal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reversal.Designer.cs">
+      <DependentUpon>Reversal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Return.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Return.Designer.cs">
+      <DependentUpon>Return.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfer Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer Stock.Designer.cs">
+      <DependentUpon>Transfer Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stocktake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stocktake.Designer.cs">
+      <DependentUpon>Stocktake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receivestock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receivestock.Designer.cs">
+      <DependentUpon>Receivestock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Header.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Header.Designer.cs">
+      <DependentUpon>Header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Delivery.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Delivery.Designer.cs">
+      <DependentUpon>Delivery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pos\Purchases.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pos\Purchases.Designer.cs">
+      <DependentUpon>Purchases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pos\Grn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pos\Grn.Designer.cs">
+      <DependentUpon>Grn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pos\Sales Receipt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pos\Sales Receipt.Designer.cs">
+      <DependentUpon>Sales Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pos\Sales summary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pos\Sales summary.Designer.cs">
+      <DependentUpon>Sales summary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pos\Sales.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Pos\Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stocks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stocks.Designer.cs">
+      <DependentUpon>Stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SupplyNote.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\SupplyNote.Designer.cs">
+      <DependentUpon>SupplyNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Weighslip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Weighslip.Designer.cs">
+      <DependentUpon>Weighslip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rice.cs" />
+    <Compile Include="Crop.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Crops.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crops.Designer.cs">
+      <DependentUpon>Crops.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Farmer.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Farmers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Farmers.Designer.cs">
+      <DependentUpon>Farmers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmchangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmchangePass.Designer.cs">
+      <DependentUpon>FrmchangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paddy_Detail.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Reportfilters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportfilters.Designer.cs">
+      <DependentUpon>Reportfilters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sales_Price.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scripting.cs" />
+    <Compile Include="SelectAccept.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SelectAccept.Designer.cs">
+      <DependentUpon>SelectAccept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statusbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statusbar.Designer.cs">
+      <DependentUpon>Statusbar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transferred_Item.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transporter.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Transporters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transporters.Designer.cs">
+      <DependentUpon>Transporters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Unit.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_outlet.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Variant.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicles.Designer.cs">
+      <DependentUpon>Vehicles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Alternate\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Bagweight\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\banks\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Collections\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Company info\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ConversionMatrix\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ItemEntries\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ItemHeader\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ItemList\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ItemMovementHeader\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Movement\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NavItems\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\NewContact\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Dimensions\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Members\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Outlets\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PaddyBags\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Prices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Resources\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Reversals\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Services\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Setup\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Transferred\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Trans\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Units\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\AUsers\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Vendors\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Weigh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Weigh.Designer.cs">
+      <DependentUpon>Weigh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WeighMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeighMain.Designer.cs">
+      <DependentUpon>WeighMain.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Bags.resx">
+      <DependentUpon>Bags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts.resx">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crops.resx">
+      <DependentUpon>Crops.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editform.resx">
+      <DependentUpon>Editform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Farmers.resx">
+      <DependentUpon>Farmers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filter.resx">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmchangePass.resx">
+      <DependentUpon>FrmchangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory tracker.resx">
+      <DependentUpon>Inventory tracker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Itemlist.resx">
+      <DependentUpon>Itemlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemMovement.resx">
+      <DependentUpon>ItemMovement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items  and services.resx">
+      <DependentUpon>Items  and services.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items.resx">
+      <DependentUpon>Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Navigation.resx">
+      <DependentUpon>Navigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryList.resx">
+      <DependentUpon>DeliveryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paddy list.resx">
+      <DependentUpon>Paddy list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paddy.resx">
+      <DependentUpon>Paddy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="POS.resx">
+      <DependentUpon>POS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PosCash.resx">
+      <DependentUpon>PosCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Convertstock.resx">
+      <DependentUpon>Convertstock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Delivery - Customer.resx">
+      <DependentUpon>Delivery - Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Garage\garageexpenditure.resx">
+      <DependentUpon>garageexpenditure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Farmer_statement.resx">
+      <DependentUpon>Farmer_statement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Inputsgrn.resx">
+      <DependentUpon>Inputsgrn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Machineexp.resx">
+      <DependentUpon>Machineexp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pos\Return.resx">
+      <DependentUpon>Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Paddy list.resx">
+      <DependentUpon>Paddy list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Weighslip - Customer.resx">
+      <DependentUpon>Weighslip - Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplyNote.resx">
+      <DependentUpon>SupplyNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Preview.resx">
+      <DependentUpon>Report Preview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pos\Purchases Cumm.resx">
+      <DependentUpon>Purchases Cumm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pos\Sale analysis.resx">
+      <DependentUpon>Sale analysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pos\Convert.resx">
+      <DependentUpon>Convert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pos\item analysis.resx">
+      <DependentUpon>item analysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pos\Sales cummulative.resx">
+      <DependentUpon>Sales cummulative.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pos\Transfer.resx">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reversal.resx">
+      <DependentUpon>Reversal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Return.resx">
+      <DependentUpon>Return.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transfer Stock.resx">
+      <DependentUpon>Transfer Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stocktake.resx">
+      <DependentUpon>Stocktake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receivestock.resx">
+      <DependentUpon>Receivestock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportfilters.resx">
+      <DependentUpon>Reportfilters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Header.resx">
+      <DependentUpon>Header.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Delivery.resx">
+      <DependentUpon>Delivery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pos\Purchases.resx">
+      <DependentUpon>Purchases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pos\Grn.resx">
+      <DependentUpon>Grn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pos\Sales Receipt.resx">
+      <DependentUpon>Sales Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pos\Sales summary.resx">
+      <DependentUpon>Sales summary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pos\Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\SupplyNote.resx">
+      <DependentUpon>SupplyNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Weighslip.resx">
+      <DependentUpon>Weighslip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectAccept.resx">
+      <DependentUpon>SelectAccept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statusbar.resx">
+      <DependentUpon>Statusbar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transporters.resx">
+      <DependentUpon>Transporters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicles.resx">
+      <DependentUpon>Vehicles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Weigh.resx">
+      <DependentUpon>Weigh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeighMain.resx">
+      <DependentUpon>WeighMain.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="Data.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Data.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data.edmx.diagram">
+      <DependentUpon>Data.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Company.datasource" />
+    <None Include="Properties\DataSources\Contact.datasource" />
+    <None Include="Properties\DataSources\Crop.datasource" />
+    <None Include="Properties\DataSources\Customer.datasource" />
+    <None Include="Properties\DataSources\Dimension.datasource" />
+    <None Include="Properties\DataSources\Farmer.datasource" />
+    <None Include="Properties\DataSources\itemstatistics.datasource" />
+    <None Include="Properties\DataSources\Items_Header.datasource" />
+    <None Include="Properties\DataSources\Items_Services.datasource" />
+    <None Include="Properties\DataSources\Items_Services_List.datasource" />
+    <None Include="Properties\DataSources\Item_Conversion_Matrix.datasource" />
+    <None Include="Properties\DataSources\Item_Movement.datasource" />
+    <None Include="Properties\DataSources\Item_Movement_Header.datasource" />
+    <None Include="Properties\DataSources\Item_Reversal.datasource" />
+    <None Include="Properties\DataSources\Outlet.datasource" />
+    <None Include="Properties\DataSources\Paddy_Bag.datasource" />
+    <None Include="Properties\DataSources\Paddy_Detail.datasource" />
+    <None Include="Properties\DataSources\Resource.datasource" />
+    <None Include="Properties\DataSources\Setting.datasource" />
+    <None Include="Properties\DataSources\Transferred_Item.datasource" />
+    <None Include="Properties\DataSources\Transporter.datasource" />
+    <None Include="Properties\DataSources\User.datasource" />
+    <None Include="Properties\DataSources\Variant.datasource" />
+    <None Include="Properties\DataSources\Vendor.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\add.png" />
+    <None Include="Web References\Alternate\Alternate.wsdl" />
+    <None Include="Web References\Alternate\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AUsers\Users1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Bagweight\BagWeight.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Bagweight\BagWeight.wsdl" />
+    <None Include="Web References\Bagweight\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\banks\Banks.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\banks\Banks.wsdl" />
+    <None Include="Web References\banks\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Collections\Collection.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Collections\Collection.wsdl" />
+    <None Include="Web References\Collections\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Company info\Company.wsdl" />
+    <None Include="Web References\Company info\Company1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Company info\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ConversionMatrix\ConversionMatrix.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ConversionMatrix\ConversionMatrix.wsdl" />
+    <None Include="Web References\ConversionMatrix\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ItemEntries\Itementries.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ItemEntries\Itementries.wsdl" />
+    <None Include="Web References\ItemEntries\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ItemHeader\Itemsheader.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ItemHeader\Itemsheader.wsdl" />
+    <None Include="Web References\ItemHeader\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ItemList\ItemsList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ItemList\ItemsList.wsdl" />
+    <None Include="Web References\ItemList\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ItemMovementHeader\ItemMovementHeader.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\ItemMovementHeader\ItemMovementHeader.wsdl" />
+    <None Include="Web References\ItemMovementHeader\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Movement\ItemMovement.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Movement\ItemMovement.wsdl" />
+    <None Include="Web References\Movement\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\NavItems\Items.wsdl" />
+    <None Include="Web References\NavItems\Items1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NavItems\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\NewContact\Contact.wsdl" />
+    <None Include="Web References\NewContact\Contact1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\NewContact\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Dimensions\Dimensions.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Dimensions\Dimensions.wsdl" />
+    <None Include="Web References\Dimensions\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Members\Members.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Members\Members.wsdl" />
+    <None Include="Web References\Members\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Outlets\Outlets.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Outlets\Outlets.wsdl" />
+    <None Include="Web References\Outlets\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PaddyBags\Paddy_bags.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PaddyBags\Paddy_bags.wsdl" />
+    <None Include="Web References\PaddyBags\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Prices\Prices.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Prices\Prices.wsdl" />
+    <None Include="Web References\Prices\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Resources\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Resources\Resource.wsdl" />
+    <None Include="Web References\Resources\Resource1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Reversals\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Reversals\Reversals.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Reversals\Reversals.wsdl" />
+    <None Include="Web References\Services\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Services\Services.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Services\Services.wsdl" />
+    <None Include="Web References\Setup\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Setup\Setup.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Setup\Setup.wsdl" />
+    <None Include="Web References\Transferred\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Transferred\Transferred.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Transferred\Transferred.wsdl" />
+    <None Include="Web References\Trans\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Trans\Transporter.wsdl" />
+    <None Include="Web References\Trans\Transporter1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Units\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Units\Units.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Units\Units.wsdl" />
+    <None Include="Web References\AUsers\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\AUsers\Users.wsdl" />
+    <None Include="Web References\Vendors\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Vendors\Vendors.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Vendors\Vendors.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mobile\S-Mobile\Logging\Logging.csproj">
+      <Project>{1c78e6b7-870d-41d4-8234-fb43fe8b16b9}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Data.edmx</DependentUpon>
+      <LastGenOutput>Data.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Data.edmx</DependentUpon>
+      <LastGenOutput>Data.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\RiceMain.jpg" />
+    <None Include="Resources\stock_advanced_filter.png" />
+    <None Include="Resources\document_revert.png" />
+    <None Include="Resources\back_2.png" />
+    <Content Include="Script.sql" />
+    <None Include="Resources\Export.png" />
+    <None Include="Resources\Cancel.png" />
+    <None Include="Resources\PrintReport.png" />
+    <None Include="Resources\NextRecord.png" />
+    <None Include="Resources\Print.png" />
+    <None Include="Resources\Key.png" />
+    <None Include="Resources\excel.png" />
+    <None Include="Images\new.png" />
+    <None Include="Images\store.png" />
+    <None Include="Images\check.png" />
+    <None Include="Images\stores.png" />
+    <None Include="Images\login.png" />
+    <None Include="Images\setup.png" />
+    <None Include="Images\collection list.png" />
+    <None Include="Images\weigh.png" />
+    <None Include="Images\farmer_add.png" />
+    <None Include="Images\farmer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://mainserver:2012/MWEASERVICE/WS/MWEA%2520RICE%2520GROWERS/Page/Setup">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Setup\</RelPath>
+      <UpdateFromURL>http://mainserver:2012/MWEASERVICE/WS/MWEA%2520RICE%2520GROWERS/Page/Setup</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Setup_Setup_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Transporter">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Trans\</RelPath>
+      <UpdateFromURL>http://paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Transporter</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Transporter_Transporter_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/ConversionMatrix">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ConversionMatrix\</RelPath>
+      <UpdateFromURL>http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/ConversionMatrix</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_ConversionMatrix_ConversionMatrix_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/Itementries">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ItemEntries\</RelPath>
+      <UpdateFromURL>http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/Itementries</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_ItemEntries_Itementries_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/Itemsheader">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ItemHeader\</RelPath>
+      <UpdateFromURL>http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/Itemsheader</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_ItemHeader_ItemHeader_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://MAINSERVER:2012/MWEASERVICE/WS/MWEA%2520RICE%2520GROWERS/Page/ItemMovement">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Movement\</RelPath>
+      <UpdateFromURL>http://MAINSERVER:2012/MWEASERVICE/WS/MWEA%2520RICE%2520GROWERS/Page/ItemMovement</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Movement_ItemMovement_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/ItemMovementHeader">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ItemMovementHeader\</RelPath>
+      <UpdateFromURL>http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/ItemMovementHeader</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_ItemMovementHeader_ItemMovementHeader_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/Items">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NavItems\</RelPath>
+      <UpdateFromURL>http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/Items</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Items_Items_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/ItemsList">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ItemList\</RelPath>
+      <UpdateFromURL>http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/ItemsList</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_ItemList_ItemsList_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Outlets">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Outlets\</RelPath>
+      <UpdateFromURL>http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Outlets</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Outlets_Outlets_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Prices">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Prices\</RelPath>
+      <UpdateFromURL>http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Prices</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Prices_Prices_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:2302/MweaTest/WS/MWEA%2520RICE/Page/Reversals">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Reversals\</RelPath>
+      <UpdateFromURL>http://vaio:2302/MweaTest/WS/MWEA%2520RICE/Page/Reversals</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Reversals_Reversals_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/Resource">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Resources\</RelPath>
+      <UpdateFromURL>http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/Resource</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Resource_Resource_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/Services">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Services\</RelPath>
+      <UpdateFromURL>http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/Services</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Services_Services_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/Transferred">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Transferred\</RelPath>
+      <UpdateFromURL>http://vaio:4013/Mwea/WS/MWEA%2520RICE/Page/Transferred</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Transferred_Transferred_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Vendors">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Vendors\</RelPath>
+      <UpdateFromURL>http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Vendors</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Vendors_Vendors_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://VAIO:4013/Mwea/WS/MWEA%2520RICE%2520GROWERS/Codeunit/Alternate">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Alternate\</RelPath>
+      <UpdateFromURL>http://VAIO:4013/Mwea/WS/MWEA%2520RICE%2520GROWERS/Codeunit/Alternate</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Alternate_Alternate</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://VAIO:4013/Mwea/WS/MWEA%2520RICE/Page/Company">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Company info\</RelPath>
+      <UpdateFromURL>http://VAIO:4013/Mwea/WS/MWEA%2520RICE/Page/Company</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Company_Company_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://VAIO:4013/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Members">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Members\</RelPath>
+      <UpdateFromURL>http://VAIO:4013/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Members</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Members_Members_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://VAIO:4013/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/BagWeight">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Bagweight\</RelPath>
+      <UpdateFromURL>http://VAIO:4013/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/BagWeight</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Bagweight_BagWeight_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:7002/Handinhand/WS/MWEA%2520RICE/Page/Banks">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\banks\</RelPath>
+      <UpdateFromURL>http://vaio:7002/Handinhand/WS/MWEA%2520RICE/Page/Banks</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_banks_Banks_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Collection">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Collections\</RelPath>
+      <UpdateFromURL>http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Collection</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Collections_Collection_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:7002/Handinhand/WS/MWEA%2520RICE/Page/Contact">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\NewContact\</RelPath>
+      <UpdateFromURL>http://vaio:7002/Handinhand/WS/MWEA%2520RICE/Page/Contact</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Contact_Contact_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:7002/Handinhand/WS/MWEA%2520RICE/Page/Dimensions">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Dimensions\</RelPath>
+      <UpdateFromURL>http://vaio:7002/Handinhand/WS/MWEA%2520RICE/Page/Dimensions</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Dimensions_Dimensions_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Paddy_bags">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PaddyBags\</RelPath>
+      <UpdateFromURL>http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Paddy_bags</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_PaddyBags_Paddy_bags_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://vaio:7002/Handinhand/WS/MWEA%2520RICE/Page/Units">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Units\</RelPath>
+      <UpdateFromURL>http://vaio:7002/Handinhand/WS/MWEA%2520RICE/Page/Units</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Units_Units_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Users">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\AUsers\</RelPath>
+      <UpdateFromURL>http://Paulo:222/Mwea/WS/MWEA%2520RICE%2520GROWERS/Page/Users</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Rice_Users_Users_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

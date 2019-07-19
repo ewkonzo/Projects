@@ -1,0 +1,127 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:1:1-27:12
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:1:1-27:12
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:1:1-27:12
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:1:1-27:12
+MERGED from [:cloudpossdk:] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\cloudpossdk.aar\9cc1244d52beb6602d790567eb1b8384\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\c9715724ece23a0e79b604add4023468\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\2e1e2927fb7eb33a9070db07c6ee7d16\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\2a4b80449fab4885e51b852789790c02\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8bcde782f6da63907471360e3309e79e\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\74a7db8c36bc3a5a8f75ce1038db8dec\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\7f1defeea1e15122206d73ed0ec650dd\AndroidManifest.xml:17:1-31:12
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\2eea6661eb44ed55fb18d1d1180f8285\AndroidManifest.xml:17:1-30:12
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:1:1-27:12
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:1:1-27:12
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:1:1-27:12
+	package
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:2:5-43
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:4:5-30
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:1:11-69
+	android:versionCode
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:3:5-28
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml
+uses-sdk
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:6:5-8:41
+MERGED from [:cloudpossdk:] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\cloudpossdk.aar\9cc1244d52beb6602d790567eb1b8384\AndroidManifest.xml:7:5-9:41
+MERGED from [:cloudpossdk:] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\cloudpossdk.aar\9cc1244d52beb6602d790567eb1b8384\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\c9715724ece23a0e79b604add4023468\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\c9715724ece23a0e79b604add4023468\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\2e1e2927fb7eb33a9070db07c6ee7d16\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\2e1e2927fb7eb33a9070db07c6ee7d16\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\2a4b80449fab4885e51b852789790c02\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\2a4b80449fab4885e51b852789790c02\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8bcde782f6da63907471360e3309e79e\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8bcde782f6da63907471360e3309e79e\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\74a7db8c36bc3a5a8f75ce1038db8dec\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\74a7db8c36bc3a5a8f75ce1038db8dec\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\7f1defeea1e15122206d73ed0ec650dd\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\7f1defeea1e15122206d73ed0ec650dd\AndroidManifest.xml:21:5-23:58
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\2eea6661eb44ed55fb18d1d1180f8285\AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\2eea6661eb44ed55fb18d1d1180f8285\AndroidManifest.xml:20:5-22:41
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:6:5-8:41
+INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:6:5-8:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\c9715724ece23a0e79b604add4023468\AndroidManifest.xml:23:9-51
+	android:targetSdkVersion
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:8:9-38
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:7:9-34
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml
+		INJECTED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.CLOUDPOS_PRINTER
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:10:5-75
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:10:22-72
+application
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:12:5-25:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\c9715724ece23a0e79b604add4023468\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\c9715724ece23a0e79b604add4023468\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\2e1e2927fb7eb33a9070db07c6ee7d16\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\2e1e2927fb7eb33a9070db07c6ee7d16\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\2a4b80449fab4885e51b852789790c02\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\2a4b80449fab4885e51b852789790c02\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8bcde782f6da63907471360e3309e79e\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8bcde782f6da63907471360e3309e79e\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\74a7db8c36bc3a5a8f75ce1038db8dec\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\74a7db8c36bc3a5a8f75ce1038db8dec\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\7f1defeea1e15122206d73ed0ec650dd\AndroidManifest.xml:25:5-29:19
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\7f1defeea1e15122206d73ed0ec650dd\AndroidManifest.xml:25:5-29:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\2eea6661eb44ed55fb18d1d1180f8285\AndroidManifest.xml:24:5-28:19
+MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\2eea6661eb44ed55fb18d1d1180f8285\AndroidManifest.xml:24:5-28:19
+	android:label
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:14:9-41
+	android:icon
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:13:9-45
+	android:theme
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:15:9-40
+activity#com.unionpay.printdemoforsdk.MainActivity
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:16:9-24:20
+	android:label
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:18:13-56
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:17:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from D:\Projects\Projects\Android\cloudpos_SDK\device\java\sample\PrintDemoForAar\app\src\main\AndroidManifest.xml:22:27-74
+meta-data#android.support.VERSION
+ADDED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\c9715724ece23a0e79b604add4023468\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\2e1e2927fb7eb33a9070db07c6ee7d16\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-media-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-media-compat-26.1.0.aar\2e1e2927fb7eb33a9070db07c6ee7d16\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\2a4b80449fab4885e51b852789790c02\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-fragment:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-fragment-26.1.0.aar\2a4b80449fab4885e51b852789790c02\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8bcde782f6da63907471360e3309e79e\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-utils:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-utils-26.1.0.aar\8bcde782f6da63907471360e3309e79e\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\74a7db8c36bc3a5a8f75ce1038db8dec\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-core-ui:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-core-ui-26.1.0.aar\74a7db8c36bc3a5a8f75ce1038db8dec\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\7f1defeea1e15122206d73ed0ec650dd\AndroidManifest.xml:26:9-28:38
+MERGED from [com.android.support:support-compat:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-compat-26.1.0.aar\7f1defeea1e15122206d73ed0ec650dd\AndroidManifest.xml:26:9-28:38
+	android:value
+		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\c9715724ece23a0e79b604add4023468\AndroidManifest.xml:28:13-35
+	android:name
+		ADDED from [com.android.support:support-v4:26.1.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\support-v4-26.1.0.aar\c9715724ece23a0e79b604add4023468\AndroidManifest.xml:27:13-51
+meta-data#android.arch.lifecycle.VERSION
+ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\2eea6661eb44ed55fb18d1d1180f8285\AndroidManifest.xml:25:9-27:47
+	android:value
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\2eea6661eb44ed55fb18d1d1180f8285\AndroidManifest.xml:27:13-44
+	android:name
+		ADDED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\hp\.gradle\caches\transforms-1\files-1.1\runtime-1.0.0.aar\2eea6661eb44ed55fb18d1d1180f8285\AndroidManifest.xml:26:13-58

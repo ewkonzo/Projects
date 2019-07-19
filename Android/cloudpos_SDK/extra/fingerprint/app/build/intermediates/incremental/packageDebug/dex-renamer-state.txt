@@ -1,0 +1,4 @@
+#Wed Sep 12 21:43:59 EAT 2018
+base.0=D\:\\Projects\\Projects\\Android\\cloudpos_SDK\\extra\\fingerprint\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=D\:\\Projects\\Projects\\Android\\cloudpos_SDK\\extra\\fingerprint\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

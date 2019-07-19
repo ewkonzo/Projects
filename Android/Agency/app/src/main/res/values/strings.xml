@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Agency</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="agentcode">Agent Code</string>
+    <string name="password">Password</string>
+    <string name="title_activity_test">test</string>
+    <string name="title_agency_list">Items</string>
+    <string name="title_agency_detail">agency Detail</string>
+    <string name="title_activity_balance">balance</string>
+    <string name="LoanBalance">Loan Balance:</string>
+    <string name="Loanno">Loan No:</string>
+    <string name="Nationalid">National ID:</string>
+    <string name="Username">Agent Code:</string>
+    <string name="accountname">Acc. Name:</string>
+    <string name="accountno">Acc. No:</string>
+    <string name="action_changepin">Change Password</string>
+    <string name="amount">Amount:</string>
+    <string name="host_name">Host</string>
+    <string name="loansource">Source:</string>
+    <string name="loantype">Loan Type:</string>
+    <string name="society">Society:</string>
+    <string name="societyno">Member No:</string>
+    <string name="telephone">Tel. No:</string>
+    <string name="error_account_invalid">This Account No is not valid</string>
+    <string name="error_code_invalid">This Code is incorrect</string>
+    <string name="error_confirmation_error">Pin Confirmation error</string>
+    <string name="error_current_pin_incorrect">Current pin entered is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_pin_invalid">This pin is incorrect</string>
+    <string name="error_same_account">Transfer To Same Account is not allowed</string>
+    <string name="error_tel_tooshort">Telephone No Entered is too short</string>
+
+</resources>

@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ukulima_dbEntities">
+    <EntitySetMapping Name="UKULIMA_SACCO_LTD_ATM_Transactions">
+      <EntityTypeMapping TypeName="Model.UKULIMA_SACCO_LTD_ATM_Transactions">
+        <MappingFragment StoreEntitySet="UKULIMA SACCO LTD$ATM Transactions">
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+          <ScalarProperty Name="Entry_No" ColumnName="Entry No" />
+          <ScalarProperty Name="Trace_ID" ColumnName="Trace ID" />
+          <ScalarProperty Name="Posting_Date" ColumnName="Posting Date" />
+          <ScalarProperty Name="Account_No" ColumnName="Account No" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Posting_S" ColumnName="Posting S" />
+          <ScalarProperty Name="Posted" ColumnName="Posted" />
+          <ScalarProperty Name="Unit_ID" ColumnName="Unit ID" />
+          <ScalarProperty Name="Transaction_Type" ColumnName="Transaction Type" />
+          <ScalarProperty Name="Trans_Time" ColumnName="Trans Time" />
+          <ScalarProperty Name="Process_Code" ColumnName="Process Code" />
+          <ScalarProperty Name="Reversed" ColumnName="Reversed" />
+          <ScalarProperty Name="Reversed_Posted" ColumnName="Reversed Posted" />
+          <ScalarProperty Name="Reversal_Trace_ID" ColumnName="Reversal Trace ID" />
+          <ScalarProperty Name="Transaction_Description" ColumnName="Transaction Description" />
+          <ScalarProperty Name="Withdrawal_Location" ColumnName="Withdrawal Location" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Transaction_Type_Charges" ColumnName="Transaction Type Charges" />
+          <ScalarProperty Name="Card_Acceptor_Terminal_ID" ColumnName="Card Acceptor Terminal ID" />
+          <ScalarProperty Name="ATM_Card_No" ColumnName="ATM Card No" />
+          <ScalarProperty Name="Transaction_Date" ColumnName="Transaction Date" />
+          <ScalarProperty Name="Is_Coop_Bank" ColumnName="Is Coop Bank" />
+          <ScalarProperty Name="POS_Vendor" ColumnName="POS Vendor" />
+          <ScalarProperty Name="Reference_No" ColumnName="Reference No" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UKULIMA_SACCO_LTD_Vendor">
+      <EntityTypeMapping TypeName="Model.UKULIMA_SACCO_LTD_Vendor">
+        <MappingFragment StoreEntitySet="UKULIMA SACCO LTD$Vendor">
+          <ScalarProperty Name="Outstanding_Balance" ColumnName="Outstanding Balance" />
+          <ScalarProperty Name="Fosa_s_no_Bosa_No" ColumnName="Fosa_s no Bosa No" />
+          <ScalarProperty Name="Date_ATM_Linked" ColumnName="Date ATM Linked" />
+          <ScalarProperty Name="Atm_card_ready" ColumnName="Atm card ready" />
+          <ScalarProperty Name="Employer_P_F" ColumnName="Employer P_F" />
+          <ScalarProperty Name="FD_Duration" ColumnName="FD Duration" />
+          <ScalarProperty Name="Reconciled" ColumnName="Reconciled" />
+          <ScalarProperty Name="ATM_Approve" ColumnName="ATM Approve" />
+          <ScalarProperty Name="ATM_Prov__No" ColumnName="ATM Prov_ No" />
+          <ScalarProperty Name="ABal_Fox" ColumnName="ABal Fox" />
+          <ScalarProperty Name="Fox_SBal" ColumnName="Fox SBal" />
+          <ScalarProperty Name="Service" ColumnName="Service" />
+          <ScalarProperty Name="Card_Valid_To" ColumnName="Card Valid To" />
+          <ScalarProperty Name="Card_Valid_From" ColumnName="Card Valid From" />
+          <ScalarProperty Name="Card_Expiry_Date" ColumnName="Card Expiry Date" />
+          <ScalarProperty Name="Force_No_" ColumnName="Force No_" />
+          <ScalarProperty Name="MPESA_Mobile_No" ColumnName="MPESA Mobile No" />
+          <ScalarProperty Name="Source_Of_Funds" ColumnName="Source Of Funds" />
+          <ScalarProperty Name="Type_Of_Organisation" ColumnName="Type Of Organisation" />
+          <ScalarProperty Name="Don_t_Transfer_to_Savings" ColumnName="Don_t Transfer to Savings" />
+          <ScalarProperty Name="Date_Renewed" ColumnName="Date Renewed" />
+          <ScalarProperty Name="Neg__Interest_Rate" ColumnName="Neg_ Interest Rate" />
+          <ScalarProperty Name="Station_Sections" ColumnName="Station_Sections" />
+          <ScalarProperty Name="Division_Department" ColumnName="Division_Department" />
+          <ScalarProperty Name="Formation_Province" ColumnName="Formation_Province" />
+          <ScalarProperty Name="Defaulted_Loans_Recovered" ColumnName="Defaulted Loans Recovered" />
+          <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+          <ScalarProperty Name="Bank_Code" ColumnName="Bank Code" />
+          <ScalarProperty Name="External_Account_No" ColumnName="External Account No" />
+          <ScalarProperty Name="System_Created" ColumnName="System Created" />
+          <ScalarProperty Name="Fixed_Duration" ColumnName="Fixed Duration" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Not_Qualify_for_Interest" ColumnName="Not Qualify for Interest" />
+          <ScalarProperty Name="Monthly_Contribution" ColumnName="Monthly Contribution" />
+          <ScalarProperty Name="Hide" ColumnName="Hide" />
+          <ScalarProperty Name="Signing_Instructions" ColumnName="Signing Instructions" />
+          <ScalarProperty Name="Proffesion" ColumnName="Proffesion" />
+          <ScalarProperty Name="Amount_to_Transfer" ColumnName="Amount to Transfer" />
+          <ScalarProperty Name="Salary_Processing" ColumnName="Salary Processing" />
+          <ScalarProperty Name="Old_Account_No_" ColumnName="Old Account No_" />
+          <ScalarProperty Name="Savings_Account_No_" ColumnName="Savings Account No_" />
+          <ScalarProperty Name="FD_Maturity_Date" ColumnName="FD Maturity Date" />
+          <ScalarProperty Name="Fixed_Deposit_Type" ColumnName="Fixed Deposit Type" />
+          <ScalarProperty Name="Closure_Notice_Date" ColumnName="Closure Notice Date" />
+          <ScalarProperty Name="Resons_for_Status_Change" ColumnName="Resons for Status Change" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="Sub_Location" ColumnName="Sub-Location" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Home_Address" ColumnName="Home Address" />
+          <ScalarProperty Name="ATM_No_" ColumnName="ATM No_" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="E_Mail__Personal_" ColumnName="E-Mail (Personal)" />
+          <ScalarProperty Name="Date_of_Birth" ColumnName="Date of Birth" />
+          <ScalarProperty Name="Expected_Maturity_Date" ColumnName="Expected Maturity Date" />
+          <ScalarProperty Name="Date_Closed" ColumnName="Date Closed" />
+          <ScalarProperty Name="Last_Transaction_Posting_Date" ColumnName="Last Transaction Posting Date" />
+          <ScalarProperty Name="Last_Deposit_Date" ColumnName="Last Deposit Date" />
+          <ScalarProperty Name="Last_Min__Balance_Date" ColumnName="Last Min_ Balance Date" />
+          <ScalarProperty Name="Last_Overdraft_Date" ColumnName="Last Overdraft Date" />
+          <ScalarProperty Name="Last_Withdrawal_Date" ColumnName="Last Withdrawal Date" />
+          <ScalarProperty Name="FD_Marked_for_Closure" ColumnName="FD Marked for Closure" />
+          <ScalarProperty Name="Account_Category" ColumnName="Account Category" />
+          <ScalarProperty Name="Account_Type" ColumnName="Account Type" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Company_Code" ColumnName="Company Code" />
+          <ScalarProperty Name="Passport_No_" ColumnName="Passport No_" />
+          <ScalarProperty Name="Signature" ColumnName="Signature" />
+          <ScalarProperty Name="BOSA_Account_No" ColumnName="BOSA Account No" />
+          <ScalarProperty Name="Registration_Date" ColumnName="Registration Date" />
+          <ScalarProperty Name="Marital_Status" ColumnName="Marital Status" />
+          <ScalarProperty Name="Mobile_Phone_No" ColumnName="Mobile Phone No" />
+          <ScalarProperty Name="Call_Deposit" ColumnName="Call Deposit" />
+          <ScalarProperty Name="Fixed_Deposit_Status" ColumnName="Fixed Deposit Status" />
+          <ScalarProperty Name="Sweep_To_Account" ColumnName="Sweep To Account" />
+          <ScalarProperty Name="Sweeping_Balance" ColumnName="Sweeping Balance" />
+          <ScalarProperty Name="Activate_Sweeping_Arrangement" ColumnName="Activate Sweeping Arrangement" />
+          <ScalarProperty Name="Last_Maintenance_Date" ColumnName="Last Maintenance Date" />
+          <ScalarProperty Name="ID_No_" ColumnName="ID No_" />
+          <ScalarProperty Name="Staff_No" ColumnName="Staff No" />
+          <ScalarProperty Name="Creditor_Type" ColumnName="Creditor Type" />
+          <ScalarProperty Name="Base_Calendar_Code" ColumnName="Base Calendar Code" />
+          <ScalarProperty Name="Lead_Time_Calculation" ColumnName="Lead Time Calculation" />
+          <ScalarProperty Name="Location_Code" ColumnName="Location Code" />
+          <ScalarProperty Name="Responsibility_Center" ColumnName="Responsibility Center" />
+          <ScalarProperty Name="Primary_Contact_No_" ColumnName="Primary Contact No_" />
+          <ScalarProperty Name="Prepayment__" ColumnName="Prepayment %" />
+          <ScalarProperty Name="IC_Partner_Code" ColumnName="IC Partner Code" />
+          <ScalarProperty Name="Block_Payment_Tolerance" ColumnName="Block Payment Tolerance" />
+          <ScalarProperty Name="VAT_Bus__Posting_Group" ColumnName="VAT Bus_ Posting Group" />
+          <ScalarProperty Name="Tax_Liable" ColumnName="Tax Liable" />
+          <ScalarProperty Name="Tax_Area_Code" ColumnName="Tax Area Code" />
+          <ScalarProperty Name="No__Series" ColumnName="No_ Series" />
+          <ScalarProperty Name="Home_Page" ColumnName="Home Page" />
+          <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+          <ScalarProperty Name="County" ColumnName="County" />
+          <ScalarProperty Name="Post_Code" ColumnName="Post Code" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Gen__Bus__Posting_Group" ColumnName="Gen_ Bus_ Posting Group" />
+          <ScalarProperty Name="VAT_Registration_No_" ColumnName="VAT Registration No_" />
+          <ScalarProperty Name="Telex_Answer_Back" ColumnName="Telex Answer Back" />
+          <ScalarProperty Name="Fax_No_" ColumnName="Fax No_" />
+          <ScalarProperty Name="Prices_Including_VAT" ColumnName="Prices Including VAT" />
+          <ScalarProperty Name="Application_Method" ColumnName="Application Method" />
+          <ScalarProperty Name="Last_Date_Modified" ColumnName="Last Date Modified" />
+          <ScalarProperty Name="Payment_Method_Code" ColumnName="Payment Method Code" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="Pay_to_Vendor_No_" ColumnName="Pay-to Vendor No_" />
+          <ScalarProperty Name="Blocked" ColumnName="Blocked" />
+          <ScalarProperty Name="Country_Region_Code" ColumnName="Country_Region Code" />
+          <ScalarProperty Name="Invoice_Disc__Code" ColumnName="Invoice Disc_ Code" />
+          <ScalarProperty Name="Shipping_Agent_Code" ColumnName="Shipping Agent Code" />
+          <ScalarProperty Name="Shipment_Method_Code" ColumnName="Shipment Method Code" />
+          <ScalarProperty Name="Purchaser_Code" ColumnName="Purchaser Code" />
+          <ScalarProperty Name="Fin__Charge_Terms_Code" ColumnName="Fin_ Charge Terms Code" />
+          <ScalarProperty Name="Payment_Terms_Code" ColumnName="Payment Terms Code" />
+          <ScalarProperty Name="Statistics_Group" ColumnName="Statistics Group" />
+          <ScalarProperty Name="Language_Code" ColumnName="Language Code" />
+          <ScalarProperty Name="Currency_Code" ColumnName="Currency Code" />
+          <ScalarProperty Name="Vendor_Posting_Group" ColumnName="Vendor Posting Group" />
+          <ScalarProperty Name="Budgeted_Amount" ColumnName="Budgeted Amount" />
+          <ScalarProperty Name="Global_Dimension_2_Code" ColumnName="Global Dimension 2 Code" />
+          <ScalarProperty Name="Global_Dimension_1_Code" ColumnName="Global Dimension 1 Code" />
+          <ScalarProperty Name="Territory_Code" ColumnName="Territory Code" />
+          <ScalarProperty Name="Our_Account_No_" ColumnName="Our Account No_" />
+          <ScalarProperty Name="Telex_No_" ColumnName="Telex No_" />
+          <ScalarProperty Name="Phone_No_" ColumnName="Phone No_" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address_2" ColumnName="Address 2" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Name_2" ColumnName="Name 2" />
+          <ScalarProperty Name="Search_Name" ColumnName="Search Name" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="No_" ColumnName="No_" />
+          <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

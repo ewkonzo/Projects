@@ -1,0 +1,85 @@
+﻿@model AllCompanies
+
+@{
+    ViewData["Title"] = "All Companies";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+<hr />
+
+<form method="get" asp-controller="AdminCompanies" asp-action="All" class="form-inline row">
+    <label asp-for="@Model.Filter"></label>
+    <div class="form-group">
+        <select asp-for="@Model.Filter" asp-items="Html.GetEnumSelectList<CompanyStatus>()" class="form-control"></select>
+    </div>
+    <input type="submit" value="Filter" class="btn btn-success" />
+</form>
+<br />
+
+@if (Model.Companies.Count() == 0)
+{
+    @Html.Partial("_NoResultsFoundMessageBox")
+}
+else
+{
+    <hr />
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>URN</th>
+                <th>Address</th>
+                <th>Chief</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var company in Model.Companies)
+            {
+                <tr>
+                    <td>@company.Name</td>
+                    <td>@company.UniqueReferenceNumber</td>
+                    <td>@company.Address</td>
+                    <td>@company.Chief</td>
+                    <td>@company.Email</td>
+                    <td>@company.PhoneNumber</td>
+                    <td>
+                        @if (!company.IsApproved)
+                        {
+                            <a class="btn btn-primary" asp-action="Approve" asp-controller="AdminCompanies" asp-route-companyId="@company.Id" asp-route-filter="@Model.Filter" asp-route-page="@Model.Pagination.CurrentPage">Approve</a>
+                        }
+
+                        @if (!company.IsBlocked && company.IsApproved)
+                        {
+                            <a class="btn btn-danger" asp-action="Block" asp-controller="AdminCompanies" asp-route-companyId="@company.Id" asp-route-filter="@Model.Filter" asp-route-page="@Model.Pagination.CurrentPage">Block</a>
+                        }
+                        else if (company.IsBlocked)
+                        {
+                            <a class="btn btn-success" asp-action="Block" asp-controller="AdminCompanies" asp-route-companyId="@company.Id" asp-route-filter="@Model.Filter" asp-route-page="@Model.Pagination.CurrentPage">Unblock</a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="container-fluid text-center">
+        <ul class="pagination">
+            <li class="page-item @(1 == Model.Pagination.CurrentPage ? "blocked":string.Empty)">
+                <a class="page-link" asp-controller="@Model.Pagination.Controller" asp-action="@Model.Pagination.Action" asp-route-filter="@Model.Filter" asp-route-page="@Model.Pagination.PreviousPage">Previous</a>
+            </li>
+            @for (int i = 1; i <= Model.Pagination.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.Pagination.CurrentPage ? "active blocked":string.Empty)">
+                    <a class="page-link" asp-controller="@Model.Pagination.Controller" asp-action="@Model.Pagination.Action" asp-route-filter="@Model.Filter" asp-route-page="@i">@i</a>
+                </li>
+            }
+            <li class="page-item @(Model.Pagination.TotalPages == Model.Pagination.CurrentPage ? "blocked":string.Empty)">
+                <a class="page-link" asp-controller="@Model.Pagination.Controller" asp-action="@Model.Pagination.Action" asp-route-filter="@Model.Filter" asp-route-page="@Model.Pagination.NextPage">Next</a>
+            </li>
+        </ul>
+    </div>
+}
+

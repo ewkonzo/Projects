@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingTop="@dimen/activity_vertical_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TableLayout android:layout_width="fill_parent" android:layout_height="500.0dip">
+            <RelativeLayout android:layout_marginTop="10.0dip">
+                <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/accountinfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transfer From:" />
+                <ProgressBar android:id="@id/paccdetails" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="25.0dip" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <View android:background="@android:color/holo_green_dark" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:id="@id/NationalId" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Nationalid" />
+                <EditText android:id="@id/txtnationalid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/Nationalid" android:layout_weight="1.0" android:inputType="textAutoComplete" />
+            </TableRow>
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <TextView android:id="@id/AccountNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accountno" />
+                <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/txtaccountno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/accountno" android:layout_weight="1.0" />
+            </TableRow>
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <TextView android:id="@id/TvAccountName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accountname" />
+                <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/txtaccountname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/accountname" android:layout_weight="1.0" />
+            </TableRow>
+            <RelativeLayout android:layout_marginTop="10.0dip">
+                <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/daccountinfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transfer To:" />
+                <ProgressBar android:id="@id/pacc2details" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="25.0dip" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+            <View android:background="@android:color/holo_green_dark" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:id="@id/DaccountNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accountno" />
+                <EditText android:id="@id/txtDaccountNo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/accountno" android:layout_weight="1.0" android:inputType="textAutoComplete" />
+            </TableRow>
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <TextView android:id="@id/TvDAccountName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accountname" />
+                <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/txtDaccountname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/accountname" android:layout_weight="1.0" />
+            </TableRow>
+            <View android:background="@android:color/holo_green_dark" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="20.0dip" />
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:id="@id/TVAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/amount" />
+                <EditText android:id="@id/txtamount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/amount" android:layout_weight="1.0" android:inputType="number" />
+            </TableRow>
+            <LinearLayout android:gravity="end" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <Button android:id="@id/Cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="50.0dip" android:text="Cancel" android:layout_marginEnd="50.0dip" />
+                <Button android:id="@id/Confirm" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Confirm" />
+            </LinearLayout>
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>

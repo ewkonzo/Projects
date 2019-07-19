@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data class="Advanceissue">
+        <variable
+            name="adv"
+            type="com.example.pawdep.Advance_issue" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="afterDescendants"
+        android:scrollbars="horizontal">
+        <!--<EditText-->
+            <!--android:id="@+id/transid"-->
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:editable="false"-->
+            <!--android:enabled="false"-->
+            <!--android:hint="Loan No"-->
+            <!--android:inputType="none"-->
+            <!--android:text="@={adv.Adv_Loan_No }"-->
+            <!--android:textSize="10dp"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/savingsbf"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:enabled="false"-->
+            <!--android:hint="Member No"-->
+            <!--android:text="@={adv.Member_No}"-->
+            <!--android:theme="@style/tlist"-->
+            <!--app:layout_constraintStart_toEndOf="@id/transid"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/loansbf"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:enabled="false"-->
+            <!--android:hint="Loans B/F"-->
+            <!--android:text="@={``+adv.Amount }"-->
+            <!--android:theme="@style/tlist"-->
+            <!--app:layout_constraintStart_toEndOf="@id/savingsbf"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/expectedprincipal"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:enabled="false"-->
+            <!--android:hint="Exp prin."-->
+            <!--android:text="@={``+adv.Adv }"-->
+            <!--android:theme="@style/tlist"-->
+            <!--app:layout_constraintStart_toEndOf="@id/loansbf"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/expectedinterest"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:enabled="false"-->
+            <!--android:hint="exp inter"-->
+            <!--android:text="@={``+transaction.Expected_Interest }"-->
+            <!--android:theme="@style/tlist"-->
+            <!--app:layout_constraintStart_toEndOf="@id/expectedprincipal"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/Unpaid_Penalty"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:enabled="false"-->
+            <!--android:hint="Unpaid pen"-->
+            <!--android:text="@={``+transaction.Unpaid_Penalty }"-->
+            <!--android:theme="@style/tlist"-->
+            <!--app:layout_constraintStart_toEndOf="@id/expectedinterest"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/Totalpaid"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:enabled="false"-->
+            <!--android:hint="Total paid"-->
+            <!--android:text="@={``+transaction.Total_Paid }"-->
+            <!--android:textStyle="normal|bold|italic"-->
+            <!--android:theme="@style/tlist"-->
+            <!--app:layout_constraintStart_toEndOf="@id/Unpaid_Penalty"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/savings"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Savings"-->
+            <!--android:text="@={``+transaction.Monthly_Savings }"-->
+            <!--android:theme="@style/tlist"-->
+            <!--app:layout_constraintStart_toEndOf="@id/Totalpaid"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/Penaltycharged"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Penalty charged"-->
+            <!--android:text="@={``+transaction.Penalty_Charged }"-->
+            <!--android:theme="@style/tlist"-->
+            <!--app:layout_constraintStart_toEndOf="@id/savings"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/Loan_Principle_Paid"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Prin. Paid"-->
+            <!--android:text="@={``+transaction.Principle_Paid }"-->
+            <!--android:theme="@style/tlist"-->
+            <!--app:layout_constraintStart_toEndOf="@id/Penaltycharged"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/interestpaid"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Interst Paid"-->
+            <!--android:text="@={``+transaction.interest_Paid }"-->
+            <!--android:theme="@style/tlist"-->
+            <!--app:layout_constraintStart_toEndOf="@id/Loan_Principle_Paid"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/fines"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Fines"-->
+            <!--android:text="@={``+transaction.Fines }"-->
+            <!--android:theme="@style/tlist"-->
+            <!--app:layout_constraintStart_toEndOf="@id/interestpaid"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+        <!--<EditText-->
+            <!--android:id="@+id/hall"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:hint="Hall"-->
+            <!--android:text="@={``+transaction.Hall}"-->
+            <!--android:theme="@style/tlist"-->
+            <!--app:layout_constraintStart_toEndOf="@id/fines"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

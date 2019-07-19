@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">Pinpad Demo</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Pinpad Demo</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <string name="PinpadOpening">The PinPad is open, please later...</string>
+    <string name="PinpadOpenSuc">The PinPad is open successfully, please enter the password...</string>
+    <string name="PinblockTimeout">Get the pinblock timeout...</string>
+    <string name="PinblockFailed">Get the pinblock failure...</string>
+    <string name="PinpadOpenFad">The PinPad failed to open.</string>
+    <string name="PinpadCloseSuc">The PinPad is closed successfully.</string>
+    <string name="PinpadCloseFad">The PinPad is closed failed...</string>
+</resources>

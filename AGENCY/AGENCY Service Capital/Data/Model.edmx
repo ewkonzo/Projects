@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="Agency Members">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telephone No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pin" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pin Changed" Type="bit" />
+          <Property Name="Date Registered" Type="datetime" />
+          <Property Name="Date Pin Changed" Type="datetime" />
+          <Property Name="Corporate No" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Agency Transactions">
+          <Key>
+            <PropertyRef Name="Entry No" />
+          </Key>
+          <Property Name="Entry No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Document No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Account No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Account Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Account Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Amount" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Transaction By" Type="nvarchar" MaxLength="50" />
+          <Property Name="Transaction Date" Type="datetime" />
+          <Property Name="Transaction Time" Type="datetime" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Status Date" Type="datetime" />
+          <Property Name="Status Time" Type="datetime" />
+          <Property Name="Status By" Type="nvarchar" MaxLength="50" />
+          <Property Name="Confirmation Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Transaction Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Transferred To Sacco" Type="bit" />
+          <Property Name="Date Transferred To Sacco" Type="datetime" />
+          <Property Name="Time Transferred To Sacco" Type="datetime" />
+          <Property Name="Transferred To Sacco By" Type="nvarchar" MaxLength="50" />
+          <Property Name="Funds Source" Type="nvarchar" MaxLength="50" />
+          <Property Name="Receiver National ID No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Receiver Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Receiver Telephone No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Source Telephone No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Funds Received" Type="bit" />
+          <Property Name="Date Funds Received" Type="datetime" />
+          <Property Name="Time Funds Received" Type="datetime" />
+          <Property Name="Confirmation Word" Type="nvarchar" MaxLength="50" />
+          <Property Name="Posted" Type="bit" />
+          <Property Name="Date Posted" Type="datetime" />
+          <Property Name="Time Posted" Type="datetime" />
+          <Property Name="System Created Entry" Type="bit" />
+          <Property Name="Transaction ID" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="Agent Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Location" Type="nvarchar" MaxLength="50" />
+          <Property Name="OTTN" Type="int" />
+          <Property Name="OTTN Sent" Type="int" />
+          <Property Name="Date OTTN Sent" Type="datetime" />
+          <Property Name="Time OTTN Sent" Type="datetime" />
+          <Property Name="Balance SMS Sent" Type="bit" />
+          <Property Name="Date SMS Sent" Type="datetime" />
+          <Property Name="Time SMS Sent" Type="datetime" />
+          <Property Name="OTTN Telephone No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Agent Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Depositer Telephone No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Comments" Type="nvarchar(max)" />
+          <Property Name="Account No 2" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Society" Type="nvarchar" MaxLength="50" />
+          <Property Name="Society No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Charge" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Agents">
+          <Key>
+            <PropertyRef Name="Entry No" />
+          </Key>
+          <Property Name="Entry No" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Agent Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Bank No" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date Registered" Type="datetime" />
+          <Property Name="Time Registred" Type="datetime" />
+          <Property Name="Registered By" Type="nvarchar" MaxLength="50" />
+          <Property Name="Location" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" />
+          <Property Name="Password Changed" Type="bit" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Agency Members" EntityType="Self.Agency Members" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Agency Transactions" EntityType="Self.Agency Transactions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Agents" EntityType="Self.Agents" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="AGENCYEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Agents" EntityType="Model.Agent" />
+          <EntitySet Name="Agency_Members" EntityType="Model.Agency_Member" />
+          <EntitySet Name="Agency_Transactions" EntityType="Model.Agency_Transaction" />
+        </EntityContainer>
+        <EntityType Name="Agent">
+          <Key>
+            <PropertyRef Name="Entry_No" />
+          </Key>
+          <Property Type="Int32" Name="Entry_No" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Agent_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bank_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Date_Registered" Precision="3" />
+          <Property Type="DateTime" Name="Time_Registred" Precision="3" />
+          <Property Type="String" Name="Registered_By" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Location" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Active" />
+          <Property Type="String" Name="Name" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Password_Changed" />
+          <Property Type="String" Name="Telephone" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Agency_Member">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ID_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Telephone_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Pin" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Date_Registered" Precision="3" />
+          <Property Type="DateTime" Name="Date_Pin_Changed" Precision="3" />
+          <Property Type="String" Name="Corporate_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Pin_Changed" />
+        </EntityType>
+        <EntityType Name="Agency_Transaction">
+          <Key>
+            <PropertyRef Name="Entry_No" />
+          </Key>
+          <Property Type="Int32" Name="Entry_No" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Document_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bank_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bank_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Account_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Account_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Account_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="Amount" Precision="18" Scale="0" />
+          <Property Type="String" Name="Transaction_By" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Transaction_Date" Precision="3" />
+          <Property Type="DateTime" Name="Transaction_Time" Precision="3" />
+          <Property Type="Int32" Name="Status" />
+          <Property Type="DateTime" Name="Status_Date" Precision="3" />
+          <Property Type="DateTime" Name="Status_Time" Precision="3" />
+          <Property Type="String" Name="Status_By" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Confirmation_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Transaction_Type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Transferred_To_Sacco" />
+          <Property Type="DateTime" Name="Date_Transferred_To_Sacco" Precision="3" />
+          <Property Type="DateTime" Name="Time_Transferred_To_Sacco" Precision="3" />
+          <Property Type="String" Name="Transferred_To_Sacco_By" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Funds_Source" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Receiver_National_ID_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Receiver_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Receiver_Telephone_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Source_Telephone_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bank_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Funds_Received" />
+          <Property Type="DateTime" Name="Date_Funds_Received" Precision="3" />
+          <Property Type="DateTime" Name="Time_Funds_Received" Precision="3" />
+          <Property Type="String" Name="Confirmation_Word" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Posted" />
+          <Property Type="DateTime" Name="Date_Posted" Precision="3" />
+          <Property Type="DateTime" Name="Time_Posted" Precision="3" />
+          <Property Type="Boolean" Name="System_Created_Entry" />
+          <Property Type="Int32" Name="Transaction_ID" />
+          <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Agent_Code" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Location" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="OTTN" />
+          <Property Type="Int32" Name="OTTN_Sent" />
+          <Property Type="DateTime" Name="Date_OTTN_Sent" Precision="3" />
+          <Property Type="DateTime" Name="Time_OTTN_Sent" Precision="3" />
+          <Property Type="Boolean" Name="Balance_SMS_Sent" />
+          <Property Type="DateTime" Name="Date_SMS_Sent" Precision="3" />
+          <Property Type="DateTime" Name="Time_SMS_Sent" Precision="3" />
+          <Property Type="String" Name="OTTN_Telephone_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Agent_Name" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Depositer_Telephone_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Account_No_2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ID_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Society" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Society_No" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Charge" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="AGENCYEntities">
+          <EntitySetMapping Name="Agents">
+            <EntityTypeMapping TypeName="Model.Agent">
+              <MappingFragment StoreEntitySet="Agents">
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="Password_Changed" ColumnName="Password Changed" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Registered_By" ColumnName="Registered By" />
+                <ScalarProperty Name="Time_Registred" ColumnName="Time Registred" />
+                <ScalarProperty Name="Date_Registered" ColumnName="Date Registered" />
+                <ScalarProperty Name="Bank_No" ColumnName="Bank No" />
+                <ScalarProperty Name="Agent_Code" ColumnName="Agent Code" />
+                <ScalarProperty Name="Entry_No" ColumnName="Entry No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Agency_Members">
+            <EntityTypeMapping TypeName="Model.Agency_Member">
+              <MappingFragment StoreEntitySet="Agency Members">
+                <ScalarProperty Name="Pin_Changed" ColumnName="Pin Changed" />
+                <ScalarProperty Name="Corporate_No" ColumnName="Corporate No" />
+                <ScalarProperty Name="Date_Pin_Changed" ColumnName="Date Pin Changed" />
+                <ScalarProperty Name="Date_Registered" ColumnName="Date Registered" />
+                <ScalarProperty Name="Pin" ColumnName="Pin" />
+                <ScalarProperty Name="Telephone_No" ColumnName="Telephone No" />
+                <ScalarProperty Name="ID_No" ColumnName="ID No" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Agency_Transactions">
+            <EntityTypeMapping TypeName="Model.Agency_Transaction">
+              <MappingFragment StoreEntitySet="Agency Transactions">
+                <ScalarProperty Name="Charge" ColumnName="Charge" />
+                <ScalarProperty Name="Society_No" ColumnName="Society No" />
+                <ScalarProperty Name="Society" ColumnName="Society" />
+                <ScalarProperty Name="ID_No" ColumnName="ID No" />
+                <ScalarProperty Name="Account_No_2" ColumnName="Account No 2" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="Depositer_Telephone_No" ColumnName="Depositer Telephone No" />
+                <ScalarProperty Name="Agent_Name" ColumnName="Agent Name" />
+                <ScalarProperty Name="OTTN_Telephone_No" ColumnName="OTTN Telephone No" />
+                <ScalarProperty Name="Time_SMS_Sent" ColumnName="Time SMS Sent" />
+                <ScalarProperty Name="Date_SMS_Sent" ColumnName="Date SMS Sent" />
+                <ScalarProperty Name="Balance_SMS_Sent" ColumnName="Balance SMS Sent" />
+                <ScalarProperty Name="Time_OTTN_Sent" ColumnName="Time OTTN Sent" />
+                <ScalarProperty Name="Date_OTTN_Sent" ColumnName="Date OTTN Sent" />
+                <ScalarProperty Name="OTTN_Sent" ColumnName="OTTN Sent" />
+                <ScalarProperty Name="OTTN" ColumnName="OTTN" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Agent_Code" ColumnName="Agent Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Transaction_ID" ColumnName="Transaction ID" />
+                <ScalarProperty Name="System_Created_Entry" ColumnName="System Created Entry" />
+                <ScalarProperty Name="Time_Posted" ColumnName="Time Posted" />
+                <ScalarProperty Name="Date_Posted" ColumnName="Date Posted" />
+                <ScalarProperty Name="Posted" ColumnName="Posted" />
+                <ScalarProperty Name="Confirmation_Word" ColumnName="Confirmation Word" />
+                <ScalarProperty Name="Time_Funds_Received" ColumnName="Time Funds Received" />
+                <ScalarProperty Name="Date_Funds_Received" ColumnName="Date Funds Received" />
+                <ScalarProperty Name="Funds_Received" ColumnName="Funds Received" />
+                <ScalarProperty Name="Bank_Name" ColumnName="Bank Name" />
+                <ScalarProperty Name="Source_Telephone_No" ColumnName="Source Telephone No" />
+                <ScalarProperty Name="Receiver_Telephone_No" ColumnName="Receiver Telephone No" />
+                <ScalarProperty Name="Receiver_Name" ColumnName="Receiver Name" />
+                <ScalarProperty Name="Receiver_National_ID_No" ColumnName="Receiver National ID No" />
+                <ScalarProperty Name="Funds_Source" ColumnName="Funds Source" />
+                <ScalarProperty Name="Transferred_To_Sacco_By" ColumnName="Transferred To Sacco By" />
+                <ScalarProperty Name="Time_Transferred_To_Sacco" ColumnName="Time Transferred To Sacco" />
+                <ScalarProperty Name="Date_Transferred_To_Sacco" ColumnName="Date Transferred To Sacco" />
+                <ScalarProperty Name="Transferred_To_Sacco" ColumnName="Transferred To Sacco" />
+                <ScalarProperty Name="Transaction_Type" ColumnName="Transaction Type" />
+                <ScalarProperty Name="Confirmation_Code" ColumnName="Confirmation Code" />
+                <ScalarProperty Name="Status_By" ColumnName="Status By" />
+                <ScalarProperty Name="Status_Time" ColumnName="Status Time" />
+                <ScalarProperty Name="Status_Date" ColumnName="Status Date" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Transaction_Time" ColumnName="Transaction Time" />
+                <ScalarProperty Name="Transaction_Date" ColumnName="Transaction Date" />
+                <ScalarProperty Name="Transaction_By" ColumnName="Transaction By" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Account_Type" ColumnName="Account Type" />
+                <ScalarProperty Name="Account_Name" ColumnName="Account Name" />
+                <ScalarProperty Name="Account_No" ColumnName="Account No" />
+                <ScalarProperty Name="Bank_Code" ColumnName="Bank Code" />
+                <ScalarProperty Name="Bank_No" ColumnName="Bank No" />
+                <ScalarProperty Name="Document_No" ColumnName="Document No" />
+                <ScalarProperty Name="Entry_No" ColumnName="Entry No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model">
+        <EntityTypeShape EntityType="Model.Agent" Width="1.5" PointX="0.75" PointY="0.75" Height="2.9417936197916656" />
+        <EntityTypeShape EntityType="Model.Agency_Member" Width="1.5" PointX="6.75" PointY="0.875" Height="2.3648893229166656" />
+        <EntityTypeShape EntityType="Model.Agency_Transaction" Width="1.5" PointX="3.375" PointY="0.75" Height="11.018453776041667" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

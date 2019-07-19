@@ -1,0 +1,18 @@
+<resources>
+
+    <string name="app_name">磁条卡刷卡Demo</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">磁条卡刷卡Demo</string>
+    <string name="open">打开</string>
+    <string name="cancel">取消</string>
+    <string name="openingMSR">正在打开磁条卡阅读器，请稍后...</string>
+    <string name="MSRisOpenSuc">磁条卡阅读器已成功打开，请刷卡...</string>
+    <string name="track1Info">第一磁道信息:</string>
+    <string name="track2Info">第二磁道信息:</string>
+    <string name="track3Info">第三磁道信息:</string>
+    <string name="readTrackTimeout">读取磁道信息超时..</string>
+    <string name="readTrackFailed">读取磁道信息失败...</string>
+    <string name="MSROpenFailed">磁条卡阅读器打开失败...</string>
+    <string name="MSRCloseSuc">磁条卡阅读器已成功关闭...</string>
+    <string name="MSRCloseFad">磁条卡阅读器关闭失败...</string>
+</resources>

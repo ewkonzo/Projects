@@ -1,0 +1,47 @@
+﻿body {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    background-image:url(back.PNG);
+}
+.background{
+    background-image:url("Background.PNG");
+    background-repeat:repeat-x;
+}
+.center-div {
+   
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+ height:auto;
+    background-color: #ccc;
+    border-radius: 3px;
+    overflow:auto;
+
+}
+.navbar-light .navbar-nav .nav-link {
+    color:white;
+
+}
+
+@media (max-width: 767px) {
+    .top-menu {
+        top: 6px;
+        right: 52px;
+        width: 100%;
+    }
+    .top-menu>.navbar-nav>li {
+        float: none!important;
+    }
+}
+
+@media (min-width: 768px) {
+    .top-menu {
+        margin-right: -15px;
+    }
+    .top-auth-menu {
+        margin-left: auto;
+    }
+}

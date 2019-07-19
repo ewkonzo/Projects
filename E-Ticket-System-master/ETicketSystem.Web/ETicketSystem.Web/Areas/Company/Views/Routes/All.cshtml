@@ -1,0 +1,116 @@
+﻿@model AllRoutes
+
+@{
+    ViewData["Title"] = "All Routes";
+}
+
+<environment include="Development">
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+</environment>
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+
+<div class="container-fluid">
+    <div class="row search-container">
+        <form method="get" asp-controller="Routes" asp-action="All" class="search-form col-md-12">
+            <div class="text-danger text-center form-errors" hidden>
+                Start destination and end destination cannot be equal!
+            </div>
+            <div class="form-fields row">
+                <div class="form-group col-md-3">
+                    <label asp-for="StartTown"></label>
+                    <select asp-for="StartTown" asp-items="Model.Towns" class="form-control start-town" required></select>
+                    <span asp-validation-for="StartTown" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="EndTown"></label>
+                    <select asp-for="EndTown" asp-items="Model.Towns" class="form-control end-town" required></select>
+                    <span asp-validation-for="EndTown" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="Date"></label>
+                    <input asp-for="Date" min="@DateTime.UtcNow.ToLocalTime().ToYearMonthDayFormat()" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+            </div>
+            <input type="submit" value="Search" class="btn btn-success" onclick="checkTownsEquality()" />
+            <a asp-controller="Routes" asp-action="All" class="btn btn-primary">Clear</a>
+        </form>        
+    </div>
+</div>
+
+@if(Model.Routes.Count() == 0)
+{
+    @Html.Partial("_NoResultsFoundMessageBox")
+}
+else
+{
+    <hr />
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Start station</th>
+                <th>End station</th>
+                <th>Departure time</th>
+                <th>Duration</th>
+                <th>Bus</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var route in Model.Routes)
+            {
+                <tr>
+                    <td>@route.StartStation</td>
+                    <td>@route.EndStation</td>
+                    <td>@route.DepartureTime.ToHoursAndMinutes()</td>
+                    <td>@route.Duration.ToHoursAndMinutes()</td>
+                    <td>@route.BusType</td>
+                    <td>$ @route.Price.ToFormatedPrice()</td>
+                    <td>@(route.IsActive ? "Active" : "Inacitve")</td>
+                    <td>
+                        <div class="container-fluid buttons">
+                            <a asp-controller="Routes" asp-action="Edit" asp-route-id="@route.Id" class="btn btn-primary col-md-12" style="margin-bottom:10px;">Edit</a>
+                            @if (route.IsActive)
+                            {
+                                <a asp-controller="Routes" asp-action="ChangeStatus" asp-route-id="@route.Id" class="btn btn-danger col-md-12" style="margin-bottom:10px;">Deactivate</a>
+                            }
+                            else
+                            {
+                                <a asp-controller="Routes" asp-action="ChangeStatus" asp-route-id="@route.Id" class="btn btn-success col-md-12" style="margin-bottom:10px;">Activate</a>
+                            }
+                            @if (Model.Date.HasValue && (new DateTime(Model.Date.Value.Year,Model.Date.Value.Month,Model.Date.Value.Day,route.DepartureTime.Hours,route.DepartureTime.Minutes,route.DepartureTime.Seconds) > DateTime.UtcNow.ToLocalTime()))
+                            {
+                                <a asp-area="" asp-controller="Routes" asp-action="Search" asp-route-startTown="@route.StartTown" asp-route-endTown="@route.EndTown" asp-route-date="@(Model.Date.HasValue ? Model.Date.Value.ToYearMonthDayFormat() : string.Empty)" asp-route-companyId="@route.CompanyId" class="btn btn-primary col-md-12">Tickets</a>
+                            }
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="container-fluid text-center">
+        <ul class="pagination">
+            <li class="page-item @(1 == Model.Pagination.CurrentPage ? "blocked":string.Empty)">
+                <a class="page-link" asp-controller="@Model.Pagination.Controller" asp-action="@Model.Pagination.Action" asp-route-startTown="@Model.StartTown" asp-route-endTown="@Model.EndTown" asp-route-date="@(Model.Date.HasValue ? Model.Date.Value.ToShortDateString() : string.Empty)" asp-route-page="@Model.Pagination.PreviousPage">Previous</a>
+            </li>
+            @for (int i = 1; i <= Model.Pagination.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.Pagination.CurrentPage ? "active blocked":string.Empty)">
+                    <a class="page-link" asp-controller="@Model.Pagination.Controller" asp-action="@Model.Pagination.Action" asp-route-startTown="@Model.StartTown" asp-route-endTown="@Model.EndTown" asp-route-date="@(Model.Date.HasValue ? Model.Date.Value.ToShortDateString() : string.Empty)" asp-route-page="@i">@i</a>
+                </li>
+            }
+            <li class="page-item @(Model.Pagination.TotalPages == Model.Pagination.CurrentPage ? "blocked":string.Empty)">
+                <a class="page-link" asp-controller="@Model.Pagination.Controller" asp-action="@Model.Pagination.Action" asp-route-startTown="@Model.StartTown" asp-route-endTown="@Model.EndTown" asp-route-date="@(Model.Date.HasValue ? Model.Date.Value.ToShortDateString() : string.Empty)" asp-route-page="@Model.Pagination.NextPage">Next</a>
+            </li>
+        </ul>
+    </div>
+}
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+

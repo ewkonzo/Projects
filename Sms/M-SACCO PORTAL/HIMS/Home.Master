@@ -1,0 +1,545 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="HIMS.Home" %>
+
+ <%@ import namespace="Global.HIMS" %>
+<%@Import Namespace="System.Web"%>
+<%@Import Namespace="System.Web.UI"%>
+<%@Import Namespace="System.Data"%>
+<%@Import Namespace="System.Data.SqlClient"%>
+<%@Import Namespace="System.Globalization"%>
+<%@Import Namespace="System.Threading"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+      <title>TrimLine Sms Portal</title>          
+       <%--<link rel="shortcut icon" href="images/favicon.ico"   type="image/x-icon" />--%>
+
+    <link rel="Stylesheet" type="text/css" href="Styles/Site.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/calendar.css" />
+
+	<link rel="stylesheet" type="text/css" href="Styles/home.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/screen.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/stylesheet.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/menu_style.css" />
+	<link rel="stylesheet" type="text/css" href="Styles/dashboard.css" /> 
+    <link rel="stylesheet" type="text/css" href="Styles/layout.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="Styles/reset.css" />
+
+    <link rel="stylesheet" type="text/css" href="Styles/jquery-ui.css" />
+  
+
+    <link rel="stylesheet" type="text/css" href="Styles/datePicker.css" /> 
+    <link rel="stylesheet" type="text/css" href="Styles/caledarstyle.css" /> 
+
+      <script type="text/javascript" language="javascript" src="Scripts/jquery-1.10.2.js"></script>
+      <script type="text/javascript" language="javascript" src="Scripts/jquery-1.6.min.js"></script> 
+      <script type="text/javascript" language="javascript" src="Scripts/jquery.layout.js"></script>
+     <script type="text/javascript" language="javascript" src="Scripts/jquery-ui.js"></script>
+
+   
+ 
+    
+ 
+
+<script type="text/javascript">
+
+    var myLayout; // a var is required because this page utilizes: myLayout.allowOverflow() method
+
+    $(document).ready(function () {
+        myLayout = $('body').layout({
+            // enable showOverflow on west-pane so popups will overlap north pane
+            west__showOverflowOnHover: true
+            //,    west__fxSettings_open: { easing: "easeOutBounce", duration: 750 }
+        });
+    });
+
+    $(function () {
+        var tabs = $("#tabs").tabs();
+        tabs.find(".ui-tabs-nav").sortable({
+            axis: "x",
+            stop: function () {
+                tabs.tabs("refresh");
+            }
+        });
+    });
+
+
+    $(document).ready(function () {
+        var currentTabIndex = "0";
+
+        $tab = $("#tabs").tabs({
+            activate: function (e, ui) {
+                currentTabIndex = ui.newTab.index().toString();
+                localStorage.setItem('tab-index', currentTabIndex);
+            }
+        });
+
+        if (localStorage.getItem('tab-index') != null) {
+            currentTabIndex = localStorage.getItem('tab-index');
+            console.log(currentTabIndex);
+            $tab.tabs('option', 'active', currentTabIndex);
+        }
+    });
+
+    function UploadFileNow() {
+
+        var value = $("#FileUpload2").val();
+
+        if (value != '') {
+
+            $("#form_Home_Master").submit();
+
+        }
+    };
+
+
+    function textCounter(field, countfield, maxlimit) {
+
+        if (field.value.length > maxlimit)
+            field.value = field.value.substring(0, maxlimit);
+        else
+            countfield.value = maxlimit - field.value.length;
+    }
+	
+</script>
+
+
+</head>
+<body>
+
+<%  string pg = "";
+    if (Request.QueryString["action"] != null)
+    {
+        pg = Request.QueryString["action"];
+    }
+ 
+    string menua = "", menub = "", menuc = "", menud = "", menue = "", menuf = "",menug = "",menuh = "",menui = "",menuj = "",
+        menuk = "", menul = "", menum = "", menun = "", menuo = "", menup = "", menuq = "", menur = "", menus = "", menut = "", menu = "", menuv = "", menuw = "", menux = "";
+    if (pg == "Withdrawals")
+    {
+        menua = "active";
+    }
+    else if (pg == "Deposits")
+    {
+        menub = "active";
+    }
+    else if (pg == "Loan")
+    {
+        menuc = "active";
+    }
+    else if (pg == "AirtimeTopup")
+    {
+        menud = "active";
+    }
+    else if (pg == "UtilityPayment")
+    {
+        menue = "active";
+    }
+
+    else if (pg == "FundTransfer")
+    {
+        menuf = "active";
+    }
+    else if (pg == "LoanRepayment")
+    {
+        menug = "active";
+    }
+    else if (pg == "VirtualRegistration")
+    {
+        menuh = "active";
+    }
+    else if (pg == "message")
+    {
+        menui = "active";
+    }
+    else if (pg == "PersonalInfo")
+    {
+        menuj = "active";
+    }
+    else if (pg == "bulksmstopup")
+    {
+        menuk = "active";
+    }
+    else if (pg == "mobilesmstopup")
+    {
+        menul = "active";
+    }
+    else if (pg == "PinReset")
+    {
+        menum = "active";
+    }
+    else if (pg == "Users")
+    {
+        menun = "active";
+    }
+    else if (pg == "SendBulkSMS")
+    {
+        menuo = "active";
+    }
+    else if (pg == "ChangePassword")
+    {
+        menup = "active";
+    }
+    else if (pg == "Home")
+    {
+        menuq = "active";
+    }
+    else if (pg == "CombinedStatement")
+    {
+        menur = "active";
+    }
+    else if (pg == "FosaStatement")
+    {
+        menus = "active";
+    }
+    else if (pg == "FosaMyLoans")
+    {
+        menut = "active";
+    }
+    else if (pg == "Inter_Account_Transfer")
+    {
+        menu = "active";
+    }
+    else if (pg == "MobileSmsTopup")
+    {
+        menu = "active";
+    }
+    else if (pg == "BulkSmsTopup")
+    {
+        menu = "active";
+    }
+    else if (pg == "ManageOnlineApplication")
+    {
+        menuv = "active";
+    }
+    
+     %>
+ <% string LegalFirmName = "";%>
+     
+ <%  string My_Group; string columnName; My_Group = Session["User_Group_Name"].ToString(); LegalFirmName = Session["Names"].ToString(); %>
+<%--Header From Here--%>
+
+<div class="ui-layout-north" onmouseover="myLayout.allowOverflow('north')" onmouseout="myLayout.resetOverflow(this)" style="padding:0 !important; margin-bottom:0 !important; background-color:inhert !important; max-height:125px;">
+
+<div class="header">
+
+<div id="tabs">
+<ul class="titlebarmenu">
+<li><a href="#tabs-1">Home</a></li>
+<%--<li><a href="#tabs-2">Administration</a></li>--%>
+<%--<li><a href="#tabs-3">Reports</a></li>--%>
+<div style="float:right;padding-top:5px;text-decoration:none;cursor: default; ">
+
+
+              | <b>Logged in:  <%=LegalFirmName%> </b> 
+              | <a href="Login.aspx">Logout</a>
+              
+</div>
+</ul>
+
+<div id="tabs-1">
+<ul  class="main-menu" style="border:solid 0px #BBB;width:100%;">
+ <% 
+    columnName = "SendBulkSMS";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+
+<li>
+    
+	<a class="<%=menuo %>" href="smsmsg.aspx?action=SendBulkSMS&Show=False">
+		<img alt="Send Bulk SMS" src="images/icons/sendbulksms.png"/>
+		<span>Send Bulk SMS</span>
+	</a>
+</li>
+<%} %>
+
+   
+
+
+ </ul>
+</div>
+
+
+<%--<div id="tabs-2">
+<ul  class="main-menu" style="border:solid 0px #BBB;width:555px;">
+     <% 
+     columnName = "Home";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+            <li>
+	            <a class="<%=menuq %>" href="Home.aspx?action=Home&Show=False">
+		            <img alt="Home" src="images/icons/Home.png"/>
+		            <span>Home</span>
+	            </a>
+            </li>
+    <%} %>
+
+ <% 
+     columnName = "Withdrawals";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+            <li>
+	            <a class="<%=menua %>" href="Withdrawals.aspx?action=Withdrawals&Show=False">
+		            <img alt="Dashboard" src="images/icons/withdraws.png"/>
+		            <span>Withdrawals</span>
+	            </a>
+            </li>
+    <%} %>
+
+<% 
+    columnName = "Deposits";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+<li>
+	<a class="<%=menub %>" href="Deposits.aspx?action=Deposits&Show=False">
+		<img alt="Deposits" src="images/icons/deposits.png"/>
+		<span>Deposits</span>
+	</a>
+</li>
+<%} %>
+
+<% 
+    columnName = "Loans";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+<li>
+	<a class="<%=menuc %>" href="MsaccoLoans.aspx?action=Loan&Show=False">
+		<img alt="Loans" src="images/icons/loans.png"/>
+		<span>Loans</span>
+	</a>
+</li>
+<%} %>
+
+
+<% 
+    columnName = "AirtimeTopup";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+<li>
+	<a class="<%=menud %>" href="AirtimeTopup.aspx?action=AirtimeTopup&Show=False">
+		<img alt="" src="images/icons/airtime.png"/>
+		<span>Airtime Topup</span>
+	</a>
+</li>
+<%} %>
+
+
+<% 
+    columnName = "UtilityPayment";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+<li>
+	<a class="<%=menue %>" href="UtilityPayment.aspx?action=UtilityPayment&Show=False">
+		<img alt="" src="images/icons/utility.png"/>
+		<span>Utility Payment</span>
+	</a>
+</li>
+<%} %>
+
+<% 
+    columnName = "FundTransfer";
+field_val = "";        
+field_val = CommonUtilities.check_link_status(My_Group, columnName);
+if (field_val == "1")
+{%>
+
+<li>
+	<a class="<%=menuf %>" href="FundTransfer.aspx?action=FundTransfer&Show=False">
+		<img alt="" src="images/icons/fundtransfer.png"/>
+		<span>Fund Transfer</span>
+	</a>
+</li>
+<%} %>
+
+<% 
+    columnName = "LoanRepayment";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+
+<li>
+	<a class="<%=menug %>" href="LoanRepayment.aspx?action=LoanRepayment&Show=False">
+		<img alt="" src="images/icons/loanrepayment.png"/>
+		<span>Loan Repayment</span>
+	</a>
+</li>
+<%} %>
+
+
+<% 
+    columnName = "VirtualRegistration";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+<li>
+	<a class="<%=menuh %>" href="VirtualRegistration.aspx?action=VirtualRegistration&Show=False">
+		<img alt="" src="images/icons/virtual.png"/>
+		<span>Virtual Registration</span>
+	</a>
+</li>
+<%} %>
+<% 
+    columnName = "MobileSMSTopup";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+
+<li>
+	<a class="<%=menul %>" href="smstopupmobile.aspx?action=mobilesmstopup&Show=False">
+		<img alt="mobilesmstopup" src="images/icons/mobilesms.png"/>
+		<span> Mobile SMS Topup </span>
+	</a>
+</li>
+<%} %>
+
+<% 
+    columnName = "BulkSmsTopup";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+<li>
+	<a class="<%=menuk %>" href="smstopupbulk.aspx?action=bulksmstopup&Show=False">
+		<img alt="bulksmstopup" src="images/icons/bulksms.png"/>
+		<span> Bulk SMS Topup </span>
+	</a>
+</li>
+
+<%} %>
+
+<% 
+    columnName = "PinReset";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+
+<li>
+	<a class="<%=menum %>" href="PinReset.aspx?action=PinReset&Show=False">
+		<img alt="messages" src="images/icons/pinreset.png"/>
+		<span> Pin Reset </span>
+	</a>
+</li>
+<%} %>
+
+<% 
+    columnName = "Users";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+
+<li>
+	<a class="<%=menun %>" href="Users.aspx?action=Users&Show=False">
+		<img alt="Users" src="images/icons/Users.png"/>
+		<span>Users</span>
+	</a>
+</li>
+<%} %>
+
+
+
+
+<% 
+    columnName = "ChangePassword";
+         field_val = "";        
+         field_val = CommonUtilities.check_link_status(My_Group, columnName);
+         if (field_val == "1")
+         {%>
+
+<li>
+    
+	<a class="<%=menup %>" href="ChangePassword.aspx?action=ChangePassword&Show=False">
+		<img alt="Change Password" src="images/icons/changePass.PNG"/>
+		<span>Change Password</span>
+	</a>
+</li>
+<%} %>
+
+ </ul>
+</div>--%>
+
+
+
+
+</div>
+
+</div>
+</div>
+<%--Header To Here--%>
+
+<form id="form_Home_Master" runat="server">
+<%--Sidebar From Here--%>
+
+<% if (Show == "True")
+   { %>
+<div class="ui-layout-west" style="background-color:#BFDBFF !important; margin-left:0 !important; padding-left:6px !important; margin-top:0 !important; padding-top:0 !important; ">
+  <div id="sidebar"> 
+  <div id="side">
+ 
+    <div>
+        <asp:ContentPlaceHolder ID="SideBar_Master" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+  
+      </div>
+ </div>
+</div>
+<%} %>
+
+<%--Sidebar To Here--%>
+
+<%--Main Container From Here--%>
+
+<div class="ui-layout-center" style="background-color: #EDF5FF;">
+    <div>
+        <asp:ContentPlaceHolder ID="Home_Master" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+
+    
+
+
+</div>
+<%--Main Container To Here--%>
+
+
+    </form>
+
+<%--Footer From Here--%>
+
+<div class="ui-layout-south" style="background-color:#BFDBFF !important; margin-left:0 !important; padding-left:2px !important; margin-top:0 !important; padding-top:0 !important; ">
+
+
+<em>
+ Copyright  &copy; <% DateTime dt = DateTime.Now;
+                      Response.Write(dt.Year.ToString()); %> -
+                     TrimLine Systems and Solutions -
+                       <%--<b> Developed By </b>
+                      <a href="http://www.coretec.co.ke" target="_blank" style="">
+                      www.coretec.co.ke</a>--%>
+</em>
+	</div>
+
+<%--Footer To Here--%>
+
+</body>
+</html>

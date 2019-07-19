@@ -1,0 +1,567 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="UKULIMA SACCO LTD$ATM Transactions" EntityType="Model.Store.UKULIMA SACCO LTD$ATM Transactions" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="UKULIMA SACCO LTD$Vendor" EntityType="Model.Store.UKULIMA SACCO LTD$Vendor" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+        </EntityContainer>
+        <EntityType Name="UKULIMA SACCO LTD$ATM Transactions">
+          <Key>
+            <PropertyRef Name="Entry No" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="Entry No" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Trace ID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Posting Date" Type="datetime" Nullable="false" />
+          <Property Name="Account No" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Amount" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Posting S" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Posted" Type="tinyint" Nullable="false" />
+          <Property Name="Unit ID" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Transaction Type" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Trans Time" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Process Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Reversed" Type="tinyint" Nullable="false" />
+          <Property Name="Reversed Posted" Type="tinyint" Nullable="false" />
+          <Property Name="Reversal Trace ID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Transaction Description" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Withdrawal Location" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="Source" Type="int" Nullable="false" />
+          <Property Name="Transaction Type Charges" Type="int" Nullable="false" />
+          <Property Name="Card Acceptor Terminal ID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ATM Card No" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Transaction Date" Type="datetime" Nullable="false" />
+          <Property Name="Is Coop Bank" Type="tinyint" Nullable="false" />
+          <Property Name="POS Vendor" Type="int" Nullable="false" />
+          <Property Name="Reference No" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="UKULIMA SACCO LTD$Vendor">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Name="timestamp" Type="timestamp" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="No_" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Search Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Name 2" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Address" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Address 2" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="City" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Contact" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Phone No_" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Telex No_" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Our Account No_" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Territory Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Global Dimension 1 Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Global Dimension 2 Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Budgeted Amount" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Vendor Posting Group" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Currency Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Language Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Statistics Group" Type="int" Nullable="false" />
+          <Property Name="Payment Terms Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Fin_ Charge Terms Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Purchaser Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Shipment Method Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Shipping Agent Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Invoice Disc_ Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Country_Region Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Blocked" Type="int" Nullable="false" />
+          <Property Name="Pay-to Vendor No_" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Priority" Type="int" Nullable="false" />
+          <Property Name="Payment Method Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Last Date Modified" Type="datetime" Nullable="false" />
+          <Property Name="Application Method" Type="int" Nullable="false" />
+          <Property Name="Prices Including VAT" Type="tinyint" Nullable="false" />
+          <Property Name="Fax No_" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Telex Answer Back" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="VAT Registration No_" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Gen_ Bus_ Posting Group" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Picture" Type="image" />
+          <Property Name="Post Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="County" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="E-Mail" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="Home Page" Type="varchar" Nullable="false" MaxLength="80" />
+          <Property Name="No_ Series" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Tax Area Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Tax Liable" Type="tinyint" Nullable="false" />
+          <Property Name="VAT Bus_ Posting Group" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Block Payment Tolerance" Type="tinyint" Nullable="false" />
+          <Property Name="IC Partner Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Prepayment %" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Primary Contact No_" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Responsibility Center" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Location Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Lead Time Calculation" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="Base Calendar Code" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Creditor Type" Type="int" Nullable="false" />
+          <Property Name="Staff No" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ID No_" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Last Maintenance Date" Type="datetime" Nullable="false" />
+          <Property Name="Activate Sweeping Arrangement" Type="tinyint" Nullable="false" />
+          <Property Name="Sweeping Balance" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Sweep To Account" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Fixed Deposit Status" Type="int" Nullable="false" />
+          <Property Name="Call Deposit" Type="tinyint" Nullable="false" />
+          <Property Name="Mobile Phone No" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Marital Status" Type="int" Nullable="false" />
+          <Property Name="Registration Date" Type="datetime" Nullable="false" />
+          <Property Name="BOSA Account No" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Signature" Type="image" />
+          <Property Name="Passport No_" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Company Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Account Type" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Account Category" Type="int" Nullable="false" />
+          <Property Name="FD Marked for Closure" Type="tinyint" Nullable="false" />
+          <Property Name="Last Withdrawal Date" Type="datetime" Nullable="false" />
+          <Property Name="Last Overdraft Date" Type="datetime" Nullable="false" />
+          <Property Name="Last Min_ Balance Date" Type="datetime" Nullable="false" />
+          <Property Name="Last Deposit Date" Type="datetime" Nullable="false" />
+          <Property Name="Last Transaction Posting Date" Type="datetime" Nullable="false" />
+          <Property Name="Date Closed" Type="datetime" Nullable="false" />
+          <Property Name="Expected Maturity Date" Type="datetime" Nullable="false" />
+          <Property Name="Date of Birth" Type="datetime" Nullable="false" />
+          <Property Name="E-Mail (Personal)" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Section" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ATM No_" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Home Address" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Location" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sub-Location" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="District" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Resons for Status Change" Type="varchar" Nullable="false" MaxLength="200" />
+          <Property Name="Closure Notice Date" Type="datetime" Nullable="false" />
+          <Property Name="Fixed Deposit Type" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="FD Maturity Date" Type="datetime" Nullable="false" />
+          <Property Name="Savings Account No_" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Old Account No_" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Salary Processing" Type="tinyint" Nullable="false" />
+          <Property Name="Amount to Transfer" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Proffesion" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Signing Instructions" Type="varchar" Nullable="false" MaxLength="250" />
+          <Property Name="Hide" Type="tinyint" Nullable="false" />
+          <Property Name="Monthly Contribution" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Not Qualify for Interest" Type="tinyint" Nullable="false" />
+          <Property Name="Gender" Type="int" Nullable="false" />
+          <Property Name="Fixed Duration" Type="varchar" Nullable="false" MaxLength="32" />
+          <Property Name="System Created" Type="tinyint" Nullable="false" />
+          <Property Name="External Account No" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Bank Code" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Enabled" Type="tinyint" Nullable="false" />
+          <Property Name="Defaulted Loans Recovered" Type="tinyint" Nullable="false" />
+          <Property Name="Formation_Province" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Division_Department" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Station_Sections" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Neg_ Interest Rate" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Date Renewed" Type="datetime" Nullable="false" />
+          <Property Name="Don_t Transfer to Savings" Type="tinyint" Nullable="false" />
+          <Property Name="Type Of Organisation" Type="int" Nullable="false" />
+          <Property Name="Source Of Funds" Type="int" Nullable="false" />
+          <Property Name="MPESA Mobile No" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Force No_" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Card Expiry Date" Type="datetime" Nullable="false" />
+          <Property Name="Card Valid From" Type="datetime" Nullable="false" />
+          <Property Name="Card Valid To" Type="datetime" Nullable="false" />
+          <Property Name="Service" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Fox SBal" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="ABal Fox" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="ATM Prov_ No" Type="varchar" Nullable="false" MaxLength="18" />
+          <Property Name="ATM Approve" Type="tinyint" Nullable="false" />
+          <Property Name="Reconciled" Type="tinyint" Nullable="false" />
+          <Property Name="FD Duration" Type="int" Nullable="false" />
+          <Property Name="Employer P_F" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Atm card ready" Type="tinyint" Nullable="false" />
+          <Property Name="Date ATM Linked" Type="datetime" Nullable="false" />
+          <Property Name="Fosa_s no Bosa No" Type="tinyint" Nullable="false" />
+          <Property Name="Outstanding Balance" Type="decimal" Nullable="false" Precision="38" Scale="20" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="ukulima_dbEntities">
+          <EntitySet Name="UKULIMA_SACCO_LTD_ATM_Transactions" EntityType="Model.UKULIMA_SACCO_LTD_ATM_Transactions" />
+          <EntitySet Name="UKULIMA_SACCO_LTD_Vendor" EntityType="Model.UKULIMA_SACCO_LTD_Vendor" />
+        </EntityContainer>
+        <EntityType Name="UKULIMA_SACCO_LTD_ATM_Transactions">
+          <Key>
+            <PropertyRef Name="Entry_No" />
+          </Key>
+          <Property Name="timestamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Entry_No" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Trace_ID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Posting_Date" Type="DateTime" Nullable="false" />
+          <Property Name="Account_No" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="38" Scale="20" />
+          <Property Name="Posting_S" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Posted" Type="Byte" Nullable="false" />
+          <Property Name="Unit_ID" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Transaction_Type" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Trans_Time" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Process_Code" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Reversed" Type="Byte" Nullable="false" />
+          <Property Name="Reversed_Posted" Type="Byte" Nullable="false" />
+          <Property Name="Reversal_Trace_ID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Transaction_Description" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Withdrawal_Location" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Source" Type="Int32" Nullable="false" />
+          <Property Name="Transaction_Type_Charges" Type="Int32" Nullable="false" />
+          <Property Name="Card_Acceptor_Terminal_ID" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ATM_Card_No" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Transaction_Date" Type="DateTime" Nullable="false" />
+          <Property Name="Is_Coop_Bank" Type="Byte" Nullable="false" />
+          <Property Name="POS_Vendor" Type="Int32" Nullable="false" />
+          <Property Name="Reference_No" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UKULIMA_SACCO_LTD_Vendor">
+          <Key>
+            <PropertyRef Name="No_" />
+          </Key>
+          <Property Type="Binary" Name="timestamp" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="No_" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Search_Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Name_2" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Address_2" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="City" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Contact" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Phone_No_" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telex_No_" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Our_Account_No_" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Territory_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Global_Dimension_1_Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Global_Dimension_2_Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Budgeted_Amount" Nullable="false" Precision="38" Scale="20" />
+          <Property Type="String" Name="Vendor_Posting_Group" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Currency_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Language_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Statistics_Group" Nullable="false" />
+          <Property Type="String" Name="Payment_Terms_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Fin__Charge_Terms_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Purchaser_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Shipment_Method_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Shipping_Agent_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Invoice_Disc__Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Country_Region_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Blocked" Nullable="false" />
+          <Property Type="String" Name="Pay_to_Vendor_No_" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Priority" Nullable="false" />
+          <Property Type="String" Name="Payment_Method_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Last_Date_Modified" Nullable="false" />
+          <Property Type="Int32" Name="Application_Method" Nullable="false" />
+          <Property Type="Byte" Name="Prices_Including_VAT" Nullable="false" />
+          <Property Type="String" Name="Fax_No_" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Telex_Answer_Back" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VAT_Registration_No_" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Gen__Bus__Posting_Group" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="Picture" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="Post_Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="County" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="E_Mail" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Home_Page" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="No__Series" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Tax_Area_Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Tax_Liable" Nullable="false" />
+          <Property Type="String" Name="VAT_Bus__Posting_Group" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Block_Payment_Tolerance" Nullable="false" />
+          <Property Type="String" Name="IC_Partner_Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Prepayment__" Nullable="false" Precision="38" Scale="20" />
+          <Property Type="String" Name="Primary_Contact_No_" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Responsibility_Center" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Location_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Lead_Time_Calculation" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Base_Calendar_Code" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Creditor_Type" Nullable="false" />
+          <Property Type="String" Name="Staff_No" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ID_No_" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Last_Maintenance_Date" Nullable="false" />
+          <Property Type="Byte" Name="Activate_Sweeping_Arrangement" Nullable="false" />
+          <Property Type="Decimal" Name="Sweeping_Balance" Nullable="false" Precision="38" Scale="20" />
+          <Property Type="String" Name="Sweep_To_Account" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Fixed_Deposit_Status" Nullable="false" />
+          <Property Type="Byte" Name="Call_Deposit" Nullable="false" />
+          <Property Type="String" Name="Mobile_Phone_No" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Marital_Status" Nullable="false" />
+          <Property Type="DateTime" Name="Registration_Date" Nullable="false" />
+          <Property Type="String" Name="BOSA_Account_No" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="Signature" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="Passport_No_" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Company_Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Status" Nullable="false" />
+          <Property Type="String" Name="Account_Type" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Account_Category" Nullable="false" />
+          <Property Type="Byte" Name="FD_Marked_for_Closure" Nullable="false" />
+          <Property Type="DateTime" Name="Last_Withdrawal_Date" Nullable="false" />
+          <Property Type="DateTime" Name="Last_Overdraft_Date" Nullable="false" />
+          <Property Type="DateTime" Name="Last_Min__Balance_Date" Nullable="false" />
+          <Property Type="DateTime" Name="Last_Deposit_Date" Nullable="false" />
+          <Property Type="DateTime" Name="Last_Transaction_Posting_Date" Nullable="false" />
+          <Property Type="DateTime" Name="Date_Closed" Nullable="false" />
+          <Property Type="DateTime" Name="Expected_Maturity_Date" Nullable="false" />
+          <Property Type="DateTime" Name="Date_of_Birth" Nullable="false" />
+          <Property Type="String" Name="E_Mail__Personal_" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Section" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ATM_No_" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Home_Address" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Location" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sub_Location" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="District" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Resons_for_Status_Change" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Closure_Notice_Date" Nullable="false" />
+          <Property Type="String" Name="Fixed_Deposit_Type" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FD_Maturity_Date" Nullable="false" />
+          <Property Type="String" Name="Savings_Account_No_" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Old_Account_No_" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Salary_Processing" Nullable="false" />
+          <Property Type="Decimal" Name="Amount_to_Transfer" Nullable="false" Precision="38" Scale="20" />
+          <Property Type="String" Name="Proffesion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Signing_Instructions" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Hide" Nullable="false" />
+          <Property Type="Decimal" Name="Monthly_Contribution" Nullable="false" Precision="38" Scale="20" />
+          <Property Type="Byte" Name="Not_Qualify_for_Interest" Nullable="false" />
+          <Property Type="Int32" Name="Gender" Nullable="false" />
+          <Property Type="String" Name="Fixed_Duration" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="System_Created" Nullable="false" />
+          <Property Type="String" Name="External_Account_No" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Bank_Code" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Enabled" Nullable="false" />
+          <Property Type="Byte" Name="Defaulted_Loans_Recovered" Nullable="false" />
+          <Property Type="String" Name="Formation_Province" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Division_Department" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Station_Sections" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Neg__Interest_Rate" Nullable="false" Precision="38" Scale="20" />
+          <Property Type="DateTime" Name="Date_Renewed" Nullable="false" />
+          <Property Type="Byte" Name="Don_t_Transfer_to_Savings" Nullable="false" />
+          <Property Type="Int32" Name="Type_Of_Organisation" Nullable="false" />
+          <Property Type="Int32" Name="Source_Of_Funds" Nullable="false" />
+          <Property Type="String" Name="MPESA_Mobile_No" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Force_No_" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="Card_Expiry_Date" Nullable="false" />
+          <Property Type="DateTime" Name="Card_Valid_From" Nullable="false" />
+          <Property Type="DateTime" Name="Card_Valid_To" Nullable="false" />
+          <Property Type="String" Name="Service" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="Fox_SBal" Nullable="false" Precision="38" Scale="20" />
+          <Property Type="Decimal" Name="ABal_Fox" Nullable="false" Precision="38" Scale="20" />
+          <Property Type="String" Name="ATM_Prov__No" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="ATM_Approve" Nullable="false" />
+          <Property Type="Byte" Name="Reconciled" Nullable="false" />
+          <Property Type="Int32" Name="FD_Duration" Nullable="false" />
+          <Property Type="String" Name="Employer_P_F" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="Atm_card_ready" Nullable="false" />
+          <Property Type="DateTime" Name="Date_ATM_Linked" Nullable="false" />
+          <Property Type="Byte" Name="Fosa_s_no_Bosa_No" Nullable="false" />
+          <Property Type="Decimal" Name="Outstanding_Balance" Nullable="false" Precision="38" Scale="20" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ukulima_dbEntities">
+          <EntitySetMapping Name="UKULIMA_SACCO_LTD_ATM_Transactions">
+            <EntityTypeMapping TypeName="Model.UKULIMA_SACCO_LTD_ATM_Transactions">
+              <MappingFragment StoreEntitySet="UKULIMA SACCO LTD$ATM Transactions">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="Entry_No" ColumnName="Entry No" />
+                <ScalarProperty Name="Trace_ID" ColumnName="Trace ID" />
+                <ScalarProperty Name="Posting_Date" ColumnName="Posting Date" />
+                <ScalarProperty Name="Account_No" ColumnName="Account No" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Posting_S" ColumnName="Posting S" />
+                <ScalarProperty Name="Posted" ColumnName="Posted" />
+                <ScalarProperty Name="Unit_ID" ColumnName="Unit ID" />
+                <ScalarProperty Name="Transaction_Type" ColumnName="Transaction Type" />
+                <ScalarProperty Name="Trans_Time" ColumnName="Trans Time" />
+                <ScalarProperty Name="Process_Code" ColumnName="Process Code" />
+                <ScalarProperty Name="Reversed" ColumnName="Reversed" />
+                <ScalarProperty Name="Reversed_Posted" ColumnName="Reversed Posted" />
+                <ScalarProperty Name="Reversal_Trace_ID" ColumnName="Reversal Trace ID" />
+                <ScalarProperty Name="Transaction_Description" ColumnName="Transaction Description" />
+                <ScalarProperty Name="Withdrawal_Location" ColumnName="Withdrawal Location" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Transaction_Type_Charges" ColumnName="Transaction Type Charges" />
+                <ScalarProperty Name="Card_Acceptor_Terminal_ID" ColumnName="Card Acceptor Terminal ID" />
+                <ScalarProperty Name="ATM_Card_No" ColumnName="ATM Card No" />
+                <ScalarProperty Name="Transaction_Date" ColumnName="Transaction Date" />
+                <ScalarProperty Name="Is_Coop_Bank" ColumnName="Is Coop Bank" />
+                <ScalarProperty Name="POS_Vendor" ColumnName="POS Vendor" />
+                <ScalarProperty Name="Reference_No" ColumnName="Reference No" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UKULIMA_SACCO_LTD_Vendor">
+            <EntityTypeMapping TypeName="Model.UKULIMA_SACCO_LTD_Vendor">
+              <MappingFragment StoreEntitySet="UKULIMA SACCO LTD$Vendor">
+                <ScalarProperty Name="Outstanding_Balance" ColumnName="Outstanding Balance" />
+                <ScalarProperty Name="Fosa_s_no_Bosa_No" ColumnName="Fosa_s no Bosa No" />
+                <ScalarProperty Name="Date_ATM_Linked" ColumnName="Date ATM Linked" />
+                <ScalarProperty Name="Atm_card_ready" ColumnName="Atm card ready" />
+                <ScalarProperty Name="Employer_P_F" ColumnName="Employer P_F" />
+                <ScalarProperty Name="FD_Duration" ColumnName="FD Duration" />
+                <ScalarProperty Name="Reconciled" ColumnName="Reconciled" />
+                <ScalarProperty Name="ATM_Approve" ColumnName="ATM Approve" />
+                <ScalarProperty Name="ATM_Prov__No" ColumnName="ATM Prov_ No" />
+                <ScalarProperty Name="ABal_Fox" ColumnName="ABal Fox" />
+                <ScalarProperty Name="Fox_SBal" ColumnName="Fox SBal" />
+                <ScalarProperty Name="Service" ColumnName="Service" />
+                <ScalarProperty Name="Card_Valid_To" ColumnName="Card Valid To" />
+                <ScalarProperty Name="Card_Valid_From" ColumnName="Card Valid From" />
+                <ScalarProperty Name="Card_Expiry_Date" ColumnName="Card Expiry Date" />
+                <ScalarProperty Name="Force_No_" ColumnName="Force No_" />
+                <ScalarProperty Name="MPESA_Mobile_No" ColumnName="MPESA Mobile No" />
+                <ScalarProperty Name="Source_Of_Funds" ColumnName="Source Of Funds" />
+                <ScalarProperty Name="Type_Of_Organisation" ColumnName="Type Of Organisation" />
+                <ScalarProperty Name="Don_t_Transfer_to_Savings" ColumnName="Don_t Transfer to Savings" />
+                <ScalarProperty Name="Date_Renewed" ColumnName="Date Renewed" />
+                <ScalarProperty Name="Neg__Interest_Rate" ColumnName="Neg_ Interest Rate" />
+                <ScalarProperty Name="Station_Sections" ColumnName="Station_Sections" />
+                <ScalarProperty Name="Division_Department" ColumnName="Division_Department" />
+                <ScalarProperty Name="Formation_Province" ColumnName="Formation_Province" />
+                <ScalarProperty Name="Defaulted_Loans_Recovered" ColumnName="Defaulted Loans Recovered" />
+                <ScalarProperty Name="Enabled" ColumnName="Enabled" />
+                <ScalarProperty Name="Bank_Code" ColumnName="Bank Code" />
+                <ScalarProperty Name="External_Account_No" ColumnName="External Account No" />
+                <ScalarProperty Name="System_Created" ColumnName="System Created" />
+                <ScalarProperty Name="Fixed_Duration" ColumnName="Fixed Duration" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Not_Qualify_for_Interest" ColumnName="Not Qualify for Interest" />
+                <ScalarProperty Name="Monthly_Contribution" ColumnName="Monthly Contribution" />
+                <ScalarProperty Name="Hide" ColumnName="Hide" />
+                <ScalarProperty Name="Signing_Instructions" ColumnName="Signing Instructions" />
+                <ScalarProperty Name="Proffesion" ColumnName="Proffesion" />
+                <ScalarProperty Name="Amount_to_Transfer" ColumnName="Amount to Transfer" />
+                <ScalarProperty Name="Salary_Processing" ColumnName="Salary Processing" />
+                <ScalarProperty Name="Old_Account_No_" ColumnName="Old Account No_" />
+                <ScalarProperty Name="Savings_Account_No_" ColumnName="Savings Account No_" />
+                <ScalarProperty Name="FD_Maturity_Date" ColumnName="FD Maturity Date" />
+                <ScalarProperty Name="Fixed_Deposit_Type" ColumnName="Fixed Deposit Type" />
+                <ScalarProperty Name="Closure_Notice_Date" ColumnName="Closure Notice Date" />
+                <ScalarProperty Name="Resons_for_Status_Change" ColumnName="Resons for Status Change" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="Sub_Location" ColumnName="Sub-Location" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Home_Address" ColumnName="Home Address" />
+                <ScalarProperty Name="ATM_No_" ColumnName="ATM No_" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="E_Mail__Personal_" ColumnName="E-Mail (Personal)" />
+                <ScalarProperty Name="Date_of_Birth" ColumnName="Date of Birth" />
+                <ScalarProperty Name="Expected_Maturity_Date" ColumnName="Expected Maturity Date" />
+                <ScalarProperty Name="Date_Closed" ColumnName="Date Closed" />
+                <ScalarProperty Name="Last_Transaction_Posting_Date" ColumnName="Last Transaction Posting Date" />
+                <ScalarProperty Name="Last_Deposit_Date" ColumnName="Last Deposit Date" />
+                <ScalarProperty Name="Last_Min__Balance_Date" ColumnName="Last Min_ Balance Date" />
+                <ScalarProperty Name="Last_Overdraft_Date" ColumnName="Last Overdraft Date" />
+                <ScalarProperty Name="Last_Withdrawal_Date" ColumnName="Last Withdrawal Date" />
+                <ScalarProperty Name="FD_Marked_for_Closure" ColumnName="FD Marked for Closure" />
+                <ScalarProperty Name="Account_Category" ColumnName="Account Category" />
+                <ScalarProperty Name="Account_Type" ColumnName="Account Type" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Company_Code" ColumnName="Company Code" />
+                <ScalarProperty Name="Passport_No_" ColumnName="Passport No_" />
+                <ScalarProperty Name="Signature" ColumnName="Signature" />
+                <ScalarProperty Name="BOSA_Account_No" ColumnName="BOSA Account No" />
+                <ScalarProperty Name="Registration_Date" ColumnName="Registration Date" />
+                <ScalarProperty Name="Marital_Status" ColumnName="Marital Status" />
+                <ScalarProperty Name="Mobile_Phone_No" ColumnName="Mobile Phone No" />
+                <ScalarProperty Name="Call_Deposit" ColumnName="Call Deposit" />
+                <ScalarProperty Name="Fixed_Deposit_Status" ColumnName="Fixed Deposit Status" />
+                <ScalarProperty Name="Sweep_To_Account" ColumnName="Sweep To Account" />
+                <ScalarProperty Name="Sweeping_Balance" ColumnName="Sweeping Balance" />
+                <ScalarProperty Name="Activate_Sweeping_Arrangement" ColumnName="Activate Sweeping Arrangement" />
+                <ScalarProperty Name="Last_Maintenance_Date" ColumnName="Last Maintenance Date" />
+                <ScalarProperty Name="ID_No_" ColumnName="ID No_" />
+                <ScalarProperty Name="Staff_No" ColumnName="Staff No" />
+                <ScalarProperty Name="Creditor_Type" ColumnName="Creditor Type" />
+                <ScalarProperty Name="Base_Calendar_Code" ColumnName="Base Calendar Code" />
+                <ScalarProperty Name="Lead_Time_Calculation" ColumnName="Lead Time Calculation" />
+                <ScalarProperty Name="Location_Code" ColumnName="Location Code" />
+                <ScalarProperty Name="Responsibility_Center" ColumnName="Responsibility Center" />
+                <ScalarProperty Name="Primary_Contact_No_" ColumnName="Primary Contact No_" />
+                <ScalarProperty Name="Prepayment__" ColumnName="Prepayment %" />
+                <ScalarProperty Name="IC_Partner_Code" ColumnName="IC Partner Code" />
+                <ScalarProperty Name="Block_Payment_Tolerance" ColumnName="Block Payment Tolerance" />
+                <ScalarProperty Name="VAT_Bus__Posting_Group" ColumnName="VAT Bus_ Posting Group" />
+                <ScalarProperty Name="Tax_Liable" ColumnName="Tax Liable" />
+                <ScalarProperty Name="Tax_Area_Code" ColumnName="Tax Area Code" />
+                <ScalarProperty Name="No__Series" ColumnName="No_ Series" />
+                <ScalarProperty Name="Home_Page" ColumnName="Home Page" />
+                <ScalarProperty Name="E_Mail" ColumnName="E-Mail" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="Post_Code" ColumnName="Post Code" />
+                <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="Gen__Bus__Posting_Group" ColumnName="Gen_ Bus_ Posting Group" />
+                <ScalarProperty Name="VAT_Registration_No_" ColumnName="VAT Registration No_" />
+                <ScalarProperty Name="Telex_Answer_Back" ColumnName="Telex Answer Back" />
+                <ScalarProperty Name="Fax_No_" ColumnName="Fax No_" />
+                <ScalarProperty Name="Prices_Including_VAT" ColumnName="Prices Including VAT" />
+                <ScalarProperty Name="Application_Method" ColumnName="Application Method" />
+                <ScalarProperty Name="Last_Date_Modified" ColumnName="Last Date Modified" />
+                <ScalarProperty Name="Payment_Method_Code" ColumnName="Payment Method Code" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="Pay_to_Vendor_No_" ColumnName="Pay-to Vendor No_" />
+                <ScalarProperty Name="Blocked" ColumnName="Blocked" />
+                <ScalarProperty Name="Country_Region_Code" ColumnName="Country_Region Code" />
+                <ScalarProperty Name="Invoice_Disc__Code" ColumnName="Invoice Disc_ Code" />
+                <ScalarProperty Name="Shipping_Agent_Code" ColumnName="Shipping Agent Code" />
+                <ScalarProperty Name="Shipment_Method_Code" ColumnName="Shipment Method Code" />
+                <ScalarProperty Name="Purchaser_Code" ColumnName="Purchaser Code" />
+                <ScalarProperty Name="Fin__Charge_Terms_Code" ColumnName="Fin_ Charge Terms Code" />
+                <ScalarProperty Name="Payment_Terms_Code" ColumnName="Payment Terms Code" />
+                <ScalarProperty Name="Statistics_Group" ColumnName="Statistics Group" />
+                <ScalarProperty Name="Language_Code" ColumnName="Language Code" />
+                <ScalarProperty Name="Currency_Code" ColumnName="Currency Code" />
+                <ScalarProperty Name="Vendor_Posting_Group" ColumnName="Vendor Posting Group" />
+                <ScalarProperty Name="Budgeted_Amount" ColumnName="Budgeted Amount" />
+                <ScalarProperty Name="Global_Dimension_2_Code" ColumnName="Global Dimension 2 Code" />
+                <ScalarProperty Name="Global_Dimension_1_Code" ColumnName="Global Dimension 1 Code" />
+                <ScalarProperty Name="Territory_Code" ColumnName="Territory Code" />
+                <ScalarProperty Name="Our_Account_No_" ColumnName="Our Account No_" />
+                <ScalarProperty Name="Telex_No_" ColumnName="Telex No_" />
+                <ScalarProperty Name="Phone_No_" ColumnName="Phone No_" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address_2" ColumnName="Address 2" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name_2" ColumnName="Name 2" />
+                <ScalarProperty Name="Search_Name" ColumnName="Search Name" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="No_" ColumnName="No_" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1" ZoomLevel="93">
+        <EntityTypeShape EntityType="Model.UKULIMA_SACCO_LTD_ATM_Transactions" Width="1.5" PointX="0.75" PointY="0.75" Height="6.0186165364583326" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.UKULIMA_SACCO_LTD_Vendor" Width="1.5" PointX="3.375" PointY="0.75" Height="26.979472656250003" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

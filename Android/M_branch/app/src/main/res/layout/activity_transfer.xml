@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/withdrawal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".withdrawal"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/depositto"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:paddingTop="10dp"
+        android:text="Transfer To"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        />
+    <Spinner
+        android:id="@+id/deposittospinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintBottom_toBottomOf="@id/depositto"
+        app:layout_constraintTop_toTopOf="parent"></Spinner>
+
+
+
+    <TextView
+        android:id="@+id/PhoneNo"
+        android:layout_width="86dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="right"
+        android:paddingTop="10dp"
+        android:text="Phone"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/depositto" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:inputType="number"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/PhoneNo"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/deposittospinner" />
+
+
+    <TextView
+        android:id="@+id/source"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="right"
+        android:paddingTop="10dp"
+        android:text="Account"
+
+        app:layout_constraintEnd_toStartOf="@+id/sourceacc"
+
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNo" />
+
+    <Spinner
+        android:id="@+id/sourceacc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintBottom_toBottomOf="@id/source"
+        app:layout_constraintTop_toBottomOf="@+id/phone">
+
+    </Spinner>
+    <TextView
+        android:id="@+id/loan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingTop="10dp"
+        android:text="Loan"
+        app:layout_constraintEnd_toStartOf="@+id/sourceacc"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/source" />
+
+    <Spinner
+        android:id="@+id/selectloan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:paddingTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline"
+        app:layout_constraintBottom_toBottomOf="@id/loan"
+        app:layout_constraintTop_toBottomOf="@+id/sourceacc">
+
+    </Spinner>
+    <include
+        android:id="@+id/include"
+        layout="@layout/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"> </include>
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="113dp"
+        android:layout_height="wrap_content"
+
+        android:gravity="right"
+        android:paddingTop="50dp"
+        android:text="Amount"
+        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/loan" />
+
+    <EditText
+        android:id="@+id/amounttxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:inputType="number"
+        android:paddingTop="50dp"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectloan" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+
+</android.support.constraint.ConstraintLayout>

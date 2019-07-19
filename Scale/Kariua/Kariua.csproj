@@ -1,0 +1,1854 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14599372-8455-4B2B-B1F8-B217CBF9ADF2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Weigh</RootNamespace>
+    <AssemblyName>Weigh</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>scales.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v18.2, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.2, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.2, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.2, Version=18.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale\Gatukuyu\bin\Debug\ServerSetting.cs" />
+    <Compile Include="Scale\Gatukuyu\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Scale\Gatukuyu\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Scale\Gatukuyu\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Scale\Gatukuyu\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Scale\Gatukuyu\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Scale\Gatukuyu\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Scale\Gatukuyu\Program.cs" />
+    <Compile Include="Scale\Gatukuyu\Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale\Gatukuyu\Properties\Resources.Designer.cs" />
+    <Compile Include="Scale\Gatukuyu\Properties\Settings.Designer.cs" />
+    <Compile Include="Scale\Gatukuyu\Web References\Server\Reference.cs" />
+    <Compile Include="Scale\Gatukuyu\Weighdata.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Allcollections.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Allcollections.Designer.cs">
+      <DependentUpon>Allcollections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Collection.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Collection.Designer.cs">
+      <DependentUpon>Collection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Daily_Collections_Detail.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Data.Context.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Data.Context1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Data.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Data.Designer.cs">
+      <DependentUpon>Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Data1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Data1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Data.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Farmer.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Farmers.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Farmers.Designer.cs">
+      <DependentUpon>Farmers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Filter.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Filter.Designer.cs">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Filters.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Filters.Designer.cs">
+      <DependentUpon>Filters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\FrmchangePass.cs" />
+    <Compile Include="Scale\Inuka\Weigh\FrmchangePass.Designer.cs">
+      <DependentUpon>FrmchangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Login.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Program.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Properties\Resources.Designer.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Properties\Settings.Designer.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Receipt.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Receipt.Designer.cs">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Reports.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Route.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Setting.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Settings.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\User.cs">
+      <DependentUpon>Data.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Users.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Inuka\Weigh\Web References\server\Reference.cs" />
+    <Compile Include="Scale\Inuka\Weigh\Weighdata.cs" />
+    <Compile Include="Scale\Inuka\Weigh\WeighMain.cs" />
+    <Compile Include="Scale\Inuka\Weigh\WeighMain.Designer.cs">
+      <DependentUpon>WeighMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Scale\Iria-ini\Program.cs" />
+    <Compile Include="Scale\Iria-ini\Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale\Iria-ini\Properties\Resources.Designer.cs" />
+    <Compile Include="Scale\Iria-ini\Properties\Settings.Designer.cs" />
+    <Compile Include="Scale\Iria-ini\Web References\Server\Reference.cs" />
+    <Compile Include="Scale\Iria-ini\Weighdata.cs" />
+    <Compile Include="Scale\Kaganda\Program.cs" />
+    <Compile Include="Scale\Kaganda\Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale\Kaganda\Properties\Resources.Designer.cs" />
+    <Compile Include="Scale\Kaganda\Properties\Settings.Designer.cs" />
+    <Compile Include="Scale\Kaganda\Web References\Server\Reference.cs" />
+    <Compile Include="Scale\Kaganda\Weighdata.cs" />
+    <Compile Include="Scale\Kariua\bin\Debug\ServerSetting.cs" />
+    <Compile Include="Scale\Kariua\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Scale\Kariua\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Scale\Kariua\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Scale\Kariua\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Scale\Kariua\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Scale\Kariua\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Scale\Kariua\Program.cs" />
+    <Compile Include="Scale\Kariua\Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale\Kariua\Properties\Resources.Designer.cs" />
+    <Compile Include="Scale\Kariua\Properties\Settings.Designer.cs" />
+    <Compile Include="Scale\Kariua\Web References\Server\Reference.cs" />
+    <Compile Include="Scale\Kiama 1.1\bin\Debug\ServerSetting.cs" />
+    <Compile Include="Scale\Kiama 1.1\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Scale\Kiama 1.1\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Scale\Kiama 1.1\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Scale\Kiama 1.1\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Scale\Kiama 1.1\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Scale\Kiama 1.1\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Scale\Kiama 1.1\Program.cs" />
+    <Compile Include="Scale\Kiama 1.1\Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale\Kiama 1.1\Properties\Resources.Designer.cs" />
+    <Compile Include="Scale\Kiama 1.1\Properties\Settings.Designer.cs" />
+    <Compile Include="Scale\Kiama 1.1\Web References\Server\Reference.cs" />
+    <Compile Include="Scale\Kiama 1.1\Weighdata.cs" />
+    <Compile Include="Scale\Kiangangwa\bin\Debug\ServerSetting.cs" />
+    <Compile Include="Scale\Kiangangwa\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Scale\Kiangangwa\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Scale\Kiangangwa\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Scale\Kiangangwa\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Scale\Kiangangwa\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Scale\Kiangangwa\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Scale\Kiangangwa\Program.cs" />
+    <Compile Include="Scale\Kiangangwa\Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale\Kiangangwa\Properties\Resources.Designer.cs" />
+    <Compile Include="Scale\Kiangangwa\Properties\Settings.Designer.cs" />
+    <Compile Include="Scale\Kiangangwa\Web References\Server\Reference.cs" />
+    <Compile Include="Scale\Kiangangwa\Weighdata.cs" />
+    <Compile Include="Scale\Kibugu\bin\Debug\ServerSetting.cs" />
+    <Compile Include="Scale\Kibugu\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Scale\Kibugu\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Scale\Kibugu\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Scale\Kibugu\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Scale\Kibugu\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Scale\Kibugu\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Scale\Kibugu\Program.cs" />
+    <Compile Include="Scale\Kibugu\Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale\Kibugu\Properties\Resources.Designer.cs" />
+    <Compile Include="Scale\Kibugu\Properties\Settings.Designer.cs" />
+    <Compile Include="Scale\Kibugu\Web References\Server\Reference.cs" />
+    <Compile Include="Scale\Kibugu\Weighdata.cs" />
+    <Compile Include="Scale\Kirimiri\bin\Debug\ServerSetting.cs" />
+    <Compile Include="Scale\Kirimiri\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Scale\Kirimiri\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Scale\Kirimiri\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Scale\Kirimiri\obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Scale\Kirimiri\obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Scale\Kirimiri\obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Scale\Kirimiri\Program.cs" />
+    <Compile Include="Scale\Kirimiri\Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale\Kirimiri\Properties\Resources.Designer.cs" />
+    <Compile Include="Scale\Kirimiri\Properties\Settings.Designer.cs" />
+    <Compile Include="Scale\Kirimiri\Web References\Server\Reference.cs" />
+    <Compile Include="Scale\Kiriti\Program.cs" />
+    <Compile Include="Scale\Kiriti\Properties\AssemblyInfo.cs" />
+    <Compile Include="Scale\Kiriti\Properties\Resources.Designer.cs" />
+    <Compile Include="Scale\Kiriti\Properties\Settings.Designer.cs" />
+    <Compile Include="Scale\Kiriti\Web References\Server\Reference.cs" />
+    <Compile Include="Scale\Kiriti\Weighdata.cs" />
+    <Compile Include="Web References\Server\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Scale\Gatukuyu\obj\Debug\Weigh.Properties.Resources.resources" />
+    <EmbeddedResource Include="Scale\Gatukuyu\Properties\licenses.licx" />
+    <EmbeddedResource Include="Scale\Gatukuyu\Properties\Resources.resx" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Allcollections.resx">
+      <DependentUpon>Allcollections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Collection.resx">
+      <DependentUpon>Collection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Farmers.resx">
+      <DependentUpon>Farmers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Filter.resx">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Filters.resx">
+      <DependentUpon>Filters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\Inuka\Weigh\FrmchangePass.resx">
+      <DependentUpon>FrmchangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\Inuka\Weigh\obj\Debug\Weigh.Allcollections.resources" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\obj\Debug\Weigh.Collection.resources" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\obj\Debug\Weigh.Farmers.resources" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\obj\Debug\Weigh.Filter.resources" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\obj\Debug\Weigh.Filters.resources" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\obj\Debug\Weigh.FrmchangePass.resources" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\obj\Debug\Weigh.Login.resources" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\obj\Debug\Weigh.Properties.Resources.resources" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\obj\Debug\Weigh.Reports.resources" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\obj\Debug\Weigh.Settings.resources" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\obj\Debug\Weigh.Users.resources" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\obj\Debug\Weigh.WeighMain.resources" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Properties\Resources.resx" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Receipt.resx">
+      <DependentUpon>Receipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Report1.rdlc" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Reports\Daily Collection.rdlc" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Reports\Farmer Delivery.rdlc" />
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\Inuka\Weigh\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\Inuka\Weigh\WeighMain.resx">
+      <DependentUpon>WeighMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scale\Iria-ini\obj\Debug\Weigh.Properties.Resources.resources" />
+    <EmbeddedResource Include="Scale\Iria-ini\Properties\licenses.licx" />
+    <EmbeddedResource Include="Scale\Iria-ini\Properties\Resources.resx" />
+    <EmbeddedResource Include="Scale\Kaganda\obj\Debug\Weigh.Properties.Resources.resources" />
+    <EmbeddedResource Include="Scale\Kaganda\Properties\licenses.licx" />
+    <EmbeddedResource Include="Scale\Kaganda\Properties\Resources.resx" />
+    <EmbeddedResource Include="Scale\Kariua\obj\Debug\Weigh.Properties.Resources.resources" />
+    <EmbeddedResource Include="Scale\Kariua\Properties\licenses.licx" />
+    <EmbeddedResource Include="Scale\Kariua\Properties\Resources.resx" />
+    <EmbeddedResource Include="Scale\Kariua\WeighMain.resx" />
+    <EmbeddedResource Include="Scale\Kiama 1.1\obj\Debug\Weigh.Properties.Resources.resources" />
+    <EmbeddedResource Include="Scale\Kiama 1.1\Properties\licenses.licx" />
+    <EmbeddedResource Include="Scale\Kiama 1.1\Properties\Resources.resx" />
+    <EmbeddedResource Include="Scale\Kiangangwa\obj\Debug\Weigh.Properties.Resources.resources" />
+    <EmbeddedResource Include="Scale\Kiangangwa\Properties\licenses.licx" />
+    <EmbeddedResource Include="Scale\Kiangangwa\Properties\Resources.resx" />
+    <EmbeddedResource Include="Scale\Kibugu\obj\Debug\Weigh.Properties.Resources.resources" />
+    <EmbeddedResource Include="Scale\Kibugu\Properties\Resources.resx" />
+    <EmbeddedResource Include="Scale\Kirimiri\obj\Debug\Weigh.Properties.Resources.resources" />
+    <EmbeddedResource Include="Scale\Kirimiri\Properties\licenses.licx" />
+    <EmbeddedResource Include="Scale\Kirimiri\Properties\Resources.resx" />
+    <EmbeddedResource Include="Scale\Kirimiri\WeighMain.resx" />
+    <EmbeddedResource Include="Scale\Kiriti\obj\Debug\Weigh.Properties.Resources.resources" />
+    <EmbeddedResource Include="Scale\Kiriti\Properties\licenses.licx" />
+    <EmbeddedResource Include="Scale\Kiriti\Properties\Resources.resx" />
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Scale\Gatukuyu\App.config" />
+    <None Include="Scale\Gatukuyu\bin\Debug\Weigh.exe.config" />
+    <None Include="Scale\Gatukuyu\obj\Debug\build.force" />
+    <None Include="Scale\Gatukuyu\obj\Debug\CoreCompileInputs.cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Gatukuyu.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Gatukuyu.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Kiangagwa.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Kiangagwa.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Kirimiri.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Kirimiri.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Kirurumwe.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Kirurumwe.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Rwama 1.1.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Rwama 1.1.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Test.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Test.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Thuita.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Gatukuyu\obj\Debug\Thuita.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Gatukuyu\obj\Release\build.force" />
+    <None Include="Scale\Gatukuyu\obj\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Gatukuyu\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Gatukuyu\packages.config" />
+    <None Include="Scale\Gatukuyu\Properties\Settings.settings" />
+    <None Include="Scale\Gatukuyu\Web References\Server\Collect.wsdl" />
+    <None Include="Scale\Gatukuyu\Web References\Server\Collection1.datasource" />
+    <None Include="Scale\Gatukuyu\Web References\Server\Items1.datasource" />
+    <None Include="Scale\Gatukuyu\Web References\Server\Reference.map" />
+    <None Include="Scale\Gatukuyu\Web References\Server\Stores1.datasource" />
+    <None Include="Scale\Gatukuyu\Web References\Server\Vendor1.datasource" />
+    <None Include="Scale\Inuka\.vs\config\applicationhost.config" />
+    <None Include="Scale\Inuka\.vs\Weigh\v14\.suo" />
+    <None Include="Scale\Inuka\packages\AForge.2.2.5\AForge.2.2.5.nupkg" />
+    <None Include="Scale\Inuka\packages\AForge.Imaging.2.2.5\AForge.Imaging.2.2.5.nupkg" />
+    <None Include="Scale\Inuka\packages\AForge.Math.2.2.5\AForge.Math.2.2.5.nupkg" />
+    <None Include="Scale\Inuka\packages\AForge.Video.2.2.5\AForge.Video.2.2.5.nupkg" />
+    <None Include="Scale\Inuka\packages\DocumentFormat.OpenXml.2.5\DocumentFormat.OpenXml.2.5.nupkg" />
+    <None Include="Scale\Inuka\packages\dois.report.1.4.0.125\dois.report.1.4.0.125.nupkg" />
+    <None Include="Scale\Inuka\packages\EntityFramework.5.0.0\Content\App.config.transform" />
+    <None Include="Scale\Inuka\packages\EntityFramework.5.0.0\Content\Web.config.transform" />
+    <None Include="Scale\Inuka\packages\EntityFramework.5.0.0\EntityFramework.5.0.0.nupkg" />
+    <None Include="Scale\Inuka\packages\EntityFramework.5.0.0\tools\EntityFramework.PS3.psd1" />
+    <None Include="Scale\Inuka\packages\EntityFramework.5.0.0\tools\EntityFramework.psd1" />
+    <None Include="Scale\Inuka\packages\EntityFramework.5.0.0\tools\EntityFramework.psm1" />
+    <None Include="Scale\Inuka\packages\EntityFramework.5.0.0\tools\init.ps1" />
+    <None Include="Scale\Inuka\packages\EntityFramework.5.0.0\tools\install.ps1" />
+    <None Include="Scale\Inuka\packages\EntityFramework.5.0.0\tools\Redirect.config" />
+    <None Include="Scale\Inuka\packages\EntityFramework.5.0.0\tools\Redirect.VS11.config" />
+    <None Include="Scale\Inuka\packages\EntityFramework.6.1.3\Content\App.config.transform" />
+    <None Include="Scale\Inuka\packages\EntityFramework.6.1.3\Content\Web.config.transform" />
+    <None Include="Scale\Inuka\packages\EntityFramework.6.1.3\EntityFramework.6.1.3.nupkg" />
+    <None Include="Scale\Inuka\packages\EntityFramework.6.1.3\tools\EntityFramework.psd1" />
+    <None Include="Scale\Inuka\packages\EntityFramework.6.1.3\tools\EntityFramework.psm1" />
+    <None Include="Scale\Inuka\packages\EntityFramework.6.1.3\tools\init.ps1" />
+    <None Include="Scale\Inuka\packages\EntityFramework.6.1.3\tools\install.ps1" />
+    <None Include="Scale\Inuka\packages\eXpandDashboard.16.1.7.5\eXpandDashboard.16.1.7.5.nupkg" />
+    <None Include="Scale\Inuka\packages\eXpandLib.16.1.7.5\eXpandLib.16.1.7.5.nupkg" />
+    <None Include="Scale\Inuka\packages\eXpandReports.16.1.7.5\eXpandReports.16.1.7.5.nupkg" />
+    <None Include="Scale\Inuka\packages\eXpandSecurity.16.1.7.5\eXpandSecurity.16.1.7.5.nupkg" />
+    <None Include="Scale\Inuka\packages\fasterflect.2.1.3\fasterflect.2.1.3.nupkg" />
+    <None Include="Scale\Inuka\packages\iTextSharp.5.4.5\iTextSharp.5.4.5.nupkg" />
+    <None Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\Microsoft.ReportViewer.2015.12.0.2.2402.nupkg" />
+    <None Include="Scale\Inuka\packages\repositories.config" />
+    <None Include="Scale\Inuka\Weigh.v12.suo" />
+    <None Include="Scale\Inuka\Weigh\App.Config" />
+    <None Include="Scale\Inuka\Weigh\bin\Debug\Weigh.exe.config" />
+    <None Include="Scale\Inuka\Weigh\bin\Debug\Weigh.vshost.exe.config" />
+    <None Include="Scale\Inuka\Weigh\bin\Debug\Weigh.vshost.exe.manifest" />
+    <EntityDeploy Include="Scale\Inuka\Weigh\Data.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Data1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Scale\Inuka\Weigh\Data.edmx.diagram">
+      <DependentUpon>Data.edmx</DependentUpon>
+    </None>
+    <None Include="Scale\Inuka\Weigh\obj\Debug\build.force" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\CoreCompileInputs.cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\Demo.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\Demo.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\edmxResourcesToEmbed\Data.csdl" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\edmxResourcesToEmbed\Data.msl" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\edmxResourcesToEmbed\Data.ssdl" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\Gaku.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\Gaku.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\Gakuyu.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\Gakuyu.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\RdlCompile.cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\RdlCompile.compiled" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\Weigh.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Debug\Weigh.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Release\build.force" />
+    <None Include="Scale\Inuka\Weigh\obj\Release\CoreCompileInputs.cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Inuka\Weigh\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Inuka\Weigh\packages.config" />
+    <None Include="Scale\Inuka\Weigh\Properties\DataSources\AutoweighEntities.datasource" />
+    <None Include="Scale\Inuka\Weigh\Properties\DataSources\Daily_Collections_Detail.datasource" />
+    <None Include="Scale\Inuka\Weigh\Properties\DataSources\Farmer.datasource" />
+    <None Include="Scale\Inuka\Weigh\Properties\DataSources\Setting.datasource" />
+    <None Include="Scale\Inuka\Weigh\Properties\Settings.settings" />
+    <None Include="Scale\Inuka\Weigh\Web References\server\Collect.wsdl" />
+    <None Include="Scale\Inuka\Weigh\Web References\server\Collection.datasource" />
+    <None Include="Scale\Inuka\Weigh\Web References\server\Reference.map" />
+    <None Include="Scale\Inuka\Weigh\Web References\server\Routes.datasource" />
+    <None Include="Scale\Inuka\Weigh\Web References\server\Vendor.datasource" />
+    <None Include="Scale\Iria-ini\App.config" />
+    <None Include="Scale\Iria-ini\bin\Debug\Test.vshost.exe.config" />
+    <None Include="Scale\Iria-ini\bin\Debug\Test.vshost.exe.manifest" />
+    <None Include="Scale\Iria-ini\bin\Debug\Weigh.vshost.exe.config" />
+    <None Include="Scale\Iria-ini\obj\Debug\build.force" />
+    <None Include="Scale\Iria-ini\obj\Debug\CoreCompileInputs.cache" />
+    <None Include="Scale\Iria-ini\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Iria-ini\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Iria-ini\obj\Debug\Iria-ini.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Iria-ini\obj\Debug\Iria-ini.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Iria-ini\obj\Debug\Kirurumwe.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Iria-ini\obj\Debug\Kirurumwe.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Iria-ini\obj\Debug\Rwama 1.1.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Iria-ini\obj\Debug\Rwama 1.1.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Iria-ini\obj\Debug\Test.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Iria-ini\obj\Debug\Test.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Iria-ini\obj\Release\build.force" />
+    <None Include="Scale\Iria-ini\obj\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Iria-ini\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Iria-ini\packages.config" />
+    <None Include="Scale\Iria-ini\Properties\Settings.settings" />
+    <None Include="Scale\Iria-ini\Web References\Server\Collect.wsdl" />
+    <None Include="Scale\Iria-ini\Web References\Server\Collection1.datasource" />
+    <None Include="Scale\Iria-ini\Web References\Server\Items1.datasource" />
+    <None Include="Scale\Iria-ini\Web References\Server\Reference.map" />
+    <None Include="Scale\Iria-ini\Web References\Server\Stores1.datasource" />
+    <None Include="Scale\Iria-ini\Web References\Server\Vendor1.datasource" />
+    <None Include="Scale\Kaganda\App.config" />
+    <None Include="Scale\Kaganda\bin\Debug\Test.vshost.exe.config" />
+    <None Include="Scale\Kaganda\bin\Debug\Test.vshost.exe.manifest" />
+    <None Include="Scale\Kaganda\bin\Debug\Weigh.vshost.exe.config" />
+    <None Include="Scale\Kaganda\bin\Debug\Weigh.vshost.exe.manifest" />
+    <None Include="Scale\Kaganda\obj\Debug\build.force" />
+    <None Include="Scale\Kaganda\obj\Debug\CoreCompileInputs.cache" />
+    <None Include="Scale\Kaganda\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Kaganda\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kaganda\obj\Debug\Kaganda.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kaganda\obj\Debug\Kaganda.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kaganda\obj\Debug\Kiama 1.1.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kaganda\obj\Debug\Kiama 1.1.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kaganda\obj\Debug\Kibugu.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kaganda\obj\Debug\Kibugu.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kaganda\obj\Debug\Kirurumwe.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kaganda\obj\Debug\Kirurumwe.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kaganda\obj\Debug\Rwama 1.1.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kaganda\obj\Debug\Rwama 1.1.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kaganda\obj\Debug\Test.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kaganda\obj\Debug\Test.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kaganda\obj\Release\build.force" />
+    <None Include="Scale\Kaganda\obj\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Kaganda\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kaganda\packages.config" />
+    <None Include="Scale\Kaganda\Properties\Settings.settings" />
+    <None Include="Scale\Kaganda\Web References\Server\Collect.wsdl" />
+    <None Include="Scale\Kaganda\Web References\Server\Collection1.datasource" />
+    <None Include="Scale\Kaganda\Web References\Server\Items1.datasource" />
+    <None Include="Scale\Kaganda\Web References\Server\Reference.map" />
+    <None Include="Scale\Kaganda\Web References\Server\Stores1.datasource" />
+    <None Include="Scale\Kaganda\Web References\Server\Vendor1.datasource" />
+    <None Include="Scale\Kariua\App.config" />
+    <None Include="Scale\Kariua\bin\Debug\Coffee.dll.config" />
+    <None Include="Scale\Kariua\bin\Debug\Test.vshost.exe.config" />
+    <None Include="Scale\Kariua\bin\Debug\Test.vshost.exe.manifest" />
+    <None Include="Scale\Kariua\bin\Debug\Weigh.exe.config" />
+    <None Include="Scale\Kariua\bin\Debug\Weigh.vshost.exe.config" />
+    <None Include="Scale\Kariua\bin\Debug\Weigh.vshost.exe.manifest" />
+    <None Include="Scale\Kariua\obj\Debug\build.force" />
+    <None Include="Scale\Kariua\obj\Debug\CoreCompileInputs.cache" />
+    <None Include="Scale\Kariua\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Kariua\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kariua\obj\Debug\Kariua.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kariua\obj\Debug\Kariua.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kariua\obj\Debug\Kirimiri.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kariua\obj\Debug\Kirimiri.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kariua\obj\Debug\Test.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kariua\obj\Debug\Test.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kariua\obj\Release\build.force" />
+    <None Include="Scale\Kariua\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kariua\packages.config" />
+    <None Include="Scale\Kariua\Properties\licenses.licx.bak" />
+    <None Include="Scale\Kariua\Properties\Settings.settings" />
+    <None Include="Scale\Kariua\Test.csproj.bak" />
+    <None Include="Scale\Kariua\Web References\Server\Collect.wsdl" />
+    <None Include="Scale\Kariua\Web References\Server\Collection1.datasource" />
+    <None Include="Scale\Kariua\Web References\Server\Items1.datasource" />
+    <None Include="Scale\Kariua\Web References\Server\Reference.map" />
+    <None Include="Scale\Kariua\Web References\Server\Stores1.datasource" />
+    <None Include="Scale\Kariua\Web References\Server\Vendor1.datasource" />
+    <None Include="Scale\Kiama 1.1\App.config" />
+    <None Include="Scale\Kiama 1.1\bin\Debug\Test.vshost.exe.config" />
+    <None Include="Scale\Kiama 1.1\bin\Debug\Test.vshost.exe.manifest" />
+    <None Include="Scale\Kiama 1.1\bin\Debug\Weigh.exe.config" />
+    <None Include="Scale\Kiama 1.1\bin\Debug\Weigh.vshost.exe.config" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\build.force" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\CoreCompileInputs.cache" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\Kiama 1.1.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\Kiama 1.1.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\Kibugu.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\Kibugu.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\Kirurumwe.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\Kirurumwe.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\Rwama 1.1.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\Rwama 1.1.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\Test.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiama 1.1\obj\Debug\Test.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiama 1.1\obj\Release\build.force" />
+    <None Include="Scale\Kiama 1.1\obj\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Kiama 1.1\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kiama 1.1\packages.config" />
+    <None Include="Scale\Kiama 1.1\Properties\Settings.settings" />
+    <None Include="Scale\Kiama 1.1\Web References\Server\Collect.wsdl" />
+    <None Include="Scale\Kiama 1.1\Web References\Server\Collection1.datasource" />
+    <None Include="Scale\Kiama 1.1\Web References\Server\Items1.datasource" />
+    <None Include="Scale\Kiama 1.1\Web References\Server\Reference.map" />
+    <None Include="Scale\Kiama 1.1\Web References\Server\Stores1.datasource" />
+    <None Include="Scale\Kiama 1.1\Web References\Server\Vendor1.datasource" />
+    <None Include="Scale\Kiangangwa\App.config" />
+    <None Include="Scale\Kiangangwa\bin\Debug\Test.vshost.exe.config" />
+    <None Include="Scale\Kiangangwa\bin\Debug\Test.vshost.exe.manifest" />
+    <None Include="Scale\Kiangangwa\bin\Debug\Weigh.exe.config" />
+    <None Include="Scale\Kiangangwa\bin\Debug\Weigh.vshost.exe.config" />
+    <None Include="Scale\Kiangangwa\bin\Debug\Weigh.vshost.exe.manifest" />
+    <None Include="Scale\Kiangangwa\obj\Debug\build.force" />
+    <None Include="Scale\Kiangangwa\obj\Debug\CoreCompileInputs.cache" />
+    <None Include="Scale\Kiangangwa\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Kiangangwa\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kiangangwa\obj\Debug\Kiangagwa.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiangangwa\obj\Debug\Kiangagwa.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiangangwa\obj\Debug\Kirurumwe.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiangangwa\obj\Debug\Kirurumwe.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiangangwa\obj\Debug\Rwama 1.1.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiangangwa\obj\Debug\Rwama 1.1.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiangangwa\obj\Debug\Test.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiangangwa\obj\Debug\Test.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiangangwa\obj\Debug\Thuita.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiangangwa\obj\Debug\Thuita.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiangangwa\obj\Release\build.force" />
+    <None Include="Scale\Kiangangwa\obj\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Kiangangwa\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kiangangwa\packages.config" />
+    <None Include="Scale\Kiangangwa\Properties\Settings.settings" />
+    <None Include="Scale\Kiangangwa\Web References\Server\Collect.wsdl" />
+    <None Include="Scale\Kiangangwa\Web References\Server\Collection1.datasource" />
+    <None Include="Scale\Kiangangwa\Web References\Server\Items1.datasource" />
+    <None Include="Scale\Kiangangwa\Web References\Server\Reference.map" />
+    <None Include="Scale\Kiangangwa\Web References\Server\Stores1.datasource" />
+    <None Include="Scale\Kiangangwa\Web References\Server\Vendor1.datasource" />
+    <None Include="Scale\Kibugu\App.config" />
+    <None Include="Scale\Kibugu\bin\Debug\Test.vshost.exe.config" />
+    <None Include="Scale\Kibugu\bin\Debug\Test.vshost.exe.manifest" />
+    <None Include="Scale\Kibugu\bin\Debug\Weigh.exe.config" />
+    <None Include="Scale\Kibugu\bin\Debug\Weigh.vshost.exe.config" />
+    <None Include="Scale\Kibugu\obj\Debug\build.force" />
+    <None Include="Scale\Kibugu\obj\Debug\CoreCompileInputs.cache" />
+    <None Include="Scale\Kibugu\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Kibugu\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kibugu\obj\Debug\Kibugu.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kibugu\obj\Debug\Kibugu.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kibugu\obj\Debug\Kirurumwe.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kibugu\obj\Debug\Kirurumwe.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kibugu\obj\Debug\Rwama 1.1.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kibugu\obj\Debug\Rwama 1.1.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kibugu\obj\Debug\Test.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kibugu\obj\Debug\Test.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kibugu\obj\Release\build.force" />
+    <None Include="Scale\Kibugu\obj\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Kibugu\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kibugu\packages.config" />
+    <None Include="Scale\Kibugu\Properties\Settings.settings" />
+    <None Include="Scale\Kibugu\Web References\Server\Collect.wsdl" />
+    <None Include="Scale\Kibugu\Web References\Server\Collection1.datasource" />
+    <None Include="Scale\Kibugu\Web References\Server\Items1.datasource" />
+    <None Include="Scale\Kibugu\Web References\Server\Reference.map" />
+    <None Include="Scale\Kibugu\Web References\Server\Stores1.datasource" />
+    <None Include="Scale\Kibugu\Web References\Server\Vendor1.datasource" />
+    <None Include="Scale\Kirimiri\App.config" />
+    <None Include="Scale\Kirimiri\bin\Debug\Coffee.dll.config" />
+    <None Include="Scale\Kirimiri\bin\Debug\DevExpress.CodeParser.v17.2.zip" />
+    <None Include="Scale\Kirimiri\bin\Debug\Test.vshost.exe.config" />
+    <None Include="Scale\Kirimiri\bin\Debug\Test.vshost.exe.manifest" />
+    <None Include="Scale\Kirimiri\bin\Debug\Weigh.exe.config" />
+    <None Include="Scale\Kirimiri\bin\Debug\Weigh.vshost.exe.config" />
+    <None Include="Scale\Kirimiri\obj\Debug\build.force" />
+    <None Include="Scale\Kirimiri\obj\Debug\CoreCompileInputs.cache" />
+    <None Include="Scale\Kirimiri\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Kirimiri\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kirimiri\obj\Debug\Kirimiri.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kirimiri\obj\Debug\Kirimiri.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kirimiri\obj\Debug\Kirimiri1.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kirimiri\obj\Debug\Kirimiri1.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kirimiri\obj\Debug\Test.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kirimiri\obj\Debug\Test.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kirimiri\obj\Release\build.force" />
+    <None Include="Scale\Kirimiri\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kirimiri\packages.config" />
+    <None Include="Scale\Kirimiri\Properties\licenses.licx.bak" />
+    <None Include="Scale\Kirimiri\Properties\Settings.settings" />
+    <None Include="Scale\Kirimiri\Test.csproj.bak" />
+    <None Include="Scale\Kirimiri\Web References\Server\Collect.wsdl" />
+    <None Include="Scale\Kirimiri\Web References\Server\Collection1.datasource" />
+    <None Include="Scale\Kirimiri\Web References\Server\Items1.datasource" />
+    <None Include="Scale\Kirimiri\Web References\Server\Reference.map" />
+    <None Include="Scale\Kirimiri\Web References\Server\Stores1.datasource" />
+    <None Include="Scale\Kirimiri\Web References\Server\Vendor1.datasource" />
+    <None Include="Scale\Kiriti\App.config" />
+    <None Include="Scale\Kiriti\bin\Debug\Test.vshost.exe.config" />
+    <None Include="Scale\Kiriti\bin\Debug\Test.vshost.exe.manifest" />
+    <None Include="Scale\Kiriti\bin\Debug\Weigh.vshost.exe.config" />
+    <None Include="Scale\Kiriti\bin\Debug\Weigh.vshost.exe.manifest" />
+    <None Include="Scale\Kiriti\obj\Debug\build.force" />
+    <None Include="Scale\Kiriti\obj\Debug\CoreCompileInputs.cache" />
+    <None Include="Scale\Kiriti\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Kiriti\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kiriti\obj\Debug\Kiriti.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiriti\obj\Debug\Kiriti.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiriti\obj\Debug\Kirurumwe.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiriti\obj\Debug\Kirurumwe.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiriti\obj\Debug\Rwama 1.1.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiriti\obj\Debug\Rwama 1.1.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiriti\obj\Debug\Test.csproj.GenerateResource.Cache" />
+    <None Include="Scale\Kiriti\obj\Debug\Test.csprojResolveAssemblyReference.cache" />
+    <None Include="Scale\Kiriti\obj\Release\build.force" />
+    <None Include="Scale\Kiriti\obj\Release\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Scale\Kiriti\obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Scale\Kiriti\packages.config" />
+    <None Include="Scale\Kiriti\Properties\Settings.settings" />
+    <None Include="Scale\Kiriti\Web References\Server\Collect.wsdl" />
+    <None Include="Scale\Kiriti\Web References\Server\Collection1.datasource" />
+    <None Include="Scale\Kiriti\Web References\Server\Items1.datasource" />
+    <None Include="Scale\Kiriti\Web References\Server\Reference.map" />
+    <None Include="Scale\Kiriti\Web References\Server\Stores1.datasource" />
+    <None Include="Scale\Kiriti\Web References\Server\Vendor1.datasource" />
+    <None Include="Scale\Kirurumwe\App.config" />
+    <None Include="Web References\Server\Collect.wsdl" />
+    <None Include="Web References\Server\Collection1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Server\Items1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Server\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Server\Stores1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Server\Vendor1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mobile\S-Mobile\Logging\Logging.csproj">
+      <Project>{1c78e6b7-870d-41d4-8234-fb43fe8b16b9}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Coffee\Coffee.csproj">
+      <Project>{da73aae7-b1e2-4cfc-af44-532340c7e34e}</Project>
+      <Name>Coffee</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:4000/Collect.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Server\</RelPath>
+      <UpdateFromURL>http://localhost:4000/Collect.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Test_Server_Collect</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web References\Server\Collect.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="files\logo.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\rugi.bmp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="scales.ico" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\Coffee.dll" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\Coffee.pdb" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\EntityFramework.dll" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\EntityFramework.xml" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\files\logo.bmp" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\files\rugi.bmp" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\Logging.dll" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\Logging.pdb" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\PData.dll" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\PData.pdb" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\Script.sql" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\Settings.txt" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\settings.xml" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\Weigh.exe" />
+    <Content Include="Scale\Gatukuyu\bin\Debug\Weigh.pdb" />
+    <Content Include="Scale\Gatukuyu\files\logo.bmp" />
+    <Content Include="Scale\Gatukuyu\files\rugi.bmp" />
+    <Content Include="Scale\Gatukuyu\Gatukuyu.csproj" />
+    <Content Include="Scale\Gatukuyu\obj\Debug\Gatukuyu.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Gatukuyu\obj\Debug\Kiangagwa.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Gatukuyu\obj\Debug\Kirimiri.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Gatukuyu\obj\Debug\Kirurumwe.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Gatukuyu\obj\Debug\Rwama 1.1.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Gatukuyu\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Gatukuyu\obj\Debug\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Gatukuyu\obj\Debug\Test.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Gatukuyu\obj\Debug\Thuita.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Gatukuyu\obj\Debug\Weigh.exe" />
+    <Content Include="Scale\Gatukuyu\obj\Debug\weigh.exe.licenses" />
+    <Content Include="Scale\Gatukuyu\obj\Debug\Weigh.pdb" />
+    <Content Include="Scale\Gatukuyu\obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Gatukuyu\obj\Release\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Gatukuyu\scales.ico" />
+    <Content Include="Scale\Gatukuyu\settings.xml" />
+    <Content Include="Scale\Gatukuyu\Web References\Server\Collect.disco" />
+    <Content Include="Scale\Inuka\packages\AForge.2.2.5\lib\AForge.dll" />
+    <Content Include="Scale\Inuka\packages\AForge.2.2.5\lib\AForge.xml" />
+    <Content Include="Scale\Inuka\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.dll" />
+    <Content Include="Scale\Inuka\packages\AForge.Imaging.2.2.5\lib\AForge.Imaging.xml" />
+    <Content Include="Scale\Inuka\packages\AForge.Math.2.2.5\lib\AForge.Math.dll" />
+    <Content Include="Scale\Inuka\packages\AForge.Math.2.2.5\lib\AForge.Math.xml" />
+    <Content Include="Scale\Inuka\packages\AForge.Video.2.2.5\lib\AForge.Video.dll" />
+    <Content Include="Scale\Inuka\packages\AForge.Video.2.2.5\lib\AForge.Video.xml" />
+    <Content Include="Scale\Inuka\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll" />
+    <Content Include="Scale\Inuka\packages\dois.report.1.4.0.125\lib\net40\Report.Base.dll" />
+    <Content Include="Scale\Inuka\packages\dois.report.1.4.0.125\lib\net40\Report.dll" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.xml" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.xml" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.5.0.0\tools\about_EntityFramework.help.txt" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.5.0.0\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.5.0.0\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.5.0.0\tools\migrate.exe" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.dll" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.dll" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.SqlServer.xml" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.6.1.3\lib\net40\EntityFramework.xml" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.xml" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.xml" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.6.1.3\tools\about_EntityFramework.help.txt" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.6.1.3\tools\EntityFramework.PowerShell.dll" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.6.1.3\tools\EntityFramework.PowerShell.Utility.dll" />
+    <Content Include="Scale\Inuka\packages\EntityFramework.6.1.3\tools\migrate.exe" />
+    <Content Include="Scale\Inuka\packages\eXpandDashboard.16.1.7.5\lib\net40\Xpand.ExpressApp.Dashboard.dll" />
+    <Content Include="Scale\Inuka\packages\eXpandDashboard.16.1.7.5\lib\net40\Xpand.ExpressApp.Dashboard.pdb" />
+    <Content Include="Scale\Inuka\packages\eXpandLib.16.1.7.5\lib\net40\Xpand.Persistent.Base.dll" />
+    <Content Include="Scale\Inuka\packages\eXpandLib.16.1.7.5\lib\net40\Xpand.Persistent.Base.pdb" />
+    <Content Include="Scale\Inuka\packages\eXpandLib.16.1.7.5\lib\net40\Xpand.Persistent.BaseImpl.dll" />
+    <Content Include="Scale\Inuka\packages\eXpandLib.16.1.7.5\lib\net40\Xpand.Persistent.BaseImpl.pdb" />
+    <Content Include="Scale\Inuka\packages\eXpandLib.16.1.7.5\lib\net40\Xpand.Utils.dll" />
+    <Content Include="Scale\Inuka\packages\eXpandLib.16.1.7.5\lib\net40\Xpand.Utils.pdb" />
+    <Content Include="Scale\Inuka\packages\eXpandLib.16.1.7.5\lib\net40\Xpand.Xpo.dll" />
+    <Content Include="Scale\Inuka\packages\eXpandLib.16.1.7.5\lib\net40\Xpand.Xpo.pdb" />
+    <Content Include="Scale\Inuka\packages\eXpandReports.16.1.7.5\lib\net40\Xpand.ExpressApp.Reports.dll" />
+    <Content Include="Scale\Inuka\packages\eXpandReports.16.1.7.5\lib\net40\Xpand.ExpressApp.Reports.pdb" />
+    <Content Include="Scale\Inuka\packages\eXpandSecurity.16.1.7.5\lib\net40\Xpand.ExpressApp.Security.dll" />
+    <Content Include="Scale\Inuka\packages\eXpandSecurity.16.1.7.5\lib\net40\Xpand.ExpressApp.Security.pdb" />
+    <Content Include="Scale\Inuka\packages\fasterflect.2.1.3\lib\net35\Fasterflect.dll" />
+    <Content Include="Scale\Inuka\packages\fasterflect.2.1.3\lib\net35\Fasterflect.XML" />
+    <Content Include="Scale\Inuka\packages\fasterflect.2.1.3\lib\net40\Fasterflect.dll" />
+    <Content Include="Scale\Inuka\packages\fasterflect.2.1.3\lib\net40\Fasterflect.XML" />
+    <Content Include="Scale\Inuka\packages\iTextSharp.5.4.5\AGPL.txt" />
+    <Content Include="Scale\Inuka\packages\iTextSharp.5.4.5\lib\itextsharp.dll" />
+    <Content Include="Scale\Inuka\packages\iTextSharp.5.4.5\lib\iTextSharp.xml" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\de\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\de\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\de\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\de\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\de\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\de\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\es\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\es\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\es\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\es\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\es\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\es\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\fr\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\fr\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\fr\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\fr\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\fr\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\fr\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\it\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\it\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\it\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\it\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\it\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\it\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ja\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ja\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ja\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ja\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ja\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ja\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ko\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ko\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ko\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ko\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ko\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ko\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\Microsoft.ReportViewer.DataVisualization.DLL" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\Microsoft.ReportViewer.Design.DLL" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.DLL" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\Microsoft.ReportViewer.WebDesign.DLL" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\Microsoft.ReportViewer.WebForms.DLL" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\Microsoft.ReportViewer.WinForms.DLL" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\pt\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\pt\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\pt\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\pt\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\pt\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\pt\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ru\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ru\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ru\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ru\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ru\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\ru\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\zh-CHS\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\zh-CHS\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\zh-CHT\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\zh-CHT\Microsoft.ReportViewer.Design.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\packages\Microsoft.ReportViewer.2015.12.0.2.2402\lib\net40\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh.sln" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\de\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\DocumentFormat.OpenXml.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\EntityFramework.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\EntityFramework.xml" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\es\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\files\logo.bmp" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\fr\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\it\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\ja\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\ko\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\Logging.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\Logging.pdb" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\Microsoft.ReportViewer.DataVisualization.DLL" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\Microsoft.ReportViewer.WebForms.DLL" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\Microsoft.ReportViewer.WinForms.DLL" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\pt\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\Report.Base.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\Report.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\ru\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\System.Drawing.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\Weigh.exe" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\Weigh.pdb" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\Weigh.vshost.exe" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll" />
+    <Content Include="Scale\Inuka\Weigh\Data.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Data.Context1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scale\Inuka\Weigh\Data.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Data1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scale\Inuka\Weigh\Demo.csproj" />
+    <Content Include="Scale\Inuka\Weigh\Demo.csproj.user" />
+    <Content Include="Scale\Inuka\Weigh\files\logo.bmp" />
+    <Content Include="Scale\Inuka\Weigh\obj\Debug\Demo.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Inuka\Weigh\obj\Debug\Gaku.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Inuka\Weigh\obj\Debug\Gakuyu.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Inuka\Weigh\obj\Debug\TempPE\Data.Context.cs.dll" />
+    <Content Include="Scale\Inuka\Weigh\obj\Debug\TempPE\Data.cs.dll" />
+    <Content Include="Scale\Inuka\Weigh\obj\Debug\TempPE\Data.Designer.cs.dll" />
+    <Content Include="Scale\Inuka\Weigh\obj\Debug\TempPE\PrintRibbonControllerResources.Designer.cs.dll" />
+    <Content Include="Scale\Inuka\Weigh\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Inuka\Weigh\obj\Debug\TempPE\Web References.server.Reference.cs.dll" />
+    <Content Include="Scale\Inuka\Weigh\obj\Debug\Weigh.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Inuka\Weigh\obj\Debug\Weigh.exe" />
+    <Content Include="Scale\Inuka\Weigh\obj\Debug\Weigh.pdb" />
+    <Content Include="Scale\Inuka\Weigh\obj\Release\TempPE\Data.Context.cs.dll" />
+    <Content Include="Scale\Inuka\Weigh\obj\Release\TempPE\Data.cs.dll" />
+    <Content Include="Scale\Inuka\Weigh\obj\Release\TempPE\Data.Designer.cs.dll" />
+    <Content Include="Scale\Inuka\Weigh\obj\Release\TempPE\PrintRibbonControllerResources.Designer.cs.dll" />
+    <Content Include="Scale\Inuka\Weigh\obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Inuka\Weigh\obj\Release\TempPE\Web References.server.Reference.cs.dll" />
+    <Content Include="Scale\Inuka\Weigh\Resources\erase.png" />
+    <Content Include="Scale\Inuka\Weigh\scales.ico" />
+    <Content Include="Scale\Inuka\Weigh\scales.png" />
+    <Content Include="Scale\Inuka\Weigh\Web References\server\Collect.disco" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Charts.v15.2.Core.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Data.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.DataAccess.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.DataAccess.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.ExpressApp.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.ExpressApp.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.ExpressApp.Win.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.ExpressApp.Win.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.PivotGrid.v15.2.Core.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.PivotGrid.v15.2.Core.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Printing.v15.2.Core.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Printing.v15.2.Core.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Utils.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Xpo.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.Xpo.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraBars.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraCharts.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraCharts.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraEditors.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraGauges.v15.2.Core.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraGauges.v15.2.Core.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraGrid.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraLayout.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraNavBar.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraNavBar.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraPrinting.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraReports.v15.2.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\DevExpress.XtraReports.v15.2.xml" />
+    <Content Include="Scale\Iria-ini\bin\Debug\EntityFramework.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Scale\Iria-ini\bin\Debug\Weigh.vshost.exe" />
+    <Content Include="Scale\Iria-ini\files\logo.bmp" />
+    <Content Include="Scale\Iria-ini\files\rugi.bmp" />
+    <Content Include="Scale\Iria-ini\Iria-ini.csproj" />
+    <Content Include="Scale\Iria-ini\obj\Debug\Iria-ini.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Iria-ini\obj\Debug\Kirurumwe.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Iria-ini\obj\Debug\Rwama 1.1.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Iria-ini\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Iria-ini\obj\Debug\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Iria-ini\obj\Debug\Test.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Iria-ini\obj\Debug\weigh.exe.licenses" />
+    <Content Include="Scale\Iria-ini\obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Iria-ini\obj\Release\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Iria-ini\scales.ico" />
+    <Content Include="Scale\Iria-ini\Web References\Server\Collect.disco" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Charts.v15.2.Core.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Data.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.DataAccess.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.DataAccess.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.ExpressApp.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.ExpressApp.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.ExpressApp.Win.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.ExpressApp.Win.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.PivotGrid.v15.2.Core.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.PivotGrid.v15.2.Core.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Printing.v15.2.Core.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Printing.v15.2.Core.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Utils.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Xpo.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.Xpo.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraBars.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraCharts.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraCharts.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraEditors.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraGauges.v15.2.Core.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraGauges.v15.2.Core.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraGrid.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraLayout.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraNavBar.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraNavBar.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraPrinting.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraReports.v15.2.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\DevExpress.XtraReports.v15.2.xml" />
+    <Content Include="Scale\Kaganda\bin\Debug\EntityFramework.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Scale\Kaganda\bin\Debug\Weigh.vshost.exe" />
+    <Content Include="Scale\Kaganda\files\logo.bmp" />
+    <Content Include="Scale\Kaganda\files\rugi.bmp" />
+    <Content Include="Scale\Kaganda\Kaganda.csproj" />
+    <Content Include="Scale\Kaganda\obj\Debug\Kaganda.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kaganda\obj\Debug\Kiama 1.1.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kaganda\obj\Debug\Kibugu.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kaganda\obj\Debug\Kirurumwe.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kaganda\obj\Debug\Rwama 1.1.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kaganda\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kaganda\obj\Debug\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kaganda\obj\Debug\Test.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kaganda\obj\Debug\weigh.exe.licenses" />
+    <Content Include="Scale\Kaganda\obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kaganda\obj\Release\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kaganda\scales.ico" />
+    <Content Include="Scale\Kaganda\settings.xml" />
+    <Content Include="Scale\Kaganda\Web References\Server\Collect.disco" />
+    <Content Include="Scale\Kariua\bin\Debug\Coffee.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\Coffee.pdb" />
+    <Content Include="Scale\Kariua\bin\Debug\Collection.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\Collection.pdb" />
+    <Content Include="Scale\Kariua\bin\Debug\Collection.XmlSerializers.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Charts.v17.2.Core.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.CodeParser.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Data.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Data.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.DataAccess.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.DataAccess.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.ExpressApp.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.ExpressApp.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.ExpressApp.Win.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.ExpressApp.Win.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Images.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Office.v17.2.Core.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Office.v17.2.Core.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.PivotGrid.v17.2.Core.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.PivotGrid.v17.2.Core.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Printing.v17.2.Core.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Printing.v17.2.Core.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.RichEdit.v17.2.Core.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.RichEdit.v17.2.Core.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.RichEdit.v17.2.Export.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Sparkline.v17.2.Core.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Sparkline.v17.2.Core.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Utils.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Utils.v17.2.UI.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Utils.v17.2.UI.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Utils.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Xpo.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.Xpo.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraBars.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraBars.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraCharts.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraCharts.v17.2.Wizard.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraCharts.v17.2.Wizard.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraCharts.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraEditors.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraEditors.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraGauges.v17.2.Core.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraGauges.v17.2.Core.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraGrid.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraGrid.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraLayout.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraLayout.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraNavBar.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraNavBar.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraPrinting.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraPrinting.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraReports.v17.2.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraReports.v17.2.Extensions.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraReports.v17.2.Extensions.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\DevExpress.XtraReports.v17.2.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.ExpressApp.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.ExpressApp.Win.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\de\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\EntityFramework.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\EntityFramework.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.ExpressApp.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.ExpressApp.Win.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\es\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\files\logo.bmp" />
+    <Content Include="Scale\Kariua\bin\Debug\files\rugi.bmp" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.ExpressApp.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.ExpressApp.Win.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ja\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\Logging.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\Logging.pdb" />
+    <Content Include="Scale\Kariua\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\Microsoft.SqlServer.Smo.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\PData.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\PData.pdb" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.ExpressApp.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.ExpressApp.Win.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\ru\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="Scale\Kariua\bin\Debug\Script.sql" />
+    <Content Include="Scale\Kariua\bin\Debug\Settings.txt" />
+    <Content Include="Scale\Kariua\bin\Debug\settings.xml" />
+    <Content Include="Scale\Kariua\bin\Debug\Weigh.exe" />
+    <Content Include="Scale\Kariua\bin\Debug\Weigh.pdb" />
+    <Content Include="Scale\Kariua\bin\Debug\Weigh.vshost.exe" />
+    <Content Include="Scale\Kariua\files\logo.bmp" />
+    <Content Include="Scale\Kariua\files\rugi.bmp" />
+    <Content Include="Scale\Kariua\Kariua.csproj" />
+    <Content Include="Scale\Kariua\Kariua.csproj.user" />
+    <Content Include="Scale\Kariua\obj\Debug\Kariua.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kariua\obj\Debug\Kirimiri.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kariua\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kariua\obj\Debug\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kariua\obj\Debug\Test.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kariua\obj\Debug\Weigh.exe" />
+    <Content Include="Scale\Kariua\obj\Debug\weigh.exe.licenses" />
+    <Content Include="Scale\Kariua\obj\Debug\Weigh.pdb" />
+    <Content Include="Scale\Kariua\obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kariua\obj\Release\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kariua\scales.ico" />
+    <Content Include="Scale\Kariua\settings.xml" />
+    <Content Include="Scale\Kariua\Web References\Server\Collect.disco" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\Coffee.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\Coffee.pdb" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.Charts.v15.2.Core.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.DataAccess.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.DataAccess.v15.2.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.ExpressApp.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.ExpressApp.v15.2.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.ExpressApp.Win.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.ExpressApp.Win.v15.2.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.PivotGrid.v15.2.Core.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.PivotGrid.v15.2.Core.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.Xpo.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.Xpo.v15.2.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraCharts.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraCharts.v15.2.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraGauges.v15.2.Core.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraGauges.v15.2.Core.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraGrid.v15.2.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraLayout.v15.2.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraNavBar.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraNavBar.v15.2.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraPrinting.v15.2.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraReports.v15.2.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\DevExpress.XtraReports.v15.2.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\EntityFramework.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\EntityFramework.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\files\logo.bmp" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\files\rugi.bmp" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\Logging.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\Logging.pdb" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\PData.dll" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\PData.pdb" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\Script.sql" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\Settings.txt" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\settings.xml" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\Weigh.exe" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\Weigh.pdb" />
+    <Content Include="Scale\Kiama 1.1\bin\Debug\Weigh.vshost.exe" />
+    <Content Include="Scale\Kiama 1.1\files\logo.bmp" />
+    <Content Include="Scale\Kiama 1.1\files\rugi.bmp" />
+    <Content Include="Scale\Kiama 1.1\Kiama 1.1.csproj" />
+    <Content Include="Scale\Kiama 1.1\obj\Debug\Kiama 1.1.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiama 1.1\obj\Debug\Kibugu.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiama 1.1\obj\Debug\Kirurumwe.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiama 1.1\obj\Debug\Rwama 1.1.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiama 1.1\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kiama 1.1\obj\Debug\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kiama 1.1\obj\Debug\Test.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiama 1.1\obj\Debug\Weigh.exe" />
+    <Content Include="Scale\Kiama 1.1\obj\Debug\weigh.exe.licenses" />
+    <Content Include="Scale\Kiama 1.1\obj\Debug\Weigh.pdb" />
+    <Content Include="Scale\Kiama 1.1\obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kiama 1.1\obj\Release\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kiama 1.1\scales.ico" />
+    <Content Include="Scale\Kiama 1.1\settings.xml" />
+    <Content Include="Scale\Kiama 1.1\Web References\Server\Collect.disco" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\Coffee.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\Coffee.pdb" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.Charts.v15.2.Core.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.DataAccess.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.DataAccess.v15.2.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.ExpressApp.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.ExpressApp.v15.2.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.ExpressApp.Win.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.ExpressApp.Win.v15.2.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.Images.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.PivotGrid.v15.2.Core.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.PivotGrid.v15.2.Core.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.Xpo.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.Xpo.v15.2.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraCharts.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraCharts.v15.2.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraGauges.v15.2.Core.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraGauges.v15.2.Core.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraGrid.v15.2.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraLayout.v15.2.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraNavBar.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraNavBar.v15.2.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraPrinting.v15.2.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraReports.v15.2.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\DevExpress.XtraReports.v15.2.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\EntityFramework.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\files\logo.bmp" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\files\rugi.bmp" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\Logging.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\Logging.pdb" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\PData.dll" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\PData.pdb" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\Script.sql" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\Settings.txt" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\settings.xml" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\Weigh.exe" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\Weigh.pdb" />
+    <Content Include="Scale\Kiangangwa\bin\Debug\Weigh.vshost.exe" />
+    <Content Include="Scale\Kiangangwa\files\logo.bmp" />
+    <Content Include="Scale\Kiangangwa\files\rugi.bmp" />
+    <Content Include="Scale\Kiangangwa\Kiangagwa.csproj" />
+    <Content Include="Scale\Kiangangwa\obj\Debug\Kiangagwa.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiangangwa\obj\Debug\Kirurumwe.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiangangwa\obj\Debug\Rwama 1.1.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiangangwa\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kiangangwa\obj\Debug\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kiangangwa\obj\Debug\Test.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiangangwa\obj\Debug\Thuita.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiangangwa\obj\Debug\Weigh.exe" />
+    <Content Include="Scale\Kiangangwa\obj\Debug\weigh.exe.licenses" />
+    <Content Include="Scale\Kiangangwa\obj\Debug\Weigh.pdb" />
+    <Content Include="Scale\Kiangangwa\obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kiangangwa\obj\Release\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kiangangwa\scales.ico" />
+    <Content Include="Scale\Kiangangwa\settings.xml" />
+    <Content Include="Scale\Kiangangwa\Web References\Server\Collect.disco" />
+    <Content Include="Scale\Kibugu\bin\Debug\Coffee.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\Coffee.pdb" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Charts.v15.2.Core.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Data.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.DataAccess.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.DataAccess.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.ExpressApp.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.ExpressApp.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.ExpressApp.Win.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.ExpressApp.Win.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.PivotGrid.v15.2.Core.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.PivotGrid.v15.2.Core.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Printing.v15.2.Core.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Printing.v15.2.Core.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Utils.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Xpo.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.Xpo.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraBars.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraCharts.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraCharts.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraEditors.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraGauges.v15.2.Core.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraGauges.v15.2.Core.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraGrid.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraLayout.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraNavBar.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraNavBar.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraPrinting.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraReports.v15.2.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\DevExpress.XtraReports.v15.2.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\EntityFramework.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\EntityFramework.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\files\logo.bmp" />
+    <Content Include="Scale\Kibugu\bin\Debug\files\rugi.bmp" />
+    <Content Include="Scale\Kibugu\bin\Debug\Logging.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\Logging.pdb" />
+    <Content Include="Scale\Kibugu\bin\Debug\PData.dll" />
+    <Content Include="Scale\Kibugu\bin\Debug\PData.pdb" />
+    <Content Include="Scale\Kibugu\bin\Debug\Script.sql" />
+    <Content Include="Scale\Kibugu\bin\Debug\Settings.txt" />
+    <Content Include="Scale\Kibugu\bin\Debug\settings.xml" />
+    <Content Include="Scale\Kibugu\bin\Debug\Weigh.exe" />
+    <Content Include="Scale\Kibugu\bin\Debug\Weigh.pdb" />
+    <Content Include="Scale\Kibugu\bin\Debug\Weigh.vshost.exe" />
+    <Content Include="Scale\Kibugu\files\logo.bmp" />
+    <Content Include="Scale\Kibugu\files\rugi.bmp" />
+    <Content Include="Scale\Kibugu\Kibugu.csproj" />
+    <Content Include="Scale\Kibugu\obj\Debug\Kibugu.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kibugu\obj\Debug\Kirurumwe.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kibugu\obj\Debug\Rwama 1.1.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kibugu\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kibugu\obj\Debug\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kibugu\obj\Debug\Test.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kibugu\obj\Debug\Weigh.exe" />
+    <Content Include="Scale\Kibugu\obj\Debug\Weigh.pdb" />
+    <Content Include="Scale\Kibugu\obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kibugu\obj\Release\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kibugu\scales.ico" />
+    <Content Include="Scale\Kibugu\settings.xml" />
+    <Content Include="Scale\Kibugu\Web References\Server\Collect.disco" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Coffee.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Coffee.pdb" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Collection.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Collection.pdb" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Collection.XmlSerializers.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Charts.v17.2.Core.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.CodeParser.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Data.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Data.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.DataAccess.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.DataAccess.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.ExpressApp.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.ExpressApp.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.ExpressApp.Win.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.ExpressApp.Win.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Images.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Office.v17.2.Core.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Office.v17.2.Core.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.PivotGrid.v17.2.Core.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.PivotGrid.v17.2.Core.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Printing.v17.2.Core.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Printing.v17.2.Core.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.RichEdit.v17.2.Core.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.RichEdit.v17.2.Core.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.RichEdit.v17.2.Export.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Sparkline.v17.2.Core.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Sparkline.v17.2.Core.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Utils.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Utils.v17.2.UI.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Utils.v17.2.UI.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Utils.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Xpo.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.Xpo.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraBars.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraBars.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraCharts.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraCharts.v17.2.Wizard.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraCharts.v17.2.Wizard.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraCharts.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraEditors.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraEditors.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraGauges.v17.2.Core.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraGauges.v17.2.Core.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraGrid.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraGrid.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraLayout.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraLayout.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraNavBar.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraNavBar.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraPrinting.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraPrinting.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraReports.v17.2.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraReports.v17.2.Extensions.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraReports.v17.2.Extensions.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\DevExpress.XtraReports.v17.2.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.ExpressApp.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.ExpressApp.Win.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\de\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\EntityFramework.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\EntityFramework.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.ExpressApp.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.ExpressApp.Win.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\es\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\files\logo.bmp" />
+    <Content Include="Scale\Kirimiri\bin\Debug\files\rugi.bmp" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.ExpressApp.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.ExpressApp.Win.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ja\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Logging.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Logging.pdb" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Microsoft.SqlServer.Management.Sdk.Sfc.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Microsoft.SqlServer.Smo.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\PData.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\PData.pdb" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.DataAccess.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.ExpressApp.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.ExpressApp.Win.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.Office.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.PivotGrid.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.RichEdit.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.Xpo.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.XtraBars.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.XtraCharts.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.XtraGauges.v15.2.Core.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.XtraGrid.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.XtraNavBar.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.XtraPrinting.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\ru\DevExpress.XtraReports.v15.2.resources.dll" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Script.sql" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Settings.txt" />
+    <Content Include="Scale\Kirimiri\bin\Debug\settings.xml" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Weigh.exe" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Weigh.pdb" />
+    <Content Include="Scale\Kirimiri\bin\Debug\Weigh.vshost.exe" />
+    <Content Include="Scale\Kirimiri\files\logo.bmp" />
+    <Content Include="Scale\Kirimiri\files\rugi.bmp" />
+    <Content Include="Scale\Kirimiri\Kirimiri1.csproj" />
+    <Content Include="Scale\Kirimiri\Kirimiri1.csproj.user" />
+    <Content Include="Scale\Kirimiri\obj\Debug\Kirimiri.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kirimiri\obj\Debug\Kirimiri1.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kirimiri\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kirimiri\obj\Debug\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kirimiri\obj\Debug\Test.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kirimiri\obj\Debug\Weigh.exe" />
+    <Content Include="Scale\Kirimiri\obj\Debug\weigh.exe.licenses" />
+    <Content Include="Scale\Kirimiri\obj\Debug\Weigh.pdb" />
+    <Content Include="Scale\Kirimiri\obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kirimiri\obj\Release\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kirimiri\scales.ico" />
+    <Content Include="Scale\Kirimiri\settings.xml" />
+    <Content Include="Scale\Kirimiri\Web References\Server\Collect.disco" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Charts.v15.2.Core.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Data.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.DataAccess.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.DataAccess.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.ExpressApp.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.ExpressApp.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.ExpressApp.Win.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.ExpressApp.Win.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Images.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.PivotGrid.v15.2.Core.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.PivotGrid.v15.2.Core.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Printing.v15.2.Core.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Printing.v15.2.Core.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Utils.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Xpo.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.Xpo.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraBars.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraBars.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraCharts.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraCharts.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraEditors.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraEditors.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraGauges.v15.2.Core.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraGauges.v15.2.Core.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraGrid.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraGrid.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraLayout.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraLayout.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraNavBar.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraNavBar.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraPrinting.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraPrinting.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraReports.v15.2.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\DevExpress.XtraReports.v15.2.xml" />
+    <Content Include="Scale\Kiriti\bin\Debug\EntityFramework.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="Scale\Kiriti\bin\Debug\Weigh.vshost.exe" />
+    <Content Include="Scale\Kiriti\files\logo.bmp" />
+    <Content Include="Scale\Kiriti\files\rugi.bmp" />
+    <Content Include="Scale\Kiriti\Kiriti.csproj" />
+    <Content Include="Scale\Kiriti\Kiriti.csproj.user" />
+    <Content Include="Scale\Kiriti\obj\Debug\Kiriti.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiriti\obj\Debug\Kirurumwe.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiriti\obj\Debug\Rwama 1.1.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiriti\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kiriti\obj\Debug\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kiriti\obj\Debug\Test.csproj.FileListAbsolute.txt" />
+    <Content Include="Scale\Kiriti\obj\Debug\weigh.exe.licenses" />
+    <Content Include="Scale\Kiriti\obj\Release\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Scale\Kiriti\obj\Release\TempPE\Web References.Server.Reference.cs.dll" />
+    <Content Include="Scale\Kiriti\scales.ico" />
+    <Content Include="Scale\Kiriti\Web References\Server\Collect.disco" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\Coffee.dll" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\Coffee.pdb" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.Charts.v15.2.Core.dll" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.Data.v15.2.dll" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.DataAccess.v15.2.dll" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.DataAccess.v15.2.xml" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.ExpressApp.v15.2.dll" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.ExpressApp.v15.2.xml" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.ExpressApp.Win.v15.2.dll" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.ExpressApp.Win.v15.2.xml" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.Office.v15.2.Core.dll" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.Office.v15.2.Core.xml" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.PivotGrid.v15.2.Core.dll" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.PivotGrid.v15.2.Core.xml" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.RichEdit.v15.2.Core.dll" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.RichEdit.v15.2.Core.xml" />
+    <Content Include="Scale\Kirurumwe\bin\Debug\DevExpress.Utils.v15.2.dll" />
+    <Content Include="settings.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scale\Gatukuyu\bin\Release\" />
+    <Folder Include="Scale\Gatukuyu\Service References\" />
+    <Folder Include="Scale\Inuka\Weigh\bin\Debug\zh-Hans\" />
+    <Folder Include="Scale\Inuka\Weigh\bin\Debug\zh-Hant\" />
+    <Folder Include="Scale\Inuka\Weigh\bin\Release\" />
+    <Folder Include="Scale\Inuka\Weigh\Service References\" />
+    <Folder Include="Scale\Iria-ini\bin\Debug\files\" />
+    <Folder Include="Scale\Iria-ini\bin\Release\" />
+    <Folder Include="Scale\Iria-ini\Service References\" />
+    <Folder Include="Scale\Kaganda\bin\Debug\de\" />
+    <Folder Include="Scale\Kaganda\bin\Debug\es\" />
+    <Folder Include="Scale\Kaganda\bin\Debug\files\" />
+    <Folder Include="Scale\Kaganda\bin\Debug\ja\" />
+    <Folder Include="Scale\Kaganda\bin\Debug\ru\" />
+    <Folder Include="Scale\Kaganda\bin\Release\" />
+    <Folder Include="Scale\Kaganda\Service References\" />
+    <Folder Include="Scale\Kariua\bin\Debug\zh\" />
+    <Folder Include="Scale\Kariua\bin\Release\" />
+    <Folder Include="Scale\Kariua\Service References\" />
+    <Folder Include="Scale\Kiama 1.1\bin\Debug\de\" />
+    <Folder Include="Scale\Kiama 1.1\bin\Debug\es\" />
+    <Folder Include="Scale\Kiama 1.1\bin\Debug\ja\" />
+    <Folder Include="Scale\Kiama 1.1\bin\Debug\ru\" />
+    <Folder Include="Scale\Kiama 1.1\bin\Release\" />
+    <Folder Include="Scale\Kiama 1.1\Service References\" />
+    <Folder Include="Scale\Kiangangwa\bin\Release\" />
+    <Folder Include="Scale\Kiangangwa\Service References\" />
+    <Folder Include="Scale\Kibugu\bin\Debug\de\" />
+    <Folder Include="Scale\Kibugu\bin\Debug\es\" />
+    <Folder Include="Scale\Kibugu\bin\Debug\ja\" />
+    <Folder Include="Scale\Kibugu\bin\Debug\ru\" />
+    <Folder Include="Scale\Kibugu\bin\Release\" />
+    <Folder Include="Scale\Kibugu\Service References\" />
+    <Folder Include="Scale\Kirimiri\bin\Debug\zh\" />
+    <Folder Include="Scale\Kirimiri\bin\Release\" />
+    <Folder Include="Scale\Kirimiri\Service References\" />
+    <Folder Include="Scale\Kiriti\bin\Debug\files\" />
+    <Folder Include="Scale\Kiriti\bin\Release\" />
+    <Folder Include="Scale\Kiriti\Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

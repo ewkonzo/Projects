@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Collection.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Collection_Vendor_Vendor_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vaio:7047/DynamicsNAV/WS/ReplaceWithAPercentEncodedCompanyName/Page/Vendor</Value>
+    </Setting>
+    <Setting Name="Collection_paulo_Collection_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vaio:7047/DynamicsNAV/WS/ReplaceWithAPercentEncodedCompanyName/Page/Collection</Value>
+    </Setting>
+    <Setting Name="Collection_Items_Items_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vaio:7047/DynamicsNAV/WS/ReplaceWithAPercentEncodedCompanyName/Page/Items</Value>
+    </Setting>
+    <Setting Name="Collection_ItemEntries_Item_entries_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vaio:7047/DynamicsNAV/WS/ReplaceWithAPercentEncodedCompanyName/Page/Item_entries</Value>
+    </Setting>
+    <Setting Name="Collection_Stores_Stores_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://vaio:7047/DynamicsNAV/WS/ReplaceWithAPercentEncodedCompanyName/Page/Stores</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

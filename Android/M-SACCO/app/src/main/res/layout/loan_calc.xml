@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dip" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:weightSum="2" >
+
+            <custom_fonts.RobotoTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Loan Amount"
+                android:textSize="20sp"
+                app:typeface="roboto_light" />
+
+            <custom_fonts.RobotoEditText
+                android:id="@+id/loan_calc_amtEdtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=""
+                android:inputType="numberDecimal"
+                android:textSize="20sp"
+                app:typeface="roboto_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:weightSum="2" >
+
+            <custom_fonts.RobotoTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:text="Interest Rate(% p.a)"
+                android:textSize="20sp"
+                app:typeface="roboto_light" />
+
+            <custom_fonts.RobotoEditText
+                android:id="@+id/loan_calc_interestEdtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint=""
+                android:inputType="numberDecimal"
+                android:textSize="20sp"
+                app:typeface="roboto_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:weightSum="2" >
+
+            <custom_fonts.RobotoTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dip"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Loan Period"
+                android:textSize="20sp"
+                app:typeface="roboto_light" />
+
+            <custom_fonts.RobotoEditText
+                android:id="@+id/loan_calc_period_AmtEdtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="MONTHS"
+                android:inputType="number"
+                android:textSize="20sp"
+                app:typeface="roboto_light" />
+        </LinearLayout>
+
+        <custom_fonts.RobotoButton
+            android:id="@+id/loan_calc_calculateBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_send_style"
+            android:text="Calculate"
+            android:textColor="@color/white"
+            app:typeface="roboto_light" />
+
+        <custom_fonts.RobotoTextView
+            android:id="@+id/monthly_repayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/darkgreen"
+            android:textSize="20sp"
+            app:typeface="roboto_light" />
+
+        <custom_fonts.RobotoTextView
+            android:id="@+id/total_repayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="@color/darkgreen"
+            android:textSize="20sp"
+            app:typeface="roboto_light" />
+    </LinearLayout>
+
+</ScrollView>

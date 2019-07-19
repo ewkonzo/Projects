@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/settings"
+            android:title="Settings" />
+    </group>
+    <item android:title="Reports">
+        <menu>
+            <item
+                android:id="@+id/summary"
+                android:icon="@drawable/summary"
+                android:title="Daily summary" />
+            <item
+                android:id="@+id/receipts"
+                android:icon="@drawable/summary"
+                android:title="Receipts" />
+            <item
+                android:id="@+id/vehicle_collection"
+                android:icon="@drawable/vehicles"
+                android:title="Vehicle Collection" />
+        </menu>
+    </item>
+
+
+</menu>

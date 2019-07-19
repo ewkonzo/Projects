@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.m_saccoagency"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" >
+    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
+    </uses-permission>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.m_saccoagency.Login"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+             
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.AgencyListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.example.m_saccoagency.MainActivity" >
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.AccountActivationActivity"
+            android:label="Account Activation"
+            android:parentActivityName="com.example.m_saccoagency.AgencyListActivity" >
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.AccountOpening"
+            android:label="Account Opening"
+            android:parentActivityName="com.example.m_saccoagency.AgencyListActivity" >
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.MemberRegistration"
+            android:label="Member Registration"
+            android:parentActivityName="com.example.m_saccoagency.AgencyListActivity" >
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.CashWithdraw"
+            android:label="Withdraw Cash"
+            android:parentActivityName="com.example.m_saccoagency.AgencyListActivity" >
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.CashDeposit"
+            android:label="Deposit Cash"
+            android:parentActivityName="com.example.m_saccoagency.AgencyListActivity" >
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.LoanRepayment"
+            android:label="Loan Repayment"
+            android:parentActivityName="com.example.m_saccoagency.AgencyListActivity" >
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.CashTransfer"
+            android:label="Cash Transfer"
+            android:parentActivityName="com.example.m_saccoagency.AgencyListActivity" >
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.ShareDeposit"
+            android:label="Share Deposit"
+            android:parentActivityName="com.example.m_saccoagency.AgencyListActivity" >
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.BalanceEnquiry"
+            android:label="Balance Enquiry"
+            android:parentActivityName="com.example.m_saccoagency.AgencyListActivity" >
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.Ministatement"
+            android:label="Mini Statement"
+            android:parentActivityName="com.example.m_saccoagency.AgencyListActivity" >
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.ChangeClientPin"
+            android:label="Change Client Pin"
+            android:parentActivityName="com.example.m_saccoagency.AgencyListActivity" >
+        </activity>
+        <activity
+            android:name="com.example.m_saccoagency.Settings"
+            android:label="Settings"
+            android:parentActivityName="com.example.m_saccoagency.MainActivity" >
+        </activity>
+    </application>
+
+</manifest>

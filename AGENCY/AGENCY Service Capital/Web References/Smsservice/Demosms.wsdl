@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Send">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Getsms">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetsmsResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendSoapIn">
+    <wsdl:part name="parameters" element="tns:Send" />
+  </wsdl:message>
+  <wsdl:message name="SendSoapOut">
+    <wsdl:part name="parameters" element="tns:SendResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetsmsSoapIn">
+    <wsdl:part name="parameters" element="tns:Getsms" />
+  </wsdl:message>
+  <wsdl:message name="GetsmsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetsmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendHttpGetIn">
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="phone" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendHttpGetOut" />
+  <wsdl:message name="GetsmsHttpGetIn" />
+  <wsdl:message name="GetsmsHttpGetOut" />
+  <wsdl:portType name="DemosmsSoap">
+    <wsdl:operation name="Send">
+      <wsdl:input message="tns:SendSoapIn" />
+      <wsdl:output message="tns:SendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getsms">
+      <wsdl:input message="tns:GetsmsSoapIn" />
+      <wsdl:output message="tns:GetsmsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="DemosmsHttpGet">
+    <wsdl:operation name="Send">
+      <wsdl:input message="tns:SendHttpGetIn" />
+      <wsdl:output message="tns:SendHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Getsms">
+      <wsdl:input message="tns:GetsmsHttpGetIn" />
+      <wsdl:output message="tns:GetsmsHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DemosmsSoap" type="tns:DemosmsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Send">
+      <soap:operation soapAction="http://tempuri.org/Send" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getsms">
+      <soap:operation soapAction="http://tempuri.org/Getsms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DemosmsSoap12" type="tns:DemosmsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Send">
+      <soap12:operation soapAction="http://tempuri.org/Send" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Getsms">
+      <soap12:operation soapAction="http://tempuri.org/Getsms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DemosmsHttpGet" type="tns:DemosmsHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Send">
+      <http:operation location="/Send" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="Getsms">
+      <http:operation location="/Getsms" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Demosms">
+    <wsdl:port name="DemosmsSoap" binding="tns:DemosmsSoap">
+      <soap:address location="https://41.72.203.234/Demosms.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DemosmsSoap12" binding="tns:DemosmsSoap12">
+      <soap12:address location="https://41.72.203.234/Demosms.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DemosmsHttpGet" binding="tns:DemosmsHttpGet">
+      <http:address location="https://41.72.203.234/Demosms.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

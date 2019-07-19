@@ -1,0 +1,81 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Ads_Portal.SiteMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ADS NYANZA SMS PLATFORM</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" /> 
+    <link href="~/Content/Site.css" rel="stylesheet" /> 
+    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/popper.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="/Scripts/jquery.parallax.min.js"></script> 
+    <script type="text/javascript" src="/Scripts/jquery.qrcode.min.js"></script>
+    <script type="text/javascript" src="/Scripts/URI.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.mCustomScrollbar.concat.min.js"></script> 
+    <script type="text/javascript" src="/Scripts/common.js"></script>
+    <script type="text/javascript" src="/Scripts/landing.js"></script>
+    <script type="text/javascript" src="/Scripts/highlight.pack.js"></script>
+    <script type="text/javascript" src="/Scripts/pages.js"></script>
+   
+    <style type="text/css">
+        .auto-style1 {
+            width: 193px;
+            height: 120px;
+        }
+    </style>
+   
+</head>
+<body>
+    <form runat="server">
+        
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light background">
+                <div class="container">
+                    <div class="navbar-header">                        
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topMenu" aria-controls="topMenu" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"><img class="auto-style1" src="Content/logo.png" /></span>
+                        </button>
+                        &nbsp;</div>
+                    <div class="collapse navbar-collapse" id="topMenu">
+                        <dx:BootstrapMenu ID="TopMenu" runat="server" ShowPopOutImages="True" ItemAutoWidth="false" ClientInstanceName="topMenu">
+                            <CssClasses Control="top-menu" Menu="navbar-nav" />
+                            <Items>
+                                <dx:BootstrapMenuItem Text="Contacts" Name="Contacts" NavigateUrl="Contacts.aspx">
+                                </dx:BootstrapMenuItem>
+                                <dx:BootstrapMenuItem Text="Groups" Name="Groups" NavigateUrl="Groups.aspx">
+                                </dx:BootstrapMenuItem> 
+                                <dx:BootstrapMenuItem Text="Responses" Name="Responses" NavigateUrl="Responses.aspx">
+                                </dx:BootstrapMenuItem>  
+                                <dx:BootstrapMenuItem Text="Queries" Name="Queries" NavigateUrl="Default.aspx">
+                                </dx:BootstrapMenuItem>  
+                                <dx:BootstrapMenuItem Text="Languages" Name="Languages" NavigateUrl="Language.aspx">
+                                </dx:BootstrapMenuItem>
+                                 <dx:BootstrapMenuItem Text="|">
+                                </dx:BootstrapMenuItem>
+                                <dx:BootstrapMenuItem Text="Counties" Name="Counties" NavigateUrl="Counties.aspx">
+                                </dx:BootstrapMenuItem>
+                                <dx:BootstrapMenuItem Text="SubCounties" Name="SubCounties" NavigateUrl="Subcounty.aspx">
+                                </dx:BootstrapMenuItem>
+                                   <dx:BootstrapMenuItem Text="Settings" Name="Settings" NavigateUrl="Settings.aspx">
+                                </dx:BootstrapMenuItem>
+
+                            </Items>
+                        </dx:BootstrapMenu>
+                    </div>
+                </div>
+            </nav>
+            <div class="container">
+                <asp:ContentPlaceHolder ID="Content" runat="server">
+                </asp:ContentPlaceHolder>
+            
+                <hr/>
+                
+                <footer>
+                    <p>&copy; <%: DateTime.Now.Year %> -  ADS Nyanza</p>
+                </footer>
+            </div>
+    </form>
+</body>
+</html>

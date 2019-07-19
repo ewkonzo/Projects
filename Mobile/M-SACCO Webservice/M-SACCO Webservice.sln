@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M-SACCO Webservice", "M-SACCO Webservice.csproj", "{632773C5-EF7B-46A8-8654-F621C0280E47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Msacco", "..\Msacco\Msacco.csproj", "{853AED07-8942-41D8-B727-E4796BEDCA18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{632773C5-EF7B-46A8-8654-F621C0280E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{632773C5-EF7B-46A8-8654-F621C0280E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{632773C5-EF7B-46A8-8654-F621C0280E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{632773C5-EF7B-46A8-8654-F621C0280E47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{853AED07-8942-41D8-B727-E4796BEDCA18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{853AED07-8942-41D8-B727-E4796BEDCA18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{853AED07-8942-41D8-B727-E4796BEDCA18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{853AED07-8942-41D8-B727-E4796BEDCA18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6BA621C-30A1-4081-BE6F-4FEAD4ABFD97}
+	EndGlobalSection
+EndGlobal

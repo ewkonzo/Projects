@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="S7Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Setup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Pull interval Ms" Type="int" />
+        </EntityType>
+        <EntityType Name="Temp Setup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Block No" Type="int" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Startat" Type="int" />
+          <Property Name="Connected" Type="bit" />
+          <Property Name="Last Connected" Type="datetime" />
+          <Property Name="Fetch interval ms" Type="int" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rack" Type="int" />
+          <Property Name="Slot" Type="int" />
+        </EntityType>
+        <EntityType Name="Temparatures">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Date" Type="date" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="Value" Type="float" />
+        </EntityType>
+        <EntityContainer Name="S7ModelStoreContainer">
+          <EntitySet Name="Setup" EntityType="Self.Setup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Temp Setup" EntityType="Self.Temp Setup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Temparatures" EntityType="Self.Temparatures" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="S7Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="S7Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Temp_Setups" EntityType="S7Model.Temp_Setup" />
+          <EntitySet Name="Temparatures" EntityType="S7Model.Temparature" />
+          <EntitySet Name="Setups" EntityType="S7Model.Setup" />
+        </EntityContainer>
+        <EntityType Name="Temp_Setup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Block_No" Type="Int32" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Startat" Type="Int32" />
+          <Property Name="Connected" Type="Boolean" />
+          <Property Name="Last_Connected" Type="DateTime" Precision="3" />
+          <Property Name="Fetch_interval_ms" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Rack" Type="Int32" />
+          <Property Name="Slot" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Temparature">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+          <Property Name="Time" Type="DateTime" Precision="3" />
+          <Property Name="Value" Type="Double" />
+        </EntityType>
+        <EntityType Name="Setup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Pull_interval_Ms" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="S7ModelStoreContainer" CdmEntityContainer="S7Entities">
+          <EntitySetMapping Name="Temp_Setups">
+            <EntityTypeMapping TypeName="S7Model.Temp_Setup">
+              <MappingFragment StoreEntitySet="Temp Setup">
+                <ScalarProperty Name="Slot" ColumnName="Slot" />
+                <ScalarProperty Name="Rack" ColumnName="Rack" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Fetch_interval_ms" ColumnName="Fetch interval ms" />
+                <ScalarProperty Name="Last_Connected" ColumnName="Last Connected" />
+                <ScalarProperty Name="Connected" ColumnName="Connected" />
+                <ScalarProperty Name="Startat" ColumnName="Startat" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Block_No" ColumnName="Block No" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Temparatures">
+            <EntityTypeMapping TypeName="S7Model.Temparature">
+              <MappingFragment StoreEntitySet="Temparatures">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Setups">
+            <EntityTypeMapping TypeName="S7Model.Setup">
+              <MappingFragment StoreEntitySet="Setup">
+                <ScalarProperty Name="Pull_interval_Ms" ColumnName="Pull interval Ms" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

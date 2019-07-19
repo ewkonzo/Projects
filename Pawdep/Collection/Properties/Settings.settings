@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Collection.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Collection_Mpesa_Mpesa_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:7047/DynamicsNAV/WS/HOMABAY%20COUNTY%20WOMEN%20SACCO/Page/Mpesa</Value>
+    </Setting>
+    <Setting Name="Collection_Mobile_Mobile" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://desktop-8rh2q4n:402/Powdep/WS/Pamoja%20Women%20Dev.%20Programme/Codeunit/Mobile</Value>
+    </Setting>
+    <Setting Name="Collection_Members_Members_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:5002/PAWDEP/WS/Pamoja%20Women%20Dev.%20Programme/Page/Members</Value>
+    </Setting>
+    <Setting Name="Collection_TransHeader_Trans_Header_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://desktop-8rh2q4n:402/Powdep/WS/Pamoja%20Women%20Dev.%20Programme/Page/Trans_Header</Value>
+    </Setting>
+    <Setting Name="Collection_TransLine_Trans_Line_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://desktop-8rh2q4n:402/Powdep/WS/Pamoja%20Women%20Dev.%20Programme/Page/Trans_Line</Value>
+    </Setting>
+    <Setting Name="Collection_Logins_Logins_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://desktop-8rh2q4n:402/Powdep/WS/Pamoja%20Women%20Dev.%20Programme/Page/Logins</Value>
+    </Setting>
+    <Setting Name="Collection_Groups_Groups_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:5002/PAWDEP/WS/Pamoja%20Women%20Dev.%20Programme/Page/Groups</Value>
+    </Setting>
+    <Setting Name="Collection_Loans_Loans_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:5002/PAWDEP/WS/Pamoja%20Women%20Dev.%20Programme/Page/Loans</Value>
+    </Setting>
+    <Setting Name="Collection_Advance_Advance_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:5002/PAWDEP/WS/Pamoja%20Women%20Dev.%20Programme/Page/Advance</Value>
+    </Setting>
+    <Setting Name="Collection_Transactions_PW_Transactions_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:5002/PAWDEP/WS/Pamoja%20Women%20Dev.%20Programme/Page/PW_Transactions</Value>
+    </Setting>
+    <Setting Name="Collection_Advance_issue_Advance_issue_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:5002/PAWDEP/WS/Pamoja%20Women%20Dev.%20Programme/Page/Advance_issue</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

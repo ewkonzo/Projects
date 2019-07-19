@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\hp\.android\build-cache\21cb4a8b6f913d48587810b1e95a7ab771061a75\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\classes_81cf5690ed5ae83e2f460e81ea57abdc7cacb69c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hp\.android\build-cache\43caf877d9f299912667a38b87432e07d2cd88b4\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\classes_d3a14a715592c10850ad5439d1990b8eee7fd548.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hp\.android\build-cache\01e43640cced94f89889134e2a4a978c1d30c855\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\classes_c7c7d93ea619611272d93642a0d1ee92d1f33e1e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Projects\AndroidSdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.2_cdee2e1e5f2c46fbf44c6357d230bdf38d8c030a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hp\.android\build-cache\b56af74da02b068ac48c63910e017e0042bbb917\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\classes_e82cffbfb3e2be09eb027d704785ebd2bff22bbc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hp\.android\build-cache\18189f1f6b06f120d3b3cd7e1259599f987ab26b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\classes_0d3f1143508df5ada7a9fb89d78e1c397e7f1839.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\libs\cloudpossdkinterface.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="9f75b1e74746eb82f8596a3d911c790633575660">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\cloudpossdkinterface_52ce2264efa9c8f91f7bd042c110b42a274db76d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hp\.android\build-cache\450321eac6a4c77f5f942faa3fb56438f5bc0d20\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\classes_5e87fb598e6d0ec22cbd62adcbf993f463991657.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\libs\cloudpossdkinterfaceextension.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="7a1c4d22a07d43eff941b1406fa00747233310af">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\cloudpossdkinterfaceextension_5da74caa53d49f0b097ff85ebdd9649851e412f0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hp\.android\build-cache\b42607e804548281fdbb77ed1daa7701776dff92\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\classes_d4bc068cf4569290d3704dd91ffd17ac35103360.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hp\.android\build-cache\8293ec10e450e64c40276147cfde2048a549e8c6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\classes_e88900da361386877da7291900181bac3e0d8dbd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hp\.android\build-cache\88aa2879d4fd80a580e10299044bee8e1ca85a96\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\classes_fef412551b9697c3ac34fdd0a8e2aeab0854fab4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\hp\.android\build-cache\db27962844d8c83a692229cab3357608a97261fa\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\classes_214e14d625e2ead2ba6d1187907aa8419b03f2ae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\Projects\AndroidSdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.1"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="D:\Projects\Projects\Android\cloudpos_SDK\extra\fingerprint\app\build\intermediates\pre-dexed\debug\support-annotations-26.0.0-alpha1_f30dce89f6c0db5e80e7ca95da4fcfd8f1e779fb.jar" />
+    </item>
+
+</items>

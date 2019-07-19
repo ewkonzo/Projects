@@ -1,0 +1,7 @@
+#Mon Oct 03 17:22:55 EAT 2016
+base.0=F\:\\Paul\\Projects\\Dropbox\\Android\\Agency Mwalimu\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_c12daaf5e7576e4008bad2af648f50e3ec2eb562
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=F\:\\Paul\\Projects\\Dropbox\\Android\\Agency Mwalimu\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_64eaa57f0f994955f492217923d80ede903b17d0\\classes.dex
+base.1=F\:\\Paul\\Projects\\Dropbox\\Android\\Agency Mwalimu\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_64eaa57f0f994955f492217923d80ede903b17d0
+file.0=F\:\\Paul\\Projects\\Dropbox\\Android\\Agency Mwalimu\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_c12daaf5e7576e4008bad2af648f50e3ec2eb562\\classes.dex

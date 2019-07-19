@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "My Profile";
+}
+
+@inject UserManager<User> UserManager
+
+<environment include="Development">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/account/profile.css" />
+</environment>
+
+<div class="container col-md-12">
+    <div class="row">
+        <nav class="profile-nav col-md-2">
+            <ul class="side-nav">
+                <li class="user-identity">
+                @if (User.IsInRole(Role.Company.ToString()))
+                {               
+                    <i class="fa fa-building" aria-hidden="true"></i>
+                }
+                else
+                {
+                    <i class="fa fa-user" aria-hidden="true"></i>                   
+                }
+                    @User.Identity.Name
+                </li>
+                <li>
+                    <a asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                @if (User.IsInRole(Role.Company.ToString()))
+                {
+                    <li>
+                        <a asp-area="Company" asp-controller="Routes" asp-action="Add">Add Route</a>
+                    </li>
+                    <li>
+                        <a asp-area="Company" asp-controller="Routes" asp-action="All">My Routes</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Users" asp-action="MyTickets" asp-route-id="@UserManager.GetUserId(User)">My Tickets</a>
+                    </li>
+                    <li>
+                        <a asp-area="Company" asp-controller="Profile" asp-action="Edit" asp-route-id="@UserManager.GetUserId(User)">Edit Profile</a>
+                    </li>}
+                else
+                {
+                    <li>
+                        <a asp-controller="Users" asp-action="MyTickets">My Tickets</a>
+                    </li>
+                    <li>
+                        <a asp-controller="Users" asp-action="EditUser">Edit Profile</a>
+                    </li>
+                }
+                <li>
+                    <form method="post" asp-action="Logout" asp-controller="Account">
+                        <button class="logout-btn" type="submit">Logout</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+        <div class="profile-info col-md-9">
+            @if (TempData.ContainsKey(WebConstants.TempDataKey.Message))
+            {
+                <div class="alert alert-@TempData[WebConstants.TempDataKey.AlertType] alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <p class="alert-message text-center">
+                        @TempData[WebConstants.TempDataKey.Message]
+                    </p>
+                </div>
+            }
+            @RenderBody()
+            <hr />
+            <footer class="text-center">
+                <p>&copy; 2017 - eTicket System</p>
+            </footer>
+        </div>
+    </div>
+</div>
+
+@RenderSection("Scripts", required: false)

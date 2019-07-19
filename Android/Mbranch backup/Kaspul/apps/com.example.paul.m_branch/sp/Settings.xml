@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="PRINTER">00:02:0A:02:B7:CB</string>
+    <string name="User">LILIAN</string>
+    <string name="IP">collect.ngrok.io</string>
+</map>

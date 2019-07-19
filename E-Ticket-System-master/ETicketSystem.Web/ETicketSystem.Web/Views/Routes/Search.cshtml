@@ -1,0 +1,121 @@
+﻿@model SearchedRoutes
+
+@{
+    ViewData["Title"] = "Search Routes";
+}
+
+<environment include="Development">
+    <link rel="stylesheet" href="~/css/route/list-routes.css" />
+    <link rel="stylesheet" href="~/css/route/horizontal-search-form.css" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+</environment>
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+
+<div class="container-fluid">
+    <div class="row search-container">
+        <form method="get" asp-controller="Routes" asp-action="Search" class="search-form col-md-12">
+            <div class="text-danger text-center form-errors" hidden>
+                Start destination and end destination cannot be equal!
+            </div>
+            <div class="form-fields row">
+                <div class="form-group col-md-3">
+                    <label asp-for="StartTown"></label>
+                    <select asp-for="StartTown" asp-items="Model.Towns" class="form-control start-town" required></select>
+                    <span asp-validation-for="StartTown" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="EndTown"></label>
+                    <select asp-for="EndTown" asp-items="Model.Towns" class="form-control end-town" required></select>
+                    <span asp-validation-for="EndTown" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="Date"></label>
+                    <input asp-for="Date" min="@DateTime.UtcNow.ToLocalTime().ToString("yyyy-MM-dd")" class="form-control"/>
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label asp-for="CompanyId"></label>
+                    <select asp-for="CompanyId" asp-items="Model.Companies" class="form-control end-town"></select>
+                    <span asp-validation-for="CompanyId" class="text-danger"></span>
+                </div>
+            </div>
+            <input type="submit" value="Search" class="btn btn-success" onclick="checkTownsEquality()" />
+        </form>
+    </div>
+</div>
+<hr />
+
+@if (Model.Routes.Count() == 0)
+{
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Oooops!</h4>
+        <p>We couldn't find any routes matching your criteria!</p>
+        <hr>
+        <p class="mb-0">Just have another try or contact us so we can help you immediately!</p>
+    </div>
+}
+else
+{
+    <div class="container-fluid ticket-list">
+        @foreach (var route in Model.Routes)
+        {
+            <div class="route-container row">
+                <div class="col-md-2 col-sm-2 col-lg-2">
+                    <a class="company-name" asp-controller="Companies" asp-action="Details" asp-route-id="@route.CompanyId">@route.CompanyName</a>
+                    <a asp-controller="Companies" asp-action="Details" asp-route-id="@route.CompanyId">
+                        @if (route.CompanyLogo == null)
+                        {
+                            <img class="img-responsive" src="~/images/common/no-logo.png" alt="@route.CompanyName" />
+                        }
+                        else
+                        {
+                            <img class="img-responsive" src="@route.CompanyLogo.ConvertBytesToImage()" alt="@route.CompanyName" />
+                        }
+                    </a>
+                </div>
+                <div class="col-md-2 col-sm-2 col-lg-2">
+                    <span class="departure-time">@route.DepartureTime.ToHoursAndMinutes()</span>
+                </div>
+                <div class="stations col-md-4 col-sm-4 col-lg-4 text-center">
+                    <span>@route.StartStation > @route.EndStation</span>
+                    <span>
+                        (@route.Duration.Hours Hours @(route.Duration.Minutes == 0 ? string.Empty : $"{route.Duration.Minutes} Minutes"))
+                    </span>
+                </div>
+                <div class="price col-md-2 col-sm-2 col-lg-2">
+                    <span>@route.Price.ToFormatedPrice() $</span>
+                </div>
+                <div class="tickets col-md-2 col-sm-2 col-lg-2">
+                    <div class="seats-info">@route.ReservedTickets / @route.TotalBusSeats</div>
+                    <form method="get" asp-controller="Routes" asp-action="BookTicket" asp-route-id="@route.Id" asp-route-departureTime="@route.DepartureTime.ToHoursAndMinutes()" asp-route-date="@Model.Date.ToYearMonthDayFormat()" asp-route-companyId="@Model.CompanyId">
+                        <input class="btn btn@(route.ReservedTickets == route.TotalBusSeats ? "-danger disabled" : "-success")" type="submit" value="@(route.ReservedTickets == route.TotalBusSeats ? "Sold out" : "Tickets")" />
+                    </form>
+                </div>
+            </div>
+            <hr />
+        }
+    </div>
+
+    <div class="container-fluid text-center">
+        <ul class="pagination">
+            <li class="page-item @(1 == Model.Pagination.CurrentPage ? "blocked":string.Empty)">
+                <a class="page-link" asp-controller="@Model.Pagination.Controller" asp-action="@Model.Pagination.Action" asp-route-startTown="@Model.StartTown" asp-route-endTown="@Model.EndTown" asp-route-companyId="@Model.CompanyId" asp-route-date="@Model.Date.ToYearMonthDayFormat()" asp-route-page="@Model.Pagination.PreviousPage">Previous</a>
+            </li>
+            @for (int i = 1; i <= Model.Pagination.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.Pagination.CurrentPage ? "active blocked":string.Empty)">
+                    <a class="page-link" asp-controller="@Model.Pagination.Controller" asp-action="@Model.Pagination.Action" asp-route-startTown="@Model.StartTown" asp-route-endTown="@Model.EndTown" asp-route-companyId="@Model.CompanyId" asp-route-date="@Model.Date.ToYearMonthDayFormat()" asp-route-page="@i">@i</a>
+                </li>
+            }
+            <li class="page-item @(Model.Pagination.TotalPages == Model.Pagination.CurrentPage ? "blocked":string.Empty)">
+                <a class="page-link" asp-controller="@Model.Pagination.Controller" asp-action="@Model.Pagination.Action" asp-route-startTown="@Model.StartTown" asp-route-endTown="@Model.EndTown" asp-route-companyId="@Model.CompanyId" asp-route-date="@Model.Date.ToYearMonthDayFormat()" asp-route-page="@Model.Pagination.NextPage">Next</a>
+            </li>
+        </ul>
+    </div>
+}
+
+@section Scripts {
+    <script type="text/javascript" src="~/js/route/search-form-validation.js"></script>
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

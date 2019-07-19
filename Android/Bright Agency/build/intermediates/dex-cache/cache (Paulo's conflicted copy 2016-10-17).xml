@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="E:\Paul\AndroidSDK\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="21.1.2"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="E:\Paul\Projects\Dropbox\Android\Agency Mwalimu\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-v4-18.0.0_0d89eee445f6d5bbec83db468fb1f3967ace9f7f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Paul\Projects\Dropbox\Android\Agency Mwalimu\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="21.1.2"
+        sha1="99fd6494f71ee4d7552d847fde8a32fbe4f0c5d8">
+        <dex dex="E:\Paul\Projects\Dropbox\Android\Agency Mwalimu\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_6cd36db4be421c47a855521ea5b9f02a63d7924a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Paul\Projects\Dropbox\Android\Agency Mwalimu\app\libs\gson-2.2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="21.1.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="E:\Paul\Projects\Dropbox\Android\Agency Mwalimu\app\build\intermediates\transforms\dex\debug\folders\1000\2\gson-2.2.4_b0ed471c540484417fbac38ec2ac36aa767e2395\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Paul\Projects\Dropbox\Android\Agency Mwalimu\app\libs\ksoap2-android-assembly-2.4-jar-with-dependencies.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="21.1.2"
+        sha1="e8796346a9191a019e936210a2dc50662c57594b">
+        <dex dex="E:\Paul\Projects\Dropbox\Android\Agency Mwalimu\app\build\intermediates\transforms\dex\debug\folders\1000\2\ksoap2-android-assembly-2.4-jar-with-dependencies_af4021cc415492cdbefbd1647ec406503ceacf44\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Paul\Projects\Dropbox\Android\Agency Mwalimu\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="21.1.2"
+        sha1="48f03f323ea1a1024951b28599018038d854b033">
+        <dex dex="E:\Paul\Projects\Dropbox\Android\Agency Mwalimu\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_11352a64ce9406e9dd09d6394c33410377674d4c\classes.dex" />
+    </item>
+
+</items>

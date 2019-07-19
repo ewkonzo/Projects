@@ -1,0 +1,7 @@
+The link between the result of the sdk interface api and error code:
+Convert the unsigned result to three bytes as Byte1Byte2Byte3
+Byte1 signifies the hardware code,
+Byte2 signifies the hardware error,
+Byte3 signifies the software error.
+If Byte2 != 0, it is a hardware error.
+If Byte2 ==0 and Byte3 != 0, the value of the Byte3 is the error code in the error.h

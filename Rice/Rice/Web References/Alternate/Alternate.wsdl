@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/Alternate" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Alternate" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/Alternate" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="Companyimages">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="picture" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Companyimages_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="picture" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetCustomerImage">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="no" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="picture" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetCustomerImage_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="picture" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SetCustomerImage">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="no" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="picture" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SetCustomerImage_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="SetcontactImage">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="no" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="picture" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SetcontactImage_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Customerpaddy">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="no" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Customerpaddy_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Customerbal">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="no" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Customerbal_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="PosthandlingCharges">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="PosthandlingCharges_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="ItemStockBalance">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="item" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="variant" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="location" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="ItemStockBalance_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Postinventory">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Postinventory_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Currentseason">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Currentseason_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="Companyimages">
+    <part name="parameters" element="tns:Companyimages" />
+  </message>
+  <message name="Companyimages_Result">
+    <part name="parameters" element="tns:Companyimages_Result" />
+  </message>
+  <message name="GetCustomerImage">
+    <part name="parameters" element="tns:GetCustomerImage" />
+  </message>
+  <message name="GetCustomerImage_Result">
+    <part name="parameters" element="tns:GetCustomerImage_Result" />
+  </message>
+  <message name="SetCustomerImage">
+    <part name="parameters" element="tns:SetCustomerImage" />
+  </message>
+  <message name="SetCustomerImage_Result">
+    <part name="parameters" element="tns:SetCustomerImage_Result" />
+  </message>
+  <message name="SetcontactImage">
+    <part name="parameters" element="tns:SetcontactImage" />
+  </message>
+  <message name="SetcontactImage_Result">
+    <part name="parameters" element="tns:SetcontactImage_Result" />
+  </message>
+  <message name="Customerpaddy">
+    <part name="parameters" element="tns:Customerpaddy" />
+  </message>
+  <message name="Customerpaddy_Result">
+    <part name="parameters" element="tns:Customerpaddy_Result" />
+  </message>
+  <message name="Customerbal">
+    <part name="parameters" element="tns:Customerbal" />
+  </message>
+  <message name="Customerbal_Result">
+    <part name="parameters" element="tns:Customerbal_Result" />
+  </message>
+  <message name="PosthandlingCharges">
+    <part name="parameters" element="tns:PosthandlingCharges" />
+  </message>
+  <message name="PosthandlingCharges_Result">
+    <part name="parameters" element="tns:PosthandlingCharges_Result" />
+  </message>
+  <message name="ItemStockBalance">
+    <part name="parameters" element="tns:ItemStockBalance" />
+  </message>
+  <message name="ItemStockBalance_Result">
+    <part name="parameters" element="tns:ItemStockBalance_Result" />
+  </message>
+  <message name="Postinventory">
+    <part name="parameters" element="tns:Postinventory" />
+  </message>
+  <message name="Postinventory_Result">
+    <part name="parameters" element="tns:Postinventory_Result" />
+  </message>
+  <message name="Currentseason">
+    <part name="parameters" element="tns:Currentseason" />
+  </message>
+  <message name="Currentseason_Result">
+    <part name="parameters" element="tns:Currentseason_Result" />
+  </message>
+  <portType name="Alternate_Port">
+    <operation name="Companyimages">
+      <input name="Companyimages" message="tns:Companyimages" />
+      <output name="Companyimages_Result" message="tns:Companyimages_Result" />
+    </operation>
+    <operation name="GetCustomerImage">
+      <input name="GetCustomerImage" message="tns:GetCustomerImage" />
+      <output name="GetCustomerImage_Result" message="tns:GetCustomerImage_Result" />
+    </operation>
+    <operation name="SetCustomerImage">
+      <input name="SetCustomerImage" message="tns:SetCustomerImage" />
+      <output name="SetCustomerImage_Result" message="tns:SetCustomerImage_Result" />
+    </operation>
+    <operation name="SetcontactImage">
+      <input name="SetcontactImage" message="tns:SetcontactImage" />
+      <output name="SetcontactImage_Result" message="tns:SetcontactImage_Result" />
+    </operation>
+    <operation name="Customerpaddy">
+      <input name="Customerpaddy" message="tns:Customerpaddy" />
+      <output name="Customerpaddy_Result" message="tns:Customerpaddy_Result" />
+    </operation>
+    <operation name="Customerbal">
+      <input name="Customerbal" message="tns:Customerbal" />
+      <output name="Customerbal_Result" message="tns:Customerbal_Result" />
+    </operation>
+    <operation name="PosthandlingCharges">
+      <input name="PosthandlingCharges" message="tns:PosthandlingCharges" />
+      <output name="PosthandlingCharges_Result" message="tns:PosthandlingCharges_Result" />
+    </operation>
+    <operation name="ItemStockBalance">
+      <input name="ItemStockBalance" message="tns:ItemStockBalance" />
+      <output name="ItemStockBalance_Result" message="tns:ItemStockBalance_Result" />
+    </operation>
+    <operation name="Postinventory">
+      <input name="Postinventory" message="tns:Postinventory" />
+      <output name="Postinventory_Result" message="tns:Postinventory_Result" />
+    </operation>
+    <operation name="Currentseason">
+      <input name="Currentseason" message="tns:Currentseason" />
+      <output name="Currentseason_Result" message="tns:Currentseason_Result" />
+    </operation>
+  </portType>
+  <binding name="Alternate_Binding" type="tns:Alternate_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Companyimages">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:Companyimages" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Companyimages">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Companyimages_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetCustomerImage">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:GetCustomerImage" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetCustomerImage">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetCustomerImage_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SetCustomerImage">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:SetCustomerImage" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SetCustomerImage">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SetCustomerImage_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SetcontactImage">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:SetcontactImage" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SetcontactImage">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SetcontactImage_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Customerpaddy">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:Customerpaddy" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Customerpaddy">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Customerpaddy_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Customerbal">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:Customerbal" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Customerbal">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Customerbal_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="PosthandlingCharges">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:PosthandlingCharges" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="PosthandlingCharges">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="PosthandlingCharges_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ItemStockBalance">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:ItemStockBalance" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ItemStockBalance">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ItemStockBalance_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Postinventory">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:Postinventory" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Postinventory">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Postinventory_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Currentseason">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/Alternate:Currentseason" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Currentseason">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Currentseason_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Alternate">
+    <port name="Alternate_Port" binding="tns:Alternate_Binding">
+      <address location="http://vaio:4013/Mwea/WS/MWEA%20RICE%20GROWERS/Codeunit/Alternate" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/RunThem" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/RunThem" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/RunThem" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="Runn">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Runn_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="Runn">
+    <part name="parameters" element="tns:Runn" />
+  </message>
+  <message name="Runn_Result">
+    <part name="parameters" element="tns:Runn_Result" />
+  </message>
+  <portType name="RunThem_Port">
+    <operation name="Runn">
+      <input name="Runn" message="tns:Runn" />
+      <output name="Runn_Result" message="tns:Runn_Result" />
+    </operation>
+  </portType>
+  <binding name="RunThem_Binding" type="tns:RunThem_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Runn">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/RunThem:Runn" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Runn">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Runn_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="RunThem">
+    <port name="RunThem_Port" binding="tns:RunThem_Binding">
+      <address location="http://localhost:8113/Mwalimu/WS/Mwalimu%20Sacco/Codeunit/RunThem" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

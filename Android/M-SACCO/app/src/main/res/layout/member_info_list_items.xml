@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <custom_fonts.RobotoTextView
+        android:id="@+id/myAccMemberInfoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dip"
+        android:text=""
+        android:textSize="15dp"
+        app:typeface="roboto_light" />
+
+    <custom_fonts.RobotoTextView
+        android:id="@+id/myAccMemberInfoName"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="5dip"
+        android:text=""
+        android:textSize="15dp"
+        android:textColor="@color/darkgreen"
+        app:typeface="roboto_light" />
+
+</RelativeLayout>

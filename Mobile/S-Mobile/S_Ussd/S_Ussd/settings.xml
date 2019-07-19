@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Serverip>localhost</Serverip>
+  <domain>localhost</domain>
+  <Instance></Instance>
+  <Database>Mobile</Database>
+  <Port>1113</Port>
+  <Username>Mobile</Username>
+  <pass>Mbanking12345*</pass>
+  <Companyname>DIMKES%20SACCO%20TEST%20DATA</Companyname>
+  <PostIntervalinsec>60</PostIntervalinsec>
+  <Reconnectintervalinsec>3</Reconnectintervalinsec>
+  <logpath>F:\Mbranch\Logs\Ussd\</logpath>
+  <usewindowsauth>false</usewindowsauth>
+  <IntegratedSecurity>true</IntegratedSecurity>
+  
+</settings> 

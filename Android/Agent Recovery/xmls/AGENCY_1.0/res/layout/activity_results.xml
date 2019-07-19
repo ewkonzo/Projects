@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="50.0sp" android:textStyle="bold" android:textColor="@android:color/holo_green_dark" android:gravity="center" android:id="@id/Info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Authentication" android:capitalize="characters" />
+    <TextView android:textSize="20.0sp" android:gravity="center" android:id="@id/txterrors" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+    <View android:background="@android:color/holo_green_dark" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="20.0dip" />
+    <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reference" />
+        <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/txtreference" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:hint="Reference" android:layout_weight="1.0" />
+    </TableRow>
+    <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Trans. Type" />
+        <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/txttranstype" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:hint="Transaction type" android:layout_weight="1.0" />
+    </TableRow>
+    <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Acc. Det." />
+        <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/txtaccountno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:hint="@string/accountno" android:layout_weight="1.0" />
+    </TableRow>
+    <TableRow android:id="@id/tramount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amount" />
+        <TextView android:textStyle="bold" android:textColor="@android:color/holo_green_dark" android:id="@id/txtamount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:hint="Amount" android:layout_weight="1.0" />
+    </TableRow>
+    <View android:background="@android:color/holo_green_dark" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="30.0dip" />
+</TableLayout>

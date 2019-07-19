@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="buy_goods_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <string-array name="my_acc_deposit_acc_selector_array">
+        <item>FOSA</item>
+        <item>BOSA</item>
+        <item>Shares</item>
+        <item>Deposits</item>
+    </string-array>
+    <string-array name="my_acc_deposit_wallet_selector_array">
+        <item>MPesa</item>
+        <item>AirTel Money</item>
+        <item>Orange Money</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="my_acc_withdrawal_my_phone_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <string-array name="my_acc_withdrawal_other_phone_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <string-array name="online_master_card_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <string-array name="online_paypal_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <string-array name="online_pesapal_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <string-array name="online_visa_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <string-array name="paybill_dstv_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <string-array name="paybill_kplc_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <string-array name="paybill_nair_water_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <string-array name="paybill_zuku_account_selector_array">
+        <item>0000000000</item>
+        <item>0000000000</item>
+    </string-array>
+    <attr name="fontFamily">
+        <enum name="roboto" value="0"/>
+        <enum name="roboto_condensed" value="1"/>
+        <enum name="roboto_slab" value="2"/>
+    </attr>
+    <attr name="textStyle">
+        <enum name="normal" value="0"/>
+        <enum name="italic" value="1"/>
+    </attr>
+    <attr name="textWeight">
+        <enum name="normal" value="0"/>
+        <enum name="thin" value="1"/>
+        <enum name="light" value="2"/>
+        <enum name="medium" value="3"/>
+        <enum name="bold" value="4"/>
+        <enum name="ultra_bold" value="5"/>
+    </attr>
+    <attr name="typeface">
+        <enum name="roboto_thin" value="0"/>
+        <enum name="roboto_thin_italic" value="1"/>
+        <enum name="roboto_light" value="2"/>
+        <enum name="roboto_light_italic" value="3"/>
+        <enum name="roboto_regular" value="4"/>
+        <enum name="roboto_italic" value="5"/>
+        <enum name="roboto_medium" value="6"/>
+        <enum name="roboto_medium_italic" value="7"/>
+        <enum name="roboto_bold" value="8"/>
+        <enum name="roboto_bold_italic" value="9"/>
+        <enum name="roboto_black" value="10"/>
+        <enum name="roboto_black_italic" value="11"/>
+        <enum name="roboto_condensed_light" value="12"/>
+        <enum name="roboto_condensed_light_italic" value="13"/>
+        <enum name="roboto_condensed_regular" value="14"/>
+        <enum name="roboto_condensed_italic" value="15"/>
+        <enum name="roboto_condensed_bold" value="16"/>
+        <enum name="roboto_condensed_bold_italic" value="17"/>
+        <enum name="roboto_slab_thin" value="18"/>
+        <enum name="roboto_slab_light" value="19"/>
+        <enum name="roboto_slab_regular" value="20"/>
+        <enum name="roboto_slab_bold" value="21"/>
+    </attr>
+    <color name="black">#000000</color>
+    <color name="darkgreen">#1C5329</color>
+    <color name="darkgrey">#CABBBBBB</color>
+    <color name="ddarkgreen">#1c5329 </color>
+    <color name="grey">#f0f0f0</color>
+    <color name="light_bg">#886EB43F</color>
+    <color name="light_blue">#4799E8</color>
+    <color name="lightgreen">#6EB43F</color>
+    <color name="red">#ff0000</color>
+    <color name="white">#ffffff</color>
+    <declare-styleable name="RobotoAutoCompleteTextView"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoButton"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoCheckBox"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoCheckedTextView"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoChronometer"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoCompoundButton"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoDigitalClock"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoEditText"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoExtractEditText"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoMultiAutoCompleteTextView"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoRadioButton"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoSwitch"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoTextClock"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoTextView"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <declare-styleable name="RobotoToggleButton"><attr name="typeface"/><attr name="fontFamily"/><attr name="textWeight"/><attr name="textStyle"/></declare-styleable>
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_horizontal_margin1">7dp</dimen>
+    <dimen name="activity_vertical_margin">7dp</dimen>
+    <dimen name="text_size_large">22sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="title_height">45dip</dimen>
+    <string name="AccountBalActivityTitle">Balance Enquiry</string>
+    <string name="CompanyName">CoreTEC Systems &amp; Solutions</string>
+    <string name="CustomerServiceActivityTitle">Customer Service</string>
+    <string name="DashBoardActivityTitle">Dashboard</string>
+    <string name="EPaymentsActivityTitle">E-Payments</string>
+    <string name="FeedbackActivityTitle">Feedback</string>
+    <string name="FosaLoansActivityTitle">Loan Repayment</string>
+    <string name="FundsTransferActivityTitle">Funds Transfer</string>
+    <string name="HomeActivityTitle">CoreTEC</string>
+    <string name="LoanCalcActivityTitle">Loan Calculator</string>
+    <string name="MemberInfoActivityTitle">My Account</string>
+    <string name="MinistmtActivityTitle">Ministatement</string>
+    <string name="MyCardsActivityTitle"> My Cards</string>
+    <string name="MyLoansActivityTitle">Loans</string>
+    <string name="RununuLoanActivityTitle">Rununu Advance</string>
+    <string name="Terms">Accept Terms &amp; Conditions</string>
+    <string name="TransactActivityTitle">Transact</string>
+    <string name="action_Language">Language</string>
+    <string name="action_Logout">Logout</string>
+    <string name="action_contacts">Contacts</string>
+    <string name="action_home">Home</string>
+    <string name="action_location_found">Location Found</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_search">Sarch</string>
+    <string name="action_settings">Logout</string>
+    <string name="app_name">Saf Sacco</string>
+    <string name="cards_spinner_title">Select Branch</string>
+    <string name="code"><b> Enter SMS Verification Code Below </b></string>
+    <string name="register">Enter Your Phone No Below</string>
+    <string name="sel_acc">Select Account</string>
+    <string name="splash"><b> SAFARICOM SACCO </b></string>
+    <style name="ActionBar.Solid.Mobibanking" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@drawable/ab_solid_mobibanking</item>
+        <item name="android:backgroundStacked">@drawable/ab_stacked_solid_mobibanking</item>
+        <item name="android:backgroundSplit">@drawable/ab_bottom_solid_mobibanking</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Mobibanking</item>
+    </style>
+    <style name="ActionBar.Transparent.Mobibanking" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@drawable/ab_transparent_mobibanking</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Mobibanking</item>
+    </style>
+    <style name="ActionBarTabStyle.Mobibanking" parent="@android:style/Widget.Holo.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_mobibanking</item>
+    </style>
+    <style name="ActionButton.CloseMode.Mobibanking" parent="@android:style/Widget.Holo.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_mobibanking</item>
+    </style>
+    <style name="DropDownListView.Mobibanking" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_mobibanking</item>
+    </style>
+    <style name="DropDownNav.Mobibanking" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/spinner_background_ab_mobibanking</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_mobibanking</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_mobibanking</item>
+    </style>
+    <style name="MySpinnerLook" parent="@android:TextAppearance.Widget.TextView.SpinnerItem">
+        
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="PopupMenu.Mobibanking" parent="@android:style/Widget.Holo.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_mobibanking</item>
+    </style>
+    <style name="ProgressBar.Mobibanking" parent="@android:style/Widget.Holo.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_mobibanking</item>
+    </style>
+    <style name="Theme.Mobibanking" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:actionBarItemBackground">@drawable/selectable_background_mobibanking</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Mobibanking</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Mobibanking</item>
+        <item name="android:actionMenuTextColor">@color/white</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Mobibanking</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Mobibanking</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Mobibanking</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_mobibanking</item>
+        <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_mobibanking</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Mobibanking</item>
+
+        <!-- Light.DarkActionBar specific -->
+        <item name="android:actionBarWidgetTheme">@style/Theme.Mobibanking.Widget</item>
+    </style>
+    <style name="Theme.Mobibanking.Widget" parent="@android:style/Theme.Holo">
+        <item name="android:popupMenuStyle">@style/PopupMenu.Mobibanking</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Mobibanking</item>
+    </style>
+</resources>

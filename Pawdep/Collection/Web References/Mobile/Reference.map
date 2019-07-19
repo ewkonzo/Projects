@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://desktop-8rh2q4n:402/Powdep/WS/Pamoja Women Dev. Programme/Codeunit/Mobile" filename="Mobile.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

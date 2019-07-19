@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AGENCY</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Nationalid">National ID:</string>
+    <string name="accountname">Acc. Name:</string>
+    <string name="amount">Amount:</string>
+    <string name="accountno">Acc. No:</string>
+    <string name="telephone">Tel. No:</string>
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="action_changepin">Change Password</string>
+    <string name="error_account_invalid">This Account No is not valid</string>
+    <string name="error_code_invalid">This Code is incorrect</string>
+    <string name="error_confirmation_error">Pin Confirmation error</string>
+    <string name="error_current_pin_incorrect">Current pin entered is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+    <string name="error_same_password">You cannot reenter the old password</string>
+
+    <string name="error_pin_invalid">This pin is incorrect</string>
+    <string name="error_same_account">Transfer To Same Account is not allowed</string>
+    <string name="error_tel_tooshort">Telephone No Entered is too short</string>
+
+    <string name="host_name">Host</string>
+    <string name="loansource">Source:</string>
+    <string name="loantype">Loan Type:</string>
+    <string name="pref_default_display_name">Null</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact based on your message history</string>
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+    <string name="pref_header_general">General</string>
+    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_ringtone_silent">Silent</string>
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string name="pref_title_display_name">Agent Code</string>
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="society">Society:</string>
+    <string name="societyno">Member No:</string>
+    <string name="noactiveaccount">No Account Linked to this ID No</string>
+    <string name="notactive">This Customer is not activated to use Agency, kindly activate the customer</string>
+    <string name="Unabletologin">Unable to login. Kindly try again Later</string>
+    <string name="emptyfield">Field cannot be null</string>
+    <string name="emptyfield1">This field cannot be null</string>
+    <string name="noloans">No loans found for this customer</string>
+    <string name="nointernet">Sorry you have no internet connection</string>
+    <string name="shares">Shares cont.</string>
+    <string name="title_activity_summary">summary</string>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Serverip>62.12.113.67</Serverip>
+  <domain>62.12.113.67</domain>
+  <Instance>Dimkes</Instance>
+  <Port>1113</Port>
+  <Username>Mobile</Username>
+  <pass>Mbanking12345*</pass>
+  <Companyname>DIMKES%20SACCO%20TEST%20DATA</Companyname>
+  <PostIntervalinsec>60</PostIntervalinsec>
+  <Reconnectintervalinsec>3</Reconnectintervalinsec>
+  <logpath>C:\Mobile\Logs\Client\</logpath>
+  <usewindowsauth>false</usewindowsauth>
+</settings> 

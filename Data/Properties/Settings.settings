@@ -1,0 +1,63 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PData.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Data_S_Mobile_S_Mobile" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:112/Ollin/WS/Ollin%20Sacco%20Ltd/Codeunit/S_Mobile</Value>
+    </Setting>
+    <Setting Name="Data_S_Applications_Applications_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:112/Ollin/WS/Ollin%20Sacco%20Ltd/Page/Applications</Value>
+    </Setting>
+    <Setting Name="Data_Statement_Account_Entries_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://62.12.113.67:1113/Dimkes/WS/DIMKES%20SACCO%20TEST%20DATA/Page/Account_Entries</Value>
+    </Setting>
+    <Setting Name="Data_Accounts_Accounts_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://62.12.113.67:1113/Dimkes/WS/DIMKES%20SACCO%20TEST%20DATA/Page/Accounts</Value>
+    </Setting>
+    <Setting Name="Data_Loans_Loans_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://62.12.113.67:1113/Dimkes/WS/DIMKES%20SACCO%20TEST%20DATA/Page/Loans</Value>
+    </Setting>
+    <Setting Name="Data_Transactions_Transactions_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:112/Ollin/WS/Ollin%20Sacco%20Ltd/Page/Transactions</Value>
+    </Setting>
+    <Setting Name="Data_Setup_Setup_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://62.12.113.67:1113/Dimkes/WS/DIMKES%20SACCO%20TEST%20DATA/Page/Setup</Value>
+    </Setting>
+    <Setting Name="Data_Member_Member_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://62.12.113.67:1113/Dimkes/WS/DIMKES%20SACCO%20TEST%20DATA/Page/Member</Value>
+    </Setting>
+    <Setting Name="Data_Sms_Sms_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://62.12.113.67:3112/SMobile/WS/DIMKES%20SACCO%20TEST%20DATA/Page/Sms</Value>
+    </Setting>
+    <Setting Name="Data_Loansproducts_Loanproducts_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:112/Ollin/WS/Ollin%20Sacco%20Ltd/Page/Loanproducts</Value>
+    </Setting>
+    <Setting Name="PData_MbranchApplications_M_Branch_Applications_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:7047/DynamicsNAV/WS/HOMABAY%20COUNTY%20WOMEN%20SACCO/Page/M_Branch_Applications</Value>
+    </Setting>
+    <Setting Name="PData_MbranchTransactions_M_Branch_Transactions_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:7047/DynamicsNAV/WS/HOMABAY%20COUNTY%20WOMEN%20SACCO/Page/M_Branch_Transactions</Value>
+    </Setting>
+    <Setting Name="PData_Members_M_Branch_Members_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:7047/DynamicsNAV/WS/HOMABAY%20COUNTY%20WOMEN%20SACCO/Page/M_Branch_Members</Value>
+    </Setting>
+    <Setting Name="PData_Groups_M_Branch_Groups_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:7047/DynamicsNAV/WS/HOMABAY%20COUNTY%20WOMEN%20SACCO/Page/M_Branch_Groups</Value>
+    </Setting>
+    <Setting Name="PData_MBranch_MBranch" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:7047/DynamicsNAV/WS/HOMABAY%20COUNTY%20WOMEN%20SACCO/Codeunit/MBranch</Value>
+    </Setting>
+    <Setting Name="PData_MBranchsms_Sms_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:7047/DynamicsNAV/WS/HOMABAY%20COUNTY%20WOMEN%20SACCO/Page/Sms</Value>
+    </Setting>
+    <Setting Name="PData_Constituency_Constituency_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:7047/DynamicsNAV/WS/HOMABAY%20COUNTY%20WOMEN%20SACCO/Page/Constituency</Value>
+    </Setting>
+    <Setting Name="PData_MbranchTranstypes_M_Branch_transtypes_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:7047/DynamicsNAV/WS/HOMABAY%20COUNTY%20WOMEN%20SACCO/Page/M_Branch_transtypes</Value>
+    </Setting>
+    <Setting Name="PData_MBranchMembers_M_Branch_Members_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:7047/DynamicsNAV/WS/HOMABAY%20COUNTY%20WOMEN%20SACCO/Page/M_Branch_Members</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

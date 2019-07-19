@@ -1,0 +1,49 @@
+﻿@model AllStations
+
+@{
+    ViewData["Title"] = "All Stations";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+<hr />
+<div class="container-fluid">
+    @Html.Partial("_SearchListingForm", Model.Pagination)
+    <a asp-controller="AdminStations" asp-action="Add" class="btn btn-success">Add Station</a>
+</div>
+<hr />
+
+@if (Model.Stations.Count() == 0)
+{
+   @Html.Partial("_NoResultsFoundMessageBox")
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Town</th>
+                <th>Phone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in Model.Stations)
+            {
+                <tr>
+                    <td>@s.Name</td>
+                    <td>@s.Town</td>
+                    <td>@s.Phone</td>
+                    <td>
+                        <a asp-controller="AdminStations" asp-action="Edit" asp-route-id="@s.Id" class="btn btn-primary">
+                            Edit
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @Html.Partial("_Pagination", Model.Pagination)
+}
+

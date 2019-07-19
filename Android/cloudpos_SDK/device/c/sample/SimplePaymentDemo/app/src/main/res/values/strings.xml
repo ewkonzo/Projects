@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SimplePaymentDemo</string>
+    <string name="printtest">This is a payment print test</string>
+
+</resources>

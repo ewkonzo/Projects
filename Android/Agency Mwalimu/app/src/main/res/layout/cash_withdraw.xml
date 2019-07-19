@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradient_bg"
+    android:paddingLeft="20.0dip"
+    android:paddingRight="20.0dip" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50.0dip" >
+
+            <TextView
+                android:id="@+id/NationalId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:maxLength="8"
+                android:text="@string/Nationalid" />
+
+            <EditText
+                android:id="@+id/cwtxtnationalid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@color/white"
+                android:hint="@string/Nationalid"
+                android:maxLength="8"
+                android:inputType="textAutoComplete" />
+        </TableRow>
+
+        <RelativeLayout android:layout_marginTop="10.0dip" >
+
+            <TextView
+                android:id="@id/accountinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Info"
+                android:textSize="20sp"
+                android:textColor="@color/holo_green_dark" />
+
+            <ProgressBar
+                android:id="@id/paccdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="25.0dip"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2.0dip"
+            android:background="@color/holo_green_dark" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip" >
+
+            <TextView
+                android:id="@id/AccountNo"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:text="@string/accountno" />
+
+            <TextView
+                android:id="@+id/cwtxtaccountno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:textSize="20sp"
+                android:hint="@string/accountno"
+                android:textColor="@color/holo_green_dark" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip" >
+            <TextView
+                android:id="@id/TvAccountName"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:text="@string/accountname" />
+            <TextView
+                android:id="@+id/cwtxtaccountname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_weight="1.0"
+                android:hint="@string/accountname"
+                android:textColor="@color/holo_green_dark" />
+
+
+        </TableRow>
+        
+                <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+                    android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvbalance"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:text="Acct. Balance:" />
+
+            <TextView
+                android:id="@+id/cwAccountBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_weight="1.0"
+                android:hint="Acct. Bal"
+                android:textColor="@color/holo_green_dark" />
+
+
+        </TableRow>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2.0dip"
+            android:layout_marginTop="20.0dip"
+            android:background="@color/holo_green_dark" />
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip" >
+
+            <TextView
+                android:id="@id/TVAmount"
+                android:layout_width="wrap_content"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"
+                android:text="@string/amount" />
+
+            <EditText
+                android:id="@+id/cwtxtamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@color/white"
+                android:textSize="20sp"
+                android:hint="@string/amount"
+                android:inputType="number"
+                />
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/cwBtnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="50.0dip"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/cwBtnConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textSize="20sp"
+                android:text="Confirm" />
+        </LinearLayout>
+    </TableLayout>
+
+</ScrollView>

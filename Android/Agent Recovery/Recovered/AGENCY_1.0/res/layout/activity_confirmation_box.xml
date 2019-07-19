@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Trans. Type" />
+                <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/txttranstype" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:hint="Transaction type" android:layout_weight="1.0" />
+            </TableRow>
+            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accountno" />
+                <TextView android:textColor="@android:color/holo_green_dark" android:id="@id/txtaccountno" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:hint="@string/accountno" android:layout_weight="1.0" />
+            </TableRow>
+            <TableRow android:id="@id/tramount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amount" />
+                <TextView android:textStyle="bold" android:textColor="@android:color/holo_green_dark" android:id="@id/txtamount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:hint="Amount" android:layout_weight="1.0" />
+            </TableRow>
+            <TextView android:textSize="30.0sp" android:textStyle="bold" android:textColor="@android:color/holo_green_dark" android:gravity="center" android:id="@id/Info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Authentication" />
+            <View android:background="@android:color/holo_green_dark" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+            <TableRow android:id="@id/trcode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <TextView android:textSize="30.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Code" />
+                <EditText android:textSize="25.0sp" android:gravity="center" android:id="@id/txtcode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Code(from sms)" android:layout_weight="1.0" android:inputType="number" />
+            </TableRow>
+            <TableRow android:id="@id/trpin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+                <TextView android:textSize="30.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pin" />
+                <EditText android:textSize="25.0sp" android:gravity="center" android:id="@id/txtpin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="pin" android:layout_weight="1.0" android:inputType="numberPassword" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</RelativeLayout>

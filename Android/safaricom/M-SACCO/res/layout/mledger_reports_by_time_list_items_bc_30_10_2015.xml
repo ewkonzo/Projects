@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="15dip"
+    android:paddingRight="10dp" >
+
+    <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dip"
+        android:orientation="horizontal"
+        android:padding="3dip"
+        android:weightSum="10" >
+
+        <ImageView
+            android:id="@+id/drill_down_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/drill" />
+
+        <TextView
+            android:id="@+id/mledgerReportsByTimelblMonth"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="2.81"
+            android:padding="5dip"
+            android:text="One"
+            android:textSize="8dip" />
+
+        <TextView
+            android:id="@+id/mledgerReportsByTimelblDeposit"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:padding="5dip"
+            android:text="One"
+            android:textSize="8dip" />
+
+        <TextView
+            android:id="@+id/mledgerReportsByTimelblWithdrawal"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="3"
+            android:padding="5dip"
+            android:text="three"
+            android:textSize="8dip" />
+    </LinearLayout>
+
+</RelativeLayout>

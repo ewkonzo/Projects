@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/grey"
+    android:fillViewport="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="2dip"
+        android:showDividers="middle"
+        android:weightSum="4" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <custom_fonts.RobotoButton
+                android:id="@+id/member_info_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/transparent_bg"
+                android:drawableTop="@drawable/icon_saf_repts_by_acts"
+                android:gravity="center_horizontal"
+                android:onClick="onButtonClicker"
+                android:padding="10dp"
+                android:text="@string/MemberInfoActivityTitle"
+                android:textColor="@color/ddarkgreen"
+                android:textSize="13dip"
+                app:typeface="roboto_light" />
+
+            <custom_fonts.RobotoButton
+                android:id="@+id/ministm_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/transparent_bg"
+                android:drawableTop="@drawable/icon_saf_ministatement"
+                android:gravity="center_horizontal"
+                android:onClick="onButtonClicker"
+                android:padding="10dp"
+                android:text="@string/MinistmtActivityTitle"
+                android:textColor="@color/ddarkgreen"
+                android:textSize="13dip"
+                app:typeface="roboto_light" />
+
+            <custom_fonts.RobotoButton
+                android:id="@+id/account_bal_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/transparent_bg"
+                android:drawableTop="@drawable/icon_saf_account_balance"
+                android:gravity="center_horizontal"
+                android:onClick="onButtonClicker"
+                android:padding="10dp"
+                android:text="@string/AccountBalActivityTitle"
+                android:textColor="@color/ddarkgreen"
+                android:textSize="13dip"
+                app:typeface="roboto_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:showDividers="middle" >
+
+            <custom_fonts.RobotoButton
+                android:id="@+id/transact_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/transparent_bg"
+                android:drawableTop="@drawable/icon_saf_transact"
+                android:gravity="center_horizontal"
+                android:onClick="onButtonClicker"
+                android:padding="10dp"
+                android:text="@string/TransactActivityTitle"
+                android:textColor="@color/ddarkgreen"
+                android:textSize="13dip"
+                app:typeface="roboto_light" />
+
+            <custom_fonts.RobotoButton
+                android:id="@+id/funds_transfer_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/transparent_bg"
+                android:drawableTop="@drawable/icon_saf_funds_transfer"
+                android:gravity="center_horizontal"
+                android:onClick="onButtonClicker"
+                android:padding="15dp"
+                android:text="@string/FundsTransferActivityTitle"
+                android:textColor="@color/ddarkgreen"
+                android:textSize="13dip"
+                app:typeface="roboto_light" />
+
+            <custom_fonts.RobotoButton
+                android:id="@+id/rununu_advance_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/transparent_bg"
+                android:drawableTop="@drawable/icon_saf_rununu_adv"
+                android:gravity="center_horizontal"
+                android:onClick="onButtonClicker"
+                android:padding="15dp"
+                android:text="@string/RununuLoanActivityTitle"
+                android:textColor="@color/ddarkgreen"
+                android:textSize="13dip"
+                app:typeface="roboto_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:showDividers="middle" >
+
+            <custom_fonts.RobotoButton
+                android:id="@+id/fosa_loans_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/transparent_bg"
+                android:drawableTop="@drawable/icon_saf_fosa_lns"
+                android:gravity="center_horizontal"
+                android:onClick="onButtonClicker"
+                android:padding="10dp"
+                android:text="@string/FosaLoansActivityTitle"
+                android:textColor="@color/ddarkgreen"
+                android:textSize="13dip"
+                app:typeface="roboto_light" />
+
+            <custom_fonts.RobotoButton
+                android:id="@+id/dashbd_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/transparent_bg"
+                android:drawableTop="@drawable/icon_saf_dashboard"
+                android:gravity="center_horizontal"
+                android:onClick="onButtonClicker"
+                android:padding="10dp"
+                android:text="@string/DashBoardActivityTitle"
+                android:textColor="@color/ddarkgreen"
+                android:textSize="13dip"
+                app:typeface="roboto_light" />
+
+            <custom_fonts.RobotoButton
+                android:id="@+id/loan_cal_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/transparent_bg"
+                android:drawableTop="@drawable/icon_saf_loan_calc"
+                android:gravity="center_horizontal"
+                android:onClick="onButtonClicker"
+                android:padding="10dp"
+                android:text="@string/LoanCalcActivityTitle"
+                android:textColor="@color/ddarkgreen"
+                android:textSize="13dip"
+                app:typeface="roboto_light" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

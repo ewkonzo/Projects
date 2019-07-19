@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MobileModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="MPESA Transactions">
+          <Key>
+            <PropertyRef Name="Receipt No_" />
+          </Key>
+          <Property Name="Receipt No_" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Completion Time" Type="datetime" />
+          <Property Name="Detaills" Type="nvarchar" MaxLength="250" />
+          <Property Name="Status" Type="int" />
+          <Property Name="Withdrawn" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Paid In" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Balance" Type="decimal" Precision="38" Scale="20" />
+          <Property Name="Balance Confirmed" Type="int" />
+          <Property Name="Transaction Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Other Party Info" Type="nvarchar" MaxLength="200" />
+          <Property Name="A_C No_" Type="nvarchar" MaxLength="200" />
+          <Property Name="Processed" Type="tinyint" />
+          <Property Name="Initiation Time" Type="datetime" />
+          <Property Name="Paybil Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+          <Property Name="Transaction Date" Type="datetime" />
+          <Property Name="Sent" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="MobileModelStoreContainer">
+          <EntitySet Name="MPESA Transactions" EntityType="Self.MPESA Transactions" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MobileModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="MPESA_Transaction">
+          <Key>
+            <PropertyRef Name="Receipt_No_" />
+          </Key>
+          <Property Name="Receipt_No_" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Completion_Time" Type="DateTime" Precision="3" />
+          <Property Name="Detaills" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" />
+          <Property Name="Withdrawn" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Paid_In" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Balance" Type="Decimal" Precision="38" Scale="20" />
+          <Property Name="Balance_Confirmed" Type="Int32" />
+          <Property Name="Transaction_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Other_Party_Info" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="A_C_No_" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Processed" Type="Byte" />
+          <Property Name="Initiation_Time" Type="DateTime" Precision="3" />
+          <Property Name="Paybil_Number" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Transaction_Date" Type="DateTime" Precision="3" />
+          <Property Name="Sent" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="MobileEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MPESA_Transactions" EntityType="Self.MPESA_Transaction" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MobileModelStoreContainer" CdmEntityContainer="MobileEntities">
+          <EntitySetMapping Name="MPESA_Transactions">
+            <EntityTypeMapping TypeName="MobileModel.MPESA_Transaction">
+              <MappingFragment StoreEntitySet="MPESA Transactions">
+                <ScalarProperty Name="Receipt_No_" ColumnName="Receipt No_" />
+                <ScalarProperty Name="Completion_Time" ColumnName="Completion Time" />
+                <ScalarProperty Name="Detaills" ColumnName="Detaills" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Withdrawn" ColumnName="Withdrawn" />
+                <ScalarProperty Name="Paid_In" ColumnName="Paid In" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Balance_Confirmed" ColumnName="Balance Confirmed" />
+                <ScalarProperty Name="Transaction_Type" ColumnName="Transaction Type" />
+                <ScalarProperty Name="Other_Party_Info" ColumnName="Other Party Info" />
+                <ScalarProperty Name="A_C_No_" ColumnName="A_C No_" />
+                <ScalarProperty Name="Processed" ColumnName="Processed" />
+                <ScalarProperty Name="Initiation_Time" ColumnName="Initiation Time" />
+                <ScalarProperty Name="Paybil_Number" ColumnName="Paybil Number" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Transaction_Date" ColumnName="Transaction Date" />
+                <ScalarProperty Name="Sent" ColumnName="Sent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

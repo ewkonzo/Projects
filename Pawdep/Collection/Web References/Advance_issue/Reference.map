@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://paulo:5002/PAWDEP/WS/Pamoja Women Dev. Programme/Page/Advance_issue" filename="Advance_issue.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

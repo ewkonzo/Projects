@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cashreceipt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.paul.m_branch.cashreceipt">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10">
+            <AutoCompleteTextView
+                android:id="@+id/memberno"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="ACC/Vehicle no"
+                android:inputType="number" />
+
+            <ImageButton
+                android:id="@+id/find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/memberno"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:src="@drawable/search" />
+            <ImageButton
+                android:id="@+id/clear"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/memberno"
+
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:src="@drawable/deletered" />
+            <ProgressBar
+                android:id="@+id/findmember"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/memberno"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/memberno"
+                android:layout_below="@id/memberno"
+                android:gravity="right"
+                android:text="A/C" />
+
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/memberno"
+                android:layout_below="@id/name"
+                android:gravity="right"
+                android:text="Account Name" />
+            <include
+                android:id="@+id/seperator"
+                layout="@layout/transactions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id" />
+
+            <Spinner
+                android:id="@+id/ttype"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/seperator"
+                android:layout_marginTop="10dp"></Spinner>
+            <Spinner
+                android:id="@+id/tvehicles"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/seperator"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/ttype"></Spinner>
+            <Spinner
+                android:id="@+id/tloans"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/tvehicles"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/ttype"></Spinner>
+            <EditText
+                android:id="@+id/tamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/seperator"
+                android:layout_marginRight="70dp"
+                android:hint="Amount"
+                android:inputType="numberDecimal" />
+
+            <Button
+                android:id="@+id/addtrans"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/seperator"
+
+                android:drawableLeft="@drawable/add"
+                android:text="Add" />
+
+            <include
+                android:id="@+id/seperator1"
+                layout="@layout/transactions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addtrans"
+                android:layout_marginTop="20dp" />
+            <ListView
+                android:id="@+id/ttrans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:scrollbarStyle="insideOverlay"
+                android:layout_below="@id/seperator1"></ListView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/totalreceipt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Total"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/postnew"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:drawableLeft="@drawable/print"
+                android:text="  Print"
+                />
+            <Button
+                android:id="@+id/reprint"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:drawableLeft="@drawable/print"
+                android:drawableStart="@drawable/print"
+                android:text="Reprint"
+
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- Footer aligned to bottom -->
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:gravity="center|bottom"
+            android:text="@string/CompanyName"
+            android:textColor="#46509A"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+
+    <!-- Scrollable Item below header and above footer -->
+
+    <ScrollView
+        android:id="@+id/scrollableContents"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:layout_above="@id/footer" >
+
+        <!-- Inflate the contents of the ScrollView dynamicaly -->
+
+    </ScrollView>
+
+</RelativeLayout>

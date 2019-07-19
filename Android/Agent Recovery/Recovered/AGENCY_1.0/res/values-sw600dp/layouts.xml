@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="layout" name="activity_agency_list">@layout/activity_agency_twopane</item>
+</resources>

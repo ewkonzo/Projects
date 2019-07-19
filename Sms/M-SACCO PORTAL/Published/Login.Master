@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.master.cs" Inherits="HIMS.Login" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+      <title>CoreTEC Systems & Solutions M-SACCO Service Portal</title>
+
+        <link rel="shortcut icon" href="images/favicon.ico"   type="image/x-icon" />
+            <link rel="Stylesheet" type="text/css" href="Styles/Site.css" />
+      
+</head>
+<body>
+<div class="container_12">
+
+  <div id="lightbox" class="done" >
+  <div class="head" style="color:#000;font-size:18px;text-align:center;text-transform:uppercase;font-family: Arial, Verdana, sans-serif; ">
+ M-SACCO SERVICE PORTAL
+</div>
+<div id="lbContent" class="clearfix">
+
+
+
+
+<div class="clear"></div>
+
+    <form id="form1" runat="server">
+    <div>
+     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+             <asp:ContentPlaceHolder ID="ForgotPassword" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+           <div class="sub">
+       </div>
+
+       </div>
+         <div class="footer"><center><span style="color:#000; font-size:14px">
+
+<em>Copyright &copy; <% DateTime dt = DateTime.Now;
+                      Response.Write(dt.Year.ToString()); %> -
+                      CoreTEC Systems & Solutions -
+                        E-mail: info@coretec.co.ke -
+                        
+                          <b> Developed By </b>
+                      <a href="http://www.coretec.co.ke" target="_blank" style="color: #000">
+                      www.coretec.co.ke</a>
+                        </em>
+                        
+                        </span></center>
+</div>
+
+    </div>
+
+</div>
+</body>
+</html>

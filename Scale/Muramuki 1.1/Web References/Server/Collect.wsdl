@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s4="urn:microsoft-dynamics-schemas/page/stores" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="urn:microsoft-dynamics-schemas/page/vendor" xmlns:s2="urn:microsoft-dynamics-schemas/page/items" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s3="urn:microsoft-dynamics-schemas/page/collection" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="urn:microsoft-dynamics-schemas/page/vendor" />
+      <s:import namespace="urn:microsoft-dynamics-schemas/page/items" />
+      <s:import namespace="urn:microsoft-dynamics-schemas/page/collection" />
+      <s:import namespace="urn:microsoft-dynamics-schemas/page/stores" />
+      <s:element name="GetFarmer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s1:Vendor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFarmerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFarmerResult" type="s1:Vendor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Items">
+        <s:complexType />
+      </s:element>
+      <s:element name="ItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ItemsResult" type="tns:ArrayOfItems" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfItems">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Items" nillable="true" type="s2:Items" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Farmers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s1:Vendor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FarmersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FarmersResult" type="tns:ArrayOfVendor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfVendor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Vendor" nillable="true" type="s1:Vendor" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Farmersbyfactory">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="factory" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FarmersbyfactoryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FarmersbyfactoryResult" type="tns:ArrayOfVendor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCollections">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="factory" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCollectionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCollectionsResult" type="tns:ArrayOfCollection" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCollection">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Collection" nillable="true" type="s3:Collection" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Collections">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ArrayOfCollection" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CollectionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CollectionsResult" type="tns:ArrayOfCollection" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetStores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ArrayOfStores" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStores">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Stores" nillable="true" type="s4:Stores" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetStoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetStoresResult" type="tns:ArrayOfStores" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfItems" nillable="true" type="tns:ArrayOfItems" />
+      <s:element name="ArrayOfVendor" nillable="true" type="tns:ArrayOfVendor" />
+      <s:element name="ArrayOfCollection" nillable="true" type="tns:ArrayOfCollection" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/page/vendor">
+      <s:complexType name="Vendor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="No" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone_No" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Account_Category" type="s1:Account_Category" />
+          <s:element minOccurs="0" maxOccurs="1" name="Factory" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Account_Category">
+        <s:restriction base="s:string">
+          <s:enumeration value="Single" />
+          <s:enumeration value="Joint" />
+          <s:enumeration value="Corporate" />
+          <s:enumeration value="Group" />
+          <s:enumeration value="Branch" />
+          <s:enumeration value="Project" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/page/items">
+      <s:complexType name="Items">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="No" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Base_Unit_of_Measure" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Last_Direct_Cost" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Item_Variants" type="s2:ArrayOfItem_Variants" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfItem_Variants">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Item_Variants" type="s2:Item_Variants" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Item_Variants">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Item_No" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description_2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="price" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/page/collection">
+      <s:complexType name="Collection">
+        <s:complexContent mixed="false">
+          <s:extension base="s3:Results">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Farmers_Number" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Farmers_Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Collection_Number" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Collections_Date" type="s:date" />
+              <s:element minOccurs="0" maxOccurs="1" name="Kg_Collected" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Coffee_Type" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Cumm" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="kgcollected" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Factory" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Collections_Time" type="s:time" />
+              <s:element minOccurs="0" maxOccurs="1" name="Collected_by" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Collect_type" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Crop" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Results">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/page/stores">
+      <s:complexType name="Stores">
+        <s:complexContent mixed="false">
+          <s:extension base="s4:Results">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Entry" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Client" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Item" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="Application_Date" type="s:date" />
+              <s:element minOccurs="0" maxOccurs="1" name="Served_By" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" type="s4:Status" />
+              <s:element minOccurs="0" maxOccurs="1" name="Factory" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Results">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="desc" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Status">
+        <s:restriction base="s:string">
+          <s:enumeration value="Pending" />
+          <s:enumeration value="Completed" />
+          <s:enumeration value="Failed" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetFarmerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFarmer" />
+  </wsdl:message>
+  <wsdl:message name="GetFarmerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFarmerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:Items" />
+  </wsdl:message>
+  <wsdl:message name="ItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:ItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FarmersSoapIn">
+    <wsdl:part name="parameters" element="tns:Farmers" />
+  </wsdl:message>
+  <wsdl:message name="FarmersSoapOut">
+    <wsdl:part name="parameters" element="tns:FarmersResponse" />
+  </wsdl:message>
+  <wsdl:message name="FarmersbyfactorySoapIn">
+    <wsdl:part name="parameters" element="tns:Farmersbyfactory" />
+  </wsdl:message>
+  <wsdl:message name="FarmersbyfactorySoapOut">
+    <wsdl:part name="parameters" element="tns:FarmersbyfactoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCollectionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCollections" />
+  </wsdl:message>
+  <wsdl:message name="GetCollectionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCollectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CollectionsSoapIn">
+    <wsdl:part name="parameters" element="tns:Collections" />
+  </wsdl:message>
+  <wsdl:message name="CollectionsSoapOut">
+    <wsdl:part name="parameters" element="tns:CollectionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetStoresSoapIn">
+    <wsdl:part name="parameters" element="tns:SetStores" />
+  </wsdl:message>
+  <wsdl:message name="SetStoresSoapOut">
+    <wsdl:part name="parameters" element="tns:SetStoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ItemsHttpGetIn" />
+  <wsdl:message name="ItemsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfItems" />
+  </wsdl:message>
+  <wsdl:message name="FarmersbyfactoryHttpGetIn">
+    <wsdl:part name="factory" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FarmersbyfactoryHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfVendor" />
+  </wsdl:message>
+  <wsdl:message name="GetCollectionsHttpGetIn">
+    <wsdl:part name="factory" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCollectionsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCollection" />
+  </wsdl:message>
+  <wsdl:message name="ItemsHttpPostIn" />
+  <wsdl:message name="ItemsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfItems" />
+  </wsdl:message>
+  <wsdl:message name="FarmersbyfactoryHttpPostIn">
+    <wsdl:part name="factory" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="FarmersbyfactoryHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfVendor" />
+  </wsdl:message>
+  <wsdl:message name="GetCollectionsHttpPostIn">
+    <wsdl:part name="factory" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCollectionsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCollection" />
+  </wsdl:message>
+  <wsdl:portType name="CollectSoap">
+    <wsdl:operation name="GetFarmer">
+      <wsdl:input message="tns:GetFarmerSoapIn" />
+      <wsdl:output message="tns:GetFarmerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Items">
+      <wsdl:input message="tns:ItemsSoapIn" />
+      <wsdl:output message="tns:ItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Farmers">
+      <wsdl:input message="tns:FarmersSoapIn" />
+      <wsdl:output message="tns:FarmersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Farmersbyfactory">
+      <wsdl:input message="tns:FarmersbyfactorySoapIn" />
+      <wsdl:output message="tns:FarmersbyfactorySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollections">
+      <wsdl:input message="tns:GetCollectionsSoapIn" />
+      <wsdl:output message="tns:GetCollectionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Collections">
+      <wsdl:input message="tns:CollectionsSoapIn" />
+      <wsdl:output message="tns:CollectionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStores">
+      <wsdl:input message="tns:SetStoresSoapIn" />
+      <wsdl:output message="tns:SetStoresSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CollectHttpGet">
+    <wsdl:operation name="Items">
+      <wsdl:input message="tns:ItemsHttpGetIn" />
+      <wsdl:output message="tns:ItemsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Farmersbyfactory">
+      <wsdl:input message="tns:FarmersbyfactoryHttpGetIn" />
+      <wsdl:output message="tns:FarmersbyfactoryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollections">
+      <wsdl:input message="tns:GetCollectionsHttpGetIn" />
+      <wsdl:output message="tns:GetCollectionsHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CollectHttpPost">
+    <wsdl:operation name="Items">
+      <wsdl:input message="tns:ItemsHttpPostIn" />
+      <wsdl:output message="tns:ItemsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Farmersbyfactory">
+      <wsdl:input message="tns:FarmersbyfactoryHttpPostIn" />
+      <wsdl:output message="tns:FarmersbyfactoryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollections">
+      <wsdl:input message="tns:GetCollectionsHttpPostIn" />
+      <wsdl:output message="tns:GetCollectionsHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CollectSoap" type="tns:CollectSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFarmer">
+      <soap:operation soapAction="http://tempuri.org/GetFarmer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Items">
+      <soap:operation soapAction="http://tempuri.org/Items" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Farmers">
+      <soap:operation soapAction="http://tempuri.org/Farmers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Farmersbyfactory">
+      <soap:operation soapAction="http://tempuri.org/Farmersbyfactory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollections">
+      <soap:operation soapAction="http://tempuri.org/GetCollections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Collections">
+      <soap:operation soapAction="http://tempuri.org/Collections" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetStores">
+      <soap:operation soapAction="http://tempuri.org/SetStores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CollectSoap12" type="tns:CollectSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetFarmer">
+      <soap12:operation soapAction="http://tempuri.org/GetFarmer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Items">
+      <soap12:operation soapAction="http://tempuri.org/Items" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Farmers">
+      <soap12:operation soapAction="http://tempuri.org/Farmers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Farmersbyfactory">
+      <soap12:operation soapAction="http://tempuri.org/Farmersbyfactory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollections">
+      <soap12:operation soapAction="http://tempuri.org/GetCollections" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Collections">
+      <soap12:operation soapAction="http://tempuri.org/Collections" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetStores">
+      <soap12:operation soapAction="http://tempuri.org/SetStores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CollectHttpGet" type="tns:CollectHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Items">
+      <http:operation location="/Items" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Farmersbyfactory">
+      <http:operation location="/Farmersbyfactory" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollections">
+      <http:operation location="/GetCollections" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CollectHttpPost" type="tns:CollectHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Items">
+      <http:operation location="/Items" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Farmersbyfactory">
+      <http:operation location="/Farmersbyfactory" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollections">
+      <http:operation location="/GetCollections" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Collect">
+    <wsdl:port name="CollectSoap" binding="tns:CollectSoap">
+      <soap:address location="http://localhost:4000/Collect.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CollectSoap12" binding="tns:CollectSoap12">
+      <soap12:address location="http://localhost:4000/Collect.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CollectHttpGet" binding="tns:CollectHttpGet">
+      <http:address location="http://localhost:4000/Collect.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CollectHttpPost" binding="tns:CollectHttpPost">
+      <http:address location="http://localhost:4000/Collect.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,9 @@
+﻿localhost
+1122
+Capital DB
+Paul
+123
+localhost
+Safaricom Training
+PAULO
+C:\coretec\Msacco\Logs\

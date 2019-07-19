@@ -1,0 +1,9 @@
+﻿192.168.100.2
+3102
+ok
+Mbranch
+Mbanking12345*
+Lophasacco
+Lopha Live
+Lophaservice
+D:\Sys\Logs\

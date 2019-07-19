@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data class="additem">
+        <variable
+            name="transaction"
+            type="com.trimline.padweps.Trans" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".addedittrans">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/Group_Code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@={transaction.Group_Code}"
+                android:hint="Group_Code"
+               />
+                </com.google.android.material.textfield.TextInputLayout> <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateinput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_username">
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{transaction.Date.toString()}"
+            android:focusable="false"
+            android:clickable="true"
+            android:hint="Date"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Group_Name"
+    android:gravity="center"
+    android:text="@{transaction.Group_Name}"
+    app:layout_constraintTop_toBottomOf="@id/dateinput"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

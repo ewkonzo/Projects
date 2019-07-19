@@ -1,0 +1,9 @@
+﻿localhost
+7047
+Hazina
+Paul
+Rahabgathoni1
+localhost
+Hazina Sacco Limited
+DynamicsNAV
+F:\PU2\Logs\

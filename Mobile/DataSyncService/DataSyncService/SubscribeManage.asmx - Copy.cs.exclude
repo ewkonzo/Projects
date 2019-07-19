@@ -1,0 +1,242 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO;
+using System.Web;
+using System.Web.Services;
+using System.Web.Services.Protocols;
+using System.Data;
+using System.Data.SqlClient;
+using System.Xml;
+using System.Xml.Serialization;
+
+
+namespace DataSyncService
+{
+
+    public class NotifySOAPHeader : SoapHeader
+    {
+
+        private DateTime _timeStamp;
+        private string _subReqID;
+        private string _traceUniqueID;
+
+        public DateTime timeStamp { get { return _timeStamp; } set { _timeStamp = value; } }
+        public string subReqID { get { return _subReqID; } set { _subReqID = value; } }
+        public string traceUniqueID { get { return _traceUniqueID; } set { _traceUniqueID = value; } }
+
+        #region commented
+        //private string _spRevId;
+        //private string _spRevpassword;
+        //private string _spId;
+        //private string _serviceId;
+        //private string _linkid;
+        //private string _traceUniqueID;
+
+        //public string spRevId { get { return _spRevId; } set { _spRevId = value; } }
+        //public string spRevpassword { get { return _spRevpassword; } set { _spRevpassword = value; } }
+        //public string spId { get { return _spId; } set { _spId = value; } }
+        //public string serviceId { get { return _serviceId; } set { _serviceId = value; } }
+        //public string linkid { get { return _linkid; } set { _linkid = value; } }
+        //public string traceUniqueID { get { return _traceUniqueID; } set { _traceUniqueID = value; } }
+        #endregion commented
+    }
+
+
+    [WebService(Namespace = "http://172.31.181.115:35070/DataSync/DataSync.asmx")]
+    [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+    [System.ComponentModel.ToolboxItem(false)]
+    [System.Web.Services.Protocols.SoapDocumentService(RoutingStyle = SoapServiceRoutingStyle.RequestElement)]
+    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
+    // [System.Web.Script.Services.ScriptService]
+    public class DataSync : System.Web.Services.WebService, IDataSyncBinding
+    {
+        public NotifySOAPHeader notify_soap_header;
+        public SoapUnknownHeader[] unknownHeaders;
+
+        [WebMethod]
+        public subscribeServiceResponse subscribeService(subscribeServiceRequest subscribeServiceRequest)
+        {
+            subscribeServiceResponse ssr = new subscribeServiceResponse();
+
+            return ssr;
+        }
+
+        public notifySmsReceptionResponse notifySmsReception(notifySmsReception nsr)
+        {
+            notifySmsReceptionResponse rval = new notifySmsReceptionResponse();
+
+            DataSyncService.tblService tsvc = new DataSyncService.tblService().GettblService_By_Correlator(nsr.correlator);
+
+            string spid = tsvc.spID.ToString();
+            string svcid = tsvc.ServiceID.ToString();
+            string statusdetails = "100";
+            int direction = 1;
+
+            //======================================================================
+            int r = CommonFunctions.InsertIntoMessages(spid, svcid, direction, nsr.message.senderAddress, nsr.message.smsServiceActivationNumber, nsr.correlator, nsr.message.message, nsr.message.dateTime, statusdetails, nsr.message.senderAddress);
+
+
+            //try
+            //{
+            //    using (SqlConnection Conn = new SqlConnection(CONNECT.conStr))
+            //    {
+            //        Conn.Open();
+
+            //        string sQl = "INSERT INTO [Messages2]";
+            //        sQl += "  (Direction, Type, Status, ToAddress,Body,ChannelID,StatusDetails,BillingID,FromAddress,[SMS Date],[CustomField1])";
+            //        sQl += "  VALUES (" + direction.ToString() + ", 1, 1, '" + nsr.message.smsServiceActivationNumber + "','" + nsr.message.message + "'," + svcid + "," + statusdetails + "";
+            //        sQl += "  ,'" + spid + "','" + nsr.message.senderAddress + "','" + nsr.message.dateTime.ToString("yyyyMMMdd HHmmss") + "','" + nsr.correlator + "')";
+
+
+            //        sQl = "" + direction.ToString() + ", 1, 1, '" + nsr.message.smsServiceActivationNumber + "','" + nsr.message.message + "'," + svcid + "," + statusdetails + "";
+            //        sQl += "  ,'" + spid + "','" + nsr.message.senderAddress + "','" + nsr.message.dateTime.ToString("yyyyMMMdd HHmmss") + "','" + nsr.correlator + "";
+
+            //        sQl = "INSERT INTO [Messages2]([Body])VALUES('" + CommonFunctions.ValidateEntry(sQl) + "')";
+
+            //        using (SqlCommand cmd = new SqlCommand(sQl, Conn))
+            //        {
+            //            cmd.CommandTimeout = 0;
+            //            int r = cmd.ExecuteNonQuery();
+            //        }
+            //        Conn.Close();
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+
+            //}
+            //======================================================================
+            return rval;
+        }
+
+        [WebMethod]
+        //[SoapHeader("notify_soap_header", Direction = SoapHeaderDirection.In)]
+        //[SoapHeader("unknownHeaders")]
+        public notifySmsDeliveryReceiptResponse notifySmsDeliveryReceipt(notifySmsDeliveryReceipt nsdr)
+        {
+            #region extract raw request
+            //string headerstr = string.Empty;
+
+            ////===============================================
+            ////===============================================       
+
+            //XmlDocument xmlSoapRequest = new XmlDocument();// Initialize soap request XML
+            //// Get raw request body
+            //using (Stream receiveStream = HttpContext.Current.Request.InputStream)
+            //{
+            //    receiveStream.Position = 0;// Move to begining of input stream and read
+            //    using (StreamReader readStream = new StreamReader(receiveStream, Encoding.UTF8))
+            //    {
+            //        xmlSoapRequest.Load(readStream);// Load into XML document                    
+            //    }
+            //}
+            //string str;
+            //try
+            //{
+            //    StringWriter sw = new StringWriter();
+            //    XmlTextWriter tx = new XmlTextWriter(sw);
+            //    xmlSoapRequest.WriteTo(tx);
+
+            //    str = sw.ToString();//
+            //}
+            //catch (Exception ex)
+            //{
+            //    str = ex.Message;
+            //}
+            //===============================================
+            //===============================================
+
+            //headerstr = xmlSoapRequest.OuterXml;
+            #endregion extract raw request
+
+            notifySmsDeliveryReceiptResponse rval = new notifySmsDeliveryReceiptResponse();
+            //======================================================================            
+
+            #region extract header
+            //if (notify_soap_header == null)
+            //{
+            //    headerstr = "hakuna";
+            //}
+            //else
+            //{
+            //    headerstr = notify_soap_header.traceUniqueID + "  " + notify_soap_header.subReqID;
+            //}
+
+            //foreach (SoapUnknownHeader header in unknownHeaders)
+            //{
+            //    string unknownHeaderAttributes = String.Empty;
+            //    // Perform some processing on the header.
+            //    foreach (XmlAttribute attribute in header.Element.Attributes)
+            //    {
+            //        unknownHeaderAttributes += attribute.Name + ":" + attribute.Value + " ";
+            //    }
+            //    // For those headers that cannot be 
+            //    // processed, set the DidUnderstand property to false.
+            //    headerstr += " > > " + unknownHeaderAttributes;
+            //    header.DidUnderstand = false;
+            //}
+            #endregion extract header
+
+            int _ID = int.Parse(nsdr.correlator);
+            string deliveryStatus = nsdr.deliveryStatus.ToString();
+            string statusDetail = "220";
+            //string correlator = nsdr.correlator;
+            string recipient = nsdr.deliveryStatus.address;
+
+            ////int r = CommonFunctions.UpdateMessage(statusDetail, deliveryStatus, correlator, recipient);   
+            try
+            {
+                Message msg = new Message().GetMessage(_ID);
+
+                CommonFunctions.LogActivityToDB(_ID.ToString());
+                msg.Status = 2;
+                //msg.Type = 1;
+                //msg.Direction = 1;
+                msg.StatusDetails = 220;
+                msg.Trace = nsdr.deliveryStatus.deliveryStatus.ToString();
+
+                //msg.Body = str; //msg.Body = "[DeliveryNotification]  " + headerstr;
+                ////msg.CustomField1 = int.Parse(nsdr.correlator);
+                ////msg.ToAddress = nsdr.deliveryStatus.address;
+                //msg.SMS_Date = DateTime.Now;                
+                //msg.Add(); //----
+
+                msg.Update();
+
+                //using (SqlConnection Conn = new SqlConnection(CONNECT.conStr))
+                //{
+                //    Conn.Open();
+
+                //    //string sQl = "INSERT INTO [Messages2]";
+                //    //sQl += "  (Direction, Type, Status, ToAddress,Body,ChannelID,StatusDetails,BillingID,FromAddress,[SMS Date],[CustomField1])";
+                //    //sQl += "  VALUES (" + direction.ToString() + ", 1, 1, '" + nsr.message.smsServiceActivationNumber + "','" + nsr.message.message + "'," + svcid + "," + statusdetails + "";
+                //    //sQl += "  ,'" + spid + "','" + nsr.message.senderAddress + "','" + nsr.message.dateTime.ToString("yyyyMMMdd HHmmss") + "','" + nsr.correlator + "')";
+
+                //    string sQl = "[StatusDetail]=" + statusDetail + ", [Trace]='" + deliveryStatus + "'";
+                //    sQl += " [CustomField1]='" + correlator + "',[ToAddress] like '" + recipient + "'";
+
+                //    sQl = "INSERT INTO [Messages2]([Body])VALUES('" + CommonFunctions.ValidateEntry(sQl) + "')";
+
+                //    using (SqlCommand cmd = new SqlCommand(sQl, Conn))
+                //    {
+                //        cmd.CommandTimeout = 0;
+                //        int r = cmd.ExecuteNonQuery();
+                //    }
+                //    Conn.Close();
+                //}
+            }
+            catch (Exception e)
+            {
+                CommonFunctions.LogActivityToDB(e.Message + " == > " + e.Source);
+                e.Data.Clear();
+                //msg.Trace = e.Message;
+                //msg.Update();
+            }
+            //======================================================================
+            return rval;
+        }
+    }
+
+
+}

@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="notifyQueueTimeout.asmx.cs" Class="notifyQueueTimeout.notifyQueueTimeout" %>

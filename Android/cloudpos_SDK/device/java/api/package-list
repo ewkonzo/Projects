@@ -1,0 +1,14 @@
+com.cloudpos
+com.cloudpos.card
+com.cloudpos.cashdrawer
+com.cloudpos.fingerprint
+com.cloudpos.hsm
+com.cloudpos.led
+com.cloudpos.msr
+com.cloudpos.pinpad
+com.cloudpos.printer
+com.cloudpos.rfcardreader
+com.cloudpos.secondarydisplay
+com.cloudpos.serialport
+com.cloudpos.signature
+com.cloudpos.smartcardreader

@@ -1,0 +1,11 @@
+﻿@model RouteFormModel
+
+@{
+    ViewData["Title"] = "Add Route";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+
+<div class="container-fluid">
+   @Html.Partial("_RouteForm", Model)
+</div>

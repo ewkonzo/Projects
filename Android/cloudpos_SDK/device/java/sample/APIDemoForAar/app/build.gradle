@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "27.0.1"
+
+    defaultConfig {
+        applicationId "com.wizarpos.apidemoforunionpaycloudpossdk"
+        minSdkVersion 19
+        targetSdkVersion 21
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'   // aar目录
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile files('libs/allutils.jar')
+    compile files('libs/androidmvc.jar')
+    //    compile files('libs/cloudpossdkinterface_en.jar')
+    //    compile files('libs/cloudpossdkinterfaceimplwithextension_patch_en_new.jar')
+    compile files('libs/bcprov-jdk15-138.jar')
+    //compile files('libs/cloudpossdk.jar')
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    //implementation  (name: 'cloudpossdk-debug', ext: 'aar')
+    //    compile files('libs/cloudpossdkinterfaceimplwithextension_patch.jar')
+    //implementation files('libs/cloudpossdk.jar')
+}

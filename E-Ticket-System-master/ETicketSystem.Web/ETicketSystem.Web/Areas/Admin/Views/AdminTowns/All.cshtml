@@ -1,0 +1,64 @@
+﻿@model AllTowns
+
+@{
+    ViewData["Title"] = "All Towns";
+}
+
+<environment include="Development">
+    <link rel="stylesheet" href="~/css/towns/towns-listing.css" />
+</environment>
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+<hr />
+<div class="container-fluid">
+    @Html.Partial("_SearchListingForm", Model.Pagination)
+    <a asp-controller="AdminTowns" asp-action="Add" class="btn btn-success">Add Town</a>
+</div>
+<hr />
+
+@if (Model.Towns.Count() == 0)
+{
+   @Html.Partial("_NoResultsFoundMessageBox")
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Domestic Companies</th>
+                <th>Total Stations</th>
+                <th>Stations</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var t in Model.Towns)
+            {
+                <tr>
+                    <td>@t.Name</td>
+                    <td>@t.DomesticCompanies</td>
+                    <td>@t.Stations</td>
+                    <td>
+                        <a href="/admin/towns/stations/@t.Id" class="btn btn-primary show-stations">
+                            Show Stations
+                        </a>
+                    </td>
+                    <td class="townId hidden">@t.Id</td>
+                </tr>
+                <tr class="all-stations">
+                    <td colspan="4">
+                        <ul class="stations-list"></ul>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @Html.Partial("_Pagination",Model.Pagination)
+}
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+   <script src="~/js/town/town-stations.js"></script>
+}
+

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s1="urn:microsoft-dynamics-schemas/page/sms" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="urn:microsoft-dynamics-schemas/page/sms" />
+      <s:element name="Sms">
+        <s:complexType />
+      </s:element>
+      <s:element name="SmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SmsResult" type="tns:ArrayOfSms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Sms" nillable="true" type="s1:Sms" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Smsupdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="s" type="tns:ArrayOfSms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SmsupdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SmsupdateResult" type="tns:ArrayOfSms" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/page/sms">
+      <s:complexType name="Sms">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Key" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Entry" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:date" />
+          <s:element minOccurs="0" maxOccurs="1" name="Time" type="s:time" />
+          <s:element minOccurs="0" maxOccurs="1" name="Posted" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date_posted" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s1:Status" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="User_Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Source" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Status">
+        <s:restriction base="s:string">
+          <s:enumeration value="Pending" />
+          <s:enumeration value="Sent" />
+          <s:enumeration value="Failed" />
+          <s:enumeration value="Delivered" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SmsSoapIn">
+    <wsdl:part name="parameters" element="tns:Sms" />
+  </wsdl:message>
+  <wsdl:message name="SmsSoapOut">
+    <wsdl:part name="parameters" element="tns:SmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SmsupdateSoapIn">
+    <wsdl:part name="parameters" element="tns:Smsupdate" />
+  </wsdl:message>
+  <wsdl:message name="SmsupdateSoapOut">
+    <wsdl:part name="parameters" element="tns:SmsupdateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MobileSoap">
+    <wsdl:operation name="Sms">
+      <wsdl:input message="tns:SmsSoapIn" />
+      <wsdl:output message="tns:SmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Smsupdate">
+      <wsdl:input message="tns:SmsupdateSoapIn" />
+      <wsdl:output message="tns:SmsupdateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MobileSoap" type="tns:MobileSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Sms">
+      <soap:operation soapAction="http://tempuri.org/Sms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Smsupdate">
+      <soap:operation soapAction="http://tempuri.org/Smsupdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MobileSoap12" type="tns:MobileSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Sms">
+      <soap12:operation soapAction="http://tempuri.org/Sms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Smsupdate">
+      <soap12:operation soapAction="http://tempuri.org/Smsupdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Mobile">
+    <wsdl:port name="MobileSoap" binding="tns:MobileSoap">
+      <soap:address location="http://localhost:8887/Mobile.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MobileSoap12" binding="tns:MobileSoap12">
+      <soap12:address location="http://localhost:8887/Mobile.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

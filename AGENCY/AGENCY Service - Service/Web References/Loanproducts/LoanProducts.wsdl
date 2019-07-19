@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/page/loanproducts" targetNamespace="urn:microsoft-dynamics-schemas/page/loanproducts" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/page/loanproducts" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:simpleType name="Source">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="BOSA" />
+          <xsd:enumeration value="FOSA" />
+          <xsd:enumeration value="Investment" />
+          <xsd:enumeration value="MICRO" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Repayment_Method">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Amortised" />
+          <xsd:enumeration value="Reducing_Balance" />
+          <xsd:enumeration value="Straight_Line" />
+          <xsd:enumeration value="Constants" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Penalty_Calculation_Method">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="No_Penalty" />
+          <xsd:enumeration value="Principal_in_Arrears" />
+          <xsd:enumeration value="Principal_in_Arrears_x002B_Interest_in_Arrears" />
+          <xsd:enumeration value="Principal_in_Arrears_x002B_Interest_in_Arrears_x002B_Penalty_in_Arrears" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Action">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="_blank_" />
+          <xsd:enumeration value="Off_Set_Commitments" />
+          <xsd:enumeration value="Discounting" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Repayment_Frequency">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Daily" />
+          <xsd:enumeration value="Weekly" />
+          <xsd:enumeration value="Monthly" />
+          <xsd:enumeration value="Quaterly" />
+          <xsd:enumeration value="Yearly" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="LoanProducts">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Key" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Product_Description" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Source" type="tns:Source" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Interest_rate" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Repayment_Method" type="tns:Repayment_Method" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Grace_Period_Principle_M" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Grace_Period_Interest_M" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Use_Cycles" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Instalment_Period" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="No_of_Installment" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Default_Installements" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Penalty_Calculation_Days" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Penalty_Percentage" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Recovery_Priority" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Min_No_Of_Guarantors" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Min_Re_application_Period" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Shares_Multiplier" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Penalty_Calculation_Method" type="tns:Penalty_Calculation_Method" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Penalty_Paid_Account" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Min_Loan_Amount" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Max_Loan_Amount" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Loan_Account" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Loan_Interest_Account" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Receivable_Interest_Account" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Action" type="tns:Action" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="BOSA_Account" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="BOSA_Personal_Loan_Account" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Top_Up_Commision_Account" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Top_Up_Commision" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Check_Off_Loan_No" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Repayment_Frequency" type="tns:Repayment_Frequency" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Mobile" type="xsd:boolean" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="LoanProducts_List">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="LoanProducts" type="tns:LoanProducts" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="LoanProducts_Fields">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Code" />
+          <xsd:enumeration value="Product_Description" />
+          <xsd:enumeration value="Source" />
+          <xsd:enumeration value="Interest_rate" />
+          <xsd:enumeration value="Repayment_Method" />
+          <xsd:enumeration value="Grace_Period_Principle_M" />
+          <xsd:enumeration value="Grace_Period_Interest_M" />
+          <xsd:enumeration value="Use_Cycles" />
+          <xsd:enumeration value="Instalment_Period" />
+          <xsd:enumeration value="No_of_Installment" />
+          <xsd:enumeration value="Default_Installements" />
+          <xsd:enumeration value="Penalty_Calculation_Days" />
+          <xsd:enumeration value="Penalty_Percentage" />
+          <xsd:enumeration value="Recovery_Priority" />
+          <xsd:enumeration value="Min_No_Of_Guarantors" />
+          <xsd:enumeration value="Min_Re_application_Period" />
+          <xsd:enumeration value="Shares_Multiplier" />
+          <xsd:enumeration value="Penalty_Calculation_Method" />
+          <xsd:enumeration value="Penalty_Paid_Account" />
+          <xsd:enumeration value="Min_Loan_Amount" />
+          <xsd:enumeration value="Max_Loan_Amount" />
+          <xsd:enumeration value="Loan_Account" />
+          <xsd:enumeration value="Loan_Interest_Account" />
+          <xsd:enumeration value="Receivable_Interest_Account" />
+          <xsd:enumeration value="Action" />
+          <xsd:enumeration value="BOSA_Account" />
+          <xsd:enumeration value="BOSA_Personal_Loan_Account" />
+          <xsd:enumeration value="Top_Up_Commision_Account" />
+          <xsd:enumeration value="Top_Up_Commision" />
+          <xsd:enumeration value="Check_Off_Loan_No" />
+          <xsd:enumeration value="Repayment_Frequency" />
+          <xsd:enumeration value="Mobile" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="LoanProducts_Filter">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="Field" type="tns:LoanProducts_Fields" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="Criteria" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Read">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Code" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Read_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="LoanProducts" type="tns:LoanProducts" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadByRecId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="recId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadByRecId_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="LoanProducts" type="tns:LoanProducts" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadMultiple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="filter" type="tns:LoanProducts_Filter" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="bookmarkKey" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="setSize" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadMultiple_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="ReadMultiple_Result" type="tns:LoanProducts_List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsUpdated">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsUpdated_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="IsUpdated_Result" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRecIdFromKey">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRecIdFromKey_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="GetRecIdFromKey_Result" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="Read">
+    <part name="parameters" element="tns:Read" />
+  </message>
+  <message name="Read_Result">
+    <part name="parameters" element="tns:Read_Result" />
+  </message>
+  <message name="ReadByRecId">
+    <part name="parameters" element="tns:ReadByRecId" />
+  </message>
+  <message name="ReadByRecId_Result">
+    <part name="parameters" element="tns:ReadByRecId_Result" />
+  </message>
+  <message name="ReadMultiple">
+    <part name="parameters" element="tns:ReadMultiple" />
+  </message>
+  <message name="ReadMultiple_Result">
+    <part name="parameters" element="tns:ReadMultiple_Result" />
+  </message>
+  <message name="IsUpdated">
+    <part name="parameters" element="tns:IsUpdated" />
+  </message>
+  <message name="IsUpdated_Result">
+    <part name="parameters" element="tns:IsUpdated_Result" />
+  </message>
+  <message name="GetRecIdFromKey">
+    <part name="parameters" element="tns:GetRecIdFromKey" />
+  </message>
+  <message name="GetRecIdFromKey_Result">
+    <part name="parameters" element="tns:GetRecIdFromKey_Result" />
+  </message>
+  <portType name="LoanProducts_Port">
+    <operation name="Read">
+      <input name="Read" message="tns:Read" />
+      <output name="Read_Result" message="tns:Read_Result" />
+    </operation>
+    <operation name="ReadByRecId">
+      <input name="ReadByRecId" message="tns:ReadByRecId" />
+      <output name="ReadByRecId_Result" message="tns:ReadByRecId_Result" />
+    </operation>
+    <operation name="ReadMultiple">
+      <input name="ReadMultiple" message="tns:ReadMultiple" />
+      <output name="ReadMultiple_Result" message="tns:ReadMultiple_Result" />
+    </operation>
+    <operation name="IsUpdated">
+      <input name="IsUpdated" message="tns:IsUpdated" />
+      <output name="IsUpdated_Result" message="tns:IsUpdated_Result" />
+    </operation>
+    <operation name="GetRecIdFromKey">
+      <input name="GetRecIdFromKey" message="tns:GetRecIdFromKey" />
+      <output name="GetRecIdFromKey_Result" message="tns:GetRecIdFromKey_Result" />
+    </operation>
+  </portType>
+  <binding name="LoanProducts_Binding" type="tns:LoanProducts_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Read">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/loanproducts:Read" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Read">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Read_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ReadByRecId">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/loanproducts:ReadByRecId" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReadByRecId">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReadByRecId_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ReadMultiple">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/loanproducts:ReadMultiple" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReadMultiple">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReadMultiple_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="IsUpdated">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/loanproducts:IsUpdated" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="IsUpdated">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="IsUpdated_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetRecIdFromKey">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/loanproducts:GetRecIdFromKey" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetRecIdFromKey">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetRecIdFromKey_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="LoanProducts_Service">
+    <port name="LoanProducts_Port" binding="tns:LoanProducts_Binding">
+      <address location="http://paulo:2012/Coretec/WS/Coretec/Page/LoanProducts" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

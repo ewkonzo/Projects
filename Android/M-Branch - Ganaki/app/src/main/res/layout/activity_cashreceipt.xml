@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cashreceipt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.paul.m_branch.cashreceipt">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="10">
+            <AutoCompleteTextView
+                android:id="@+id/memberno"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="ACC/Vehicle no"
+                android:inputType="number" />
+
+            <ImageButton
+                android:id="@+id/find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/memberno"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:src="@drawable/search" />
+            <ImageButton
+                android:id="@+id/clear"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@id/memberno"
+
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:src="@drawable/deletered" />
+            <ProgressBar
+                android:id="@+id/findmember"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/memberno"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/memberno"
+                android:layout_below="@id/memberno"
+                android:gravity="right"
+                android:text="A/C" />
+
+            <TextView
+                android:id="@+id/id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/memberno"
+                android:layout_below="@id/name"
+                android:gravity="right"
+                android:text="Account Name" />
+
+            <TextView
+                android:id="@+id/LoanBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id"
+                android:layout_alignLeft="@id/name"
+                android:gravity="right"
+                android:text="Loan balance"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/Penalty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/name"
+                android:layout_below="@id/LoanBalance"
+                android:gravity="right"
+                android:text="Penalty" />
+            <TextView
+                android:id="@+id/operation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/name"
+                android:layout_below="@id/Penalty"
+                android:gravity="right"
+                android:text="Operation" />
+            <include
+                android:id="@+id/seperator"
+                layout="@layout/transactions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/operation" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seperator"
+            android:id="@+id/lamount">
+
+            <EditText
+                android:id="@+id/tamount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seperator"
+                android:layout_alignParentRight="true"
+                android:layout_weight=".70"
+                android:gravity="center"
+                android:hint="Amount"
+                android:inputType="numberDecimal"
+                android:selectAllOnFocus="true" />
+            <Button
+                android:id="@+id/distribute"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+
+                android:text="Distribute..."
+                />
+    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/operations"
+                android:layout_below="@id/lamount"
+               >
+            <TextView
+                android:id="@+id/toperation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tamount"
+                android:gravity="right"
+                android:layout_weight=".50"
+                android:hint="To Operation:"
+                 />
+
+                <EditText
+                    android:id="@+id/eoperation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tamount"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight=".50"
+                    android:gravity="right"
+                    android:hint="Amount"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true" />
+                <TextView
+                    android:id="@+id/tstage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tamount"
+                    android:gravity="right"
+                    android:layout_weight=".50"
+                    android:hint="To Stage:"
+                    />
+
+                <EditText
+                    android:id="@+id/estage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tamount"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight=".50"
+                    android:gravity="right"
+                    android:hint="Amount"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/stage"
+                android:layout_below="@id/operations">
+
+            </LinearLayout>
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/Welfare"
+            android:layout_below="@id/stage">
+            <TextView
+                android:id="@+id/twelfare"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tamount"
+                android:gravity="right"
+                android:layout_weight=".50"
+                android:hint="To Welfare:"
+                />
+
+                <EditText
+                    android:id="@+id/ewelfare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tamount"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight=".50"
+                    android:gravity="right"
+                    android:hint="Amount"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true" />
+                <TextView
+                    android:id="@+id/tcourt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tamount"
+                    android:gravity="right"
+                    android:layout_weight=".50"
+                    android:hint="To Court:"
+                    />
+
+                <EditText
+                    android:id="@+id/ecourt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tamount"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight=".50"
+                    android:gravity="right"
+                    android:hint="Amount"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true" />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/court"
+                android:layout_below="@id/Welfare">
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/shares"
+                android:layout_below="@id/court">
+                <TextView
+                    android:id="@+id/tshares"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tamount"
+                    android:gravity="right"
+                    android:layout_weight=".50"
+                    android:hint="To Shares:"
+                    />
+
+                <EditText
+                    android:id="@+id/eshares"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tamount"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight=".50"
+                    android:gravity="right"
+                    android:hint="Amount"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true" />
+                <TextView
+                    android:id="@+id/tloan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tamount"
+                    android:gravity="right"
+                    android:layout_weight=".50"
+                    android:hint="To loan:"
+                    />
+
+                <EditText
+                    android:id="@+id/eloan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tamount"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight=".50"
+                    android:gravity="right"
+                    android:hint="Amount"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/loan"
+                android:layout_below="@id/shares">
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/savings"
+                android:layout_below="@id/loan">
+                <TextView
+                    android:id="@+id/tsavings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tamount"
+
+                    android:gravity="right"
+
+                    android:hint="To Savings:"
+                    />
+
+                <EditText
+                    android:id="@+id/esavings"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tamount"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight=".50"
+                    android:gravity="right"
+                    android:hint="Amount"
+                    android:inputType="numberDecimal"
+                    android:selectAllOnFocus="true" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/totalreceipt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="Total"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/postnew"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:drawableLeft="@drawable/print"
+                android:text="  Print"
+                />
+            <Button
+                android:id="@+id/reprint"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:drawableLeft="@drawable/print"
+                android:drawableStart="@drawable/print"
+                android:text="Reprint"
+
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

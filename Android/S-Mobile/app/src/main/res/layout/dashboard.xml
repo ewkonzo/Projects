@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_Withdraw"
+                style="@style/DashboardButton"
+                android:drawableTop="@drawable/withdraw"
+                android:onClick="onClick"
+                android:text="Withdraw" />
+
+            <Button
+                android:id="@+id/btn_Deposit"
+                style="@style/DashboardButton"
+                android:drawableTop="@drawable/withdraw"
+                android:onClick="onClick"
+                android:text="Deposit" />
+        </LinearLayout>
+
+        <include layout="@layout/_seperator"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_Balance"
+                style="@style/DashboardButton"
+                android:drawableTop="@drawable/withdraw"
+                android:onClick="onClick"
+                android:text="Balance Enquiry" />
+
+            <Button
+                android:id="@+id/btn_Ministatement"
+                style="@style/DashboardButton"
+                android:drawableTop="@drawable/withdraw"
+                android:onClick="onClick"
+                android:text="Ministatement" />
+        </LinearLayout>
+
+        <include layout="@layout/_seperator"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_Transfer"
+                style="@style/DashboardButton"
+                android:drawableTop="@drawable/withdraw"
+                android:onClick="onClick"
+                android:text="Transfer" />
+
+        </LinearLayout>
+
+        <include layout="@layout/_seperator"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_Airtime"
+                style="@style/DashboardButton"
+                android:drawableTop="@drawable/withdraw"
+                android:onClick="onClick"
+                android:text="Airtime" />
+
+        </LinearLayout>
+
+        <include layout="@layout/_seperator"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_Atm"
+                style="@style/DashboardButton"
+                android:drawableTop="@drawable/withdraw"
+                android:onClick="onClick"
+                android:text="Atm" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

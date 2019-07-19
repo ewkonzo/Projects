@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/codeunit/S_Mobile" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/S_Mobile" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/codeunit/S_Mobile" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="Balance">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="acc" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Balance_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetErrorCode">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="errorcode" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="GetErrorCode_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Post">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Post_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="SendSms">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="source" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="telephone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="textsms" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="documentNo" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="SendSms_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="Replacestring">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="string" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="findwhat" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="replacewith" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Replacestring_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Charge">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="transaction_Type" type="int" />
+            <element minOccurs="1" maxOccurs="1" name="amount" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Charge_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AdvanceEligibility">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="account" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AdvanceEligibility_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Postentry">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="entry" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Postentry_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="LoanGuaranteed">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="memberno1" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="path1" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanGuaranteed_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccountStatement">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="memberno" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="path" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="AccountStatement_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanGuarantors">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="memberno2" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="path2" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanGuarantors_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="DivindedReport">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="memberno2" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="path2" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="DivindedReport_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="boolean" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Delcalc">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="memberno" type="string" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="Delcalc_Result">
+        <complexType>
+          <sequence />
+        </complexType>
+      </element>
+      <element name="LoanEligibility">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="phone" type="string" />
+            <element minOccurs="1" maxOccurs="1" name="loantypes" type="int" />
+          </sequence>
+        </complexType>
+      </element>
+      <element name="LoanEligibility_Result">
+        <complexType>
+          <sequence>
+            <element minOccurs="1" maxOccurs="1" name="return_value" type="decimal" />
+          </sequence>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="Balance">
+    <part name="parameters" element="tns:Balance" />
+  </message>
+  <message name="Balance_Result">
+    <part name="parameters" element="tns:Balance_Result" />
+  </message>
+  <message name="GetErrorCode">
+    <part name="parameters" element="tns:GetErrorCode" />
+  </message>
+  <message name="GetErrorCode_Result">
+    <part name="parameters" element="tns:GetErrorCode_Result" />
+  </message>
+  <message name="Post">
+    <part name="parameters" element="tns:Post" />
+  </message>
+  <message name="Post_Result">
+    <part name="parameters" element="tns:Post_Result" />
+  </message>
+  <message name="SendSms">
+    <part name="parameters" element="tns:SendSms" />
+  </message>
+  <message name="SendSms_Result">
+    <part name="parameters" element="tns:SendSms_Result" />
+  </message>
+  <message name="Replacestring">
+    <part name="parameters" element="tns:Replacestring" />
+  </message>
+  <message name="Replacestring_Result">
+    <part name="parameters" element="tns:Replacestring_Result" />
+  </message>
+  <message name="Charge">
+    <part name="parameters" element="tns:Charge" />
+  </message>
+  <message name="Charge_Result">
+    <part name="parameters" element="tns:Charge_Result" />
+  </message>
+  <message name="AdvanceEligibility">
+    <part name="parameters" element="tns:AdvanceEligibility" />
+  </message>
+  <message name="AdvanceEligibility_Result">
+    <part name="parameters" element="tns:AdvanceEligibility_Result" />
+  </message>
+  <message name="Postentry">
+    <part name="parameters" element="tns:Postentry" />
+  </message>
+  <message name="Postentry_Result">
+    <part name="parameters" element="tns:Postentry_Result" />
+  </message>
+  <message name="LoanGuaranteed">
+    <part name="parameters" element="tns:LoanGuaranteed" />
+  </message>
+  <message name="LoanGuaranteed_Result">
+    <part name="parameters" element="tns:LoanGuaranteed_Result" />
+  </message>
+  <message name="AccountStatement">
+    <part name="parameters" element="tns:AccountStatement" />
+  </message>
+  <message name="AccountStatement_Result">
+    <part name="parameters" element="tns:AccountStatement_Result" />
+  </message>
+  <message name="LoanGuarantors">
+    <part name="parameters" element="tns:LoanGuarantors" />
+  </message>
+  <message name="LoanGuarantors_Result">
+    <part name="parameters" element="tns:LoanGuarantors_Result" />
+  </message>
+  <message name="DivindedReport">
+    <part name="parameters" element="tns:DivindedReport" />
+  </message>
+  <message name="DivindedReport_Result">
+    <part name="parameters" element="tns:DivindedReport_Result" />
+  </message>
+  <message name="Delcalc">
+    <part name="parameters" element="tns:Delcalc" />
+  </message>
+  <message name="Delcalc_Result">
+    <part name="parameters" element="tns:Delcalc_Result" />
+  </message>
+  <message name="LoanEligibility">
+    <part name="parameters" element="tns:LoanEligibility" />
+  </message>
+  <message name="LoanEligibility_Result">
+    <part name="parameters" element="tns:LoanEligibility_Result" />
+  </message>
+  <portType name="S_Mobile_Port">
+    <operation name="Balance">
+      <input name="Balance" message="tns:Balance" />
+      <output name="Balance_Result" message="tns:Balance_Result" />
+    </operation>
+    <operation name="GetErrorCode">
+      <input name="GetErrorCode" message="tns:GetErrorCode" />
+      <output name="GetErrorCode_Result" message="tns:GetErrorCode_Result" />
+    </operation>
+    <operation name="Post">
+      <input name="Post" message="tns:Post" />
+      <output name="Post_Result" message="tns:Post_Result" />
+    </operation>
+    <operation name="SendSms">
+      <input name="SendSms" message="tns:SendSms" />
+      <output name="SendSms_Result" message="tns:SendSms_Result" />
+    </operation>
+    <operation name="Replacestring">
+      <input name="Replacestring" message="tns:Replacestring" />
+      <output name="Replacestring_Result" message="tns:Replacestring_Result" />
+    </operation>
+    <operation name="Charge">
+      <input name="Charge" message="tns:Charge" />
+      <output name="Charge_Result" message="tns:Charge_Result" />
+    </operation>
+    <operation name="AdvanceEligibility">
+      <input name="AdvanceEligibility" message="tns:AdvanceEligibility" />
+      <output name="AdvanceEligibility_Result" message="tns:AdvanceEligibility_Result" />
+    </operation>
+    <operation name="Postentry">
+      <input name="Postentry" message="tns:Postentry" />
+      <output name="Postentry_Result" message="tns:Postentry_Result" />
+    </operation>
+    <operation name="LoanGuaranteed">
+      <input name="LoanGuaranteed" message="tns:LoanGuaranteed" />
+      <output name="LoanGuaranteed_Result" message="tns:LoanGuaranteed_Result" />
+    </operation>
+    <operation name="AccountStatement">
+      <input name="AccountStatement" message="tns:AccountStatement" />
+      <output name="AccountStatement_Result" message="tns:AccountStatement_Result" />
+    </operation>
+    <operation name="LoanGuarantors">
+      <input name="LoanGuarantors" message="tns:LoanGuarantors" />
+      <output name="LoanGuarantors_Result" message="tns:LoanGuarantors_Result" />
+    </operation>
+    <operation name="DivindedReport">
+      <input name="DivindedReport" message="tns:DivindedReport" />
+      <output name="DivindedReport_Result" message="tns:DivindedReport_Result" />
+    </operation>
+    <operation name="Delcalc">
+      <input name="Delcalc" message="tns:Delcalc" />
+      <output name="Delcalc_Result" message="tns:Delcalc_Result" />
+    </operation>
+    <operation name="LoanEligibility">
+      <input name="LoanEligibility" message="tns:LoanEligibility" />
+      <output name="LoanEligibility_Result" message="tns:LoanEligibility_Result" />
+    </operation>
+  </portType>
+  <binding name="S_Mobile_Binding" type="tns:S_Mobile_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Balance">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:Balance" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Balance">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Balance_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetErrorCode">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:GetErrorCode" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetErrorCode">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetErrorCode_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Post">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:Post" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Post">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Post_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="SendSms">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:SendSms" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="SendSms">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="SendSms_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Replacestring">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:Replacestring" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Replacestring">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Replacestring_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Charge">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:Charge" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Charge">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Charge_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AdvanceEligibility">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:AdvanceEligibility" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AdvanceEligibility">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AdvanceEligibility_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Postentry">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:Postentry" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Postentry">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Postentry_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="LoanGuaranteed">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:LoanGuaranteed" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="LoanGuaranteed">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="LoanGuaranteed_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="AccountStatement">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:AccountStatement" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="AccountStatement">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="AccountStatement_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="LoanGuarantors">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:LoanGuarantors" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="LoanGuarantors">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="LoanGuarantors_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="DivindedReport">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:DivindedReport" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="DivindedReport">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="DivindedReport_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Delcalc">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:Delcalc" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Delcalc">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Delcalc_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="LoanEligibility">
+      <operation soapAction="urn:microsoft-dynamics-schemas/codeunit/S_Mobile:LoanEligibility" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="LoanEligibility">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="LoanEligibility_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="S_Mobile">
+    <port name="S_Mobile_Port" binding="tns:S_Mobile_Binding">
+      <address location="http://192.168.30.128:4048/SHERIATEST/WS/SHERIA%20SACCO%20SOCIETY%20LTD./Codeunit/S_Mobile" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

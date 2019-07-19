@@ -1,0 +1,9 @@
+package com.cloudpos.scan.aidl;
+import com.cloudpos.scan.aidl.ScanParameter;
+import com.cloudpos.scan.aidl.ScannerResult;
+import com.cloudpos.scan.aidl.IScanCallBack;
+interface IScannService{
+   ScannerResult scanBarcode(in ScanParameter parameter);
+   void startScan(in ScanParameter parameter, in IScanCallBack callBack);
+   boolean stopScan();
+}

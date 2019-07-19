@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="F:\Paul\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_8c2d7897939512fc4310385ae59975cd40ca5784.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="3d28dbbe8b5460c47e83f7d4339890cddd2bb752">
+        <dex dex="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\pre-dexed\debug\instant-run-bootstrap_e7618db95359d0421441997011de0ac22362d275.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="a4598fe1179864e8927cd0bd1bb39fc132ee49ad">
+        <dex dex="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\pre-dexed\debug\instant-run_86010e67a8b3794d41d1c7db7c9c021b0a2a3bef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="82ce13fd19cdfde0e392f03c27edeba8d4333648">
+        <dex dex="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.3.0_cac6972ef167ce8632b53b269b9dfacfb0933d61.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_b7a8786696b910a29bc6d022e0f254145966c2fa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\gridlayout-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="003ebdacd5f75067b8724f92bd5eefa323d870aa">
+        <dex dex="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\pre-dexed\debug\com.android.support-gridlayout-v7-23.3.0_f2370cc091493128ec5b0c2cef81803ec950f827.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="F:\Paul\Projects\Dropbox\Android\BluetoothChat\Application\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_b9e6dc02cafbeb0c94e6782c80cd713c54a19bb3.jar" />
+    </item>
+
+</items>

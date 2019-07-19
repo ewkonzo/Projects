@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Collection.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Collection_Vendor_Vendor_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:7047/DynamicsNAV/WS/GAKUYU%20FCS%20LIMITED/Page/Vendor</Value>
+    </Setting>
+    <Setting Name="Collection_paulo_Collection_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:7047/DynamicsNAV/WS/GAKUYU%20FCS%20LIMITED/Page/Collection</Value>
+    </Setting>
+    <Setting Name="Collection_Routes_Routes_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:7047/DynamicsNAV/WS/GAKUYU%20FCS%20LIMITED/Page/Routes</Value>
+    </Setting>
+    <Setting Name="Collection_Mpesa_Mpesa_Service" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://paulo:7047/DynamicsNAV/WS/HOMABAY%20COUNTY%20WOMEN%20SACCO/Page/Mpesa</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

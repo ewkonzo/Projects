@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="M-Sacco.asmx.cs" Class="MobiService.Mobile" %>

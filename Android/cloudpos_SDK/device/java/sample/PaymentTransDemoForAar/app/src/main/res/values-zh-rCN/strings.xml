@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PaymentTransDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="txt_xiaoji"><u>小计: 1000</u></string>
+    <string name="SwingCard">请挥卡...</string>
+    <string name="InputPW">请输入密码:</string>
+    <string name="OrderMes">订单信息Demo\n序号: 1\n商品名称: 美的电磁壶\n商品图片: </string>
+    <string name="Price">市场价:1100\n本店价: 1000\n数量: 1\n折扣金额: 0</string>
+    <string name="HowPay">选择支付方式</string>
+    <string name="RFCard">非接卡</string>
+    <string name="MSR">磁条卡</string>
+    <string name="ICCard">IC卡</string>
+    <string name="Pay">支付</string>
+    <string name="SwipeCard">请刷卡...</string>
+    <string name="InsertCard">请插卡...</string>
+    <string name="NoPaper">缺纸</string>
+    <string name="PaySuc">支付结果: 成功</string>
+    <string name="Print">打印</string>
+    <string name="Back">返回</string>
+
+</resources>

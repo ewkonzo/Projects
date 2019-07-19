@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="Advance"
+        android:icon="@drawable/advance"
+        app:showAsAction="always"
+        android:id="@+id/advance"
+        />
+    <item
+        android:title="T Line"
+        android:icon="@drawable/tlist"
+        app:showAsAction="always"
+        android:id="@+id/List"
+        />
+    <item
+        android:title="Save"
+        android:icon="@drawable/save"
+        app:showAsAction="always"
+        android:id="@+id/save" />
+
+</menu>

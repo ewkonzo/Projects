@@ -1,0 +1,15 @@
+﻿Could not parse the configuration file. The error message is: 'Could not find file 'D:\Projects\Projects\Mobile\S-Mobile\S_Ussd\S_Ussd\Web.config'.'. Try editing the file manually and then saving it.
+Generated model file: Model1.edmx.
+Loading metadata from the database took 00:00:01.9525906.
+Generating the model took 00:00:03.2706844.
+Added the connection string to the Web.Config file.
+Writing the .edmx file took 00:00:00.0029136.
+Generated model file: Model1.edmx.
+Loading metadata from the database took 00:00:01.2861375.
+Generating the model took 00:00:02.9744976.
+Generated model file: Model1.edmx.
+Loading metadata from the database took 00:00:01.9965234.
+Generating the model took 00:00:02.5360242.
+Generated model file: Model1.edmx.
+Loading metadata from the database took 00:00:01.4844397.
+Generating the model took 00:00:02.8164017.

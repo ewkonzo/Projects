@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_farmercollection"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.paul.datacollector.farmercollection">
+
+    <TextView
+        android:id="@+id/farmerno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtfarmerno"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Farmer Number:" />
+
+    <EditText
+        android:id="@+id/txtfarmerno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+
+        android:layout_toRightOf="@id/farmerno"
+        android:hint="Farmer number" />
+
+    <Button
+        android:id="@+id/find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Find" />
+
+    <TextView
+        android:id="@+id/farmername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtfarmerno"
+     android:gravity="right"
+        android:layout_alignRight="@id/txtfarmerno"
+        android:hint="Farmer Number:" />
+    <Button
+        android:id="@+id/print"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/find"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Print" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/print"
+        android:id="@+id/listfarmerreport"></ListView>
+</RelativeLayout>
