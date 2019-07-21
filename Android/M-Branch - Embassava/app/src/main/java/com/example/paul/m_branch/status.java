@@ -38,13 +38,13 @@ public class status extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_status);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         db = new DB(this);
-        vehno = (AutoCompleteTextView) findViewById(R.id.searchno);
-        p = (ProgressBar) findViewById(R.id.searchprogress);
-        sl = (ListView) findViewById(R.id.statuslist);
-        search = (ImageButton) findViewById(R.id.findveh);
+        vehno = findViewById(R.id.searchno);
+        p = findViewById(R.id.searchprogress);
+        sl = findViewById(R.id.statuslist);
+        search = findViewById(R.id.findveh);
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

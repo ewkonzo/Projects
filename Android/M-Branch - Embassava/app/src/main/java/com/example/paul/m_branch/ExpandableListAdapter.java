@@ -50,15 +50,15 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.reportlist, null);
         }
 
-        TextView txtmemberno = (TextView) convertView.findViewById(R.id.memberno);
+        TextView txtmemberno = convertView.findViewById(R.id.memberno);
         txtmemberno.setText(t.Account_No);
-        TextView txtmembername = (TextView) convertView.findViewById(R.id.membername);
+        TextView txtmembername = convertView.findViewById(R.id.membername);
         txtmembername.setText(t.Account_Name);
-        TextView txtreference = (TextView) convertView.findViewById(R.id.reference);
+        TextView txtreference = convertView.findViewById(R.id.reference);
         txtreference.setText(t.Document_No);
-        TextView txtreceipt = (TextView) convertView.findViewById(R.id.receiptno);
+        TextView txtreceipt = convertView.findViewById(R.id.receiptno);
         txtreceipt.setText(t.Date + " "+ t.Time);
-        TextView txtttype = (TextView) convertView.findViewById(R.id.transtype);
+        TextView txtttype = convertView.findViewById(R.id.transtype);
         if(!t.Loan_No.equals("")) {
             if (t.Type.contains("LOAN"))
             txtttype.setText(t.typename + "(" + t.Ward +")");
@@ -67,9 +67,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
         }else
             txtttype.setText(t.typename);
 
-        TextView txtamount = (TextView) convertView.findViewById(R.id.tamount);
+        TextView txtamount = convertView.findViewById(R.id.tamount);
         txtamount.setText(String.format("%.2f", t.Amount));
-        ImageView sent = (ImageView)convertView.findViewById(R.id.sent);
+        ImageView sent = convertView.findViewById(R.id.sent);
         if(!t.sent)
             sent.setVisibility(View.GONE);
 
@@ -107,29 +107,29 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.reportgroup, null);
         }
-        ImageView im = (ImageView) convertView.findViewById(R.id.groupheadericon);
+        ImageView im = convertView.findViewById(R.id.groupheadericon);
 
 
-        TextView lblgroupname = (TextView) convertView
+        TextView lblgroupname = convertView
                 .findViewById(R.id.lblListHeader);
         lblgroupname.setText(headerTitle.date);
 
-        TextView lblcount = (TextView) convertView
+        TextView lblcount = convertView
                 .findViewById(R.id.groupcountvalue);
         lblcount.setText(String.valueOf(headerTitle.Count));
 
-        TextView lbltotal = (TextView) convertView
+        TextView lbltotal = convertView
                 .findViewById(R.id.grouptotalvalue);
         lbltotal.setText(headerTitle.Total.toString());
 
-        ImageView print = (ImageView)convertView.findViewById(R.id.printdaily);
+        ImageView print = convertView.findViewById(R.id.printdaily);
         print.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
             }
         });
-        ImageView refresh = (ImageView)convertView.findViewById(R.id.refresh);
+        ImageView refresh = convertView.findViewById(R.id.refresh);
 refresh.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {

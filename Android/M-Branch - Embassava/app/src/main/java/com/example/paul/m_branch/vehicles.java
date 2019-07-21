@@ -18,7 +18,7 @@ public class vehicles {
         return this.Code;
     }
 
-    public static enum Vehicle_Type {
+    public enum Vehicle_Type {
 
 
         _x0031_4_Seater("14 Seater"),

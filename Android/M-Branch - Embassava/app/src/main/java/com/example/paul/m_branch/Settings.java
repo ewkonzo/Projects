@@ -30,9 +30,9 @@ public class Settings extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
 
-        printer = (EditText) findViewById(R.id.setprinter);
-        copies =(EditText)findViewById(R.id.copiestoprint);
-        ip = (EditText) findViewById(R.id.setip);
+        printer = findViewById(R.id.setprinter);
+        copies = findViewById(R.id.copiestoprint);
+        ip = findViewById(R.id.setip);
         sharedPreferences = getSharedPreferences("Settings",MODE_PRIVATE);
         Map<String,?> keys = sharedPreferences.getAll();
 
@@ -40,7 +40,7 @@ public class Settings extends Activity {
             Log.d("map values",entry.getKey() + ": " +
                     entry.getValue().toString());
         }
-        save = (Button)findViewById(R.id.savesetttings);
+        save = findViewById(R.id.savesetttings);
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

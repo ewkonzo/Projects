@@ -52,24 +52,24 @@ public class Receipts extends BaseExpandableListAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.reportreceiptlist, null);
         }
-        TextView recno = (TextView) convertView.findViewById(R.id.Receiptno);
+        TextView recno = convertView.findViewById(R.id.Receiptno);
         recno.setText(t.Document_No);
 
-        TextView time = (TextView) convertView.findViewById(R.id.time);
+        TextView time = convertView.findViewById(R.id.time);
         time.setText(t.Time);
 
-        TextView type = (TextView) convertView.findViewById(R.id.type);
+        TextView type = convertView.findViewById(R.id.type);
         type.setText(t.typename);
-        TextView loanno = (TextView) convertView.findViewById(R.id.loanno);
+        TextView loanno = convertView.findViewById(R.id.loanno);
         if(t.Type.contains("LOAN"))
         loanno.setText(t.Loan_No +"("+ t.Ward +")");
         else
             loanno.setText(t.Loan_No);
 
-        TextView txtamount = (TextView) convertView.findViewById(R.id.Amount);
+        TextView txtamount = convertView.findViewById(R.id.Amount);
         txtamount.setText(String.format("%.2f", t.Amount));
 
-        ImageView sent = (ImageView) convertView.findViewById(R.id.sent);
+        ImageView sent = convertView.findViewById(R.id.sent);
         if (!t.sent)
             sent.setVisibility(View.GONE);
 
@@ -107,30 +107,30 @@ public class Receipts extends BaseExpandableListAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.receiptgroup, null);
         }
-        ImageView im = (ImageView) convertView.findViewById(R.id.groupheadericon);
+        ImageView im = convertView.findViewById(R.id.groupheadericon);
 
-        TextView lblgroupname = (TextView) convertView
+        TextView lblgroupname = convertView
                 .findViewById(R.id.lblListHeader);
         lblgroupname.setText(headerTitle.date);
 
-        TextView lblrec = (TextView) convertView
+        TextView lblrec = convertView
                 .findViewById(R.id.lblListreceipt);
         lblrec.setText(headerTitle.receipt + "(" + headerTitle.Count + ")");
 
-        TextView lblmno = (TextView) convertView
+        TextView lblmno = convertView
                 .findViewById(R.id.memberno);
         lblmno.setText(headerTitle.No);
 
-        TextView mname = (TextView) convertView
+        TextView mname = convertView
                 .findViewById(R.id.membername);
         mname.setText(headerTitle.Name);
 
 
-        TextView lblcount = (TextView) convertView
+        TextView lblcount = convertView
                 .findViewById(R.id.groupcountvalue);
         lblcount.setText(String.valueOf(headerTitle.user));
 
-        TextView lbltotal = (TextView) convertView
+        TextView lbltotal = convertView
                 .findViewById(R.id.grouptotalvalue);
         lbltotal.setText(String.format("%.2f", headerTitle.Total));
 
@@ -138,7 +138,7 @@ public class Receipts extends BaseExpandableListAdapter {
         cdt = Calendar.getInstance();
         SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
         final String formattedDate = df.format(cdt.getTime());
-        final ImageView reverse = (ImageView) convertView.findViewById(R.id.reverse);
+        final ImageView reverse = convertView.findViewById(R.id.reverse);
         reverse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -168,7 +168,7 @@ public class Receipts extends BaseExpandableListAdapter {
                 }
             }
         });
-        ImageView print = (ImageView) convertView.findViewById(R.id.printdaily);
+        ImageView print = convertView.findViewById(R.id.printdaily);
         print.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

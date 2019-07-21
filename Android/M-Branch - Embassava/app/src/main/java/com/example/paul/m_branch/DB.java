@@ -21,9 +21,9 @@ public class DB extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "MBranch.db";
 
     public static class t {
-        public static final String Transactions_TABLE_NAME = "transactions";
-        public static final String tmpTransactions_TABLE_NAME = "tmpFarmer";
-        public static final String Document_No = "Document_No";
+        static final String Transactions_TABLE_NAME = "transactions";
+         static final String tmpTransactions_TABLE_NAME = "tmpFarmer";
+         static final String Document_No = "Document_No";
         public static final String Account_No = "Account_No";
         public static final String Agent_Code = "Agent_Code";
         public static final String Loan_No = "Loan_No";
@@ -468,7 +468,7 @@ public class DB extends SQLiteOpenHelper {
             f.Account_Name = res.getString(res.getColumnIndex(t.Account_Name));
             f.Telephone = res.getString(res.getColumnIndex(t.Telephone));
             f.Transaction_Type = res.getInt(res.getColumnIndex(t.Transaction_Type));
-            f.sent = (res.getInt(res.getColumnIndex(t.sent)) == 0 ? false : true);
+            f.sent = (res.getInt(res.getColumnIndex(t.sent)) != 0);
             f.Amount = res.getDouble(res.getColumnIndex(t.Amount));
             f.Document_No = res.getString(res.getColumnIndex(t.Document_No));
             f.Date = res.getString(res.getColumnIndex(t.Date));
@@ -498,7 +498,7 @@ public class DB extends SQLiteOpenHelper {
             f.Account_Name = res.getString(res.getColumnIndex(t.Account_Name));
             f.Telephone = res.getString(res.getColumnIndex(t.Telephone));
             f.Transaction_Type = res.getInt(res.getColumnIndex(t.Transaction_Type));
-            f.sent = (res.getInt(res.getColumnIndex(t.sent)) == 0 ? false : true);
+            f.sent = (res.getInt(res.getColumnIndex(t.sent)) != 0);
             f.Amount = res.getDouble(res.getColumnIndex(t.Amount));
             f.Document_No = res.getString(res.getColumnIndex(t.Document_No));
             f.Loan_No = res.getString(res.getColumnIndex(t.Loan_No));
@@ -580,7 +580,7 @@ public class DB extends SQLiteOpenHelper {
             f.Account_Name = res.getString(res.getColumnIndex(t.Account_Name));
             f.Telephone = res.getString(res.getColumnIndex(t.Telephone));
             f.Transaction_Type = res.getInt(res.getColumnIndex(t.Transaction_Type));
-            f.sent = (res.getInt(res.getColumnIndex(t.sent)) == 0 ? false : true);
+            f.sent = (res.getInt(res.getColumnIndex(t.sent)) != 0);
             f.Amount = res.getDouble(res.getColumnIndex(t.Amount));
             f.Document_No = res.getString(res.getColumnIndex(t.Document_No));
             f.Loan_No = res.getString(res.getColumnIndex(t.Loan_No));
@@ -613,7 +613,7 @@ public class DB extends SQLiteOpenHelper {
         f.Account_Name = res.getString(res.getColumnIndex(t.Account_Name));
         f.Telephone = res.getString(res.getColumnIndex(t.Telephone));
         f.Transaction_Type = res.getInt(res.getColumnIndex(t.Transaction_Type));
-        f.sent = (res.getInt(res.getColumnIndex(t.sent)) == 0 ? false : true);
+        f.sent = (res.getInt(res.getColumnIndex(t.sent)) != 0);
         f.Amount = res.getDouble(res.getColumnIndex(t.Amount));
         f.Document_No = res.getString(res.getColumnIndex(t.Document_No));
         f.Loan_No = res.getString(res.getColumnIndex(t.Loan_No));
@@ -648,7 +648,7 @@ public class DB extends SQLiteOpenHelper {
             f.Account_Name = res.getString(res.getColumnIndex(t.Account_Name));
             f.Telephone = res.getString(res.getColumnIndex(t.Telephone));
             f.Transaction_Type = res.getInt(res.getColumnIndex(t.Transaction_Type));
-            f.sent = (res.getInt(res.getColumnIndex(t.sent)) == 0 ? false : true);
+            f.sent = (res.getInt(res.getColumnIndex(t.sent)) != 0);
             f.Amount = res.getDouble(res.getColumnIndex(t.Amount));
             f.Document_No = res.getString(res.getColumnIndex(t.Document_No));
             f.Loan_No = res.getString(res.getColumnIndex(t.Loan_No));
@@ -683,7 +683,7 @@ public class DB extends SQLiteOpenHelper {
             f.Account_Name = res.getString(res.getColumnIndex(t.Account_Name));
             f.Telephone = res.getString(res.getColumnIndex(t.Telephone));
             f.Transaction_Type = res.getInt(res.getColumnIndex(t.Transaction_Type));
-            f.sent = (res.getInt(res.getColumnIndex(t.sent)) == 0 ? false : true);
+            f.sent = (res.getInt(res.getColumnIndex(t.sent)) != 0);
             f.Amount = res.getDouble(res.getColumnIndex(t.Amount));
             f.Document_No = res.getString(res.getColumnIndex(t.Document_No));
             f.Loan_No = res.getString(res.getColumnIndex(t.Loan_No));
@@ -718,7 +718,7 @@ public class DB extends SQLiteOpenHelper {
             f.Account_Name = res.getString(res.getColumnIndex(t.Account_Name));
             f.Telephone = res.getString(res.getColumnIndex(t.Telephone));
             f.Transaction_Type = res.getInt(res.getColumnIndex(t.Transaction_Type));
-            f.sent = (res.getInt(res.getColumnIndex(t.sent)) == 0 ? false : true);
+            f.sent = (res.getInt(res.getColumnIndex(t.sent)) != 0);
             f.Amount = res.getDouble(res.getColumnIndex(t.Amount));
             f.Document_No = res.getString(res.getColumnIndex(t.Document_No));
             f.Loan_No = res.getString(res.getColumnIndex(t.Loan_No));
@@ -752,7 +752,7 @@ public class DB extends SQLiteOpenHelper {
             f.Account_Name = res.getString(res.getColumnIndex(t.Account_Name));
             f.Telephone = res.getString(res.getColumnIndex(t.Telephone));
             f.Transaction_Type = res.getInt(res.getColumnIndex(t.Transaction_Type));
-            f.sent = (res.getInt(res.getColumnIndex(t.sent)) == 0 ? false : true);
+            f.sent = (res.getInt(res.getColumnIndex(t.sent)) != 0);
             f.Amount = res.getDouble(res.getColumnIndex(t.Amount));
             f.Loan_No = res.getString(res.getColumnIndex(t.Loan_No));
             f.Document_No = res.getString(res.getColumnIndex(t.Document_No));
@@ -791,7 +791,7 @@ public class DB extends SQLiteOpenHelper {
             f.Account_Name = res.getString(res.getColumnIndex(t.Account_Name));
             f.Telephone = res.getString(res.getColumnIndex(t.Telephone));
             f.Transaction_Type = res.getInt(res.getColumnIndex(t.Transaction_Type));
-            f.sent = (res.getInt(res.getColumnIndex(t.sent)) == 0 ? false : true);
+            f.sent = (res.getInt(res.getColumnIndex(t.sent)) != 0);
             f.Amount = res.getDouble(res.getColumnIndex(t.Amount));
             f.Loan_No = res.getString(res.getColumnIndex(t.Loan_No));
             f.Document_No = res.getString(res.getColumnIndex(t.Document_No));
@@ -942,7 +942,7 @@ public class DB extends SQLiteOpenHelper {
             f.Outstanding_Balance = res.getDouble(res.getColumnIndex(m.Outstanding_Balance));
             f.Repayment = res.getDouble(res.getColumnIndex(m.Repayment));
             f.ID_No = res.getString(res.getColumnIndex(m.ID_No));
-            f.updated = (res.getInt(res.getColumnIndex(m.updated)) == 0 ? false : true);
+            f.updated = (res.getInt(res.getColumnIndex(m.updated)) != 0);
             res.moveToNext();
             array_list.add(f);
         }
@@ -968,7 +968,7 @@ public class DB extends SQLiteOpenHelper {
             f.Outstanding_Balance = res.getDouble(res.getColumnIndex(m.Outstanding_Balance));
             f.Repayment = res.getDouble(res.getColumnIndex(m.Repayment));
             f.ID_No = res.getString(res.getColumnIndex(m.ID_No));
-            f.updated = (res.getInt(res.getColumnIndex(m.updated)) == 0 ? false : true);
+            f.updated = (res.getInt(res.getColumnIndex(m.updated)) != 0);
         }
         res.close();
         return f;
@@ -1022,7 +1022,7 @@ public class DB extends SQLiteOpenHelper {
             f.Outstanding_Balance = res.getDouble(res.getColumnIndex(m.Outstanding_Balance));
             f.Repayment = res.getDouble(res.getColumnIndex(m.Repayment));
             f.ID_No = res.getString(res.getColumnIndex(m.ID_No));
-            f.updated = (res.getInt(res.getColumnIndex(m.updated)) == 0 ? false : true);
+            f.updated = (res.getInt(res.getColumnIndex(m.updated)) != 0);
         }
         res.close();
         return f;
@@ -1257,8 +1257,8 @@ public class DB extends SQLiteOpenHelper {
             types f = new types();
             f.Code = res.getString(res.getColumnIndex(tt.Code));
             f.Name = res.getString(res.getColumnIndex(tt.Name));
-            f.Active = (res.getInt(res.getColumnIndex(tt.Active)) == 0 ? false : true);
-            f.Attach_to_vehicle = (res.getInt(res.getColumnIndex(tt.Attach_to_vehicle)) == 0 ? false : true);
+            f.Active = (res.getInt(res.getColumnIndex(tt.Active)) != 0);
+            f.Attach_to_vehicle = (res.getInt(res.getColumnIndex(tt.Attach_to_vehicle)) != 0);
             f.Order = res.getInt(res.getColumnIndex(tt.Order)) ;
             res.moveToNext();
 
@@ -1279,8 +1279,8 @@ public class DB extends SQLiteOpenHelper {
             f = new types();
         f.Code = res.getString(res.getColumnIndex(tt.Code));
         f.Name = res.getString(res.getColumnIndex(tt.Name));
-        f.Active = (res.getInt(res.getColumnIndex(tt.Active)) == 0 ? false : true);
-        f.Attach_to_vehicle = (res.getInt(res.getColumnIndex(tt.Attach_to_vehicle)) == 0 ? false : true);
+        f.Active = (res.getInt(res.getColumnIndex(tt.Active)) != 0);
+        f.Attach_to_vehicle = (res.getInt(res.getColumnIndex(tt.Attach_to_vehicle)) != 0);
         f.Order = res.getInt(res.getColumnIndex(tt.Order)) ;
         res.close();}
         return f;

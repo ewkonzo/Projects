@@ -55,23 +55,23 @@ public class menu extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        cash = (Button) findViewById(R.id.CashReceipt);
-        paymentstatus = (Button) findViewById(R.id.Paymentstatus);
+        cash = findViewById(R.id.CashReceipt);
+        paymentstatus = findViewById(R.id.Paymentstatus);
         db = new DB(this);
-        printer = (CheckBox) findViewById(R.id.printer);
+        printer = findViewById(R.id.printer);
         preferences = getSharedPreferences("Settings", MODE_PRIVATE);
         JsonParser.preferences = preferences;
         summaries.mHandler = mHandler;
         sp = new summaries.Printerthread(preferences);
         sp.start();
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         membersupdate = new updatemembers();
         membersupdate.start();
@@ -137,7 +137,7 @@ public class menu extends AppCompatActivity
         }
         if (i != null)
             startActivity(i);
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
@@ -145,10 +145,10 @@ public class menu extends AppCompatActivity
     protected void onDestroy() {
         super.onDestroy();
         try {
-            if (p.printersock != null) {
-                p.printerout.close();
-                p.printersock.close();
-                p.printersock = null;
+            if (summaries.printer.printersock != null) {
+                summaries.printer.printerout.close();
+                summaries.printer.printersock.close();
+                summaries.printer.printersock = null;
                 sp.cancel();
                 Log.i("disconnect","bluetooth");
             }
@@ -343,7 +343,7 @@ public class menu extends AppCompatActivity
 //
 //                    new getcollections(g).execute();
 
-                    this.sleep(20000);
+                    sleep(20000);
                 }
             } catch (Exception ex) {
                 ex.printStackTrace();
@@ -507,8 +507,8 @@ public class menu extends AppCompatActivity
                     BluetoothDevice device = intent
                             .getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
                     if (summaries.printer.printerdevice.equals(device)) {
-                        p.printersock .close();
-                        p.printerout.close();
+                        summaries.printer.printersock.close();
+                        summaries.printer.printerout.close();
                         mHandler.obtainMessage(Constants.PRINTER_DISCONNECTED).sendToTarget();
 
                     }

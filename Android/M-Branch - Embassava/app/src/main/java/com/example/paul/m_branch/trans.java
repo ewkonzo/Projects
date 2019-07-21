@@ -52,16 +52,16 @@ public class trans
         View view;
         view = this.inflater.inflate(R.layout.trans, paramViewGroup, false);
 
-        TextView collno = (TextView) view
+        TextView collno = view
                 .findViewById(R.id.transtype);
         if (!coll.get(paramInt).Loan_No.equals(""))
             collno.setText(db.gettype(coll.get(paramInt).Type).Name + (coll.get(paramInt).Type.contains("LOAN") ? "\n(" + coll.get(paramInt).Ward + "(" +coll.get(paramInt).Loan_No + "))" : "\n(" + coll.get(paramInt).Loan_No + ")"));
         else
             collno.setText(db.gettype(coll.get(paramInt).Type).Name);
-        TextView datecol = (TextView) view
+        TextView datecol = view
                 .findViewById(R.id.amount);
         datecol.setText(coll.get(paramInt).Amount.toString());
-        ImageView delete = (ImageView) view.findViewById(R.id.delete);
+        ImageView delete = view.findViewById(R.id.delete);
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

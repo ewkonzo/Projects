@@ -128,7 +128,7 @@ public class summaries {
                                 }
                             printerdevice = prnt;
                             Method m = prnt.getClass().getMethod("createRfcommSocket",
-                                    new Class[]{int.class});
+                                    int.class);
                             printersock = (BluetoothSocket) m.invoke(prnt, Integer.valueOf(1));
                             try {
                                 Thread.sleep(1000);
@@ -153,7 +153,7 @@ public class summaries {
                    try {
                                 while (printersock.isConnected()){
                                     Log.i("thread", "printer connected");
-                                    this.sleep(2000);
+                                    sleep(2000);
                                 }
 
                                // mHandler.obtainMessage(Constants.PRINTER_DISCONNECTED, true).sendToTarget();

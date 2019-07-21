@@ -36,7 +36,7 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Stetho.initializeWithDefaults(this);
         preferences = getSharedPreferences("Settings", MODE_PRIVATE);
@@ -44,20 +44,20 @@ public class login extends AppCompatActivity {
         db = new DB(this);
         DB.t tt = new DB.t();
         Log.i("fields", tt.toString());
-        final TextInputLayout usernameWrapper = (TextInputLayout) findViewById(R.id.input_layout_username);
-        final TextInputLayout passwordWrapper = (TextInputLayout) findViewById(R.id.input_layout_password);
+        final TextInputLayout usernameWrapper = findViewById(R.id.input_layout_username);
+        final TextInputLayout passwordWrapper = findViewById(R.id.input_layout_password);
         usernameWrapper.setHint("User Name");
         passwordWrapper.setHint("Pin");
-        username = (EditText) findViewById(R.id.username);
-        pass = (EditText) findViewById(R.id.password);
+        username = findViewById(R.id.username);
+        pass = findViewById(R.id.password);
         new Getlogins().execute();
         new Getvehicles().execute();
         String us = getpreferences("User");
-        if (!us.toString().equals("")) {
+        if (!us.equals("")) {
             username.setText(getpreferences("User"));
             pass.requestFocus();
         }
-        Login = (Button) findViewById(R.id.login);
+        Login = findViewById(R.id.login);
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

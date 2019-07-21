@@ -34,7 +34,7 @@ public class transaction {
 
     public String Type ;
 
-    public static enum gender {
+    public enum gender {
 
         _blank_("Select"),
         Male("Male"),
@@ -52,7 +52,7 @@ public class transaction {
         }
     }
 
-    public static enum marital {
+    public enum marital {
 
         _blank_("Select"),
         Single("Single"),
@@ -74,7 +74,7 @@ public class transaction {
     }
 
 
-    public static enum T_Type {
+    public enum T_Type {
 
         _blank_("Select"),
 

@@ -47,7 +47,7 @@ public class transstatus
         View view;
         view = this.inflater.inflate(R.layout.transstatus, paramViewGroup, false);
 
-        TextView collno = (TextView) view
+        TextView collno = view
                 .findViewById(R.id.transtype);
         types t = db.gettype(coll.get(paramInt).Type);
         if (!coll.get(paramInt).Loan_No.equals("")) {
@@ -57,10 +57,10 @@ public class transstatus
         }
 
 
-        TextView datecol = (TextView) view
+        TextView datecol = view
                 .findViewById(R.id.amount);
         datecol.setText(coll.get(paramInt).Amount.toString());
-        TextView user = (TextView) view
+        TextView user = view
                 .findViewById(R.id.agent);
         user.setText(coll.get(paramInt).Agent_Code);
         return view;

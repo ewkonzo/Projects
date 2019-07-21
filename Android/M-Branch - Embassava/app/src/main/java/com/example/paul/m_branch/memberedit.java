@@ -26,21 +26,21 @@ public class memberedit extends AppCompatActivity {
             jsonMyObject = extras.getString("member");
             f = new Gson().fromJson(jsonMyObject, member.class);
         }
-        no = (TextView) findViewById(R.id.mno);
-        name = (TextView) findViewById(R.id.mname);
+        no = findViewById(R.id.mno);
+        name = findViewById(R.id.mname);
 
         if (f != null) {
             no.setText(f.No);
             name.setText(f.Name);
         }
 
-        phone = (EditText) findViewById(R.id.phone);
-        id = (EditText) findViewById(R.id.idno);
+        phone = findViewById(R.id.phone);
+        id = findViewById(R.id.idno);
         phone.setError(null);
         id.setError(null);
 
-        update = (Button) findViewById(R.id.updatemember);
-        cancel = (Button) findViewById(R.id.cancel);
+        update = findViewById(R.id.updatemember);
+        cancel = findViewById(R.id.cancel);
 
         update.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -49,7 +49,7 @@ public class receiptreport extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("Summary Report");
         db = new DB(this);
@@ -59,8 +59,8 @@ public class receiptreport extends AppCompatActivity implements
         progress.setIndeterminate(false);
         progress.setProgress(0);
         //progress.setMax( db.getcollectionreceipts().size());
-        report = (ExpandableListView) findViewById(R.id.summuryreport);
-        total = (TextView)findViewById(R.id.total);
+        report = findViewById(R.id.summuryreport);
+        total = findViewById(R.id.total);
 
         //datepicker
 
@@ -72,7 +72,7 @@ public class receiptreport extends AppCompatActivity implements
         mDay = c.get(Calendar.DAY_OF_MONTH);
 
         date = mFormat.format(Double.valueOf(mDay)) + "-" + (mFormat.format(Double.valueOf(mMonth+ 1)) ) + "-" + mYear;
-        setdate = (Button) findViewById(R.id.Date);
+        setdate = findViewById(R.id.Date);
 
         setdate.setOnClickListener(this);
         setdate.setText(date);
@@ -230,7 +230,6 @@ public class receiptreport extends AppCompatActivity implements
                         List<types> ty;
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                             ty = typ.stream().filter(p -> p.Code.contains(tt.Type)).collect(Collectors.toList());
-                            ;
                             if (ty.size() > 0)
                                 tt.typename = ty.get(0).Name;
                         }

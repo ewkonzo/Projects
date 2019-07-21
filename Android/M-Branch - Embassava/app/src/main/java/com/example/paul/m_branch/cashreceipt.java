@@ -104,10 +104,10 @@ public class cashreceipt extends AppCompatActivity {
         setContentView(R.layout.activity_cashreceipt);
         preferences = getSharedPreferences("Settings", MODE_PRIVATE);
         db = new DB(this);
-        ttrans = (ListView) (findViewById(R.id.ttrans));
-        ttypes = (Spinner) findViewById(R.id.ttype);
-        tvehicles = (Spinner) findViewById(R.id.tvehicles);
-        tloans = (Spinner) findViewById(R.id.tloans);
+        ttrans = findViewById(R.id.ttrans);
+        ttypes = findViewById(R.id.ttype);
+        tvehicles = findViewById(R.id.tvehicles);
+        tloans = findViewById(R.id.tloans);
         permissions();
         final ArrayAdapter<types> dataAdapter;
         dataAdapter = new ArrayAdapter<types>(this,
@@ -186,11 +186,11 @@ public class cashreceipt extends AppCompatActivity {
         cdt = Calendar.getInstance();
         batch = new SimpleDateFormat("yyyyMMddHHmmss");
         Batch = batch.format(cdt.getTime());
-        memberno = (AutoCompleteTextView) findViewById(R.id.memberno);
+        memberno = findViewById(R.id.memberno);
         memberno.setSelection(memberno.getText().length());
-        amount = (EditText) findViewById(R.id.tamount);
-        membername = (TextView) findViewById(R.id.name);
-        id = (TextView) findViewById(R.id.id);
+        amount = findViewById(R.id.tamount);
+        membername = findViewById(R.id.name);
+        id = findViewById(R.id.id);
         memberno.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long iid) {
@@ -253,15 +253,15 @@ public class cashreceipt extends AppCompatActivity {
         AutoSuggestAdapter adapter = new AutoSuggestAdapter(cashreceipt.this, android.R.layout.simple_list_item_1, Myvariables.vehs);
         memberno.setAdapter(adapter);
 
-        totalrec = (TextView) findViewById(R.id.totalreceipt);
-        clear = (ImageButton) findViewById(R.id.clear);
+        totalrec = findViewById(R.id.totalreceipt);
+        clear = findViewById(R.id.clear);
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 memberno.setText("");
             }
         });
-        find = (ImageButton) findViewById(R.id.find);
+        find = findViewById(R.id.find);
         find.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -306,7 +306,7 @@ public class cashreceipt extends AppCompatActivity {
             }
         });
 
-        reprint = (Button) findViewById(R.id.reprint);
+        reprint = findViewById(R.id.reprint);
         reprint.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -315,7 +315,7 @@ public class cashreceipt extends AppCompatActivity {
             }
         });
 
-        postnew = (Button) findViewById(R.id.postnew);
+        postnew = findViewById(R.id.postnew);
         postnew.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -340,7 +340,7 @@ public class cashreceipt extends AppCompatActivity {
             }
         });
         //add
-        addtrans = (Button) findViewById(R.id.addtrans);
+        addtrans = findViewById(R.id.addtrans);
         addtrans.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -480,7 +480,7 @@ public class cashreceipt extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
-                                           String permissions[], int[] grantResults) {
+                                           String[] permissions, int[] grantResults) {
         switch (requestCode) {
             case MY_PERMISSIONS_REQUEST_READ_CONTACTS: {
                 // If request is cancelled, the result arrays are empty.
@@ -503,7 +503,7 @@ public class cashreceipt extends AppCompatActivity {
         int index = 0;
 
         for (int i = 0; i < spinner.getCount(); i++) {
-            if (((vehicles) spinner.getItemAtPosition(i)).Code.toString().equalsIgnoreCase(myString)) {
+            if (((vehicles) spinner.getItemAtPosition(i)).Code.equalsIgnoreCase(myString)) {
                 index = i;
                 break;
             }

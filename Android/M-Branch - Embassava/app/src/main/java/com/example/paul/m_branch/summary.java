@@ -25,10 +25,10 @@ public class summary extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         toolbar.setTitle("Summary Report");
-        report = (ExpandableListView) findViewById(R.id.summuryreport);
+        report = findViewById(R.id.summuryreport);
         db = new DB(this);
         DateCollection();
         listAdapter = new ExpandableListAdapter(this, listDataHeader, listDataChild,db);

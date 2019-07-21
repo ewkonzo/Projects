@@ -47,19 +47,19 @@ public class Vehicleadapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.vehiclelist, null);
         }
 
-        TextView date = (TextView) convertView.findViewById(R.id.Date);
+        TextView date = convertView.findViewById(R.id.Date);
         date.setText(t.Date);
 
-        TextView time = (TextView) convertView.findViewById(R.id.Time );
+        TextView time = convertView.findViewById(R.id.Time );
         time.setText(t.Time);
 
-        TextView type = (TextView) convertView.findViewById(R.id.type);
+        TextView type = convertView.findViewById(R.id.type);
         type.setText(t.typename);
 
-        TextView txtreceipt = (TextView) convertView.findViewById(R.id.receiptno);
+        TextView txtreceipt = convertView.findViewById(R.id.receiptno);
         txtreceipt.setText(t.Document_No);
 
-        TextView txtamount = (TextView) convertView.findViewById(R.id.Amount);
+        TextView txtamount = convertView.findViewById(R.id.Amount);
         txtamount.setText(String.format("%.2f", t.Amount));
 
 //        TextView txtttype = (TextView) convertView.findViewById(R.id.transtype);
@@ -112,23 +112,23 @@ public class Vehicleadapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(R.layout.vehiclegroup, null);
         }
 
-        TextView veh = (TextView) convertView
+        TextView veh = convertView
                 .findViewById(R.id.vehicleno);
         veh.setText(headerTitle.date);
 
-        TextView memberno = (TextView) convertView
+        TextView memberno = convertView
                 .findViewById(R.id.memberno);
         memberno.setText(String.valueOf(headerTitle.MemberNo));
 
-        TextView memberName = (TextView) convertView
+        TextView memberName = convertView
                 .findViewById(R.id.membername);
         memberName.setText(headerTitle.MemberName);
 
-        TextView c = (TextView) convertView
+        TextView c = convertView
                 .findViewById(R.id.vehiclecount);
         c.setText(String.valueOf(headerTitle.Count));
 
-        TextView t = (TextView) convertView
+        TextView t = convertView
                 .findViewById(R.id.grouptotalvalue);
         t.setText(headerTitle.Total.toString());
          return convertView;
